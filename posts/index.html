@@ -145,6 +145,173 @@
   
   <div class="posts">
     
+      <article class="post on-list">
+        <h1 class="post-title">
+          <a href="https://its-rawat.github.io/bigbits.github.io/posts/configuring_hugo/">How to Configure Hugo with  Obsidian</a>
+        </h1>
+        <div class="post-meta"><time class="post-date">2024-11-29</time>
+          
+
+        </div>
+
+        
+
+        
+
+
+
+        <div class="post-content">
+          
+            <h2 id="step---1">Step - 1</h2>
+<blockquote>
+<p>First Execute this Command.</p>
+</blockquote>
+<pre tabindex="0"><code class="language-first" data-lang="first">robocopy &#34;E:\Blog\WriteBlogsHere\posts&#34; &#34;E:\Blog\RWTBlogs\content\posts&#34; /mir
+</code></pre><h2 id="step-2">Step-2</h2>
+<blockquote>
+<p>Execute Python File.</p>
+</blockquote>
+<pre tabindex="0"><code class="language-second" data-lang="second">python images.py
+</code></pre><h2 id="step-3">Step-3</h2>
+<blockquote>
+<p>Execute Hugo Command.</p>
+</blockquote>
+<pre tabindex="0"><code class="language-third" data-lang="third">hugo server -t terminal
+</code></pre><p><code>There are several steps in between but for now I'll skip that....</code></p>
+<p>![[Pasted image 20241201211037.png]]</p>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button" href="/bigbits.github.io/posts/configuring_hugo/">Read more →</a>
+          </div>
+        
+      </article>
+    
+      <article class="post on-list">
+        <h1 class="post-title">
+          <a href="https://its-rawat.github.io/bigbits.github.io/posts/spring-security/">Spring Security</a>
+        </h1>
+        <div class="post-meta"><time class="post-date">2024-11-29</time>
+          
+
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/java/">Java</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/springframework/">Springframework</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/springsecurity/">SpringSecurity</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+
+
+        <div class="post-content">
+          
+            <p>Spring Security is a robust framework provided by the Spring ecosystem for implementing security in Java applications. It focuses on authentication, authorization, and protection against common security vulnerabilities. Here&rsquo;s a detailed breakdown of Spring Security:</p>
+<h3 id="core-concepts"><strong>Core Concepts</strong></h3>
+<h4 id="1authentication">1. <strong>Authentication</strong></h4>
+<ul>
+<li>The process of verifying the identity of a user.</li>
+<li>Spring Security supports various authentication mechanisms:
+<ul>
+<li><strong>Basic Authentication</strong>: Username and password are sent with each request.</li>
+<li><strong>Form-Based Authentication</strong>: User credentials are entered through a web form.</li>
+<li><strong>OAuth2/OpenID Connect</strong>: Token-based authentication for modern APIs.</li>
+<li><strong>LDAP Authentication</strong>: Integration with LDAP servers.</li>
+<li><strong>JWT Authentication</strong>: Stateless authentication using JSON Web Tokens.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2authorization">2. <strong>Authorization</strong></h4>
+<ul>
+<li>Determines whether a user has permission to access specific resources or perform certain actions.</li>
+<li>Supports:
+<ul>
+<li>Role-based access control (RBAC)</li>
+<li>Method-level security using annotations like <code>@PreAuthorize</code>, <code>@PostAuthorize</code>, <code>@Secured</code>, and <code>@RolesAllowed</code>.</li>
+<li>URL-based access control via <code>HttpSecurity</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3security-context">3. <strong>Security Context</strong></h4>
+<ul>
+<li>A central place to store the details of the authenticated user (<code>Authentication</code> object).</li>
+<li>Managed by the <code>SecurityContextHolder</code>.</li>
+</ul>
+<h4 id="4filters">4. <strong>Filters</strong></h4>
+<ul>
+<li>Spring Security operates using a chain of filters that intercept HTTP requests and apply security rules.</li>
+<li>Common filters:
+<ul>
+<li><code>UsernamePasswordAuthenticationFilter</code></li>
+<li><code>BasicAuthenticationFilter</code></li>
+<li><code>JwtAuthenticationFilter</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="key-components"><strong>Key Components</strong></h3>
+<h4 id="1authenticationmanager">1. <strong>AuthenticationManager</strong></h4>
+<ul>
+<li>Central interface for handling authentication.</li>
+<li>Delegates to specific <code>AuthenticationProvider</code> instances.</li>
+</ul>
+<h4 id="2authenticationprovider">2. <strong>AuthenticationProvider</strong></h4>
+<ul>
+<li>Responsible for authenticating a specific type of credentials (e.g., database-backed, LDAP, JWT).</li>
+</ul>
+<h4 id="3userdetailsservice">3. <strong>UserDetailsService</strong></h4>
+<ul>
+<li>Interface used to fetch user details from a data source (e.g., database).</li>
+<li>Custom implementations often load users by username.</li>
+</ul>
+<h4 id="4grantedauthority">4. <strong>GrantedAuthority</strong></h4>
+<ul>
+<li>Represents the authorities (roles or permissions) granted to a user.</li>
+</ul>
+<h4 id="5password-encoding">5. <strong>Password Encoding</strong></h4>
+<ul>
+<li>Passwords are encoded for secure storage using classes like <code>BCryptPasswordEncoder</code>.</li>
+</ul>
+<h4 id="6security-filters">6. <strong>Security Filters</strong></h4>
+<ul>
+<li>Filters are used to inspect, modify, or reject requests based on security rules.</li>
+<li>The filter chain is highly customizable.</li>
+</ul>
+<hr>
+<h3 id="features"><strong>Features</strong></h3>
+<h4 id="1declarative-security">1. <strong>Declarative Security</strong></h4>
+<ul>
+<li>Secure methods or URLs using annotations or configuration:
+<ul>
+<li><code>@EnableWebSecurity</code>: Enables Spring Security in the application.</li>
+<li><code>@PreAuthorize(&quot;hasRole('ADMIN')&quot;)</code>: Restrict access based on roles.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2http-security-configuration">2. <strong>HTTP Security Configuration</strong></h4>
+<ul>
+<li>
+<p>Configurable via the <code>HttpSecurity</code> API:</p>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button" href="/bigbits.github.io/posts/spring-security/">Read more →</a>
+          </div>
+        
+      </article>
+    
 
     <div class="pagination">
   <div class="pagination__buttons">

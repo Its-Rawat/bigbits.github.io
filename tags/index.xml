@@ -5,6 +5,37 @@
     <link>https://its-rawat.github.io/bigbits.github.io/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/java/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/java/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Springframework</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/springframework/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/springframework/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>SpringSecurity</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/springsecurity/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/springsecurity/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
   </channel>
 </rss>
