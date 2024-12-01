@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>https://its-rawat.github.io/bigbits.github.io/posts/</link>
+    <link>http://localhost:1313/bigbits.github.io/posts/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://its-rawat.github.io/bigbits.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/bigbits.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Configure Hugo with  Obsidian</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/configuring_hugo/</link>
+      <link>http://localhost:1313/bigbits.github.io/posts/configuring_hugo/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/configuring_hugo/</guid>
+      <guid>http://localhost:1313/bigbits.github.io/posts/configuring_hugo/</guid>
       <description>&lt;h2 id=&#34;step---1&#34;&gt;Step - 1&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;First Execute this Command.&lt;/p&gt;
@@ -29,7 +29,7 @@
 &lt;/blockquote&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-third&#34; data-lang=&#34;third&#34;&gt;hugo server -t terminal
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;There are several steps in between but for now I&#39;ll skip that....&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;!&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pexels-marta-dzedyshko-1042863-20881841.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;!&lt;img alt=&#34;Image Description&#34; src=&#34;http://localhost:1313/bigbits.github.io/images/pexels-marta-dzedyshko-1042863-20881841.png&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h2 id=&#34;step---1&#34;&gt;Step - 1&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;First Execute this Command.&lt;/p&gt;
@@ -46,16 +46,16 @@
 &lt;/blockquote&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-third&#34; data-lang=&#34;third&#34;&gt;hugo server -t terminal
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;There are several steps in between but for now I&#39;ll skip that....&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;!&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pexels-marta-dzedyshko-1042863-20881841.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;!&lt;img alt=&#34;Image Description&#34; src=&#34;http://localhost:1313/bigbits.github.io/images/pexels-marta-dzedyshko-1042863-20881841.png&#34;&gt;&lt;/p&gt;
 </content>
     </item>
     
     <item>
       <title>Spring Security</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/spring-security/</link>
+      <link>http://localhost:1313/bigbits.github.io/posts/spring-security/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-security/</guid>
+      <guid>http://localhost:1313/bigbits.github.io/posts/spring-security/</guid>
       <description>&lt;p&gt;Spring Security is a robust framework provided by the Spring ecosystem for implementing security in Java applications. It focuses on authentication, authorization, and protection against common security vulnerabilities. Here&amp;rsquo;s a detailed breakdown of Spring Security:&lt;/p&gt;
 &lt;h3 id=&#34;core-concepts&#34;&gt;&lt;strong&gt;Core Concepts&lt;/strong&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;1authentication&#34;&gt;1. &lt;strong&gt;Authentication&lt;/strong&gt;&lt;/h4&gt;

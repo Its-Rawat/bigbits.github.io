@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Springframework on </title>
-    <link>https://its-rawat.github.io/bigbits.github.io/tags/springframework/</link>
+    <link>http://localhost:1313/bigbits.github.io/tags/springframework/</link>
     <description>Recent content in Springframework on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/springframework/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/bigbits.github.io/tags/springframework/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spring Security</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/spring-security/</link>
+      <link>http://localhost:1313/bigbits.github.io/posts/spring-security/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-security/</guid>
+      <guid>http://localhost:1313/bigbits.github.io/posts/spring-security/</guid>
       <description>&lt;p&gt;Spring Security is a robust framework provided by the Spring ecosystem for implementing security in Java applications. It focuses on authentication, authorization, and protection against common security vulnerabilities. Here&amp;rsquo;s a detailed breakdown of Spring Security:&lt;/p&gt;
 &lt;h3 id=&#34;core-concepts&#34;&gt;&lt;strong&gt;Core Concepts&lt;/strong&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;1authentication&#34;&gt;1. &lt;strong&gt;Authentication&lt;/strong&gt;&lt;/h4&gt;
