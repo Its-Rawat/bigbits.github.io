@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Spring Security :: </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Spring Security is a robust framework provided by the Spring ecosystem for implementing security in Java applications. It focuses on authentication, authorization, and protection against common security vulnerabilities. Here&rsquo;s a detailed breakdown of Spring Security:
+Core Concepts 1. Authentication The process of verifying the identity of a user. Spring Security supports various authentication mechanisms: Basic Authentication: Username and password are sent with each request. Form-Based Authentication: User credentials are entered through a web form. OAuth2/OpenID Connect: Token-based authentication for modern APIs. LDAP Authentication: Integration with LDAP servers. JWT Authentication: Stateless authentication using JSON Web Tokens. 2. Authorization Determines whether a user has permission to access specific resources or perform certain actions. Supports: Role-based access control (RBAC) Method-level security using annotations like @PreAuthorize, @PostAuthorize, @Secured, and @RolesAllowed. URL-based access control via HttpSecurity. 3. Security Context A central place to store the details of the authenticated user (Authentication object). Managed by the SecurityContextHolder. 4. Filters Spring Security operates using a chain of filters that intercept HTTP requests and apply security rules. Common filters: UsernamePasswordAuthenticationFilter BasicAuthenticationFilter JwtAuthenticationFilter Key Components 1. AuthenticationManager Central interface for handling authentication. Delegates to specific AuthenticationProvider instances. 2. AuthenticationProvider Responsible for authenticating a specific type of credentials (e.g., database-backed, LDAP, JWT). 3. UserDetailsService Interface used to fetch user details from a data source (e.g., database). Custom implementations often load users by username. 4. GrantedAuthority Represents the authorities (roles or permissions) granted to a user. 5. Password Encoding Passwords are encoded for secure storage using classes like BCryptPasswordEncoder. 6. Security Filters Filters are used to inspect, modify, or reject requests based on security rules. The filter chain is highly customizable. Features 1. Declarative Security Secure methods or URLs using annotations or configuration: @EnableWebSecurity: Enables Spring Security in the application. @PreAuthorize(&quot;hasRole(&#39;ADMIN&#39;)&quot;): Restrict access based on roles. 2. HTTP Security Configuration Configurable via the HttpSecurity API:
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="//localhost:1313/posts/spring-security/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="//localhost:1313/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="//localhost:1313/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="//localhost:1313/img/theme-colors/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Spring Security">
+<meta property="og:description" content="Spring Security is a robust framework provided by the Spring ecosystem for implementing security in Java applications. It focuses on authentication, authorization, and protection against common security vulnerabilities. Here&rsquo;s a detailed breakdown of Spring Security:
+Core Concepts 1. Authentication The process of verifying the identity of a user. Spring Security supports various authentication mechanisms: Basic Authentication: Username and password are sent with each request. Form-Based Authentication: User credentials are entered through a web form. OAuth2/OpenID Connect: Token-based authentication for modern APIs. LDAP Authentication: Integration with LDAP servers. JWT Authentication: Stateless authentication using JSON Web Tokens. 2. Authorization Determines whether a user has permission to access specific resources or perform certain actions. Supports: Role-based access control (RBAC) Method-level security using annotations like @PreAuthorize, @PostAuthorize, @Secured, and @RolesAllowed. URL-based access control via HttpSecurity. 3. Security Context A central place to store the details of the authenticated user (Authentication object). Managed by the SecurityContextHolder. 4. Filters Spring Security operates using a chain of filters that intercept HTTP requests and apply security rules. Common filters: UsernamePasswordAuthenticationFilter BasicAuthenticationFilter JwtAuthenticationFilter Key Components 1. AuthenticationManager Central interface for handling authentication. Delegates to specific AuthenticationProvider instances. 2. AuthenticationProvider Responsible for authenticating a specific type of credentials (e.g., database-backed, LDAP, JWT). 3. UserDetailsService Interface used to fetch user details from a data source (e.g., database). Custom implementations often load users by username. 4. GrantedAuthority Represents the authorities (roles or permissions) granted to a user. 5. Password Encoding Passwords are encoded for secure storage using classes like BCryptPasswordEncoder. 6. Security Filters Filters are used to inspect, modify, or reject requests based on security rules. The filter chain is highly customizable. Features 1. Declarative Security Secure methods or URLs using annotations or configuration: @EnableWebSecurity: Enables Spring Security in the application. @PreAuthorize(&quot;hasRole(&#39;ADMIN&#39;)&quot;): Restrict access based on roles. 2. HTTP Security Configuration Configurable via the HttpSecurity API:
+" />
+<meta property="og:url" content="//localhost:1313/posts/spring-security/" />
+<meta property="og:site_name" content="" />
+
+  
+    <meta property="og:image" content="//localhost:1313/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2024-11-29 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="orange">
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    re-Terminal
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="/showcase" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="//localhost:1313/posts/spring-security/">Spring Security</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2024-11-29[Updated::2024-11-29]</time>
+    
+</div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="//localhost:1313/tags/java/">Java</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/springframework/">Springframework</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/springsecurity/">SpringSecurity</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Spring Security is a robust framework provided by the Spring ecosystem for implementing security in Java applications. It focuses on authentication, authorization, and protection against common security vulnerabilities. Here&rsquo;s a detailed breakdown of Spring Security:</p>
+<h3 id="core-concepts"><strong>Core Concepts</strong><a href="#core-concepts" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="1authentication">1. <strong>Authentication</strong><a href="#1authentication" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>The process of verifying the identity of a user.</li>
+<li>Spring Security supports various authentication mechanisms:
+<ul>
+<li><strong>Basic Authentication</strong>: Username and password are sent with each request.</li>
+<li><strong>Form-Based Authentication</strong>: User credentials are entered through a web form.</li>
+<li><strong>OAuth2/OpenID Connect</strong>: Token-based authentication for modern APIs.</li>
+<li><strong>LDAP Authentication</strong>: Integration with LDAP servers.</li>
+<li><strong>JWT Authentication</strong>: Stateless authentication using JSON Web Tokens.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2authorization">2. <strong>Authorization</strong><a href="#2authorization" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Determines whether a user has permission to access specific resources or perform certain actions.</li>
+<li>Supports:
+<ul>
+<li>Role-based access control (RBAC)</li>
+<li>Method-level security using annotations like <code>@PreAuthorize</code>, <code>@PostAuthorize</code>, <code>@Secured</code>, and <code>@RolesAllowed</code>.</li>
+<li>URL-based access control via <code>HttpSecurity</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3security-context">3. <strong>Security Context</strong><a href="#3security-context" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>A central place to store the details of the authenticated user (<code>Authentication</code> object).</li>
+<li>Managed by the <code>SecurityContextHolder</code>.</li>
+</ul>
+<h4 id="4filters">4. <strong>Filters</strong><a href="#4filters" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Spring Security operates using a chain of filters that intercept HTTP requests and apply security rules.</li>
+<li>Common filters:
+<ul>
+<li><code>UsernamePasswordAuthenticationFilter</code></li>
+<li><code>BasicAuthenticationFilter</code></li>
+<li><code>JwtAuthenticationFilter</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="key-components"><strong>Key Components</strong><a href="#key-components" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="1authenticationmanager">1. <strong>AuthenticationManager</strong><a href="#1authenticationmanager" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Central interface for handling authentication.</li>
+<li>Delegates to specific <code>AuthenticationProvider</code> instances.</li>
+</ul>
+<h4 id="2authenticationprovider">2. <strong>AuthenticationProvider</strong><a href="#2authenticationprovider" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Responsible for authenticating a specific type of credentials (e.g., database-backed, LDAP, JWT).</li>
+</ul>
+<h4 id="3userdetailsservice">3. <strong>UserDetailsService</strong><a href="#3userdetailsservice" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Interface used to fetch user details from a data source (e.g., database).</li>
+<li>Custom implementations often load users by username.</li>
+</ul>
+<h4 id="4grantedauthority">4. <strong>GrantedAuthority</strong><a href="#4grantedauthority" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Represents the authorities (roles or permissions) granted to a user.</li>
+</ul>
+<h4 id="5password-encoding">5. <strong>Password Encoding</strong><a href="#5password-encoding" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Passwords are encoded for secure storage using classes like <code>BCryptPasswordEncoder</code>.</li>
+</ul>
+<h4 id="6security-filters">6. <strong>Security Filters</strong><a href="#6security-filters" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Filters are used to inspect, modify, or reject requests based on security rules.</li>
+<li>The filter chain is highly customizable.</li>
+</ul>
+<hr>
+<h3 id="features"><strong>Features</strong><a href="#features" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="1declarative-security">1. <strong>Declarative Security</strong><a href="#1declarative-security" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Secure methods or URLs using annotations or configuration:
+<ul>
+<li><code>@EnableWebSecurity</code>: Enables Spring Security in the application.</li>
+<li><code>@PreAuthorize(&quot;hasRole('ADMIN')&quot;)</code>: Restrict access based on roles.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2http-security-configuration">2. <strong>HTTP Security Configuration</strong><a href="#2http-security-configuration" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>
+<p>Configurable via the <code>HttpSecurity</code> API:</p>
+<p>java</p>
+<p>Copy code</p>
+<p><code>@Override protected void configure(HttpSecurity http) throws Exception {     http.csrf().disable()         .authorizeRequests()         .antMatchers(&quot;/admin/**&quot;).hasRole(&quot;ADMIN&quot;)         .antMatchers(&quot;/user/**&quot;).hasAnyRole(&quot;USER&quot;, &quot;ADMIN&quot;)         .antMatchers(&quot;/public/**&quot;).permitAll()         .and()         .formLogin(); }</code></p>
+</li>
+</ul>
+<h4 id="3csrf-protection">3. <strong>CSRF Protection</strong><a href="#3csrf-protection" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Protects against Cross-Site Request Forgery attacks.</li>
+<li>Enabled by default but can be disabled when necessary.</li>
+</ul>
+<h4 id="4session-management">4. <strong>Session Management</strong><a href="#4session-management" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Provides features like session fixation protection and concurrent session control.</li>
+<li>Can also work in stateless environments using JWTs or OAuth tokens.</li>
+</ul>
+<h4 id="5oauth2-and-openid-connect">5. <strong>OAuth2 and OpenID Connect</strong><a href="#5oauth2-and-openid-connect" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Integrates easily with identity providers like Google, Facebook, and GitHub.</li>
+<li>Supports single sign-on (SSO).</li>
+</ul>
+<h4 id="6integration-with-spring-boot">6. <strong>Integration with Spring Boot</strong><a href="#6integration-with-spring-boot" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Auto-configuration simplifies setup:
+<ul>
+<li>Add the <code>spring-boot-starter-security</code> dependency.</li>
+<li>Default behavior secures all endpoints with HTTP Basic authentication.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="common-use-cases"><strong>Common Use Cases</strong><a href="#common-use-cases" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ol>
+<li>
+<p><strong>Web Application Security</strong></p>
+<ul>
+<li>Protect pages based on roles or permissions.</li>
+<li>Secure sensitive operations like account management.</li>
+</ul>
+</li>
+<li>
+<p><strong>REST API Security</strong></p>
+<ul>
+<li>Stateless authentication using JWT.</li>
+<li>Protect API endpoints with OAuth2.</li>
+</ul>
+</li>
+<li>
+<p><strong>Microservices Security</strong></p>
+<ul>
+<li>Implement centralized authentication with OAuth2 and API gateways.</li>
+</ul>
+</li>
+<li>
+<p><strong>Single Sign-On (SSO)</strong></p>
+<ul>
+<li>Integrate applications with identity providers for unified login.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="implementation-steps"><strong>Implementation Steps</strong><a href="#implementation-steps" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ol>
+<li>
+<p><strong>Add Dependency</strong></p>
+<p>xml</p>
+<p>Copy code</p>
+<p><code>&lt;dependency&gt;     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;     &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt; &lt;/dependency&gt;</code></p>
+</li>
+<li>
+<p><strong>Create Security Configuration</strong></p>
+<p>java</p>
+<p>Copy code</p>
+<p><code>@Configuration @EnableWebSecurity public class SecurityConfig extends WebSecurityConfigurerAdapter {     @Override     protected void configure(HttpSecurity http) throws Exception {         http.csrf().disable()             .authorizeRequests()             .antMatchers(&quot;/public/**&quot;).permitAll()             .anyRequest().authenticated()             .and()             .formLogin();     } }</code></p>
+</li>
+<li>
+<p><strong>Custom UserDetailsService</strong></p>
+<p>java</p>
+<p>Copy code</p>
+<p><code>@Service public class MyUserDetailsService implements UserDetailsService {     @Override     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {         // Fetch user details from the database         return new User(&quot;username&quot;, &quot;password&quot;, Collections.emptyList());     } }</code></p>
+</li>
+<li>
+<p><strong>Password Encoding</strong></p>
+<p>java</p>
+<p>Copy code</p>
+<p><code>@Bean public PasswordEncoder passwordEncoder() {     return new BCryptPasswordEncoder(); }</code></p>
+</li>
+</ol>
+<hr>
+<h3 id="advanced-topics"><strong>Advanced Topics</strong><a href="#advanced-topics" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ol>
+<li>
+<p><strong>JWT Authentication</strong></p>
+<ul>
+<li>Create and validate JWTs for stateless sessions.</li>
+<li>Use filters to intercept and parse JWT tokens.</li>
+</ul>
+</li>
+<li>
+<p><strong>Custom Filters</strong></p>
+<ul>
+<li>Implement your own filters to add additional processing to the security chain.</li>
+</ul>
+</li>
+<li>
+<p><strong>Testing</strong></p>
+<ul>
+<li>Use <code>@WithMockUser</code> or <code>@WithSecurityContext</code> for unit tests.</li>
+<li>Mock authenticated users for endpoint testing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Actuator Integration</strong></p>
+<ul>
+<li>Secure sensitive endpoints like <code>/actuator/health</code> and <code>/actuator/metrics</code>.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>Spring Security is highly configurable and modular, making it a go-to solution for securing Java applications. Let me know if you&rsquo;d like to dive deeper into any specific feature or example!</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="//localhost:1313/posts/configuring_hugo/">
+                <span class="button__icon">←</span>
+                <span class="button__text">How to Configure Hugo with  Obsidian</span>
+            </a>
+        </span>
+        
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/mirus-ua/hugo-theme-re-terminal" target="_blank">Theme</a> made by <a href="https://github.com/mirus-ua" target="_blank">Mirus</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
