@@ -5,7 +5,89 @@
     <link>https://its-rawat.github.io/bigbits.github.io/posts/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://its-rawat.github.io/bigbits.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/namaste/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/namaste/</guid>
+      <description>&lt;p&gt;![[tech.png]]&lt;/p&gt;
+&lt;h1 id=&#34;welcome-to-my-blog-&#34;&gt;Welcome to My Blog 🎉&lt;/h1&gt;
+&lt;p&gt;Hi, I&amp;rsquo;m &lt;strong&gt;Aditya Rawat&lt;/strong&gt;, a tech enthusiast and developer passionate about sharing knowledge. This is my personal space where I write about technology, programming, and projects that inspire me.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-latest-posts&#34;&gt;🔥 Latest Posts&lt;/h2&gt;
+&lt;p&gt;Stay updated with my latest thoughts and projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;posts/getting-started-with-spring-boot/&#34;&gt;Getting Started with Spring Boot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;posts/smart-devices-with-arduino/&#34;&gt;Exploring Smart Devices with Arduino&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;posts/configuring-hugo/&#34;&gt;Configuring Hugo for Blogs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-featured-projects&#34;&gt;🌟 Featured Projects&lt;/h2&gt;
+&lt;p&gt;Here are some of the projects I&amp;rsquo;m proud of:&lt;/p&gt;</description>
+      <content>&lt;p&gt;![[tech.png]]&lt;/p&gt;
+&lt;h1 id=&#34;welcome-to-my-blog-&#34;&gt;Welcome to My Blog 🎉&lt;/h1&gt;
+&lt;p&gt;Hi, I&amp;rsquo;m &lt;strong&gt;Aditya Rawat&lt;/strong&gt;, a tech enthusiast and developer passionate about sharing knowledge. This is my personal space where I write about technology, programming, and projects that inspire me.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-latest-posts&#34;&gt;🔥 Latest Posts&lt;/h2&gt;
+&lt;p&gt;Stay updated with my latest thoughts and projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;posts/getting-started-with-spring-boot/&#34;&gt;Getting Started with Spring Boot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;posts/smart-devices-with-arduino/&#34;&gt;Exploring Smart Devices with Arduino&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;posts/configuring-hugo/&#34;&gt;Configuring Hugo for Blogs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-featured-projects&#34;&gt;🌟 Featured Projects&lt;/h2&gt;
+&lt;p&gt;Here are some of the projects I&amp;rsquo;m proud of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Electrolok Store&lt;/strong&gt;: A file upload/download feature built with Spring Boot. &lt;a href=&#34;posts/electrolok-store/&#34;&gt;Learn More&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Smart Blind Stick&lt;/strong&gt;: A device designed for visually and hearing-impaired individuals. &lt;a href=&#34;posts/smart-blind-stick/&#34;&gt;Read Project&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-about-me&#34;&gt;👨‍💻 About Me&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m a developer with expertise in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Java&lt;/strong&gt; and &lt;strong&gt;Spring Framework&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Building backend systems&lt;/li&gt;
+&lt;li&gt;Creating innovative solutions for real-world problems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When I’m not coding, I enjoy exploring new tech and working on open-source projects.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-get-in-touch&#34;&gt;📬 Get in Touch&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;d love to connect with you! Here’s where you can find me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a href=&#34;https://github.com/Its-Rawat&#34;&gt;Its-Rawat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Twitter&lt;/strong&gt;: &lt;a href=&#34;https://twitter.com/Its_Rawat&#34;&gt;@Its_Rawat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;a href=&#34;mailto:aditya.rawat@example.com&#34;&gt;aditya.rawat@example.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Feel free to explore, read, and connect. Thanks for stopping by!&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/temp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/temp/</guid>
+      <description>&lt;p&gt;d
+a
+da
+da
+dad
+ad
+a&lt;/p&gt;</description>
+      <content>&lt;p&gt;d
+a
+da
+da
+dad
+ad
+a&lt;/p&gt;
+</content>
+    </item>
+    
   </channel>
 </rss>
