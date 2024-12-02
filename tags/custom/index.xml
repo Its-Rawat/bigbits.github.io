@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
-    <link>https://its-rawat.github.io/bigbits.github.io/</link>
-    <description>Recent content on </description>
+    <title>Custom on </title>
+    <link>https://its-rawat.github.io/bigbits.github.io/tags/custom/</link>
+    <description>Recent content in Custom on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>bigbits</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/namaste/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/namaste/</guid>
-      <description>&lt;h2 id=&#34;welcome-to-aditya-rawats-big-bits-blogs&#34;&gt;Welcome to Aditya Rawat&amp;rsquo;s Big Bits Blogs&lt;/h2&gt;
-&lt;p&gt;Hi there! I&amp;rsquo;m Aditya, a passionate developer with many years of experience in Java, Spring Boot, and embedded systems. I specialize in building robust backend applications and innovative solutions. Explore my repositories to see the projects I&amp;rsquo;ve worked on, and feel free to connect with me for collaboration or discussions.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s code something amazing!&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34;&gt;&lt;/p&gt;</description>
-      <content>&lt;h2 id=&#34;welcome-to-aditya-rawats-big-bits-blogs&#34;&gt;Welcome to Aditya Rawat&amp;rsquo;s Big Bits Blogs&lt;/h2&gt;
-&lt;p&gt;Hi there! I&amp;rsquo;m Aditya, a passionate developer with many years of experience in Java, Spring Boot, and embedded systems. I specialize in building robust backend applications and innovative solutions. Explore my repositories to see the projects I&amp;rsquo;ve worked on, and feel free to connect with me for collaboration or discussions.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s code something amazing!&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34;&gt;&lt;/p&gt;
-</content>
-    </item>
-    
+    <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/custom/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Custom Spring Boot Banners</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/</link>

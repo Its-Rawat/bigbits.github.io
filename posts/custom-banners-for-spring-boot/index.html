@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Custom Spring Boot Banners :: </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Spring Boot Banners In this endpoint of internet, we’ll explore how to create a custom banner in a Spring Boot application.
+Overview When a Spring Boot application starts, it prints a banner, a visual representation, or text (often with ASCII graphics or branding information). The banner is a way to provide a more engaging and informative startup experience for developers and users such as the application name, version, or any other relevant data.
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://its-rawat.github.io/bigbits.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Custom Spring Boot Banners">
+<meta property="og:description" content="Spring Boot Banners In this endpoint of internet, we’ll explore how to create a custom banner in a Spring Boot application.
+Overview When a Spring Boot application starts, it prints a banner, a visual representation, or text (often with ASCII graphics or branding information). The banner is a way to provide a more engaging and informative startup experience for developers and users such as the application name, version, or any other relevant data.
+" />
+<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/" />
+<meta property="og:site_name" content="" />
+
+  
+    <meta property="og:image" content="https://its-rawat.github.io/bigbits.github.io/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="orange">
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://its-rawat.github.io/bigbits.github.io/">
+  <div class="logo">
+    re-Terminal
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/bigbits.github.io/about">About</a></li>
+        
+      
+        
+          <li><a href="/bigbits.github.io/showcase">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+      
+        
+          <li><a href="/bigbits.github.io/about" >About</a></li>
+        
+      
+        
+          <li><a href="/bigbits.github.io/showcase" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/">Custom Spring Boot Banners</a>
+  </h1>
+  <div class="post-meta">
+    
+</div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/springboot/">springboot</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tricks/">tricks</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/custom/">custom</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/linkedin/">linkedin</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/post/">post</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#spring-boot-banners">Spring Boot Banners</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#how-to-create-custom-spring-boot-banners">How to create Custom Spring Boot Banners</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h2 id="spring-boot-banners">Spring Boot Banners<a href="#spring-boot-banners" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>In this endpoint of internet, we’ll explore how to create a custom banner in a Spring Boot application.</p>
+<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/custombanner.png"></p>
+<h1 id="overview">Overview<a href="#overview" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>When a Spring Boot application starts, it prints a <strong>banner</strong>, a visual representation, or text (often with ASCII graphics or branding information). The banner is a way to provide a more engaging and informative startup experience for developers and users such as the application name, version, or any other relevant data.</p>
+<p>By default, Spring Boot includes a simple banner displaying the Spring logo and the version number. Here’s an example of what the default banner looks like:
+<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/sdgvfsgffs.png"></p>
+<h2 id="how-to-create-custom-spring-boot-banners">How to create Custom Spring Boot Banners<a href="#how-to-create-custom-spring-boot-banners" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ol>
+<li>
+<p>Create a banner.txt file under your resource directory.
+<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/sdfsf.png"></p>
+</li>
+<li>
+<p>Go to this website <a href="https://www.ascii-art.de/ascii/">web</a> and get the design of your preferences then <code>copy</code> &amp; <code>paste</code> it in banner.txt.
+<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/scs.png"></p>
+</li>
+<li>
+<p>You can also add some more information like.
+<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/jkthghbgh.png"></p>
+</li>
+</ol>
+<pre tabindex="0"><code class="language-copy" data-lang="copy">Welcome to Spring Boot App ${spring.application.name}  
+Version: ${application.version}  
+Running on: ${os.name}
+</code></pre><ol start="4">
+<li>
+<p>To make these properties work you have to define them in your <code>application.properties</code>  file.
+<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/sdsdsds.png"></p>
+</li>
+<li>
+<p>The Output will look like this:
+<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/llllfs.png"></p>
+</li>
+</ol>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/namaste/">
+                <span class="button__icon">←</span>
+                <span class="button__text">bigbits</span>
+            </a>
+        </span>
+        
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/mirus-ua/hugo-theme-re-terminal" target="_blank">Theme</a> made by <a href="https://github.com/mirus-ua" target="_blank">Mirus</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bigbits.github.io/bundle.min.js"></script>
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
