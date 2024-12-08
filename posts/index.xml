@@ -78,7 +78,7 @@ Running on: ${os.name}
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/attachments/Green%20Terrarium%20Tutorial%20YouTube%20Thumbnail.png&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
 &lt;p&gt;Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.&lt;/p&gt;
 &lt;h2 id=&#34;why&#34;&gt;Why&lt;/h2&gt;
@@ -87,7 +87,7 @@ Running on: ${os.name}
 &lt;h3 id=&#34;step-1-configuration&#34;&gt;STEP 1 {Configuration}&lt;/h3&gt;
 &lt;p&gt;Add the latest &lt;code&gt;spring-boot-starter-security&lt;/code&gt; dependency in your pom.xml file.
 You can check the latest version from &lt;a href=&#34;https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-      <content>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/attachments/Green%20Terrarium%20Tutorial%20YouTube%20Thumbnail.png&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
 &lt;p&gt;Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.&lt;/p&gt;
 &lt;h2 id=&#34;why&#34;&gt;Why&lt;/h2&gt;
