@@ -2,96 +2,96 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>http://localhost:1313/bigbits.github.io/tags/</link>
+    <link>https://its-rawat.github.io/bigbits.github.io/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://localhost:1313/bigbits.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>http://localhost:1313/bigbits.github.io/tags/blog/</link>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/bigbits.github.io/tags/blog/</guid>
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/blog/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Custom</title>
-      <link>http://localhost:1313/bigbits.github.io/tags/custom/</link>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/custom/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/bigbits.github.io/tags/custom/</guid>
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/custom/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Linkedin</title>
-      <link>http://localhost:1313/bigbits.github.io/tags/linkedin/</link>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/linkedin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/bigbits.github.io/tags/linkedin/</guid>
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/linkedin/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Post</title>
-      <link>http://localhost:1313/bigbits.github.io/tags/post/</link>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/post/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/bigbits.github.io/tags/post/</guid>
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/post/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Security</title>
-      <link>http://localhost:1313/bigbits.github.io/tags/security/</link>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/bigbits.github.io/tags/security/</guid>
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/security/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Spring</title>
-      <link>http://localhost:1313/bigbits.github.io/tags/spring/</link>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/spring/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/bigbits.github.io/tags/spring/</guid>
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/spring/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Springboot</title>
-      <link>http://localhost:1313/bigbits.github.io/tags/springboot/</link>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/springboot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/bigbits.github.io/tags/springboot/</guid>
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/springboot/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Tricks</title>
-      <link>http://localhost:1313/bigbits.github.io/tags/tricks/</link>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/tricks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/bigbits.github.io/tags/tricks/</guid>
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/tricks/</guid>
       <description></description>
       <content></content>
     </item>
     
     <item>
       <title>Welcome</title>
-      <link>http://localhost:1313/bigbits.github.io/tags/welcome/</link>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/welcome/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/bigbits.github.io/tags/welcome/</guid>
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/welcome/</guid>
       <description></description>
       <content></content>
     </item>
