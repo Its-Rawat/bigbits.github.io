@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>spring-security :: </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="What Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.
+Why It helps in protecting user data, It also protects developer&rsquo;s logic.
+How to add spring security in your spring boot project STEP 1 {Configuration} Add the latest spring-boot-starter-security dependency in your pom.xml file. You can check the latest version from here.
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://its-rawat.github.io/bigbits.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="spring-security">
+<meta property="og:description" content="What Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.
+Why It helps in protecting user data, It also protects developer&rsquo;s logic.
+How to add spring security in your spring boot project STEP 1 {Configuration} Add the latest spring-boot-starter-security dependency in your pom.xml file. You can check the latest version from here.
+" />
+<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/" />
+<meta property="og:site_name" content="" />
+
+  
+    <meta property="og:image" content="https://its-rawat.github.io/bigbits.github.io/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="orange">
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://its-rawat.github.io/bigbits.github.io/">
+  <div class="logo">
+    re-Terminal
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/bigbits.github.io/about">About</a></li>
+        
+      
+        
+          <li><a href="/bigbits.github.io/showcase">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+      
+        
+          <li><a href="/bigbits.github.io/about" >About</a></li>
+        
+      
+        
+          <li><a href="/bigbits.github.io/showcase" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/">spring-security</a>
+  </h1>
+  <div class="post-meta">
+    
+</div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/blog/">blog</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/spring/">spring</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/security/">security</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what">What</a></li>
+    <li><a href="#why">Why</a></li>
+    <li><a href="#how-to-add-spring-security-in-your-spring-boot-project">How to add spring security in your spring boot project</a>
+      <ul>
+        <li><a href="#step-1-configuration">STEP 1 {Configuration}</a></li>
+        <li><a href="#step-20-customization">STEP 2.0 {Customization}</a></li>
+        <li><a href="#step-21-customization">STEP 2.1 {Customization}</a></li>
+      </ul>
+    </li>
+    <li><a href="#internal-flow-of-spring-security">Internal Flow Of Spring Security</a>
+      <ul>
+        <li><a href="#diagram">Diagram</a></li>
+        <li><a href="#login-process-in-short">Login Process in Short</a></li>
+        <li><a href="#login-process-in-depth">Login Process in Depth</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h2 id="what">What<a href="#what" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.</p>
+<h2 id="why">Why<a href="#why" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>It helps in protecting user data, It also protects developer&rsquo;s logic.</p>
+<h2 id="how-to-add-spring-security-in-your-spring-boot-project">How to add spring security in your spring boot project<a href="#how-to-add-spring-security-in-your-spring-boot-project" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="step-1-configuration">STEP 1 {Configuration}<a href="#step-1-configuration" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Add the latest <code>spring-boot-starter-security</code> dependency in your pom.xml file.
+You can check the latest version from <a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security">here</a>.</p>
+<pre tabindex="0"><code class="language-copy" data-lang="copy">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+    &lt;version&gt;3.4.0&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><p><em>If you run your spring boot app now after adding this dependency and try to hit your endpoint you may observe a login page whose password is given in your console/log window and by default username would be <code>user</code>.</em></p>
+<h3 id="step-20-customization">STEP 2.0 {Customization}<a href="#step-20-customization" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Adding Custom user and password manually for single user.</p>
+<p>Go to<code>.properties</code> file and add these lines:</p>
+<pre tabindex="0"><code class="language-copy" data-lang="copy">#Spring Security Configurations  
+spring.security.user.name = yourUserName  
+spring.security.user.password = yourPassword
+</code></pre><p>For more properties like this <a href="https://docs.spring.io/spring-boot/appendix/application-properties/index.html#appendix.application-properties.security">visit here</a>.</p>
+<h3 id="step-21-customization">STEP 2.1 {Customization}<a href="#step-21-customization" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Adding custom user and password using  java configuration class.</p>
+<pre tabindex="0"><code class="language-copy" data-lang="copy">// In-Memory {No Database} User Detail Management Using Springboot.  
+  
+@EnableWebSecurity(debug = true)  
+@Configuration  
+public class SecurityConfig {  
+    @Bean  
+    public UserDetailsService userDetailsService(){  
+    // InMemory User Creation User1 User2  
+        UserDetails user1 = User  
+                .withDefaultPasswordEncoder()  
+                .username(&#34;apple&#34;)  
+                .password(&#34;apple123#&#34;)  
+                .roles(&#34;ADMIN&#34;)  
+                .build();  
+        UserDetails user2 = User  
+                .withDefaultPasswordEncoder()  
+                .username(&#34;bannana&#34;)  
+                .password(&#34;bannana123#&#34;)  
+                .roles(&#34;GUEST&#34;)  
+                .build();  
+  
+        // InMemoryUserDetailManager is a child class of UserDetailsService Interface.  
+        // So we can return it&#39;s Object directly.        InMemoryUserDetailsManager inMemoryUserDetailsManager = new InMemoryUserDetailsManager(user1,user2);  
+        return inMemoryUserDetailsManager;  
+    }  
+}
+</code></pre><ul>
+<li>To load user we use #UserDetailService interface <code>Locates the user based on the username</code>.</li>
+<li>To use this interface we need to create an object of its implementation class which is <code>InMemoryUserDetailsManager</code> class.</li>
+<li>In InMemoryUserDetailManager constructor we can pass users created using UserDetails.</li>
+<li>Run your app again and hit your endpoints.</li>
+</ul>
+<h2 id="internal-flow-of-spring-security">Internal Flow Of Spring Security<a href="#internal-flow-of-spring-security" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="diagram">Diagram<a href="#diagram" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241208135216.png"></p>
+<h3 id="login-process-in-short">Login Process in Short<a href="#login-process-in-short" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ol>
+<li>Client enter username and password and send.</li>
+<li>The request first get&rsquo;s intercepted by spring security filters.</li>
+<li>A authentication object is created containing username and password.</li>
+<li>The authentication object is passed to authentication manager.</li>
+<li>Authentication manager finds all the supported authentication provider for the authentication object.</li>
+<li>Logic is processed in authentication provider.</li>
+<li>Finally in the end authentication provider uses User Detail Service to fetch the data from database using authentication object username and password.</li>
+<li>If username and password match in the database then the authentication flag is turned to true and returned to Security Context Holder.</li>
+<li>The response is sent to user.</li>
+<li>Done.</li>
+</ol>
+<h3 id="login-process-in-depth">Login Process in Depth<a href="#login-process-in-depth" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Continue&hellip;.</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Custom Spring Boot Banners</span>
+            </a>
+        </span>
+        
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/mirus-ua/hugo-theme-re-terminal" target="_blank">Theme</a> made by <a href="https://github.com/mirus-ua" target="_blank">Mirus</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bigbits.github.io/bundle.min.js"></script>
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

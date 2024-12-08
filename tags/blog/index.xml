@@ -23,5 +23,95 @@
 </content>
     </item>
     
+    <item>
+      <title>spring-security</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/</guid>
+      <description>&lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
+&lt;p&gt;Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.&lt;/p&gt;
+&lt;h2 id=&#34;why&#34;&gt;Why&lt;/h2&gt;
+&lt;p&gt;It helps in protecting user data, It also protects developer&amp;rsquo;s logic.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-add-spring-security-in-your-spring-boot-project&#34;&gt;How to add spring security in your spring boot project&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-configuration&#34;&gt;STEP 1 {Configuration}&lt;/h3&gt;
+&lt;p&gt;Add the latest &lt;code&gt;spring-boot-starter-security&lt;/code&gt; dependency in your pom.xml file.
+You can check the latest version from &lt;a href=&#34;https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
+&lt;p&gt;Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.&lt;/p&gt;
+&lt;h2 id=&#34;why&#34;&gt;Why&lt;/h2&gt;
+&lt;p&gt;It helps in protecting user data, It also protects developer&amp;rsquo;s logic.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-add-spring-security-in-your-spring-boot-project&#34;&gt;How to add spring security in your spring boot project&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-configuration&#34;&gt;STEP 1 {Configuration}&lt;/h3&gt;
+&lt;p&gt;Add the latest &lt;code&gt;spring-boot-starter-security&lt;/code&gt; dependency in your pom.xml file.
+You can check the latest version from &lt;a href=&#34;https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-copy&#34; data-lang=&#34;copy&#34;&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;spring-boot-starter-security&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;3.4.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;If you run your spring boot app now after adding this dependency and try to hit your endpoint you may observe a login page whose password is given in your console/log window and by default username would be &lt;code&gt;user&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-20-customization&#34;&gt;STEP 2.0 {Customization}&lt;/h3&gt;
+&lt;p&gt;Adding Custom user and password manually for single user.&lt;/p&gt;
+&lt;p&gt;Go to&lt;code&gt;.properties&lt;/code&gt; file and add these lines:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-copy&#34; data-lang=&#34;copy&#34;&gt;#Spring Security Configurations  
+spring.security.user.name = yourUserName  
+spring.security.user.password = yourPassword
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For more properties like this &lt;a href=&#34;https://docs.spring.io/spring-boot/appendix/application-properties/index.html#appendix.application-properties.security&#34;&gt;visit here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;step-21-customization&#34;&gt;STEP 2.1 {Customization}&lt;/h3&gt;
+&lt;p&gt;Adding custom user and password using  java configuration class.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-copy&#34; data-lang=&#34;copy&#34;&gt;// In-Memory {No Database} User Detail Management Using Springboot.  
+  
+@EnableWebSecurity(debug = true)  
+@Configuration  
+public class SecurityConfig {  
+    @Bean  
+    public UserDetailsService userDetailsService(){  
+    // InMemory User Creation User1 User2  
+        UserDetails user1 = User  
+                .withDefaultPasswordEncoder()  
+                .username(&amp;#34;apple&amp;#34;)  
+                .password(&amp;#34;apple123#&amp;#34;)  
+                .roles(&amp;#34;ADMIN&amp;#34;)  
+                .build();  
+        UserDetails user2 = User  
+                .withDefaultPasswordEncoder()  
+                .username(&amp;#34;bannana&amp;#34;)  
+                .password(&amp;#34;bannana123#&amp;#34;)  
+                .roles(&amp;#34;GUEST&amp;#34;)  
+                .build();  
+  
+        // InMemoryUserDetailManager is a child class of UserDetailsService Interface.  
+        // So we can return it&amp;#39;s Object directly.        InMemoryUserDetailsManager inMemoryUserDetailsManager = new InMemoryUserDetailsManager(user1,user2);  
+        return inMemoryUserDetailsManager;  
+    }  
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;To load user we use #UserDetailService interface &lt;code&gt;Locates the user based on the username&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;To use this interface we need to create an object of its implementation class which is &lt;code&gt;InMemoryUserDetailsManager&lt;/code&gt; class.&lt;/li&gt;
+&lt;li&gt;In InMemoryUserDetailManager constructor we can pass users created using UserDetails.&lt;/li&gt;
+&lt;li&gt;Run your app again and hit your endpoints.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;internal-flow-of-spring-security&#34;&gt;Internal Flow Of Spring Security&lt;/h2&gt;
+&lt;h3 id=&#34;diagram&#34;&gt;Diagram&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241208135216.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;login-process-in-short&#34;&gt;Login Process in Short&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Client enter username and password and send.&lt;/li&gt;
+&lt;li&gt;The request first get&amp;rsquo;s intercepted by spring security filters.&lt;/li&gt;
+&lt;li&gt;A authentication object is created containing username and password.&lt;/li&gt;
+&lt;li&gt;The authentication object is passed to authentication manager.&lt;/li&gt;
+&lt;li&gt;Authentication manager finds all the supported authentication provider for the authentication object.&lt;/li&gt;
+&lt;li&gt;Logic is processed in authentication provider.&lt;/li&gt;
+&lt;li&gt;Finally in the end authentication provider uses User Detail Service to fetch the data from database using authentication object username and password.&lt;/li&gt;
+&lt;li&gt;If username and password match in the database then the authentication flag is turned to true and returned to Security Context Holder.&lt;/li&gt;
+&lt;li&gt;The response is sent to user.&lt;/li&gt;
+&lt;li&gt;Done.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;login-process-in-depth&#34;&gt;Login Process in Depth&lt;/h3&gt;
+&lt;p&gt;Continue&amp;hellip;.&lt;/p&gt;
+</content>
+    </item>
+    
   </channel>
 </rss>
