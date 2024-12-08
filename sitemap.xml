@@ -2,36 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/posts/namaste/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/posts/namaste/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/tags/blog/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/tags/blog/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/categories/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/categories/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/tags/custom/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/tags/custom/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/posts/custom-banners-for-spring-boot/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/tags/linkedin/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/tags/linkedin/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/tags/post/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/tags/post/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/posts/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/posts/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/tags/security/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/tags/security/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/tags/spring/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/tags/spring/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/posts/spring-security-introduction/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/tags/springboot/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/tags/springboot/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/tags/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/tags/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/tags/tricks/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/tags/tricks/</loc>
   </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/tags/welcome/</loc>
+    <loc>http://localhost:1313/bigbits.github.io/tags/welcome/</loc>
   </url>
 </urlset>
