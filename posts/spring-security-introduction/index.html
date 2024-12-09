@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/bigbits.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=bigbits.github.io/livereload" data-no-instant defer></script>
   
     <title>spring-security :: </title>
   
@@ -15,7 +15,7 @@ How to add spring security in your spring boot project STEP 1 {Configuration} Ad
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/" />
+<link rel="canonical" href="http://localhost:1313/bigbits.github.io/posts/spring-security-introduction/" />
 
 
 
@@ -27,7 +27,7 @@ How to add spring security in your spring boot project STEP 1 {Configuration} Ad
   
   
   
-  <link rel="stylesheet" href="https://its-rawat.github.io/bigbits.github.io/styles.css">
+  <link rel="stylesheet" href="http://localhost:1313/bigbits.github.io/styles.css">
 
 
 
@@ -35,8 +35,8 @@ How to add spring security in your spring boot project STEP 1 {Configuration} Ad
 
 
 
-  <link rel="shortcut icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
-  <link rel="apple-touch-icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+  <link rel="shortcut icon" href="http://localhost:1313/bigbits.github.io/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="http://localhost:1313/bigbits.github.io/img/theme-colors/orange.png">
 
 
 
@@ -52,11 +52,11 @@ What Spring Security is a powerful framework used to secure Java-based applicati
 Why It helps in protecting user data, It also protects developer&rsquo;s logic.
 How to add spring security in your spring boot project STEP 1 {Configuration} Add the latest spring-boot-starter-security dependency in your pom.xml file. You can check the latest version from here.
 " />
-<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/" />
+<meta property="og:url" content="http://localhost:1313/bigbits.github.io/posts/spring-security-introduction/" />
 <meta property="og:site_name" content="" />
 
   
-    <meta property="og:image" content="https://its-rawat.github.io/bigbits.github.io/img/favicon/orange.png">
+    <meta property="og:image" content="http://localhost:1313/bigbits.github.io/img/favicon/orange.png">
   
 
 <meta property="og:image:width" content="1200">
@@ -158,20 +158,20 @@ How to add spring security in your spring boot project STEP 1 {Configuration} Ad
     
 <article class="post">
   <h1 class="post-title">
-    <a href="https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/">spring-security</a>
+    <a href="http://localhost:1313/bigbits.github.io/posts/spring-security-introduction/">spring-security</a>
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">2 min read (406 words)</span></div>
+<span class="post-reading-time">3 min read (634 words)</span></div>
 
   
     <span class="post-tags">
       
-      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/blog/">blog</a>&nbsp;
+      #<a href="http://localhost:1313/bigbits.github.io/tags/blog/">blog</a>&nbsp;
       
-      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/spring/">spring</a>&nbsp;
+      #<a href="http://localhost:1313/bigbits.github.io/tags/spring/">spring</a>&nbsp;
       
-      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/security/">security</a>&nbsp;
+      #<a href="http://localhost:1313/bigbits.github.io/tags/security/">security</a>&nbsp;
       
     </span>
   
@@ -281,7 +281,25 @@ public class SecurityConfig {
 <li>Done.</li>
 </ol>
 <h3 id="login-process-in-depth">Login Process in Depth<a href="#login-process-in-depth" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p>Continue&hellip;.</p>
+<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241209114553.png">
+<strong>We all remember this sign in page when we just started learning spring security. Although this page style is basic but when we click on <code>sign in</code> the working behind it is not the basic one which we encounter.</strong></p>
+<p><strong>Lets dive deep into it&rsquo;s working:</strong></p>
+<ol>
+<li>When user hit the login form by providing username and password, The Spring security calls AttemptAuthentication() method to validate the credentials.</li>
+</ol>
+<p><em>In Short this method do all these functionality:</em></p>
+<ul>
+<li><strong>Extract Credentials</strong>: Fetches the <code>username</code> and <code>password</code> from the HTTP request.</li>
+<li><strong>Create Token</strong>: Constructs a <code>UsernamePasswordAuthenticationToken</code> using the credentials and set the Authentication = false.</li>
+<li><strong>Authenticate</strong>: Passes the token object to the Authenticate() method inside the <code>ProviderManager</code> which implement <code>AuthenticationManager</code> for validation against the user database or service.</li>
+<li><strong>Return Authentication</strong>: If valid, returns an authenticated <code>Authentication</code> object; if not, throws an exception.</li>
+</ul>
+<ol start="2">
+<li>Authenticate(token Object) Method have username, password and authentication status{true/false} from the token object.</li>
+<li>The Authenticate method finds the providers for the token. <em>{Authentication Provider&ndash;&gt; It is responsible for performing authentication logic. Providers validate authentication requests (tokens) and decide whether the provided credentials are valid, ultimately returning an authenticated user or rejecting the authentication attempt.}</em></li>
+<li>The appropriate provider after implementing logic calls the <code>retriveUser(username, UsernamePasswordToken token)</code>, this method fetch the user from Database/InMemoryUser/CustomUser.</li>
+<li>The fetched data will go through some more additional check and post additional checks and then returned back as a response.</li>
+</ol>
 
       </div></div>
 
@@ -295,7 +313,7 @@ public class SecurityConfig {
     <div class="pagination__buttons">
         
         <span class="button previous">
-            <a href="https://its-rawat.github.io/bigbits.github.io/posts/projects/">
+            <a href="http://localhost:1313/bigbits.github.io/posts/projects/">
                 <span class="button__icon">←</span>
                 <span class="button__text">my-projects</span>
             </a>

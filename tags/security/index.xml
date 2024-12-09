@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on </title>
-    <link>https://its-rawat.github.io/bigbits.github.io/tags/security/</link>
+    <link>http://localhost:1313/bigbits.github.io/tags/security/</link>
     <description>Recent content in Security on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="http://localhost:1313/bigbits.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>spring-security</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/</link>
+      <link>http://localhost:1313/bigbits.github.io/posts/spring-security-introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/</guid>
+      <guid>http://localhost:1313/bigbits.github.io/posts/spring-security-introduction/</guid>
       <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
 &lt;p&gt;Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.&lt;/p&gt;
@@ -94,7 +94,25 @@ public class SecurityConfig {
 &lt;li&gt;Done.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;login-process-in-depth&#34;&gt;Login Process in Depth&lt;/h3&gt;
-&lt;p&gt;Continue&amp;hellip;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241209114553.png&#34;&gt;
+&lt;strong&gt;We all remember this sign in page when we just started learning spring security. Although this page style is basic but when we click on &lt;code&gt;sign in&lt;/code&gt; the working behind it is not the basic one which we encounter.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lets dive deep into it&amp;rsquo;s working:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;When user hit the login form by providing username and password, The Spring security calls AttemptAuthentication() method to validate the credentials.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;In Short this method do all these functionality:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Extract Credentials&lt;/strong&gt;: Fetches the &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt; from the HTTP request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create Token&lt;/strong&gt;: Constructs a &lt;code&gt;UsernamePasswordAuthenticationToken&lt;/code&gt; using the credentials and set the Authentication = false.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Authenticate&lt;/strong&gt;: Passes the token object to the Authenticate() method inside the &lt;code&gt;ProviderManager&lt;/code&gt; which implement &lt;code&gt;AuthenticationManager&lt;/code&gt; for validation against the user database or service.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Return Authentication&lt;/strong&gt;: If valid, returns an authenticated &lt;code&gt;Authentication&lt;/code&gt; object; if not, throws an exception.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Authenticate(token Object) Method have username, password and authentication status{true/false} from the token object.&lt;/li&gt;
+&lt;li&gt;The Authenticate method finds the providers for the token. &lt;em&gt;{Authentication Provider&amp;ndash;&amp;gt; It is responsible for performing authentication logic. Providers validate authentication requests (tokens) and decide whether the provided credentials are valid, ultimately returning an authenticated user or rejecting the authentication attempt.}&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;The appropriate provider after implementing logic calls the &lt;code&gt;retriveUser(username, UsernamePasswordToken token)&lt;/code&gt;, this method fetch the user from Database/InMemoryUser/CustomUser.&lt;/li&gt;
+&lt;li&gt;The fetched data will go through some more additional check and post additional checks and then returned back as a response.&lt;/li&gt;
+&lt;/ol&gt;
 </content>
     </item>
     
