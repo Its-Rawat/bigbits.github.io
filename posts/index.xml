@@ -78,8 +78,39 @@ Running on: ${os.name}
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/projects/</guid>
-      <description></description>
-      <content></content>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Welcome to my Project Space, It&amp;rsquo;s hard to update this, as I don&amp;rsquo;t usually public what I have developed or developing.&lt;/p&gt;
+&lt;h1 id=&#34;java-stack&#34;&gt;Java-Stack&lt;/h1&gt;
+&lt;p&gt;All the projects made using java or java framework&amp;rsquo;s are here:&lt;/p&gt;
+&lt;h2 id=&#34;electro-lok-e-commerce-store-website&#34;&gt;Electro-Lok (E-commerce Store Website)&lt;/h2&gt;
+&lt;p&gt;#spring #java #hibernate #sql #spring-security&lt;/p&gt;
+&lt;h2 id=&#34;smart-scrapper-app-javafx-web-scrapper&#34;&gt;Smart Scrapper App (JavaFx Web Scrapper)&lt;/h2&gt;
+&lt;p&gt;#java #javaFx #jsoup #mysql&lt;/p&gt;
+&lt;h1 id=&#34;frontend&#34;&gt;Frontend&lt;/h1&gt;
+&lt;h2 id=&#34;personal-portfolio&#34;&gt;Personal Portfolio&lt;/h2&gt;
+&lt;p&gt;#html #css #javaScript&lt;/p&gt;
+&lt;h2 id=&#34;arduino-blind-stick&#34;&gt;Arduino Blind Stick&lt;/h2&gt;
+&lt;p&gt;#arduino #iot #cuircit&lt;/p&gt;
+&lt;h1 id=&#34;innovative&#34;&gt;Innovative&lt;/h1&gt;
+&lt;h2 id=&#34;hugo-personal-site&#34;&gt;Hugo Personal Site&lt;/h2&gt;
+&lt;p&gt;#hugo #obsidian #github&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Welcome to my Project Space, It&amp;rsquo;s hard to update this, as I don&amp;rsquo;t usually public what I have developed or developing.&lt;/p&gt;
+&lt;h1 id=&#34;java-stack&#34;&gt;Java-Stack&lt;/h1&gt;
+&lt;p&gt;All the projects made using java or java framework&amp;rsquo;s are here:&lt;/p&gt;
+&lt;h2 id=&#34;electro-lok-e-commerce-store-website&#34;&gt;Electro-Lok (E-commerce Store Website)&lt;/h2&gt;
+&lt;p&gt;#spring #java #hibernate #sql #spring-security&lt;/p&gt;
+&lt;h2 id=&#34;smart-scrapper-app-javafx-web-scrapper&#34;&gt;Smart Scrapper App (JavaFx Web Scrapper)&lt;/h2&gt;
+&lt;p&gt;#java #javaFx #jsoup #mysql&lt;/p&gt;
+&lt;h1 id=&#34;frontend&#34;&gt;Frontend&lt;/h1&gt;
+&lt;h2 id=&#34;personal-portfolio&#34;&gt;Personal Portfolio&lt;/h2&gt;
+&lt;p&gt;#html #css #javaScript&lt;/p&gt;
+&lt;h2 id=&#34;arduino-blind-stick&#34;&gt;Arduino Blind Stick&lt;/h2&gt;
+&lt;p&gt;#arduino #iot #cuircit&lt;/p&gt;
+&lt;h1 id=&#34;innovative&#34;&gt;Innovative&lt;/h1&gt;
+&lt;h2 id=&#34;hugo-personal-site&#34;&gt;Hugo Personal Site&lt;/h2&gt;
+&lt;p&gt;#hugo #obsidian #github&lt;/p&gt;
+</content>
     </item>
     
     <item>
@@ -189,6 +220,219 @@ public class SecurityConfig {
 &lt;li&gt;The appropriate provider after implementing logic calls the &lt;code&gt;retriveUser(username, UsernamePasswordToken token)&lt;/code&gt;, this method fetch the user from Database/InMemoryUser/CustomUser.&lt;/li&gt;
 &lt;li&gt;The fetched data will go through some more additional check and post additional checks and then returned back as a response.&lt;/li&gt;
 &lt;/ol&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Zoho Library System App</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/elite-tech-park-zoho-creator-assessment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/elite-tech-park-zoho-creator-assessment/</guid>
+      <description>&lt;h2 id=&#34;objective&#34;&gt;Objective&lt;/h2&gt;
+&lt;p&gt;As part of the &lt;strong&gt;Elite Tech Park - Zoho Creator Assessment&lt;/strong&gt;, I developed a &lt;strong&gt;Library System&lt;/strong&gt; application in Zoho Creator. The app features robust validations, workflows, and dynamic reporting to ensure efficient library management.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://drive.google.com/drive/u/3/folders/13QsjO3fwi1e8jjSm0T9MgS3c4ooTUz0D&#34;&gt;Watch the Demo Video&lt;/a&gt;&lt;/strong&gt;: A comprehensive walkthrough of the application&amp;rsquo;s functionalities and workflows.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Its-Rawat/Zoho_Library_System_App&#34;&gt;Download the Application (.ds file)&lt;/a&gt;&lt;/strong&gt;: Access the complete application file for deployment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below, I explain what the application offers and how it works.&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;objective&#34;&gt;Objective&lt;/h2&gt;
+&lt;p&gt;As part of the &lt;strong&gt;Elite Tech Park - Zoho Creator Assessment&lt;/strong&gt;, I developed a &lt;strong&gt;Library System&lt;/strong&gt; application in Zoho Creator. The app features robust validations, workflows, and dynamic reporting to ensure efficient library management.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://drive.google.com/drive/u/3/folders/13QsjO3fwi1e8jjSm0T9MgS3c4ooTUz0D&#34;&gt;Watch the Demo Video&lt;/a&gt;&lt;/strong&gt;: A comprehensive walkthrough of the application&amp;rsquo;s functionalities and workflows.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/Its-Rawat/Zoho_Library_System_App&#34;&gt;Download the Application (.ds file)&lt;/a&gt;&lt;/strong&gt;: Access the complete application file for deployment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Below, I explain what the application offers and how it works.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-i-created&#34;&gt;What I Created&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;Library System&lt;/strong&gt; application consists of several modules, each designed to handle specific library operations. Here&amp;rsquo;s a breakdown of the functionalities:
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212542.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;task-1-create-modules-and-forms&#34;&gt;Task 1: Create Modules and Forms&lt;/h3&gt;
+&lt;h4 id=&#34;1-books-module&#34;&gt;1. Books Module&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fields:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Book ID&lt;/strong&gt; (Auto-generated)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt; (Text - Mandatory)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Author&lt;/strong&gt; (Text - Mandatory)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Genre&lt;/strong&gt; (Dropdown - Predefined values: Fiction, Non-Fiction, Sci-Fi, Biography)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Publication Year&lt;/strong&gt; (Number - Valid years between 1900 and the current year)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Available Copies&lt;/strong&gt; (Number - Minimum value = 0)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ISBN Number&lt;/strong&gt; (Text - Unique validation)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rating&lt;/strong&gt; (Number - Values between 1 to 5)
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212623.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-members-module&#34;&gt;2. Members Module&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fields:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Member ID&lt;/strong&gt; (Auto-generated)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name&lt;/strong&gt; (Text - Mandatory)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt; (Email - Validated for proper format)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Phone Number&lt;/strong&gt; (Number - Validated for 10 digits)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Membership Start Date&lt;/strong&gt; (Date - Default to the current date)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Membership Type&lt;/strong&gt; (Dropdown - Values: Basic, Premium, Elite)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Max Books Allowed&lt;/strong&gt; (Number - Auto-filled based on Membership Type: Basic=2, Premium=5, Elite=10)
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212708.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3-transactions-module&#34;&gt;3. Transactions Module&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fields:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Transaction ID&lt;/strong&gt; (Auto-generated)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Member&lt;/strong&gt; (Lookup to Members)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Book&lt;/strong&gt; (Lookup to Books)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Issue Date&lt;/strong&gt; (Date - Default to the current date)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Return Date&lt;/strong&gt; (Date - Must be later than Issue Date)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; (Dropdown - Values: Issued, Returned, Overdue)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fine Amount&lt;/strong&gt; (Currency - Auto-calculated for overdue books)
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212739.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;4-staff-members-module&#34;&gt;4. Staff Members Module&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fields:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Staff ID&lt;/strong&gt; (Auto-generated)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name&lt;/strong&gt; (Text - Mandatory)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt; (Email - Validated for proper format)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Role&lt;/strong&gt; (Dropdown - Values: Librarian, Assistant)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Phone Number&lt;/strong&gt; (Number - Validated for 10 digits)
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212800.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;task-2-implement-form-validations&#34;&gt;Task 2: Implement Form Validations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Books Form:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure ISBN Number is unique.&lt;/li&gt;
+&lt;li&gt;Validate Publication Year to accept only years between 1900 and the current year.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Members Form:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Prevent duplicate entries based on Email.&lt;/li&gt;
+&lt;li&gt;Auto-fill Max Books Allowed based on Membership Type.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transactions Form:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Prevent transactions if Available Copies = 0.&lt;/li&gt;
+&lt;li&gt;Validate Return Date to ensure it is later than Issue Date.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;task-3-create-workflows&#34;&gt;Task 3: Create Workflows&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Books Module:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Decrease Available Copies by 1 when a book is issued.&lt;/li&gt;
+&lt;li&gt;Increase Available Copies by 1 when a book is returned.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transactions Module:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Auto-calculate Fine Amount for overdue books ($2 per day overdue).&lt;/li&gt;
+&lt;li&gt;Email members about overdue books, including fine details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Members Module:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Send a welcome email to new members.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Staff Members Module:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Role-based permissions:
+&lt;ul&gt;
+&lt;li&gt;Librarians can issue/return books.&lt;/li&gt;
+&lt;li&gt;Assistants can view books/members but cannot make changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;task-4-generate-reports-and-dashboards&#34;&gt;Task 4: Generate Reports and Dashboards&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reports:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Overdue Books Report:&lt;/strong&gt; List overdue transactions with member and fine details.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Top Members Report:&lt;/strong&gt; Top 10 members who borrowed the most books in a month.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dashboards:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Genre Popularity Chart:&lt;/strong&gt; A pie chart of books borrowed by genre.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Staff Activity Log:&lt;/strong&gt; Track staff actions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;task-5-add-custom-features&#34;&gt;Task 5: Add Custom Features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Books Module:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Button to mark books as &amp;ldquo;Featured,&amp;rdquo; highlighting them in reports.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transactions Module:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Custom action &amp;ldquo;Mark as Lost&amp;rdquo; to set Available Copies = 0 and log a note in reports.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;User-Friendly Forms:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Each module has dedicated forms for easy data entry and validation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic Updates:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Fields auto-update based on conditions, reducing manual effort.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Workflows in Action:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Automate routine tasks like updating Available Copies, calculating fines, and sending emails.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Role-Based Permissions:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Secure access control ensures staff roles are clearly defined.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Insights with Reports:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-time data visualization through reports and dashboards provides actionable insights.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;submission-requirements&#34;&gt;Submission Requirements&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Zoho Creator Application:&lt;/strong&gt; Exported as a &lt;code&gt;.ds&lt;/code&gt; file, Link-&amp;gt; &lt;a href=&#34;https://github.com/Its-Rawat/Zoho_Library_System_App&#34;&gt;.ds File&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Demo Video:&lt;/strong&gt; A comprehensive video showcasing:
+&lt;ul&gt;
+&lt;li&gt;Task completion.&lt;/li&gt;
+&lt;li&gt;Validations, workflows, and reports in action.&lt;/li&gt;
+&lt;li&gt;Role-based permissions.
+Link&amp;ndash;&amp;gt;&lt;a href=&#34;https://youtu.be/rWEzYghffrI&#34;&gt;Click To Watch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
 </content>
     </item>
     
