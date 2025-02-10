@@ -7,6 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AGILE</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/agile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/agile/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
       <title>All</title>
       <link>https://its-rawat.github.io/bigbits.github.io/tags/all/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -32,6 +42,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/tags/chennai/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>COURSE</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/course/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/course/</guid>
       <description></description>
       <content></content>
     </item>
@@ -117,11 +137,31 @@
     </item>
     
     <item>
+      <title>TCS</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/tcs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/tcs/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
       <title>Tricks</title>
       <link>https://its-rawat.github.io/bigbits.github.io/tags/tricks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/tags/tricks/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>UDEMY</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/udemy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/udemy/</guid>
       <description></description>
       <content></content>
     </item>
