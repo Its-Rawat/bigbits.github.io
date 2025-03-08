@@ -7,110 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/course-id-65172-agile-ci-cd-pipeline-and-devops/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/course-id-65172-agile-ci-cd-pipeline-and-devops/</guid>
-      <description>&lt;h2 id=&#34;old-sdlc&#34;&gt;OLD SDLC&lt;/h2&gt;
-&lt;h6 id=&#34;development-team&#34;&gt;{Development Team}&lt;/h6&gt;
-&lt;p&gt;Developer 1 &amp;ndash;&amp;gt;
-Developer 2 &amp;ndash;&amp;gt;  &amp;gt; Build &amp;amp; Integration Team -&amp;gt; Ensures Code Compiles -&amp;gt; Package
-Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
-&lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
-&lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
-&lt;p&gt;The Operations team deploys the app and then testers test.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;#Cons&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
-&lt;li&gt;Defects are detected late.&lt;/li&gt;
-&lt;li&gt;Any intermediate code merge can cause issues.&lt;/li&gt;
-&lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
-&lt;li&gt;Long Feedback cycle&lt;/li&gt;
-&lt;li&gt;Long Iteration
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34;&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Continuous integration is a development practice that requires developers to integrate code into a shared repo several times a day.&lt;/code&gt;&lt;/p&gt;</description>
-      <content>&lt;h2 id=&#34;old-sdlc&#34;&gt;OLD SDLC&lt;/h2&gt;
-&lt;h6 id=&#34;development-team&#34;&gt;{Development Team}&lt;/h6&gt;
-&lt;p&gt;Developer 1 &amp;ndash;&amp;gt;
-Developer 2 &amp;ndash;&amp;gt;  &amp;gt; Build &amp;amp; Integration Team -&amp;gt; Ensures Code Compiles -&amp;gt; Package
-Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
-&lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
-&lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
-&lt;p&gt;The Operations team deploys the app and then testers test.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;#Cons&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
-&lt;li&gt;Defects are detected late.&lt;/li&gt;
-&lt;li&gt;Any intermediate code merge can cause issues.&lt;/li&gt;
-&lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
-&lt;li&gt;Long Feedback cycle&lt;/li&gt;
-&lt;li&gt;Long Iteration
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34;&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Continuous integration is a development practice that requires developers to integrate code into a shared repo several times a day.&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;cardinal-principles-of-continuous-integration&#34;&gt;Cardinal Principles of Continuous Integration&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;A single central repo where the code lives.&lt;/li&gt;
-&lt;li&gt;Developers check-in/commit their code frequently.&lt;/li&gt;
-&lt;li&gt;Build should be automated and fast.&lt;/li&gt;
-&lt;li&gt;Build should compile the code as well as run automated.&lt;/li&gt;
-&lt;li&gt;Fixing the failed build should be priority for developers.&lt;/li&gt;
-&lt;li&gt;Build results should always be communicated to all developers.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;difference-between-old-school-integration-and-ci&#34;&gt;Difference Between Old School Integration and CI&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Integration is painful and effort consuming.&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Integration is automated and quick.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;Fixing Issues at the end of interations&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Issues show up early, because of frequent integration.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;Merge issues can hold up teams&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Broken builds are fixed with immediate priority by developers.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;Long feedback cycle for functional defects&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Shorter feedback- developer is notified immediately.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;Long Interation&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Shorter iterations. Faster time to market.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;CI&lt;/em&gt; (&lt;em&gt;Continuous Integration&lt;/em&gt;) pipeline means where developers frequently merge code changes into a central repository, allowing early detection of issues.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;CD&lt;/em&gt; refers to &lt;em&gt;continuous deployment&lt;/em&gt; or &lt;em&gt;continuous delivery&lt;/em&gt;, which automates the application&amp;rsquo;s release to its intended environment, ensuring that it is readily available to users.&lt;/strong&gt;
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c1.png&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;old-school-operations-pain-points&#34;&gt;OLD School Operations Pain Points&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Correctness of Instructions.&lt;/li&gt;
-&lt;li&gt;Difference of instruction across environments.&lt;/li&gt;
-&lt;li&gt;Error prone nature of manual tasks.&lt;/li&gt;
-&lt;li&gt;Deployments are sophisticated, high impact with downtime. {eg, if client wants to add a small feature, it will take too much time.}&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;continuous-development&#34;&gt;Continuous Development&lt;/h2&gt;
-&lt;p&gt;![[c2.jpg]]&lt;/p&gt;
-&lt;h2 id=&#34;what-is-devops&#34;&gt;What is DevOps?&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;DevOps combines development (Dev) and operations (Ops) to increase the efficiency, speed, and security of software development and delivery compared to traditional processes.&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;why-we-need-devops&#34;&gt;Why we need DevOps?&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;DevOps is needed because it helps organizations to deliver software faster, more reliably, and with greater quality by uniting development and operations teams.&lt;/em&gt;&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
       <title>AGILE CRASH COURSE UDEMY</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/agile-crash-course/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -346,6 +242,110 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;p&gt;Hi there! I&amp;rsquo;m Aditya, a passionate developer with many years of experience in Java, Spring Boot, and embedded systems. I specialize in building robust backend applications and innovative solutions. Explore my repositories to see the projects I&amp;rsquo;ve worked on, and feel free to connect with me for collaboration or discussions.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s code something amazing!&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34;&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>CI/CD Pipeline and Devops Introduction</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/course-id-65172-agile-ci-cd-pipeline-and-devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/course-id-65172-agile-ci-cd-pipeline-and-devops/</guid>
+      <description>&lt;h2 id=&#34;old-sdlc&#34;&gt;OLD SDLC&lt;/h2&gt;
+&lt;h6 id=&#34;development-team&#34;&gt;{Development Team}&lt;/h6&gt;
+&lt;p&gt;Developer 1 &amp;ndash;&amp;gt;
+Developer 2 &amp;ndash;&amp;gt;  &amp;gt; Build &amp;amp; Integration Team -&amp;gt; Ensures Code Compiles -&amp;gt; Package
+Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
+&lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
+&lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
+&lt;p&gt;The Operations team deploys the app and then testers test.
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;#Cons&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
+&lt;li&gt;Defects are detected late.&lt;/li&gt;
+&lt;li&gt;Any intermediate code merge can cause issues.&lt;/li&gt;
+&lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
+&lt;li&gt;Long Feedback cycle&lt;/li&gt;
+&lt;li&gt;Long Iteration
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Continuous integration is a development practice that requires developers to integrate code into a shared repo several times a day.&lt;/code&gt;&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;old-sdlc&#34;&gt;OLD SDLC&lt;/h2&gt;
+&lt;h6 id=&#34;development-team&#34;&gt;{Development Team}&lt;/h6&gt;
+&lt;p&gt;Developer 1 &amp;ndash;&amp;gt;
+Developer 2 &amp;ndash;&amp;gt;  &amp;gt; Build &amp;amp; Integration Team -&amp;gt; Ensures Code Compiles -&amp;gt; Package
+Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
+&lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
+&lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
+&lt;p&gt;The Operations team deploys the app and then testers test.
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;#Cons&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
+&lt;li&gt;Defects are detected late.&lt;/li&gt;
+&lt;li&gt;Any intermediate code merge can cause issues.&lt;/li&gt;
+&lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
+&lt;li&gt;Long Feedback cycle&lt;/li&gt;
+&lt;li&gt;Long Iteration
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Continuous integration is a development practice that requires developers to integrate code into a shared repo several times a day.&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cardinal-principles-of-continuous-integration&#34;&gt;Cardinal Principles of Continuous Integration&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;A single central repo where the code lives.&lt;/li&gt;
+&lt;li&gt;Developers check-in/commit their code frequently.&lt;/li&gt;
+&lt;li&gt;Build should be automated and fast.&lt;/li&gt;
+&lt;li&gt;Build should compile the code as well as run automated.&lt;/li&gt;
+&lt;li&gt;Fixing the failed build should be priority for developers.&lt;/li&gt;
+&lt;li&gt;Build results should always be communicated to all developers.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;difference-between-old-school-integration-and-ci&#34;&gt;Difference Between Old School Integration and CI&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Integration is painful and effort consuming.&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Integration is automated and quick.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Fixing Issues at the end of interations&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Issues show up early, because of frequent integration.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Merge issues can hold up teams&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Broken builds are fixed with immediate priority by developers.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Long feedback cycle for functional defects&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Shorter feedback- developer is notified immediately.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Long Interation&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Shorter iterations. Faster time to market.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;CI&lt;/em&gt; (&lt;em&gt;Continuous Integration&lt;/em&gt;) pipeline means where developers frequently merge code changes into a central repository, allowing early detection of issues.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;CD&lt;/em&gt; refers to &lt;em&gt;continuous deployment&lt;/em&gt; or &lt;em&gt;continuous delivery&lt;/em&gt;, which automates the application&amp;rsquo;s release to its intended environment, ensuring that it is readily available to users.&lt;/strong&gt;
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c1.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;old-school-operations-pain-points&#34;&gt;OLD School Operations Pain Points&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Correctness of Instructions.&lt;/li&gt;
+&lt;li&gt;Difference of instruction across environments.&lt;/li&gt;
+&lt;li&gt;Error prone nature of manual tasks.&lt;/li&gt;
+&lt;li&gt;Deployments are sophisticated, high impact with downtime. {eg, if client wants to add a small feature, it will take too much time.}&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;continuous-development&#34;&gt;Continuous Development&lt;/h2&gt;
+&lt;p&gt;![[c2.jpg]]&lt;/p&gt;
+&lt;h2 id=&#34;what-is-devops&#34;&gt;What is DevOps?&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;DevOps combines development (Dev) and operations (Ops) to increase the efficiency, speed, and security of software development and delivery compared to traditional processes.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;why-we-need-devops&#34;&gt;Why we need DevOps?&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;DevOps is needed because it helps organizations to deliver software faster, more reliably, and with greater quality by uniting development and operations teams.&lt;/em&gt;&lt;/p&gt;
 </content>
     </item>
     
