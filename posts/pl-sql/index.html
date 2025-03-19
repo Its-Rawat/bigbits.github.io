@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>PL/SQL Full Notes :: </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="What is PL/SQL? PL/SQL stands for Procedural Language Extension to SQL It is a Extension of SQL developed by Oracle. It adds SQL capabilities of procedural programming like variables, loops and conditional statements in SQL. PL/SQL Architecture Physical Architecture ![[WhatsApp Image 2025-03-15 at 19.26.24_681f38a3.jpg]]
+PL/SQL engine processes the entire PL/SQL block of code. It Separate SQL statements and Procedural statements. Simple Architecture Flow PL/SQL Logical Architecture Corporates with SQL Engine. Enables Subprograms -&gt; Allows re-usability of code/script like variables and functions. Dynamic Queries-&gt; We can modify or create new Queries. Case Insensitivity Optimizer-&gt; It optimizes our code for better performance. Enables Object-Oriented Programming Web Development #Extras Context Switching: When you write SQL Query in PL/SQL the PL/SQL send the query to SQL Engine and the result will be returned this operation is called Context Switching. Pluggable Database ![[WhatsApp Image 2025-03-15 at 21.14.48_f2a85a5d.jpg]]
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/pl-sql/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://its-rawat.github.io/bigbits.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="PL/SQL Full Notes">
+<meta property="og:description" content="What is PL/SQL? PL/SQL stands for Procedural Language Extension to SQL It is a Extension of SQL developed by Oracle. It adds SQL capabilities of procedural programming like variables, loops and conditional statements in SQL. PL/SQL Architecture Physical Architecture ![[WhatsApp Image 2025-03-15 at 19.26.24_681f38a3.jpg]]
+PL/SQL engine processes the entire PL/SQL block of code. It Separate SQL statements and Procedural statements. Simple Architecture Flow PL/SQL Logical Architecture Corporates with SQL Engine. Enables Subprograms -&gt; Allows re-usability of code/script like variables and functions. Dynamic Queries-&gt; We can modify or create new Queries. Case Insensitivity Optimizer-&gt; It optimizes our code for better performance. Enables Object-Oriented Programming Web Development #Extras Context Switching: When you write SQL Query in PL/SQL the PL/SQL send the query to SQL Engine and the result will be returned this operation is called Context Switching. Pluggable Database ![[WhatsApp Image 2025-03-15 at 21.14.48_f2a85a5d.jpg]]
+" />
+<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/pl-sql/" />
+<meta property="og:site_name" content="" />
+
+  
+    <meta property="og:image" content="https://its-rawat.github.io/bigbits.github.io/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="orange">
+
+  
+    <div id="banner">
+      <span>
+        
+          <a href="https://github.com/Its-Rawat">Also Check My GitHub</a>
+        
+      </span>
+      
+        <button type="button">x</button>
+      
+    </div>
+  
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://its-rawat.github.io/bigbits.github.io/">
+  <div class="logo">
+    re-Terminal
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/">About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/" >About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/pl-sql/">PL/SQL Full Notes</a>
+  </h1>
+  <div class="post-meta">
+    
+<span class="post-reading-time">2 min read (418 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/post/">post</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/agile/">Agile</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/hands/">Hands</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/sbooltrue/">true</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/sql/">sql</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/pl/sql/">PL/SQL</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#physical-architecture">Physical Architecture</a>
+      <ul>
+        <li><a href="#simple-architecture-flow">Simple Architecture Flow</a></li>
+      </ul>
+    </li>
+    <li><a href="#plsql-logical-architecture">PL/SQL Logical Architecture</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#what-is-pdb">What is PDB?</a></li>
+    <li><a href="#why-pdb">Why PDB?</a></li>
+    <li><a href="#structure">Structure</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#structure-1">Structure</a>
+      <ul>
+        <li><a href="#syntax-of-plsql-block">Syntax of PL/SQL Block</a></li>
+      </ul>
+    </li>
+    <li><a href="#types-of-blocks">Types of Blocks</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#how-to-print-text-as-output-in-plsql">How to Print Text as Output in PL/SQL</a></li>
+    <li><a href="#nested-blocks">Nested Blocks</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#plsql-variable-types">PL/SQL Variable Types</a>
+      <ul>
+        <li><a href="#scalar-data-types">SCALAR DATA TYPES</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h1 id="what-is-plsql">What is PL/SQL?<a href="#what-is-plsql" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ol>
+<li><code>PL/SQL stands for Procedural Language Extension to SQL</code></li>
+<li>It is a Extension of SQL developed by Oracle.</li>
+<li>It adds SQL capabilities of procedural programming like variables, loops and conditional statements in SQL.</li>
+</ol>
+<h1 id="plsql-architecture">PL/SQL Architecture<a href="#plsql-architecture" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="physical-architecture">Physical Architecture<a href="#physical-architecture" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>![[WhatsApp Image 2025-03-15 at 19.26.24_681f38a3.jpg]]</p>
+<ul>
+<li>PL/SQL engine processes the entire PL/SQL block of code.</li>
+<li>It Separate SQL statements and Procedural statements.</li>
+</ul>
+<h3 id="simple-architecture-flow">Simple Architecture Flow<a href="#simple-architecture-flow" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png"></p>
+<h2 id="plsql-logical-architecture">PL/SQL Logical Architecture<a href="#plsql-logical-architecture" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><em><strong>Corporates with SQL Engine</strong></em>.</li>
+<li><em><strong>Enables Subprograms</strong></em> -&gt; Allows re-usability of code/script like variables and functions.</li>
+<li><em><strong>Dynamic Queries</strong></em>-&gt; We can modify or create new Queries.</li>
+<li><em><strong>Case Insensitivity</strong></em></li>
+<li><em><strong>Optimizer</strong></em>-&gt; It optimizes our code for better performance.</li>
+<li><strong>Enables Object-Oriented Programming</strong></li>
+<li><em><strong>Web Development</strong></em>
+#Extras
+<em><strong>Context Switching</strong></em>: <code>When you write SQL Query in PL/SQL the PL/SQL send the query to SQL Engine and the result will be returned this operation is called Context Switching.</code></li>
+</ul>
+<hr>
+<h1 id="pluggable-database">Pluggable Database<a href="#pluggable-database" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>![[WhatsApp Image 2025-03-15 at 21.14.48_f2a85a5d.jpg]]</p>
+<h2 id="what-is-pdb">What is PDB?<a href="#what-is-pdb" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><strong>Pluggable Database (PDB)</strong> is a portable collection of schemas, tables, and objects that can be plugged into a <strong>Container Database (CDB)</strong> in Oracle.</p>
+<h2 id="why-pdb">Why PDB?<a href="#why-pdb" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>Better resource management</li>
+<li>Easier database consolidation</li>
+<li>Faster provisioning and cloning</li>
+</ul>
+<h2 id="structure">Structure<a href="#structure" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ol>
+<li>A <strong>Container Database (CDB)</strong> holds multiple <strong>Pluggable Databases (PDBs)</strong>.</li>
+<li>A PDB is independent and can be moved or cloned between CDBs.</li>
+<li>Each PDB has its own:
+<ul>
+<li>Data files</li>
+<li>Schemas</li>
+<li>Tables</li>
+<li>Users</li>
+</ul>
+</li>
+<li>A single CDB can manage multiple PDBs, improving scalability and consolidation.</li>
+</ol>
+<hr>
+<h1 id="what-are-blocks">What are Blocks?<a href="#what-are-blocks" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p><code>Block is a logical unit of code that groups related declarations, statements. </code></p>
+<p>![[WhatsApp Image 2025-03-16 at 13.41.51_65816a2f.jpg]]</p>
+<h2 id="structure-1">Structure<a href="#structure-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ol>
+<li><em><strong>DECLARE</strong></em> Block.</li>
+</ol>
+<blockquote>
+<p>Here we declare Variables, const, exceptions.</p>
+</blockquote>
+<ol start="2">
+<li><em><strong>EXECUTION</strong></em> BLOCK.</li>
+</ol>
+<blockquote>
+<p>Contains Executable Statements like SQL, procedural statements.
+Starts with <em><strong>BEGIN</strong></em></p>
+</blockquote>
+<ol start="3">
+<li><em><strong>EXCEPTION HANDLING</strong></em> BLOCK.</li>
+</ol>
+<blockquote>
+<p>Starts with <em><strong>EXCEPTION</strong></em>
+Handles exceptions and errors during execution.</p>
+</blockquote>
+<h3 id="syntax-of-plsql-block">Syntax of PL/SQL Block<a href="#syntax-of-plsql-block" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">DECLARE 
+   -- Declaration statements (optional)
+BEGIN 
+   -- Executable statements (mandatory)
+EXCEPTION 
+   -- Exception handling statements (optional)
+END;
+</code></pre><h2 id="types-of-blocks">Types of Blocks<a href="#types-of-blocks" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ol>
+<li>Anonymous Block</li>
+<li>Procedures</li>
+<li>Functions</li>
+</ol>
+<h1 id="coding-in-plsql">Coding in PL/SQL<a href="#coding-in-plsql" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="how-to-print-text-as-output-in-plsql">How to Print Text as Output in PL/SQL<a href="#how-to-print-text-as-output-in-plsql" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">SET SERVEROUTPUT ON;
+begin
+dbms_output.put_line(&#39;Hello World&#39;);
+end;
+</code></pre><h2 id="nested-blocks">Nested Blocks<a href="#nested-blocks" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>*We can add begin end inside begin end block that way we can do nested blocks.</p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">SET SERVEROUTPUT ON;
+begin
+dbms_output.put_line(&#39;Hello World&#39;);
+    BEGIN
+        dbms_output.put_line(&#39;Its Me Rawat&#39;);    
+    END;
+end;
+</code></pre><h1 id="variables">Variables<a href="#variables" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>`Same Use Cases as in normal Programming language.'</p>
+<h2 id="plsql-variable-types">PL/SQL Variable Types<a href="#plsql-variable-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ol>
+<li><em><strong>SCALAR</strong></em>
+Holds single value of same type.</li>
+<li><em><strong>REFERENCE</strong></em>
+Pointers.</li>
+<li><em><strong>LARGE OBJECTS</strong></em>
+Holds pointers of large data.</li>
+<li><em><strong>COMPOSITE</strong></em>
+Hold more then one data type.</li>
+</ol>
+<h3 id="scalar-data-types">SCALAR DATA TYPES<a href="#scalar-data-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ol>
+<li>CHAR()</li>
+<li>VARCHAR()</li>
+<li>NUMBER[,]</li>
+<li>BINARY_INTEGER = PLSINTEGER</li>
+<li>BINARY_FLOAT</li>
+<li>BINARY_DOUBLE</li>
+<li>BOOLEAN</li>
+<li>DATE</li>
+<li>TIMESTAMP</li>
+<li>TIMESTAMP(P) WITH TIME ZONE</li>
+<li>TIMESTAMP(P) WITH LOCAL TIME ZONE</li>
+<li>INTERVAL(P) YEAR TO MONTH</li>
+<li>INTERVAL(P) DAY TO SECOND(P)</li>
+</ol>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/projects/">
+                <span class="button__icon">←</span>
+                <span class="button__text">my-projects</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/selenium-v4.29/">
+                <span class="button__text">Selenium Notes</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/Its-Rawat" target="_blank">Theme</a> made by <a href="https://github.com/Its-Rawat" target="_blank">Its_Rawat</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bigbits.github.io/bundle.min.js"></script>
+
+
+
+  
+
+  <script type="text/javascript" src="/bigbits.github.io/js/banner.min.js"></script>
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

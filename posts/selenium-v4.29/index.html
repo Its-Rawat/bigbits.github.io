@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Selenium Notes :: </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Important Libraries from selenium import webdriver from selenium.webdriver.chrome.service import Service from selenium.webdriver.support.ui import Select from selenium.webdriver.common.by lmport By from selenium.webdriver.support import expected_conditions as EC from selenium.webdriver.support.ui import WebDriverWait import time from selenium.webdriver.common.action_chains import ActionChains from selenium.webdriver.chrome.options import Options from selenium webdriver.remote.webelement import WebElement webdriver imports the webdriver module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.
+Service Service is used to manage the lifecycle of the chromedriver.exe process (starting, stopping, and communication).
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/selenium-v4.29/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://its-rawat.github.io/bigbits.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Selenium Notes">
+<meta property="og:description" content="Important Libraries from selenium import webdriver from selenium.webdriver.chrome.service import Service from selenium.webdriver.support.ui import Select from selenium.webdriver.common.by lmport By from selenium.webdriver.support import expected_conditions as EC from selenium.webdriver.support.ui import WebDriverWait import time from selenium.webdriver.common.action_chains import ActionChains from selenium.webdriver.chrome.options import Options from selenium webdriver.remote.webelement import WebElement webdriver imports the webdriver module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.
+Service Service is used to manage the lifecycle of the chromedriver.exe process (starting, stopping, and communication).
+" />
+<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/selenium-v4.29/" />
+<meta property="og:site_name" content="" />
+
+  
+    <meta property="og:image" content="https://its-rawat.github.io/bigbits.github.io/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="orange">
+
+  
+    <div id="banner">
+      <span>
+        
+          <a href="https://github.com/Its-Rawat">Also Check My GitHub</a>
+        
+      </span>
+      
+        <button type="button">x</button>
+      
+    </div>
+  
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://its-rawat.github.io/bigbits.github.io/">
+  <div class="logo">
+    re-Terminal
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/">About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/" >About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/selenium-v4.29/">Selenium Notes</a>
+  </h1>
+  <div class="post-meta">
+    
+<span class="post-reading-time">2 min read (320 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/testing/">testing</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/code/">Theory/code</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/selenium/">selenium</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/python/">python</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#google-search-example">Google Search Example</a></li>
+    <li><a href="#switch-windows-example">Switch Windows Example</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h1 id="important-libraries">Important Libraries<a href="#important-libraries" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">from selenium import webdriver 
+from selenium.webdriver.chrome.service import Service 
+from selenium.webdriver.support.ui import Select 
+from selenium.webdriver.common.by lmport By 
+from selenium.webdriver.support import expected_conditions as EC 
+from selenium.webdriver.support.ui import WebDriverWait 
+import time 
+from selenium.webdriver.common.action_chains import ActionChains 
+from selenium.webdriver.chrome.options import Options 
+from selenium webdriver.remote.webelement import WebElement
+</code></pre><ol>
+<li><em><strong>webdriver</strong></em></li>
+</ol>
+<blockquote>
+<p>imports the <code>webdriver</code> module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.</p>
+</blockquote>
+<ol start="2">
+<li><em><strong>Service</strong></em></li>
+</ol>
+<blockquote>
+<p><code>Service</code> is used to manage the lifecycle of the <code>chromedriver.exe</code> process (starting, stopping, and communication).</p>
+</blockquote>
+<ol start="3">
+<li><em><strong>Select</strong></em></li>
+</ol>
+<blockquote>
+<p><code>from selenium.webdriver.support.ui import Select</code> imports the <code>Select</code> class, which is used to handle dropdown menus in Selenium.</p>
+</blockquote>
+<ol start="4">
+<li><em><strong>expected_conditions</strong></em></li>
+</ol>
+<blockquote>
+<p><code>from selenium.webdriver.support import expected_conditions as EC</code> imports <code>expected_conditions</code>, which defines conditions to wait for (like element visibility) before performing actions.</p>
+</blockquote>
+<ol start="5">
+<li><em><strong>WebDriverWait</strong></em></li>
+</ol>
+<blockquote>
+<p><code>from selenium.webdriver.support.ui import WebDriverWait</code> imports <code>WebDriverWait</code>, which is used to wait for a specific condition to be met before proceeding.</p>
+</blockquote>
+<ol start="6">
+<li><em><strong>ActionChains</strong></em></li>
+</ol>
+<blockquote>
+<p><code>from selenium.webdriver.common.action_chains import ActionChains</code> imports <code>ActionChains</code>, which is used to perform complex user interactions like hover, drag-and-drop, and right-click.</p>
+</blockquote>
+<ol start="7">
+<li><em><strong>Options</strong></em></li>
+</ol>
+<blockquote>
+<p><code>from selenium.webdriver.chrome.options import Options</code> imports <code>Options</code>, which is used to set Chrome-specific settings like headless mode, disabling extensions, etc.</p>
+</blockquote>
+<ol start="8">
+<li><em><strong>WebElement</strong></em></li>
+</ol>
+<blockquote>
+<p>Represents an HTML element.</p>
+</blockquote>
+<h1 id="basic-code-examples">Basic Code Examples<a href="#basic-code-examples" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="google-search-example">Google Search Example<a href="#google-search-example" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">from selenium import webdriver
+
+from selenium.webdriver.chrome.service import Service
+
+from selenium.webdriver.common.by import By
+
+from selenium.webdriver.support.ui import WebDriverWait
+
+from selenium.webdriver.support import expected_conditions as EC
+
+import time
+
+  
+
+# Path to chromedriver.exe
+
+service = Service(r&#34;Drivers\chromedriver.exe&#34;)
+
+  
+
+# Initialize WebDriver using Service
+
+driver = webdriver.Chrome(service=service)
+
+  
+
+# Set page load timeout
+
+driver.set_page_load_timeout(10)
+
+  
+
+# Open Google
+
+driver.get(&#34;https://google.com&#34;)
+
+  
+
+# Find search input and send keys
+
+driver.find_element(By.NAME, &#34;q&#34;).send_keys(&#34;Hello Google&#34;)
+
+  
+
+time.sleep(5)
+
+  
+
+# Wait until the search button is clickable, then click
+
+driver.find_element(By.NAME,&#34;btnK&#34;).click()
+
+  
+
+# Wait for results to load
+
+time.sleep(5)
+
+  
+
+# Close browser
+
+driver.close()
+
+driver.quit()
+
+  
+
+print(&#34;Test Completed&#34;)
+</code></pre><hr>
+<h2 id="switch-windows-example">Switch Windows Example<a href="#switch-windows-example" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">from selenium import webdriver
+
+from selenium.webdriver.chrome.service import Service
+
+import time
+
+from selenium.webdriver.common.by import By
+
+  
+
+service = Service(r&#34;Drivers\chromedriver.exe&#34;)
+
+  
+
+driver = webdriver.Chrome(service=service)
+
+  
+
+driver.get(&#34;https://www.examples.com/&#34;)
+
+time.sleep(2)
+
+  
+
+driver.maximize_window()
+
+  
+
+time.sleep(2)
+
+  
+  
+
+time.sleep(2)
+
+  
+
+home_window = driver.current_window_handle
+
+  
+
+print(home_window)
+
+  
+
+time.sleep(2)
+
+  
+
+driver.switch_to.new_window(&#39;tab&#39;)
+
+  
+
+time.sleep(2)
+
+  
+
+driver.switch_to.window(home_window)
+
+  
+
+time.sleep(2)
+
+ele = driver.find_elements(By.CLASS_NAME,&#34;cat-img&#34;)
+
+ele[0].click()
+
+time.sleep(2)
+
+  
+
+time.sleep(2)
+
+  
+
+driver.close()
+</code></pre><hr>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/pl-sql/">
+                <span class="button__icon">←</span>
+                <span class="button__text">PL/SQL Full Notes</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/">
+                <span class="button__text">spring-security</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/Its-Rawat" target="_blank">Theme</a> made by <a href="https://github.com/Its-Rawat" target="_blank">Its_Rawat</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bigbits.github.io/bundle.min.js"></script>
+
+
+
+  
+
+  <script type="text/javascript" src="/bigbits.github.io/js/banner.min.js"></script>
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

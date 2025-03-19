@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theory/Code on </title>
+    <link>https://its-rawat.github.io/bigbits.github.io/tags/theory/code/</link>
+    <description>Recent content in Theory/Code on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/theory/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Selenium Notes</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/selenium-v4.29/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/selenium-v4.29/</guid>
+      <description>&lt;h1 id=&#34;important-libraries&#34;&gt;Important Libraries&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver 
+from selenium.webdriver.chrome.service import Service 
+from selenium.webdriver.support.ui import Select 
+from selenium.webdriver.common.by lmport By 
+from selenium.webdriver.support import expected_conditions as EC 
+from selenium.webdriver.support.ui import WebDriverWait 
+import time 
+from selenium.webdriver.common.action_chains import ActionChains 
+from selenium.webdriver.chrome.options import Options 
+from selenium webdriver.remote.webelement import WebElement
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;webdriver&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Service&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Service&lt;/code&gt; is used to manage the lifecycle of the &lt;code&gt;chromedriver.exe&lt;/code&gt; process (starting, stopping, and communication).&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;important-libraries&#34;&gt;Important Libraries&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver 
+from selenium.webdriver.chrome.service import Service 
+from selenium.webdriver.support.ui import Select 
+from selenium.webdriver.common.by lmport By 
+from selenium.webdriver.support import expected_conditions as EC 
+from selenium.webdriver.support.ui import WebDriverWait 
+import time 
+from selenium.webdriver.common.action_chains import ActionChains 
+from selenium.webdriver.chrome.options import Options 
+from selenium webdriver.remote.webelement import WebElement
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;webdriver&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Service&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Service&lt;/code&gt; is used to manage the lifecycle of the &lt;code&gt;chromedriver.exe&lt;/code&gt; process (starting, stopping, and communication).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Select&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import Select&lt;/code&gt; imports the &lt;code&gt;Select&lt;/code&gt; class, which is used to handle dropdown menus in Selenium.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;expected_conditions&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support import expected_conditions as EC&lt;/code&gt; imports &lt;code&gt;expected_conditions&lt;/code&gt;, which defines conditions to wait for (like element visibility) before performing actions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;WebDriverWait&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import WebDriverWait&lt;/code&gt; imports &lt;code&gt;WebDriverWait&lt;/code&gt;, which is used to wait for a specific condition to be met before proceeding.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;ActionChains&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.common.action_chains import ActionChains&lt;/code&gt; imports &lt;code&gt;ActionChains&lt;/code&gt;, which is used to perform complex user interactions like hover, drag-and-drop, and right-click.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Options&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.chrome.options import Options&lt;/code&gt; imports &lt;code&gt;Options&lt;/code&gt;, which is used to set Chrome-specific settings like headless mode, disabling extensions, etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;WebElement&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Represents an HTML element.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;basic-code-examples&#34;&gt;Basic Code Examples&lt;/h1&gt;
+&lt;h2 id=&#34;google-search-example&#34;&gt;Google Search Example&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver
+
+from selenium.webdriver.chrome.service import Service
+
+from selenium.webdriver.common.by import By
+
+from selenium.webdriver.support.ui import WebDriverWait
+
+from selenium.webdriver.support import expected_conditions as EC
+
+import time
+
+  
+
+# Path to chromedriver.exe
+
+service = Service(r&amp;#34;Drivers\chromedriver.exe&amp;#34;)
+
+  
+
+# Initialize WebDriver using Service
+
+driver = webdriver.Chrome(service=service)
+
+  
+
+# Set page load timeout
+
+driver.set_page_load_timeout(10)
+
+  
+
+# Open Google
+
+driver.get(&amp;#34;https://google.com&amp;#34;)
+
+  
+
+# Find search input and send keys
+
+driver.find_element(By.NAME, &amp;#34;q&amp;#34;).send_keys(&amp;#34;Hello Google&amp;#34;)
+
+  
+
+time.sleep(5)
+
+  
+
+# Wait until the search button is clickable, then click
+
+driver.find_element(By.NAME,&amp;#34;btnK&amp;#34;).click()
+
+  
+
+# Wait for results to load
+
+time.sleep(5)
+
+  
+
+# Close browser
+
+driver.close()
+
+driver.quit()
+
+  
+
+print(&amp;#34;Test Completed&amp;#34;)
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;switch-windows-example&#34;&gt;Switch Windows Example&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver
+
+from selenium.webdriver.chrome.service import Service
+
+import time
+
+from selenium.webdriver.common.by import By
+
+  
+
+service = Service(r&amp;#34;Drivers\chromedriver.exe&amp;#34;)
+
+  
+
+driver = webdriver.Chrome(service=service)
+
+  
+
+driver.get(&amp;#34;https://www.examples.com/&amp;#34;)
+
+time.sleep(2)
+
+  
+
+driver.maximize_window()
+
+  
+
+time.sleep(2)
+
+  
+  
+
+time.sleep(2)
+
+  
+
+home_window = driver.current_window_handle
+
+  
+
+print(home_window)
+
+  
+
+time.sleep(2)
+
+  
+
+driver.switch_to.new_window(&amp;#39;tab&amp;#39;)
+
+  
+
+time.sleep(2)
+
+  
+
+driver.switch_to.window(home_window)
+
+  
+
+time.sleep(2)
+
+ele = driver.find_elements(By.CLASS_NAME,&amp;#34;cat-img&amp;#34;)
+
+ele[0].click()
+
+time.sleep(2)
+
+  
+
+time.sleep(2)
+
+  
+
+driver.close()
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

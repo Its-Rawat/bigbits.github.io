@@ -332,5 +332,179 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 </content>
     </item>
     
+    <item>
+      <title>PL/SQL Full Notes</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/pl-sql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/pl-sql/</guid>
+      <description>&lt;h1 id=&#34;what-is-plsql&#34;&gt;What is PL/SQL?&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;PL/SQL stands for Procedural Language Extension to SQL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;It is a Extension of SQL developed by Oracle.&lt;/li&gt;
+&lt;li&gt;It adds SQL capabilities of procedural programming like variables, loops and conditional statements in SQL.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
+&lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
+&lt;p&gt;![[WhatsApp Image 2025-03-15 at 19.26.24_681f38a3.jpg]]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
+&lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Enables Subprograms&lt;/strong&gt;&lt;/em&gt; -&amp;gt; Allows re-usability of code/script like variables and functions.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Dynamic Queries&lt;/strong&gt;&lt;/em&gt;-&amp;gt; We can modify or create new Queries.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Case Insensitivity&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Optimizer&lt;/strong&gt;&lt;/em&gt;-&amp;gt; It optimizes our code for better performance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enables Object-Oriented Programming&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Web Development&lt;/strong&gt;&lt;/em&gt;
+#Extras
+&lt;em&gt;&lt;strong&gt;Context Switching&lt;/strong&gt;&lt;/em&gt;: &lt;code&gt;When you write SQL Query in PL/SQL the PL/SQL send the query to SQL Engine and the result will be returned this operation is called Context Switching.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
+&lt;p&gt;![[WhatsApp Image 2025-03-15 at 21.14.48_f2a85a5d.jpg]]&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;what-is-plsql&#34;&gt;What is PL/SQL?&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;PL/SQL stands for Procedural Language Extension to SQL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;It is a Extension of SQL developed by Oracle.&lt;/li&gt;
+&lt;li&gt;It adds SQL capabilities of procedural programming like variables, loops and conditional statements in SQL.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
+&lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
+&lt;p&gt;![[WhatsApp Image 2025-03-15 at 19.26.24_681f38a3.jpg]]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
+&lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Enables Subprograms&lt;/strong&gt;&lt;/em&gt; -&amp;gt; Allows re-usability of code/script like variables and functions.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Dynamic Queries&lt;/strong&gt;&lt;/em&gt;-&amp;gt; We can modify or create new Queries.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Case Insensitivity&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Optimizer&lt;/strong&gt;&lt;/em&gt;-&amp;gt; It optimizes our code for better performance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enables Object-Oriented Programming&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Web Development&lt;/strong&gt;&lt;/em&gt;
+#Extras
+&lt;em&gt;&lt;strong&gt;Context Switching&lt;/strong&gt;&lt;/em&gt;: &lt;code&gt;When you write SQL Query in PL/SQL the PL/SQL send the query to SQL Engine and the result will be returned this operation is called Context Switching.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
+&lt;p&gt;![[WhatsApp Image 2025-03-15 at 21.14.48_f2a85a5d.jpg]]&lt;/p&gt;
+&lt;h2 id=&#34;what-is-pdb&#34;&gt;What is PDB?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Pluggable Database (PDB)&lt;/strong&gt; is a portable collection of schemas, tables, and objects that can be plugged into a &lt;strong&gt;Container Database (CDB)&lt;/strong&gt; in Oracle.&lt;/p&gt;
+&lt;h2 id=&#34;why-pdb&#34;&gt;Why PDB?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Better resource management&lt;/li&gt;
+&lt;li&gt;Easier database consolidation&lt;/li&gt;
+&lt;li&gt;Faster provisioning and cloning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;structure&#34;&gt;Structure&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;A &lt;strong&gt;Container Database (CDB)&lt;/strong&gt; holds multiple &lt;strong&gt;Pluggable Databases (PDBs)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;A PDB is independent and can be moved or cloned between CDBs.&lt;/li&gt;
+&lt;li&gt;Each PDB has its own:
+&lt;ul&gt;
+&lt;li&gt;Data files&lt;/li&gt;
+&lt;li&gt;Schemas&lt;/li&gt;
+&lt;li&gt;Tables&lt;/li&gt;
+&lt;li&gt;Users&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A single CDB can manage multiple PDBs, improving scalability and consolidation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;what-are-blocks&#34;&gt;What are Blocks?&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Block is a logical unit of code that groups related declarations, statements. &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;![[WhatsApp Image 2025-03-16 at 13.41.51_65816a2f.jpg]]&lt;/p&gt;
+&lt;h2 id=&#34;structure-1&#34;&gt;Structure&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;DECLARE&lt;/strong&gt;&lt;/em&gt; Block.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Here we declare Variables, const, exceptions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;EXECUTION&lt;/strong&gt;&lt;/em&gt; BLOCK.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Contains Executable Statements like SQL, procedural statements.
+Starts with &lt;em&gt;&lt;strong&gt;BEGIN&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;EXCEPTION HANDLING&lt;/strong&gt;&lt;/em&gt; BLOCK.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Starts with &lt;em&gt;&lt;strong&gt;EXCEPTION&lt;/strong&gt;&lt;/em&gt;
+Handles exceptions and errors during execution.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;syntax-of-plsql-block&#34;&gt;Syntax of PL/SQL Block&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;DECLARE 
+   -- Declaration statements (optional)
+BEGIN 
+   -- Executable statements (mandatory)
+EXCEPTION 
+   -- Exception handling statements (optional)
+END;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;types-of-blocks&#34;&gt;Types of Blocks&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Anonymous Block&lt;/li&gt;
+&lt;li&gt;Procedures&lt;/li&gt;
+&lt;li&gt;Functions&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;coding-in-plsql&#34;&gt;Coding in PL/SQL&lt;/h1&gt;
+&lt;h2 id=&#34;how-to-print-text-as-output-in-plsql&#34;&gt;How to Print Text as Output in PL/SQL&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;SET SERVEROUTPUT ON;
+begin
+dbms_output.put_line(&amp;#39;Hello World&amp;#39;);
+end;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;nested-blocks&#34;&gt;Nested Blocks&lt;/h2&gt;
+&lt;p&gt;*We can add begin end inside begin end block that way we can do nested blocks.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;SET SERVEROUTPUT ON;
+begin
+dbms_output.put_line(&amp;#39;Hello World&amp;#39;);
+    BEGIN
+        dbms_output.put_line(&amp;#39;Its Me Rawat&amp;#39;);    
+    END;
+end;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;variables&#34;&gt;Variables&lt;/h1&gt;
+&lt;p&gt;`Same Use Cases as in normal Programming language.&#39;&lt;/p&gt;
+&lt;h2 id=&#34;plsql-variable-types&#34;&gt;PL/SQL Variable Types&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;SCALAR&lt;/strong&gt;&lt;/em&gt;
+Holds single value of same type.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;REFERENCE&lt;/strong&gt;&lt;/em&gt;
+Pointers.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;LARGE OBJECTS&lt;/strong&gt;&lt;/em&gt;
+Holds pointers of large data.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;COMPOSITE&lt;/strong&gt;&lt;/em&gt;
+Hold more then one data type.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;scalar-data-types&#34;&gt;SCALAR DATA TYPES&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;CHAR()&lt;/li&gt;
+&lt;li&gt;VARCHAR()&lt;/li&gt;
+&lt;li&gt;NUMBER[,]&lt;/li&gt;
+&lt;li&gt;BINARY_INTEGER = PLSINTEGER&lt;/li&gt;
+&lt;li&gt;BINARY_FLOAT&lt;/li&gt;
+&lt;li&gt;BINARY_DOUBLE&lt;/li&gt;
+&lt;li&gt;BOOLEAN&lt;/li&gt;
+&lt;li&gt;DATE&lt;/li&gt;
+&lt;li&gt;TIMESTAMP&lt;/li&gt;
+&lt;li&gt;TIMESTAMP(P) WITH TIME ZONE&lt;/li&gt;
+&lt;li&gt;TIMESTAMP(P) WITH LOCAL TIME ZONE&lt;/li&gt;
+&lt;li&gt;INTERVAL(P) YEAR TO MONTH&lt;/li&gt;
+&lt;li&gt;INTERVAL(P) DAY TO SECOND(P)&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    </item>
+    
   </channel>
 </rss>
