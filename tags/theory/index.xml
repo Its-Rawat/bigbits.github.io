@@ -374,154 +374,217 @@ from selenium webdriver.remote.webelement import WebElement
 &lt;h1 id=&#34;basic-code-examples&#34;&gt;Basic Code Examples&lt;/h1&gt;
 &lt;h2 id=&#34;google-search-example&#34;&gt;Google Search Example&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver
-
 from selenium.webdriver.chrome.service import Service
-
 from selenium.webdriver.common.by import By
-
 from selenium.webdriver.support.ui import WebDriverWait
-
 from selenium.webdriver.support import expected_conditions as EC
-
 import time
 
-  
-
 # Path to chromedriver.exe
-
 service = Service(r&amp;#34;Drivers\chromedriver.exe&amp;#34;)
-
-  
-
 # Initialize WebDriver using Service
-
 driver = webdriver.Chrome(service=service)
-
-  
-
 # Set page load timeout
-
 driver.set_page_load_timeout(10)
-
-  
-
 # Open Google
-
 driver.get(&amp;#34;https://google.com&amp;#34;)
-
-  
-
 # Find search input and send keys
-
 driver.find_element(By.NAME, &amp;#34;q&amp;#34;).send_keys(&amp;#34;Hello Google&amp;#34;)
-
-  
-
 time.sleep(5)
-
-  
-
 # Wait until the search button is clickable, then click
-
 driver.find_element(By.NAME,&amp;#34;btnK&amp;#34;).click()
-
-  
-
 # Wait for results to load
-
 time.sleep(5)
-
-  
-
 # Close browser
-
 driver.close()
-
 driver.quit()
-
-  
-
 print(&amp;#34;Test Completed&amp;#34;)
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h2 id=&#34;switch-windows-example&#34;&gt;Switch Windows Example&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+import time
+
+from selenium.webdriver.common.by import By
+service = Service(r&amp;#34;Drivers\chromedriver.exe&amp;#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(&amp;#34;https://www.examples.com/&amp;#34;)
+time.sleep(2)
+driver.maximize_window()
+time.sleep(2)
+time.sleep(2)
+home_window = driver.current_window_handle
+print(home_window)
+time.sleep(2)
+driver.switch_to.new_window(&amp;#39;tab&amp;#39;)
+time.sleep(2)
+driver.switch_to.window(home_window)
+time.sleep(2)
+ele = driver.find_elements(By.CLASS_NAME,&amp;#34;cat-img&amp;#34;)
+ele[0].click()
+time.sleep(2)
+time.sleep(2)
+driver.close()
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id=&#34;things-to-know&#34;&gt;Things to know&amp;hellip;&lt;/h3&gt;
+&lt;h4 id=&#34;headless-chrome&#34;&gt;Headless Chrome&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;Headless mode is a configuration option in Selenium that enables running browser instances without displaying a visible UI.&lt;/em&gt;&lt;/p&gt;
+&lt;h5 id=&#34;why&#34;&gt;Why?&lt;/h5&gt;
+&lt;p&gt;This mode is particularly useful for automating tasks on cloud infrastructure, where a graphical interface is not available, or for running tests on a continuous integration/continuous deployment (CI/CD) pipeline.&lt;/p&gt;
+&lt;h5 id=&#34;example&#34;&gt;Example&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
+
+chromeOptions = Options()
+chromeOptions.add_argument(&amp;#34;--headless&amp;#34;);
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;);
+driver = webdriver.Chrome(service=service,options=chromeOptions);
+driver.get(&amp;#34;https://google.com&amp;#34;);
+print(driver.title)
+searchBox = driver.find_element(By.NAME,&amp;#39;q&amp;#39;)
+searchBox.send_keys(&amp;#34;What is Selenuium?&amp;#34;);
+time.sleep(3)
+driver.find_element(By.NAME,&amp;#34;btnK&amp;#34;).click();
+time.sleep(3)
+print(driver.title)
+driver.close();
+driver.quit();
+print(&amp;#34;Completed&amp;#34;);
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📎 &lt;strong&gt;List of Chrome Driver Arguments:&lt;/strong&gt; &lt;a href=&#34;https://gist.github.com/ntamvl/4f93bbb7c9b4829c601104a2d2f91fe5&#34;&gt;View the Resource&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;topic-wise-examples&#34;&gt;Topic-Wise-Examples&lt;/h1&gt;
+&lt;h2 id=&#34;switch-to-new-browser-instance-of-window--tab&#34;&gt;Switch to new browser instance of &amp;lsquo;window&amp;rsquo; || &amp;rsquo;tab&amp;rsquo;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;driver.switch_to.new_window()&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service  import Service
+from selenium.webdriver.common.by import By
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(&amp;#34;https://search.brave.com/&amp;#34;)
+time.sleep(2)
+googleSearchBox = driver.find_element(By.ID,&amp;#34;searchbox&amp;#34;);
+googleSearchBox.send_keys(&amp;#34;What is NVIDIA Omniverse?&amp;#34;);
+time.sleep(2)
+searchBtn = driver.find_element(By.ID,&amp;#34;submit-button&amp;#34;);
+searchBtn.click()
+time.sleep(3)
+print(driver.title)
+driver.switch_to.new_window(&amp;#34;tab&amp;#34;);
+driver.get(&amp;#34;https://www.blender.org/&amp;#34;)
+print(driver.title)
+time.sleep(5)
+driver.close();
+driver.quit();
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;to-select-a-radio-button--print-a-text-in-console&#34;&gt;To Select a Radio Button &amp;amp;&amp;amp; Print a Text in Console&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+
+from selenium import webdriver
 
 from selenium.webdriver.chrome.service import Service
-
-import time
 
 from selenium.webdriver.common.by import By
 
   
 
-service = Service(r&amp;#34;Drivers\chromedriver.exe&amp;#34;)
-
-  
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
 
 driver = webdriver.Chrome(service=service)
 
-  
-
-driver.get(&amp;#34;https://www.examples.com/&amp;#34;)
+driver.get(&amp;#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio&amp;#34;)
 
 time.sleep(2)
 
-  
+print(driver.title)
 
-driver.maximize_window()
+driver.switch_to.frame(&amp;#34;iframeResult&amp;#34;)
 
-  
+radioBtn = driver.find_element(By.ID,&amp;#34;html&amp;#34;);
 
-time.sleep(2)
+radioBtn.click()
 
-  
-  
+textArea = driver.find_elements(By.TAG_NAME,&amp;#34;p&amp;#34;)[0ii].text
 
-time.sleep(2)
-
-  
-
-home_window = driver.current_window_handle
-
-  
-
-print(home_window)
-
-  
+print(textArea)
 
 time.sleep(2)
 
-  
-
-driver.switch_to.new_window(&amp;#39;tab&amp;#39;)
-
-  
-
-time.sleep(2)
-
-  
-
-driver.switch_to.window(home_window)
-
-  
-
-time.sleep(2)
-
-ele = driver.find_elements(By.CLASS_NAME,&amp;#34;cat-img&amp;#34;)
-
-ele[0].click()
-
-time.sleep(2)
-
-  
-
-time.sleep(2)
-
-  
-
-driver.close()
+driver.quit()
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-</content>
+&lt;h2 id=&#34;select-dropdown-value-and-print-text&#34;&gt;Select Dropdown Value and Print Text&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+
+from selenium import webdriver
+
+from selenium.webdriver.chrome.service import Service
+
+from selenium.webdriver.common.by import By
+
+from selenium.webdriver.support.ui import Select
+
+  
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+
+driver = webdriver.Chrome(service = service)
+
+driver.get(&amp;#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select&amp;#34;)
+
+time.sleep(2)
+
+driver.switch_to.frame(&amp;#34;iframeResult&amp;#34;)
+
+time.sleep(1)
+
+dropdown = driver.find_element(By.ID,&amp;#34;cars&amp;#34;);
+
+time.sleep(2)
+
+dropdowned = Select(dropdown);
+
+time.sleep(2)
+
+dropdowned.select_by_value(&amp;#34;audi&amp;#34;)
+
+selected_text = dropdowned.first_selected_option.text
+
+print(selected_text)
+
+time.sleep(2)
+
+driver.quit()
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;handle-alert-window&#34;&gt;Handle Alert Window&lt;/h2&gt;
+&lt;p&gt;*The Following code will click on alert btn then send keys to alert.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(&amp;#34;https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt&amp;#34;)
+time.sleep(2)
+driver.switch_to.frame(&amp;#34;iframeResult&amp;#34;)
+time.sleep(2)
+driver.find_element(By.XPATH,&amp;#34;/html/body/button&amp;#34;).click()
+time.sleep(1)
+alert1 = driver.switch_to.alert
+time.sleep(1)
+alert1.send_keys(&amp;#34;Someone give me Chole Bhature and Kurkure Momos😭😭😭😭😭plzzz&amp;#34;);
+time.sleep(5)
+alert1.accept()
+time.sleep(5)
+driver.close()
+driver.quit()
+&lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     
   </channel>

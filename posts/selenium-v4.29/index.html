@@ -158,7 +158,7 @@ Service Service is used to manage the lifecycle of the chromedriver.exe process 
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">2 min read (320 words)</span></div>
+<span class="post-reading-time">3 min read (634 words)</span></div>
 
   
     <span class="post-tags">
@@ -187,7 +187,18 @@ Service Service is used to manage the lifecycle of the chromedriver.exe process 
       <nav id="TableOfContents">
   <ul>
     <li><a href="#google-search-example">Google Search Example</a></li>
-    <li><a href="#switch-windows-example">Switch Windows Example</a></li>
+    <li><a href="#switch-windows-example">Switch Windows Example</a>
+      <ul>
+        <li><a href="#things-to-know">Things to know&hellip;</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#switch-to-new-browser-instance-of-window--tab">Switch to new browser instance of &lsquo;window&rsquo; || &rsquo;tab&rsquo;</a></li>
+    <li><a href="#to-select-a-radio-button--print-a-text-in-console">To Select a Radio Button &amp;&amp; Print a Text in Console</a></li>
+    <li><a href="#select-dropdown-value-and-print-text">Select Dropdown Value and Print Text</a></li>
+    <li><a href="#handle-alert-window">Handle Alert Window</a></li>
   </ul>
 </nav>
     </div>
@@ -256,154 +267,217 @@ from selenium webdriver.remote.webelement import WebElement
 <h1 id="basic-code-examples">Basic Code Examples<a href="#basic-code-examples" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <h2 id="google-search-example">Google Search Example<a href="#google-search-example" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <pre tabindex="0"><code class="language-Copy" data-lang="Copy">from selenium import webdriver
-
 from selenium.webdriver.chrome.service import Service
-
 from selenium.webdriver.common.by import By
-
 from selenium.webdriver.support.ui import WebDriverWait
-
 from selenium.webdriver.support import expected_conditions as EC
-
 import time
 
-  
-
 # Path to chromedriver.exe
-
 service = Service(r&#34;Drivers\chromedriver.exe&#34;)
-
-  
-
 # Initialize WebDriver using Service
-
 driver = webdriver.Chrome(service=service)
-
-  
-
 # Set page load timeout
-
 driver.set_page_load_timeout(10)
-
-  
-
 # Open Google
-
 driver.get(&#34;https://google.com&#34;)
-
-  
-
 # Find search input and send keys
-
 driver.find_element(By.NAME, &#34;q&#34;).send_keys(&#34;Hello Google&#34;)
-
-  
-
 time.sleep(5)
-
-  
-
 # Wait until the search button is clickable, then click
-
 driver.find_element(By.NAME,&#34;btnK&#34;).click()
-
-  
-
 # Wait for results to load
-
 time.sleep(5)
-
-  
-
 # Close browser
-
 driver.close()
-
 driver.quit()
-
-  
-
 print(&#34;Test Completed&#34;)
 </code></pre><hr>
 <h2 id="switch-windows-example">Switch Windows Example<a href="#switch-windows-example" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <pre tabindex="0"><code class="language-Copy" data-lang="Copy">from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+import time
+
+from selenium.webdriver.common.by import By
+service = Service(r&#34;Drivers\chromedriver.exe&#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(&#34;https://www.examples.com/&#34;)
+time.sleep(2)
+driver.maximize_window()
+time.sleep(2)
+time.sleep(2)
+home_window = driver.current_window_handle
+print(home_window)
+time.sleep(2)
+driver.switch_to.new_window(&#39;tab&#39;)
+time.sleep(2)
+driver.switch_to.window(home_window)
+time.sleep(2)
+ele = driver.find_elements(By.CLASS_NAME,&#34;cat-img&#34;)
+ele[0].click()
+time.sleep(2)
+time.sleep(2)
+driver.close()
+</code></pre><hr>
+<h3 id="things-to-know">Things to know&hellip;<a href="#things-to-know" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="headless-chrome">Headless Chrome<a href="#headless-chrome" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p><em>Headless mode is a configuration option in Selenium that enables running browser instances without displaying a visible UI.</em></p>
+<h5 id="why">Why?<a href="#why" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<p>This mode is particularly useful for automating tasks on cloud infrastructure, where a graphical interface is not available, or for running tests on a continuous integration/continuous deployment (CI/CD) pipeline.</p>
+<h5 id="example">Example<a href="#example" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
+
+chromeOptions = Options()
+chromeOptions.add_argument(&#34;--headless&#34;);
+service = Service(r&#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&#34;);
+driver = webdriver.Chrome(service=service,options=chromeOptions);
+driver.get(&#34;https://google.com&#34;);
+print(driver.title)
+searchBox = driver.find_element(By.NAME,&#39;q&#39;)
+searchBox.send_keys(&#34;What is Selenuium?&#34;);
+time.sleep(3)
+driver.find_element(By.NAME,&#34;btnK&#34;).click();
+time.sleep(3)
+print(driver.title)
+driver.close();
+driver.quit();
+print(&#34;Completed&#34;);
+</code></pre><hr>
+<blockquote>
+<p>📎 <strong>List of Chrome Driver Arguments:</strong> <a href="https://gist.github.com/ntamvl/4f93bbb7c9b4829c601104a2d2f91fe5">View the Resource</a></p>
+</blockquote>
+<hr>
+<h1 id="topic-wise-examples">Topic-Wise-Examples<a href="#topic-wise-examples" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="switch-to-new-browser-instance-of-window--tab">Switch to new browser instance of &lsquo;window&rsquo; || &rsquo;tab&rsquo;<a href="#switch-to-new-browser-instance-of-window--tab" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><code>driver.switch_to.new_window()</code></p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service  import Service
+from selenium.webdriver.common.by import By
+
+service = Service(r&#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(&#34;https://search.brave.com/&#34;)
+time.sleep(2)
+googleSearchBox = driver.find_element(By.ID,&#34;searchbox&#34;);
+googleSearchBox.send_keys(&#34;What is NVIDIA Omniverse?&#34;);
+time.sleep(2)
+searchBtn = driver.find_element(By.ID,&#34;submit-button&#34;);
+searchBtn.click()
+time.sleep(3)
+print(driver.title)
+driver.switch_to.new_window(&#34;tab&#34;);
+driver.get(&#34;https://www.blender.org/&#34;)
+print(driver.title)
+time.sleep(5)
+driver.close();
+driver.quit();
+</code></pre><hr>
+<h2 id="to-select-a-radio-button--print-a-text-in-console">To Select a Radio Button &amp;&amp; Print a Text in Console<a href="#to-select-a-radio-button--print-a-text-in-console" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import time
+
+from selenium import webdriver
 
 from selenium.webdriver.chrome.service import Service
-
-import time
 
 from selenium.webdriver.common.by import By
 
   
 
-service = Service(r&#34;Drivers\chromedriver.exe&#34;)
-
-  
+service = Service(r&#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&#34;)
 
 driver = webdriver.Chrome(service=service)
 
-  
-
-driver.get(&#34;https://www.examples.com/&#34;)
+driver.get(&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio&#34;)
 
 time.sleep(2)
 
-  
+print(driver.title)
 
-driver.maximize_window()
+driver.switch_to.frame(&#34;iframeResult&#34;)
 
-  
+radioBtn = driver.find_element(By.ID,&#34;html&#34;);
 
-time.sleep(2)
+radioBtn.click()
 
-  
-  
+textArea = driver.find_elements(By.TAG_NAME,&#34;p&#34;)[0ii].text
 
-time.sleep(2)
-
-  
-
-home_window = driver.current_window_handle
-
-  
-
-print(home_window)
-
-  
+print(textArea)
 
 time.sleep(2)
 
-  
-
-driver.switch_to.new_window(&#39;tab&#39;)
-
-  
-
-time.sleep(2)
-
-  
-
-driver.switch_to.window(home_window)
-
-  
-
-time.sleep(2)
-
-ele = driver.find_elements(By.CLASS_NAME,&#34;cat-img&#34;)
-
-ele[0].click()
-
-time.sleep(2)
-
-  
-
-time.sleep(2)
-
-  
-
-driver.close()
+driver.quit()
 </code></pre><hr>
+<h2 id="select-dropdown-value-and-print-text">Select Dropdown Value and Print Text<a href="#select-dropdown-value-and-print-text" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import time
 
+from selenium import webdriver
+
+from selenium.webdriver.chrome.service import Service
+
+from selenium.webdriver.common.by import By
+
+from selenium.webdriver.support.ui import Select
+
+  
+
+service = Service(r&#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&#34;)
+
+driver = webdriver.Chrome(service = service)
+
+driver.get(&#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select&#34;)
+
+time.sleep(2)
+
+driver.switch_to.frame(&#34;iframeResult&#34;)
+
+time.sleep(1)
+
+dropdown = driver.find_element(By.ID,&#34;cars&#34;);
+
+time.sleep(2)
+
+dropdowned = Select(dropdown);
+
+time.sleep(2)
+
+dropdowned.select_by_value(&#34;audi&#34;)
+
+selected_text = dropdowned.first_selected_option.text
+
+print(selected_text)
+
+time.sleep(2)
+
+driver.quit()
+</code></pre><h2 id="handle-alert-window">Handle Alert Window<a href="#handle-alert-window" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>*The Following code will click on alert btn then send keys to alert.</p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+
+service = Service(r&#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(&#34;https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt&#34;)
+time.sleep(2)
+driver.switch_to.frame(&#34;iframeResult&#34;)
+time.sleep(2)
+driver.find_element(By.XPATH,&#34;/html/body/button&#34;).click()
+time.sleep(1)
+alert1 = driver.switch_to.alert
+time.sleep(1)
+alert1.send_keys(&#34;Someone give me Chole Bhature and Kurkure Momos😭😭😭😭😭plzzz&#34;);
+time.sleep(5)
+alert1.accept()
+time.sleep(5)
+driver.close()
+driver.quit()
+</code></pre>
       </div></div>
 
   
