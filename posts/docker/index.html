@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   
-    <title> :: </title>
+    <title>Docker Full Notes :: </title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="What is Docker? Docker is an open platform for developing, shipping and running applications. Docker is a platform which packages an application and all its dependencies together in the form of containers. What problem does Docker solve? The main problem it solves is dependency management. ![[WhatsApp Image 2025-03-29 at 09.56.09_266cb626.jpg]]
-Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program which runs on our computer and manages docker containers. Docker file: It is a text document which contains all the commands that a user can call on the command line to assemble an image. Images: Template to create docker container. Container: Running instance of docker image.Containers hold entire package to run application. Basic Commands for Docker Check the version docker -v pull image docker pull &lt;image-name&gt; check all the images docker images search images docker search &lt;image-name&gt; container creation docker run &lt;image-name&gt; list all the running containers docker ps list all the running &#43; stopped containers docker ps -a run container in background(detached mode) &#43; change the name of container. docker run --name &lt;custom-name&gt; -d &lt;image-name/image-id&gt; run container in -it {interactive-mode}, your container will run continuously docker run --name &lt;custom-name&gt; -it -d &lt;image-id/name&gt; to execute the command inside your container docker exec -it &lt;container-id&gt; command{python3/bash/java/cpp} get all the information about the container docker inspect &lt;container-id&gt; stop the running container docker stop &lt;containerName&gt; remove image docker rm &lt;image-name&gt; My-SQL Image Commands get the image docker install mysql run the mysql container docker run --name &lt;custome-mysql-name&gt; -e MYSQL_ROOT_PASSWORD=&lt;give-a-pass&gt; -d mysql use commands inside mysql container docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt; " />
+<meta name="description" content="What is Docker? Docker is an open platform for developing, shipping and running applications. Docker is a platform which packages an application and all its dependencies together in the form of containers. What problem does Docker solve? The main problem it solves is dependency management. Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program which runs on our computer and manages docker containers. Docker file: It is a text document which contains all the commands that a user can call on the command line to assemble an image. Images: Template to create docker container. Container: Running instance of docker image.Containers hold entire package to run application. Basic Commands for Docker Check the version docker -v pull image docker pull &lt;image-name&gt; check all the images docker images search images docker search &lt;image-name&gt; container creation docker run &lt;image-name&gt; list all the running containers docker ps list all the running &#43; stopped containers docker ps -a run container in background(detached mode) &#43; change the name of container. docker run --name &lt;custom-name&gt; -d &lt;image-name/image-id&gt; run container in -it {interactive-mode}, your container will run continuously docker run --name &lt;custom-name&gt; -it -d &lt;image-id/name&gt; to execute the command inside your container docker exec -it &lt;container-id&gt; command{python3/bash/java/cpp} get all the information about the container docker inspect &lt;container-id&gt; stop the running container docker stop &lt;containerName&gt; remove image docker rm &lt;image-name&gt; My-SQL Image Commands get the image docker install mysql run the mysql container docker run --name &lt;custome-mysql-name&gt; -e MYSQL_ROOT_PASSWORD=&lt;give-a-pass&gt; -d mysql use commands inside mysql container docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt; " />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
@@ -43,9 +42,8 @@ Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="">
-<meta property="og:description" content="What is Docker? Docker is an open platform for developing, shipping and running applications. Docker is a platform which packages an application and all its dependencies together in the form of containers. What problem does Docker solve? The main problem it solves is dependency management. ![[WhatsApp Image 2025-03-29 at 09.56.09_266cb626.jpg]]
-Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program which runs on our computer and manages docker containers. Docker file: It is a text document which contains all the commands that a user can call on the command line to assemble an image. Images: Template to create docker container. Container: Running instance of docker image.Containers hold entire package to run application. Basic Commands for Docker Check the version docker -v pull image docker pull &lt;image-name&gt; check all the images docker images search images docker search &lt;image-name&gt; container creation docker run &lt;image-name&gt; list all the running containers docker ps list all the running &#43; stopped containers docker ps -a run container in background(detached mode) &#43; change the name of container. docker run --name &lt;custom-name&gt; -d &lt;image-name/image-id&gt; run container in -it {interactive-mode}, your container will run continuously docker run --name &lt;custom-name&gt; -it -d &lt;image-id/name&gt; to execute the command inside your container docker exec -it &lt;container-id&gt; command{python3/bash/java/cpp} get all the information about the container docker inspect &lt;container-id&gt; stop the running container docker stop &lt;containerName&gt; remove image docker rm &lt;image-name&gt; My-SQL Image Commands get the image docker install mysql run the mysql container docker run --name &lt;custome-mysql-name&gt; -e MYSQL_ROOT_PASSWORD=&lt;give-a-pass&gt; -d mysql use commands inside mysql container docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt; " />
+<meta property="og:title" content="Docker Full Notes">
+<meta property="og:description" content="What is Docker? Docker is an open platform for developing, shipping and running applications. Docker is a platform which packages an application and all its dependencies together in the form of containers. What problem does Docker solve? The main problem it solves is dependency management. Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program which runs on our computer and manages docker containers. Docker file: It is a text document which contains all the commands that a user can call on the command line to assemble an image. Images: Template to create docker container. Container: Running instance of docker image.Containers hold entire package to run application. Basic Commands for Docker Check the version docker -v pull image docker pull &lt;image-name&gt; check all the images docker images search images docker search &lt;image-name&gt; container creation docker run &lt;image-name&gt; list all the running containers docker ps list all the running &#43; stopped containers docker ps -a run container in background(detached mode) &#43; change the name of container. docker run --name &lt;custom-name&gt; -d &lt;image-name/image-id&gt; run container in -it {interactive-mode}, your container will run continuously docker run --name &lt;custom-name&gt; -it -d &lt;image-id/name&gt; to execute the command inside your container docker exec -it &lt;container-id&gt; command{python3/bash/java/cpp} get all the information about the container docker inspect &lt;container-id&gt; stop the running container docker stop &lt;containerName&gt; remove image docker rm &lt;image-name&gt; My-SQL Image Commands get the image docker install mysql run the mysql container docker run --name &lt;custome-mysql-name&gt; -e MYSQL_ROOT_PASSWORD=&lt;give-a-pass&gt; -d mysql use commands inside mysql container docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt; " />
 <meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/docker/" />
 <meta property="og:site_name" content="" />
 
@@ -152,12 +150,26 @@ Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program 
     
 <article class="post">
   <h1 class="post-title">
-    <a href="https://its-rawat.github.io/bigbits.github.io/posts/docker/"></a>
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/docker/">Docker Full Notes</a>
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">2 min read (260 words)</span></div>
+<span class="post-reading-time">2 min read (255 words)</span></div>
 
+  
+    <span class="post-tags">
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/post/">post</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/agile/">Agile</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/hands_on/">Hands_On</a>&nbsp;
+      
+    </span>
   
   
 
@@ -188,7 +200,7 @@ Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program 
 </ul>
 <h1 id="what-problem-does-docker-solve">What problem does Docker solve?<a href="#what-problem-does-docker-solve" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>The main problem it solves is <em>dependency management</em>.
-![[WhatsApp Image 2025-03-29 at 09.56.09_266cb626.jpg]]</p>
+<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/dock1.png"></p>
 <hr>
 <h1 id="docker-architecture">Docker Architecture<a href="#docker-architecture" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png"></p>
@@ -279,10 +291,17 @@ Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program 
     </div>
     <div class="pagination__buttons">
         
+        <span class="button previous">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Custom Spring Boot Banners</span>
+            </a>
+        </span>
+        
         
         <span class="button next">
-            <a href="https://its-rawat.github.io/bigbits.github.io/posts/react-js/">
-                <span class="button__text"></span>
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/chennai-in-bits/">
+                <span class="button__text">First Immpression of CHENNAI</span>
                 <span class="button__icon">→</span>
             </a>
         </span>

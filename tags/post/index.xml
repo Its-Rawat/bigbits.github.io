@@ -160,6 +160,188 @@ Running on: ${os.name}
     </item>
     
     <item>
+      <title>Docker Full Notes</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/docker/</guid>
+      <description>&lt;h1 id=&#34;what-is-docker&#34;&gt;What is Docker?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Docker is an open platform for developing, shipping and running applications.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Docker is a platform which packages an application and all its dependencies together in the form of containers.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
+&lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Docker Daemon&lt;/strong&gt;: Daemon is a program which runs on our computer and manages docker containers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker file&lt;/strong&gt;: It is a text document which contains all the commands that a user can call on the command line to assemble an image.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Images&lt;/strong&gt;: Template to create docker container.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt;: Running instance of docker image.Containers hold entire package to run application.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;basic-commands-for-docker&#34;&gt;Basic Commands for Docker&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Check the version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker -v
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;pull image&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker pull &amp;lt;image-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;check all the images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker images
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;search images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker search &amp;lt;image-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;container creation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker run &amp;lt;image-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;list all the running containers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker ps
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;list all the running + stopped containers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker ps -a
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;run container in background(detached mode) + change the name of container.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker run --name &amp;lt;custom-name&amp;gt; -d &amp;lt;image-name/image-id&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;run container in -it {interactive-mode}, your container will run continuously&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker run --name &amp;lt;custom-name&amp;gt; -it -d &amp;lt;image-id/name&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;to execute the command inside your container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker exec -it &amp;lt;container-id&amp;gt; command{python3/bash/java/cpp} 
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;get all the information about the container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker inspect &amp;lt;container-id&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;stop the running container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker stop &amp;lt;containerName&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;remove image&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker rm &amp;lt;image-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;my-sql-image-commands&#34;&gt;My-SQL Image Commands&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;get the image&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker install mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;run the mysql container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker run --name &amp;lt;custome-mysql-name&amp;gt; -e MYSQL_ROOT_PASSWORD=&amp;lt;give-a-pass&amp;gt; -d mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;use commands inside mysql container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker exec -it &amp;lt;custom-sql-name&amp;gt; &amp;lt;command-type&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+      <content>&lt;h1 id=&#34;what-is-docker&#34;&gt;What is Docker?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Docker is an open platform for developing, shipping and running applications.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Docker is a platform which packages an application and all its dependencies together in the form of containers.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
+&lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
+&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Docker Daemon&lt;/strong&gt;: Daemon is a program which runs on our computer and manages docker containers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker file&lt;/strong&gt;: It is a text document which contains all the commands that a user can call on the command line to assemble an image.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Images&lt;/strong&gt;: Template to create docker container.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt;: Running instance of docker image.Containers hold entire package to run application.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;basic-commands-for-docker&#34;&gt;Basic Commands for Docker&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Check the version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker -v
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;pull image&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker pull &amp;lt;image-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;check all the images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker images
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;search images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker search &amp;lt;image-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;container creation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker run &amp;lt;image-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;list all the running containers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker ps
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;list all the running + stopped containers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker ps -a
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;run container in background(detached mode) + change the name of container.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker run --name &amp;lt;custom-name&amp;gt; -d &amp;lt;image-name/image-id&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;run container in -it {interactive-mode}, your container will run continuously&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker run --name &amp;lt;custom-name&amp;gt; -it -d &amp;lt;image-id/name&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;to execute the command inside your container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker exec -it &amp;lt;container-id&amp;gt; command{python3/bash/java/cpp} 
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;get all the information about the container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker inspect &amp;lt;container-id&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;stop the running container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker stop &amp;lt;containerName&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;remove image&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker rm &amp;lt;image-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;my-sql-image-commands&#34;&gt;My-SQL Image Commands&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;get the image&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker install mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;run the mysql container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker run --name &amp;lt;custome-mysql-name&amp;gt; -e MYSQL_ROOT_PASSWORD=&amp;lt;give-a-pass&amp;gt; -d mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;use commands inside mysql container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;docker exec -it &amp;lt;custom-sql-name&amp;gt; &amp;lt;command-type&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
       <title>First Immpression of CHENNAI</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/chennai-in-bits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

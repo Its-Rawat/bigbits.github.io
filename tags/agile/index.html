@@ -268,6 +268,131 @@ Developer 3 &ndash;&gt;</p>
     
       <article class="post on-list">
         <h1 class="post-title">
+          <a href="https://its-rawat.github.io/bigbits.github.io/posts/docker/">Docker Full Notes</a>
+        </h1>
+        <div class="post-meta"></div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/post/">post</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/agile/">Agile</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/hands_on/">Hands_On</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+
+
+        <div class="post-content">
+          
+            <h1 id="what-is-docker">What is Docker?</h1>
+<ul>
+<li><code>Docker is an open platform for developing, shipping and running applications.</code></li>
+<li><code>Docker is a platform which packages an application and all its dependencies together in the form of containers.</code></li>
+</ul>
+<h1 id="what-problem-does-docker-solve">What problem does Docker solve?</h1>
+<p>The main problem it solves is <em>dependency management</em>.
+<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/dock1.png"></p>
+<hr>
+<h1 id="docker-architecture">Docker Architecture</h1>
+<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png"></p>
+<hr>
+<h2 id="some-terms-to-understand">Some Terms to Understand</h2>
+<ol>
+<li><strong>Docker Daemon</strong>: Daemon is a program which runs on our computer and manages docker containers.</li>
+<li><strong>Docker file</strong>: It is a text document which contains all the commands that a user can call on the command line to assemble an image.</li>
+<li><strong>Images</strong>: Template to create docker container.</li>
+<li><strong>Container</strong>: Running instance of docker image.Containers hold entire package to run application.</li>
+</ol>
+<hr>
+<h1 id="basic-commands-for-docker">Basic Commands for Docker</h1>
+<ul>
+<li>Check the version</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker -v
+</code></pre><ul>
+<li>pull image</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker pull &lt;image-name&gt;
+</code></pre><ul>
+<li>check all the images</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker images
+</code></pre><ul>
+<li>search images</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker search &lt;image-name&gt;
+</code></pre><ul>
+<li>container creation</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker run &lt;image-name&gt;
+</code></pre><ul>
+<li>list all the running containers</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker ps
+</code></pre><ul>
+<li>list all the running + stopped containers</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker ps -a
+</code></pre><ul>
+<li>run container in background(detached mode) + change the name of container.</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker run --name &lt;custom-name&gt; -d &lt;image-name/image-id&gt;
+</code></pre><ul>
+<li>run container in -it {interactive-mode}, your container will run continuously</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker run --name &lt;custom-name&gt; -it -d &lt;image-id/name&gt; 
+</code></pre><ul>
+<li>to execute the command inside your container</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker exec -it &lt;container-id&gt; command{python3/bash/java/cpp} 
+</code></pre><ul>
+<li>get all the information about the container</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker inspect &lt;container-id&gt;
+</code></pre><ul>
+<li>stop the running container</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker stop &lt;containerName&gt;
+</code></pre><ul>
+<li>remove image</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker rm &lt;image-name&gt;
+</code></pre><h2 id="my-sql-image-commands">My-SQL Image Commands</h2>
+<ul>
+<li>get the image</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker install mysql
+</code></pre><ul>
+<li>run the mysql container</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker run --name &lt;custome-mysql-name&gt; -e MYSQL_ROOT_PASSWORD=&lt;give-a-pass&gt; -d mysql
+</code></pre><ul>
+<li>use commands inside mysql container</li>
+</ul>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt;
+</code></pre>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button" href="/bigbits.github.io/posts/docker/">Read more →</a>
+          </div>
+        
+      </article>
+    
+      <article class="post on-list">
+        <h1 class="post-title">
           <a href="https://its-rawat.github.io/bigbits.github.io/posts/pl-sql/">PL/SQL Full Notes</a>
         </h1>
         <div class="post-meta"></div>
