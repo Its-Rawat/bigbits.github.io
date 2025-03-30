@@ -584,7 +584,8 @@ alert1.accept()
 time.sleep(5)
 driver.close()
 driver.quit()
-&lt;/code&gt;&lt;/pre&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+</content>
     </item>
     
   </channel>
