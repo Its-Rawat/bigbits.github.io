@@ -7,6 +7,108 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/theory/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>React Notes</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/react-js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/react-js/</guid>
+      <description>&lt;h1 id=&#34;introduction-to-react&#34;&gt;Introduction to React&lt;/h1&gt;
+&lt;p&gt;React is a JavaScript library for building user interfaces, particularly single-page applications where you need a fast, interactive UI.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;To create a new React app, use:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;npx create-react-app my-app cd my-app npm start
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h1 id=&#34;jsx-javascript-xml&#34;&gt;JSX (JavaScript XML)&lt;/h1&gt;
+&lt;p&gt;JSX allows writing HTML elements inside JavaScript and placing them in the DOM without using methods like &lt;code&gt;createElement&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;const element = &amp;lt;h1&amp;gt;Hello, React!&amp;lt;/h1&amp;gt;;
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h1 id=&#34;react-components&#34;&gt;React Components&lt;/h1&gt;
+&lt;p&gt;React components are reusable pieces of UI. There are two types:&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;introduction-to-react&#34;&gt;Introduction to React&lt;/h1&gt;
+&lt;p&gt;React is a JavaScript library for building user interfaces, particularly single-page applications where you need a fast, interactive UI.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;To create a new React app, use:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;npx create-react-app my-app cd my-app npm start
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h1 id=&#34;jsx-javascript-xml&#34;&gt;JSX (JavaScript XML)&lt;/h1&gt;
+&lt;p&gt;JSX allows writing HTML elements inside JavaScript and placing them in the DOM without using methods like &lt;code&gt;createElement&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;const element = &amp;lt;h1&amp;gt;Hello, React!&amp;lt;/h1&amp;gt;;
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h1 id=&#34;react-components&#34;&gt;React Components&lt;/h1&gt;
+&lt;p&gt;React components are reusable pieces of UI. There are two types:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Functional Components&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt; const Greeting = () =&amp;gt; {     return &amp;lt;h1&amp;gt;Hello, World!&amp;lt;/h1&amp;gt;; };
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Other Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import &amp;#39;./App.css&amp;#39;;
+const Data = ()=&amp;gt;{
+  return(
+    &amp;lt;&amp;gt;
+    &amp;lt;h1&amp;gt;Name : Aditya&amp;lt;/h1&amp;gt;
+    &amp;lt;h3&amp;gt;DOB : 08/08/2002&amp;lt;/h3&amp;gt;
+    &amp;lt;h5&amp;gt;Relationship : Single&amp;lt;/h5&amp;gt;
+    &amp;lt;/&amp;gt;
+  )
+}
+const App = () =&amp;gt;{
+  return (
+    &amp;lt;div className=&amp;#34;App&amp;#34;&amp;gt;
+      &amp;lt;Data/&amp;gt;
+      &amp;lt;Data/&amp;gt;
+      &amp;lt;Data/&amp;gt;
+      &amp;lt;Data/&amp;gt;
+    &amp;lt;/div&amp;gt;
+  );
+}
+export default App;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Class Components&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;class Greeting extends React.Component {     render() {         return &amp;lt;h1&amp;gt;Hello, World!&amp;lt;/h1&amp;gt;;     } }
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h1 id=&#34;props-in-react&#34;&gt;Props in React&lt;/h1&gt;
+&lt;p&gt;Props (short for &amp;ldquo;properties&amp;rdquo;) are used to pass data from a parent component to a child component.&lt;/p&gt;
+&lt;h3 id=&#34;example-1&#34;&gt;Example:&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;const Welcome = (props) =&amp;gt; {     return &amp;lt;h1&amp;gt;Hello, {props.name}!&amp;lt;/h1&amp;gt;; };  &amp;lt;Welcome name=&amp;#34;Aditya&amp;#34; /&amp;gt;;
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h1 id=&#34;state-in-react&#34;&gt;State in React&lt;/h1&gt;
+&lt;p&gt;State allows components to manage their own data dynamically.&lt;/p&gt;
+&lt;h3 id=&#34;example-using-usestate&#34;&gt;Example using &lt;code&gt;useState&lt;/code&gt;:&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import { useState } from &amp;#39;react&amp;#39;;  const Counter = () =&amp;gt; {     const [count, setCount] = useState(0);      return (         &amp;lt;div&amp;gt;             &amp;lt;p&amp;gt;Count: {count}&amp;lt;/p&amp;gt;             &amp;lt;button onClick={() =&amp;gt; setCount(count + 1)}&amp;gt;Increment&amp;lt;/button&amp;gt;         &amp;lt;/div&amp;gt;     ); };
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h1 id=&#34;conditional-rendering&#34;&gt;Conditional Rendering&lt;/h1&gt;
+&lt;p&gt;Conditional rendering in React allows different UI elements to be displayed based on conditions.&lt;/p&gt;
+&lt;h3 id=&#34;example-2&#34;&gt;Example:&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;const Greeting = ({ isLoggedIn }) =&amp;gt; {     return isLoggedIn ? &amp;lt;h1&amp;gt;Welcome back!&amp;lt;/h1&amp;gt; : &amp;lt;h1&amp;gt;Please log in&amp;lt;/h1&amp;gt;; };
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;react-fragment&#34;&gt;React-Fragment&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;&amp;lt;&amp;gt; &amp;lt;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;The React Fragments are used to wrap tags together as react dont allow multiple tags togeter in jsx file.&lt;/code&gt;
+&lt;code&gt;For example: &lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import &amp;#39;./App.css&amp;#39;;
+
+const App = () =&amp;gt;{
+  const name= &amp;#34;Aditya&amp;#34;;
+  const isName = false;  
+  return (
+    &amp;lt;div className=&amp;#34;App&amp;#34;&amp;gt;
+      &amp;lt;h1&amp;gt;Hello, {isName?(name):(&amp;#34;SomeOne&amp;#34;)}&amp;lt;/h1&amp;gt;
+      {isName?(&amp;lt;&amp;gt;
+        Test
+      &amp;lt;/&amp;gt;):(
+        &amp;lt;h1&amp;gt;Testing&amp;lt;/h1&amp;gt;
+        &amp;lt;h1&amp;gt;Testing&amp;lt;/h1&amp;gt;
+      )}
+    &amp;lt;/div&amp;gt;
+  );
+}
+export default App;
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
       <title>Selenium Notes</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/selenium-v4.29/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
