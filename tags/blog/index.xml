@@ -25,42 +25,18 @@
     
     <item>
       <title>my-projects</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/projects/</link>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/topic-tags/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/projects/</guid>
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/topic-tags/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Welcome to my Project Space, It&amp;rsquo;s hard to update this, as I don&amp;rsquo;t usually public what I have developed or developing.&lt;/p&gt;
-&lt;h1 id=&#34;java-stack&#34;&gt;Java-Stack&lt;/h1&gt;
-&lt;p&gt;All the projects made using java or java framework&amp;rsquo;s are here:&lt;/p&gt;
-&lt;h2 id=&#34;electro-lok-e-commerce-store-website&#34;&gt;Electro-Lok (E-commerce Store Website)&lt;/h2&gt;
-&lt;p&gt;#spring #java #hibernate #sql #spring-security&lt;/p&gt;
-&lt;h2 id=&#34;smart-scrapper-app-javafx-web-scrapper&#34;&gt;Smart Scrapper App (JavaFx Web Scrapper)&lt;/h2&gt;
-&lt;p&gt;#java #javaFx #jsoup #mysql&lt;/p&gt;
-&lt;h1 id=&#34;frontend&#34;&gt;Frontend&lt;/h1&gt;
-&lt;h2 id=&#34;personal-portfolio&#34;&gt;Personal Portfolio&lt;/h2&gt;
-&lt;p&gt;#html #css #javaScript&lt;/p&gt;
-&lt;h2 id=&#34;arduino-blind-stick&#34;&gt;Arduino Blind Stick&lt;/h2&gt;
-&lt;p&gt;#arduino #iot #cuircit&lt;/p&gt;
-&lt;h1 id=&#34;innovative&#34;&gt;Innovative&lt;/h1&gt;
-&lt;h2 id=&#34;hugo-personal-site&#34;&gt;Hugo Personal Site&lt;/h2&gt;
-&lt;p&gt;#hugo #obsidian #github&lt;/p&gt;</description>
+&lt;h1 id=&#34;access-all-topics&#34;&gt;Access All Topics&lt;/h1&gt;
+&lt;p&gt;#TCS #Agile #js #selenium #Chennai #springboot #Docker #PL/SQL #react #devops&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Welcome to my Project Space, It&amp;rsquo;s hard to update this, as I don&amp;rsquo;t usually public what I have developed or developing.&lt;/p&gt;
-&lt;h1 id=&#34;java-stack&#34;&gt;Java-Stack&lt;/h1&gt;
-&lt;p&gt;All the projects made using java or java framework&amp;rsquo;s are here:&lt;/p&gt;
-&lt;h2 id=&#34;electro-lok-e-commerce-store-website&#34;&gt;Electro-Lok (E-commerce Store Website)&lt;/h2&gt;
-&lt;p&gt;#spring #java #hibernate #sql #spring-security&lt;/p&gt;
-&lt;h2 id=&#34;smart-scrapper-app-javafx-web-scrapper&#34;&gt;Smart Scrapper App (JavaFx Web Scrapper)&lt;/h2&gt;
-&lt;p&gt;#java #javaFx #jsoup #mysql&lt;/p&gt;
-&lt;h1 id=&#34;frontend&#34;&gt;Frontend&lt;/h1&gt;
-&lt;h2 id=&#34;personal-portfolio&#34;&gt;Personal Portfolio&lt;/h2&gt;
-&lt;p&gt;#html #css #javaScript&lt;/p&gt;
-&lt;h2 id=&#34;arduino-blind-stick&#34;&gt;Arduino Blind Stick&lt;/h2&gt;
-&lt;p&gt;#arduino #iot #cuircit&lt;/p&gt;
-&lt;h1 id=&#34;innovative&#34;&gt;Innovative&lt;/h1&gt;
-&lt;h2 id=&#34;hugo-personal-site&#34;&gt;Hugo Personal Site&lt;/h2&gt;
-&lt;p&gt;#hugo #obsidian #github&lt;/p&gt;
+&lt;h1 id=&#34;access-all-topics&#34;&gt;Access All Topics&lt;/h1&gt;
+&lt;p&gt;#TCS #Agile #js #selenium #Chennai #springboot #Docker #PL/SQL #react #devops&lt;/p&gt;
 </content>
     </item>
     
