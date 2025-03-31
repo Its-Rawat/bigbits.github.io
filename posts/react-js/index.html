@@ -6,7 +6,11 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
+<meta name="description" content="Introduction to React React is a JavaScript library for building user interfaces, particularly single-page applications where you need a fast, interactive UI.
+Installation To create a new React app, use:
+npx create-react-app my-app cd my-app npm start JSX (JavaScript XML) JSX allows writing HTML elements inside JavaScript and placing them in the DOM without using methods like createElement.
+Example: const element = &lt;h1&gt;Hello, React!&lt;/h1&gt;; React Components React components are reusable pieces of UI. There are two types:
+" />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
@@ -43,7 +47,11 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="">
-<meta property="og:description" content="" />
+<meta property="og:description" content="Introduction to React React is a JavaScript library for building user interfaces, particularly single-page applications where you need a fast, interactive UI.
+Installation To create a new React app, use:
+npx create-react-app my-app cd my-app npm start JSX (JavaScript XML) JSX allows writing HTML elements inside JavaScript and placing them in the DOM without using methods like createElement.
+Example: const element = &lt;h1&gt;Hello, React!&lt;/h1&gt;; React Components React components are reusable pieces of UI. There are two types:
+" />
 <meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/react-js/" />
 <meta property="og:site_name" content="" />
 
@@ -154,7 +162,7 @@
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">0 min read (0 words)</span></div>
+<span class="post-reading-time">2 min read (315 words)</span></div>
 
   
   
@@ -166,11 +174,129 @@
       <h2>
         Table of Contents
       </h2>
-      <nav id="TableOfContents"></nav>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#installation">Installation</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example">Example:</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example-1">Example:</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example-using-usestate">Example using <code>useState</code>:</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example-2">Example:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
   
 
-  <div class="post-content"></div>
+  <div class="post-content"><div>
+        <h1 id="introduction-to-react">Introduction to React<a href="#introduction-to-react" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>React is a JavaScript library for building user interfaces, particularly single-page applications where you need a fast, interactive UI.</p>
+<h2 id="installation">Installation<a href="#installation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>To create a new React app, use:</p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">npx create-react-app my-app cd my-app npm start
+</code></pre><hr>
+<h1 id="jsx-javascript-xml">JSX (JavaScript XML)<a href="#jsx-javascript-xml" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>JSX allows writing HTML elements inside JavaScript and placing them in the DOM without using methods like <code>createElement</code>.</p>
+<h3 id="example">Example:<a href="#example" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">const element = &lt;h1&gt;Hello, React!&lt;/h1&gt;;
+</code></pre><hr>
+<h1 id="react-components">React Components<a href="#react-components" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>React components are reusable pieces of UI. There are two types:</p>
+<ol>
+<li><strong>Functional Components</strong></li>
+</ol>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy"> const Greeting = () =&gt; {     return &lt;h1&gt;Hello, World!&lt;/h1&gt;; };
+</code></pre><p>Other Example:</p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import &#39;./App.css&#39;;
+const Data = ()=&gt;{
+  return(
+    &lt;&gt;
+    &lt;h1&gt;Name : Aditya&lt;/h1&gt;
+    &lt;h3&gt;DOB : 08/08/2002&lt;/h3&gt;
+    &lt;h5&gt;Relationship : Single&lt;/h5&gt;
+    &lt;/&gt;
+  )
+}
+const App = () =&gt;{
+  return (
+    &lt;div className=&#34;App&#34;&gt;
+      &lt;Data/&gt;
+      &lt;Data/&gt;
+      &lt;Data/&gt;
+      &lt;Data/&gt;
+    &lt;/div&gt;
+  );
+}
+export default App;
+</code></pre><ol>
+<li><strong>Class Components</strong></li>
+</ol>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">class Greeting extends React.Component {     render() {         return &lt;h1&gt;Hello, World!&lt;/h1&gt;;     } }
+</code></pre><hr>
+<h1 id="props-in-react">Props in React<a href="#props-in-react" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Props (short for &ldquo;properties&rdquo;) are used to pass data from a parent component to a child component.</p>
+<h3 id="example-1">Example:<a href="#example-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">const Welcome = (props) =&gt; {     return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;; };  &lt;Welcome name=&#34;Aditya&#34; /&gt;;
+</code></pre><hr>
+<h1 id="state-in-react">State in React<a href="#state-in-react" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>State allows components to manage their own data dynamically.</p>
+<h3 id="example-using-usestate">Example using <code>useState</code>:<a href="#example-using-usestate" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import { useState } from &#39;react&#39;;  const Counter = () =&gt; {     const [count, setCount] = useState(0);      return (         &lt;div&gt;             &lt;p&gt;Count: {count}&lt;/p&gt;             &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Increment&lt;/button&gt;         &lt;/div&gt;     ); };
+</code></pre><hr>
+<h1 id="conditional-rendering">Conditional Rendering<a href="#conditional-rendering" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Conditional rendering in React allows different UI elements to be displayed based on conditions.</p>
+<h3 id="example-2">Example:<a href="#example-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">const Greeting = ({ isLoggedIn }) =&gt; {     return isLoggedIn ? &lt;h1&gt;Welcome back!&lt;/h1&gt; : &lt;h1&gt;Please log in&lt;/h1&gt;; };
+</code></pre><h1 id="react-fragment">React-Fragment<a href="#react-fragment" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">&lt;&gt; &lt;/&gt;
+</code></pre><p><code>The React Fragments are used to wrap tags together as react dont allow multiple tags togeter in jsx file.</code>
+<code>For example: </code></p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import &#39;./App.css&#39;;
+
+const App = () =&gt;{
+  const name= &#34;Aditya&#34;;
+  const isName = false;  
+  return (
+    &lt;div className=&#34;App&#34;&gt;
+      &lt;h1&gt;Hello, {isName?(name):(&#34;SomeOne&#34;)}&lt;/h1&gt;
+      {isName?(&lt;&gt;
+        Test
+      &lt;/&gt;):(
+        &lt;h1&gt;Testing&lt;/h1&gt;
+        &lt;h1&gt;Testing&lt;/h1&gt;
+      )}
+    &lt;/div&gt;
+  );
+}
+export default App;
+</code></pre>
+      </div></div>
 
   
     
