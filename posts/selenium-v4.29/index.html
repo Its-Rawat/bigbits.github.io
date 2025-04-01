@@ -158,7 +158,7 @@ Service Service is used to manage the lifecycle of the chromedriver.exe process 
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">3 min read (634 words)</span></div>
+<span class="post-reading-time">5 min read (990 words)</span></div>
 
   
     <span class="post-tags">
@@ -199,6 +199,8 @@ Service Service is used to manage the lifecycle of the chromedriver.exe process 
     <li><a href="#to-select-a-radio-button--print-a-text-in-console">To Select a Radio Button &amp;&amp; Print a Text in Console</a></li>
     <li><a href="#select-dropdown-value-and-print-text">Select Dropdown Value and Print Text</a></li>
     <li><a href="#handle-alert-window">Handle Alert Window</a></li>
+    <li><a href="#expected-conditions-ec">Expected Conditions (EC)</a></li>
+    <li><a href="#action-chains">Action Chains</a></li>
   </ul>
 </nav>
     </div>
@@ -478,7 +480,129 @@ time.sleep(5)
 driver.close()
 driver.quit()
 </code></pre><hr>
+<h2 id="expected-conditions-ec">Expected Conditions (EC)<a href="#expected-conditions-ec" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><strong>Expected Conditions (EC)</strong> are used with <strong>WebDriverWait</strong> to handle dynamic web elements and ensure synchronization between the script and the browser.</p>
+<p>Without <code>EC</code>, Selenium might try to interact with elements before they exist, causing <strong>NoSuchElementException</strong> or <strong>StaleElementReferenceException</strong>.</p>
+<ol>
+<li>Alert Html Script</li>
+</ol>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;Random Alert Box&lt;/title&gt;
+    &lt;script&gt;
+        function showAlert() {
+            let randomDelay = Math.floor(Math.random() * 5000) + 1000; // Random delay between 1s to 5s
+            setTimeout(() =&gt; {
+                alert(&#34;This is a random alert!&#34;);
+            }, randomDelay);
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&#34;showAlert()&#34;&gt;
+    &lt;h2&gt;Random Alert Box Example&lt;/h2&gt;
+    &lt;p&gt;Wait for the alert to appear randomly between 1 to 5 seconds.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><ol start="2">
+<li>Selenium Code to handle EC</li>
+</ol>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
+service = Service(r&#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(r&#34;E:\Jobs\TCS\Testing\Selenium\TestingChrome\Test1\delayAlert.html&#34;)
+wait = WebDriverWait(driver, 10);
+delayAlert = wait.until(EC.alert_is_present());
+alert = driver.switch_to.alert
+print(&#34;Alert Text:&#34;, alert.text)
+alert.accept()
+print(&#34;Alert accepted successfully!&#34;)
+driver.quit()
+</code></pre><hr>
+<h2 id="action-chains">Action Chains<a href="#action-chains" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><strong>Action Chains</strong> in Selenium allow you to perform <strong>mouse and keyboard actions</strong> like hover, drag-and-drop, right-click, double-click, etc.</p>
+<p>Html Script</p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;Action Chains Example&lt;/title&gt;
+    &lt;style&gt;
+        #hoverText {
+            display: none;
+            color: red;
+            font-weight: bold;
+        }
+        #hoverArea:hover + #hoverText {
+            display: block;
+        }
+        #draggable {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            cursor: grab;
+        }
+        #droppable {
+            width: 120px;
+            height: 120px;
+            border: 2px dashed black;
+            text-align: center;
+            line-height: 120px;
+            margin-top: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Action Chains Example&lt;/h2&gt;
+    &lt;!-- Right Click and Double Click Example --&gt;
+    &lt;button id=&#34;actionButton&#34;&gt;Right Click or Double Click&lt;/button&gt;
+    &lt;!-- Hover Example --&gt;
+    &lt;div id=&#34;hoverArea&#34; style=&#34;margin-top: 20px; background: yellow; padding: 10px; display: inline-block;&#34;&gt;
+        Hover over me
+    &lt;/div&gt;
+    &lt;div id=&#34;hoverText&#34;&gt;You hovered!&lt;/div&gt;
+    &lt;!-- Drag and Drop Example --&gt;
+    &lt;div id=&#34;draggable&#34;&gt;Drag Me&lt;/div&gt;
+    &lt;div id=&#34;droppable&#34;&gt;Drop Here&lt;/div&gt;
+    &lt;script&gt;
+        document.getElementById(&#34;actionButton&#34;).addEventListener(&#34;contextmenu&#34;, function(event) {
+            event.preventDefault();
+            alert(&#34;Right-click detected!&#34;);
+        });
+        document.getElementById(&#34;actionButton&#34;).addEventListener(&#34;dblclick&#34;, function() {
+            alert(&#34;Double-click detected!&#34;);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>Selenium Code</p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import time
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By;
+from selenium.webdriver.common.action_chains import ActionChains;
+from selenium import webdriver;
+
+service = Service(r&#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&#34;)
+driver = webdriver.Chrome(service=service);
+driver.get(r&#34;E:\Jobs\TCS\Testing\Selenium\TestingChrome\Test1\actionChain.html&#34;)
+actions = ActionChains(driver);
+hoverArea = driver.find_element(By.ID,&#34;hoverArea&#34;)
+time.sleep(3);
+actions.move_to_element(hoverArea).perform()
+time.sleep(3);
+</code></pre>
       </div></div>
 
   

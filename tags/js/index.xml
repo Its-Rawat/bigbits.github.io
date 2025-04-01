@@ -87,15 +87,35 @@ export default App;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;class Greeting extends React.Component {     render() {         return &amp;lt;h1&amp;gt;Hello, World!&amp;lt;/h1&amp;gt;;     } }
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h1 id=&#34;props-in-react&#34;&gt;Props in React&lt;/h1&gt;
-&lt;p&gt;Props (short for &amp;ldquo;properties&amp;rdquo;) are used to pass data from a parent component to a child component.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Props (short for &amp;ldquo;properties&amp;rdquo;) are used to pass data from a parent component to a child component.&lt;/li&gt;
+&lt;li&gt;It is used to pass dynamic data through react components.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;example-1&#34;&gt;Example:&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;const Welcome = (props) =&amp;gt; {     return &amp;lt;h1&amp;gt;Hello, {props.name}!&amp;lt;/h1&amp;gt;; };  &amp;lt;Welcome name=&amp;#34;Aditya&amp;#34; /&amp;gt;;
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h1 id=&#34;state-in-react&#34;&gt;State in React&lt;/h1&gt;
-&lt;p&gt;State allows components to manage their own data dynamically.&lt;/p&gt;
+&lt;h1 id=&#34;usestate-in-react&#34;&gt;useState in React&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;State allows components to manage their own data dynamically.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;useState&lt;/code&gt; is a Hook in React that allows functional components to manage state.&lt;/li&gt;
+&lt;li&gt;It lets you  declare state variables and update them while preserving the component&amp;rsquo;s reactivity.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;example-using-usestate&#34;&gt;Example using &lt;code&gt;useState&lt;/code&gt;:&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import { useState } from &amp;#39;react&amp;#39;;  const Counter = () =&amp;gt; {     const [count, setCount] = useState(0);      return (         &amp;lt;div&amp;gt;             &amp;lt;p&amp;gt;Count: {count}&amp;lt;/p&amp;gt;             &amp;lt;button onClick={() =&amp;gt; setCount(count + 1)}&amp;gt;Increment&amp;lt;/button&amp;gt;         &amp;lt;/div&amp;gt;     ); };
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;const App = () =&amp;gt;{
+  const [Counter,setCounter] = useState(0);
+
+  return (
+    &amp;lt;div className=&amp;#34;App&amp;#34;&amp;gt;
+     &amp;lt;button onClick={()=&amp;gt;setCounter((prevCount)=&amp;gt; prevCount-1)}&amp;gt;-&amp;lt;/button&amp;gt;
+     &amp;lt;h1&amp;gt;{Counter}&amp;lt;/h1&amp;gt;
+     &amp;lt;button onClick={()=&amp;gt; setCounter((prevCount)=&amp;gt;prevCount+1)}&amp;gt;+&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+  );
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Anything starts with &amp;lsquo;use&amp;rsquo; are hooks in javaScript.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;conditional-rendering&#34;&gt;Conditional Rendering&lt;/h1&gt;
 &lt;p&gt;Conditional rendering in React allows different UI elements to be displayed based on conditions.&lt;/p&gt;
 &lt;h3 id=&#34;example-2&#34;&gt;Example:&lt;/h3&gt;

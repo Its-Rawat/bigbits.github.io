@@ -162,7 +162,7 @@ Example: const element = &lt;h1&gt;Hello, React!&lt;/h1&gt;; React Components Re
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">2 min read (315 words)</span></div>
+<span class="post-reading-time">2 min read (352 words)</span></div>
 
   
     <span class="post-tags">
@@ -274,15 +274,35 @@ export default App;
 <pre tabindex="0"><code class="language-Copy" data-lang="Copy">class Greeting extends React.Component {     render() {         return &lt;h1&gt;Hello, World!&lt;/h1&gt;;     } }
 </code></pre><hr>
 <h1 id="props-in-react">Props in React<a href="#props-in-react" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<p>Props (short for &ldquo;properties&rdquo;) are used to pass data from a parent component to a child component.</p>
+<ul>
+<li>Props (short for &ldquo;properties&rdquo;) are used to pass data from a parent component to a child component.</li>
+<li>It is used to pass dynamic data through react components.</li>
+</ul>
 <h3 id="example-1">Example:<a href="#example-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <pre tabindex="0"><code class="language-Copy" data-lang="Copy">const Welcome = (props) =&gt; {     return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;; };  &lt;Welcome name=&#34;Aditya&#34; /&gt;;
 </code></pre><hr>
-<h1 id="state-in-react">State in React<a href="#state-in-react" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<p>State allows components to manage their own data dynamically.</p>
+<h1 id="usestate-in-react">useState in React<a href="#usestate-in-react" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li>State allows components to manage their own data dynamically.</li>
+<li><code>useState</code> is a Hook in React that allows functional components to manage state.</li>
+<li>It lets you  declare state variables and update them while preserving the component&rsquo;s reactivity.</li>
+</ul>
 <h3 id="example-using-usestate">Example using <code>useState</code>:<a href="#example-using-usestate" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import { useState } from &#39;react&#39;;  const Counter = () =&gt; {     const [count, setCount] = useState(0);      return (         &lt;div&gt;             &lt;p&gt;Count: {count}&lt;/p&gt;             &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Increment&lt;/button&gt;         &lt;/div&gt;     ); };
-</code></pre><hr>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">const App = () =&gt;{
+  const [Counter,setCounter] = useState(0);
+
+  return (
+    &lt;div className=&#34;App&#34;&gt;
+     &lt;button onClick={()=&gt;setCounter((prevCount)=&gt; prevCount-1)}&gt;-&lt;/button&gt;
+     &lt;h1&gt;{Counter}&lt;/h1&gt;
+     &lt;button onClick={()=&gt; setCounter((prevCount)=&gt;prevCount+1)}&gt;+&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre><ul>
+<li>Anything starts with &lsquo;use&rsquo; are hooks in javaScript.</li>
+</ul>
+<hr>
 <h1 id="conditional-rendering">Conditional Rendering<a href="#conditional-rendering" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>Conditional rendering in React allows different UI elements to be displayed based on conditions.</p>
 <h3 id="example-2">Example:<a href="#example-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>

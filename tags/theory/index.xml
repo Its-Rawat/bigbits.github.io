@@ -555,15 +555,35 @@ export default App;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;class Greeting extends React.Component {     render() {         return &amp;lt;h1&amp;gt;Hello, World!&amp;lt;/h1&amp;gt;;     } }
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h1 id=&#34;props-in-react&#34;&gt;Props in React&lt;/h1&gt;
-&lt;p&gt;Props (short for &amp;ldquo;properties&amp;rdquo;) are used to pass data from a parent component to a child component.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Props (short for &amp;ldquo;properties&amp;rdquo;) are used to pass data from a parent component to a child component.&lt;/li&gt;
+&lt;li&gt;It is used to pass dynamic data through react components.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;example-1&#34;&gt;Example:&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;const Welcome = (props) =&amp;gt; {     return &amp;lt;h1&amp;gt;Hello, {props.name}!&amp;lt;/h1&amp;gt;; };  &amp;lt;Welcome name=&amp;#34;Aditya&amp;#34; /&amp;gt;;
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h1 id=&#34;state-in-react&#34;&gt;State in React&lt;/h1&gt;
-&lt;p&gt;State allows components to manage their own data dynamically.&lt;/p&gt;
+&lt;h1 id=&#34;usestate-in-react&#34;&gt;useState in React&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;State allows components to manage their own data dynamically.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;useState&lt;/code&gt; is a Hook in React that allows functional components to manage state.&lt;/li&gt;
+&lt;li&gt;It lets you  declare state variables and update them while preserving the component&amp;rsquo;s reactivity.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;example-using-usestate&#34;&gt;Example using &lt;code&gt;useState&lt;/code&gt;:&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import { useState } from &amp;#39;react&amp;#39;;  const Counter = () =&amp;gt; {     const [count, setCount] = useState(0);      return (         &amp;lt;div&amp;gt;             &amp;lt;p&amp;gt;Count: {count}&amp;lt;/p&amp;gt;             &amp;lt;button onClick={() =&amp;gt; setCount(count + 1)}&amp;gt;Increment&amp;lt;/button&amp;gt;         &amp;lt;/div&amp;gt;     ); };
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;const App = () =&amp;gt;{
+  const [Counter,setCounter] = useState(0);
+
+  return (
+    &amp;lt;div className=&amp;#34;App&amp;#34;&amp;gt;
+     &amp;lt;button onClick={()=&amp;gt;setCounter((prevCount)=&amp;gt; prevCount-1)}&amp;gt;-&amp;lt;/button&amp;gt;
+     &amp;lt;h1&amp;gt;{Counter}&amp;lt;/h1&amp;gt;
+     &amp;lt;button onClick={()=&amp;gt; setCounter((prevCount)=&amp;gt;prevCount+1)}&amp;gt;+&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+  );
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Anything starts with &amp;lsquo;use&amp;rsquo; are hooks in javaScript.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;conditional-rendering&#34;&gt;Conditional Rendering&lt;/h1&gt;
 &lt;p&gt;Conditional rendering in React allows different UI elements to be displayed based on conditions.&lt;/p&gt;
 &lt;h3 id=&#34;example-2&#34;&gt;Example:&lt;/h3&gt;
@@ -894,7 +914,129 @@ time.sleep(5)
 driver.close()
 driver.quit()
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-</content>
+&lt;h2 id=&#34;expected-conditions-ec&#34;&gt;Expected Conditions (EC)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Expected Conditions (EC)&lt;/strong&gt; are used with &lt;strong&gt;WebDriverWait&lt;/strong&gt; to handle dynamic web elements and ensure synchronization between the script and the browser.&lt;/p&gt;
+&lt;p&gt;Without &lt;code&gt;EC&lt;/code&gt;, Selenium might try to interact with elements before they exist, causing &lt;strong&gt;NoSuchElementException&lt;/strong&gt; or &lt;strong&gt;StaleElementReferenceException&lt;/strong&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Alert Html Script&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt;
+    &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt;
+    &amp;lt;title&amp;gt;Random Alert Box&amp;lt;/title&amp;gt;
+    &amp;lt;script&amp;gt;
+        function showAlert() {
+            let randomDelay = Math.floor(Math.random() * 5000) + 1000; // Random delay between 1s to 5s
+            setTimeout(() =&amp;gt; {
+                alert(&amp;#34;This is a random alert!&amp;#34;);
+            }, randomDelay);
+        }
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body onload=&amp;#34;showAlert()&amp;#34;&amp;gt;
+    &amp;lt;h2&amp;gt;Random Alert Box Example&amp;lt;/h2&amp;gt;
+    &amp;lt;p&amp;gt;Wait for the alert to appear randomly between 1 to 5 seconds.&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Selenium Code to handle EC&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\TestingChrome\Test1\delayAlert.html&amp;#34;)
+wait = WebDriverWait(driver, 10);
+delayAlert = wait.until(EC.alert_is_present());
+alert = driver.switch_to.alert
+print(&amp;#34;Alert Text:&amp;#34;, alert.text)
+alert.accept()
+print(&amp;#34;Alert accepted successfully!&amp;#34;)
+driver.quit()
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;action-chains&#34;&gt;Action Chains&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Action Chains&lt;/strong&gt; in Selenium allow you to perform &lt;strong&gt;mouse and keyboard actions&lt;/strong&gt; like hover, drag-and-drop, right-click, double-click, etc.&lt;/p&gt;
+&lt;p&gt;Html Script&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt;
+    &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt;
+    &amp;lt;title&amp;gt;Action Chains Example&amp;lt;/title&amp;gt;
+    &amp;lt;style&amp;gt;
+        #hoverText {
+            display: none;
+            color: red;
+            font-weight: bold;
+        }
+        #hoverArea:hover + #hoverText {
+            display: block;
+        }
+        #draggable {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            cursor: grab;
+        }
+        #droppable {
+            width: 120px;
+            height: 120px;
+            border: 2px dashed black;
+            text-align: center;
+            line-height: 120px;
+            margin-top: 20px;
+        }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;h2&amp;gt;Action Chains Example&amp;lt;/h2&amp;gt;
+    &amp;lt;!-- Right Click and Double Click Example --&amp;gt;
+    &amp;lt;button id=&amp;#34;actionButton&amp;#34;&amp;gt;Right Click or Double Click&amp;lt;/button&amp;gt;
+    &amp;lt;!-- Hover Example --&amp;gt;
+    &amp;lt;div id=&amp;#34;hoverArea&amp;#34; style=&amp;#34;margin-top: 20px; background: yellow; padding: 10px; display: inline-block;&amp;#34;&amp;gt;
+        Hover over me
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;#34;hoverText&amp;#34;&amp;gt;You hovered!&amp;lt;/div&amp;gt;
+    &amp;lt;!-- Drag and Drop Example --&amp;gt;
+    &amp;lt;div id=&amp;#34;draggable&amp;#34;&amp;gt;Drag Me&amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;#34;droppable&amp;#34;&amp;gt;Drop Here&amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        document.getElementById(&amp;#34;actionButton&amp;#34;).addEventListener(&amp;#34;contextmenu&amp;#34;, function(event) {
+            event.preventDefault();
+            alert(&amp;#34;Right-click detected!&amp;#34;);
+        });
+        document.getElementById(&amp;#34;actionButton&amp;#34;).addEventListener(&amp;#34;dblclick&amp;#34;, function() {
+            alert(&amp;#34;Double-click detected!&amp;#34;);
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Selenium Code&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By;
+from selenium.webdriver.common.action_chains import ActionChains;
+from selenium import webdriver;
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+driver = webdriver.Chrome(service=service);
+driver.get(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\TestingChrome\Test1\actionChain.html&amp;#34;)
+actions = ActionChains(driver);
+hoverArea = driver.find_element(By.ID,&amp;#34;hoverArea&amp;#34;)
+time.sleep(3);
+actions.move_to_element(hoverArea).perform()
+time.sleep(3);
+&lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     
   </channel>
