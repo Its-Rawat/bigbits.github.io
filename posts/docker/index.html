@@ -6,7 +6,29 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="What is Docker? Docker is an open platform for developing, shipping and running applications. Docker is a platform which packages an application and all its dependencies together in the form of containers. What problem does Docker solve? The main problem it solves is dependency management. Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program which runs on our computer and manages docker containers. Docker file: It is a text document which contains all the commands that a user can call on the command line to assemble an image. Images: Template to create docker container. Container: Running instance of docker image.Containers hold entire package to run application. Basic Commands for Docker Check the version docker -v pull image docker pull &lt;image-name&gt; check all the images docker images search images docker search &lt;image-name&gt; container creation docker run &lt;image-name&gt; list all the running containers docker ps list all the running &#43; stopped containers docker ps -a run container in background(detached mode) &#43; change the name of container. docker run --name &lt;custom-name&gt; -d &lt;image-name/image-id&gt; run container in -it {interactive-mode}, your container will run continuously docker run --name &lt;custom-name&gt; -it -d &lt;image-id/name&gt; to execute the command inside your container docker exec -it &lt;container-id&gt; command{python3/bash/java/cpp} get all the information about the container docker inspect &lt;container-id&gt; stop the running container docker stop &lt;containerName&gt; remove image docker rm &lt;image-name&gt; to restart the running container docker restart &lt;container-id&gt; My-SQL Image Commands get the image docker install mysql run the mysql container docker run --name &lt;custome-mysql-name&gt; -e MYSQL_ROOT_PASSWORD=&lt;give-a-pass&gt; -d mysql use commands inside mysql container docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt; " />
+<meta name="description" content="What is Docker? Docker is an open platform for developing, shipping and running applications. Docker is a platform which packages an application and all its dependencies together in the form of containers. What problem does Docker solve? The main problem it solves is dependency management. Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program which runs on our computer and manages docker containers. Docker file: It is a text document which contains all the commands that a user can call on the command line to assemble an image. Images: Template to create docker container. Container: Running instance of docker image.Containers hold entire package to run application. Basic Commands for Docker Check the version docker -v pull image docker pull &lt;image-name&gt; check all the images docker images search images docker search &lt;image-name&gt; container creation docker run &lt;image-name&gt; list all the running containers docker ps list all the running &#43; stopped containers docker ps -a run container in background(detached mode) &#43; change the name of container. docker run --name &lt;custom-name&gt; -d &lt;image-name/image-id&gt; run container in -it {interactive-mode}, your container will run continuously docker run --name &lt;custom-name&gt; -it -d &lt;image-id/name&gt; to execute the command inside your container docker exec -it &lt;container-id&gt; command{python3/bash/java/cpp} get all the information about the container docker inspect &lt;container-id&gt; stop the running container docker stop &lt;containerName&gt; remove image docker rm &lt;image-name&gt; to restart the running container docker restart &lt;container-id&gt; My-SQL Image Commands get the image docker install mysql run the mysql container docker run --name &lt;custome-mysql-name&gt; -e MYSQL_ROOT_PASSWORD=&lt;give-a-pass&gt; -d mysql use commands inside mysql container docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt; Docker for Touchstone MCQ Test 1. Docker Basics What is Docker? Benefits of using Docker Docker vs Virtual Machines Docker Architecture Docker Engine Docker Daemon Docker Client 2. Docker Images What is a Docker Image? Layers in Docker Images Docker Hub and Image Registries Pulling Images
+docker pull Listing Images
+docker images Removing Images
+docker rmi Custom Images using Dockerfile
+(See Dockerfile section below) 3. Docker Containers What is a Container? Creating Containers
+docker run Listing Containers
+docker ps, docker ps -a Starting/Stopping/Removing Containers
+docker start, docker stop, docker rm Inspecting Containers
+docker inspect Container Lifecycle Running containers in detached mode
+-d Executing commands inside containers
+docker exec, docker attach Logs and Terminal access
+docker logs, docker exec -it 4. Dockerfile (Creating Custom Images) What is a Dockerfile? Basic Dockerfile Instructions FROM RUN COPY ADD CMD ENTRYPOINT EXPOSE ENV WORKDIR Building Image from Dockerfile
+docker build Best practices Minimizing layers Using .dockerignore 5. Docker Volumes (Data Persistence) What is a Volume? Types Volumes Bind Mounts Creating Volumes
+docker volume create Mounting Volumes to Containers
+-v or --mount Inspecting Volumes
+docker volume inspect Volume Persistence and Sharing between Containers 6. Docker Networking Default Docker Networks bridge host none Creating Custom Networks
+docker network create Connecting Containers to Networks
+--network Inspecting Networks
+docker network inspect Communication between containers
+Via network name 7. Docker Compose (Multi-container Applications) What is Docker Compose? docker-compose.yml file structure version services build ports volumes depends_on networks Running with Compose
+docker-compose up, docker-compose down Building and Rebuilding
+docker-compose build, docker-compose up --build Scaling services
+docker-compose up --scale Use cases and benefits " />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
@@ -43,7 +65,29 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Docker Full Notes">
-<meta property="og:description" content="What is Docker? Docker is an open platform for developing, shipping and running applications. Docker is a platform which packages an application and all its dependencies together in the form of containers. What problem does Docker solve? The main problem it solves is dependency management. Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program which runs on our computer and manages docker containers. Docker file: It is a text document which contains all the commands that a user can call on the command line to assemble an image. Images: Template to create docker container. Container: Running instance of docker image.Containers hold entire package to run application. Basic Commands for Docker Check the version docker -v pull image docker pull &lt;image-name&gt; check all the images docker images search images docker search &lt;image-name&gt; container creation docker run &lt;image-name&gt; list all the running containers docker ps list all the running &#43; stopped containers docker ps -a run container in background(detached mode) &#43; change the name of container. docker run --name &lt;custom-name&gt; -d &lt;image-name/image-id&gt; run container in -it {interactive-mode}, your container will run continuously docker run --name &lt;custom-name&gt; -it -d &lt;image-id/name&gt; to execute the command inside your container docker exec -it &lt;container-id&gt; command{python3/bash/java/cpp} get all the information about the container docker inspect &lt;container-id&gt; stop the running container docker stop &lt;containerName&gt; remove image docker rm &lt;image-name&gt; to restart the running container docker restart &lt;container-id&gt; My-SQL Image Commands get the image docker install mysql run the mysql container docker run --name &lt;custome-mysql-name&gt; -e MYSQL_ROOT_PASSWORD=&lt;give-a-pass&gt; -d mysql use commands inside mysql container docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt; " />
+<meta property="og:description" content="What is Docker? Docker is an open platform for developing, shipping and running applications. Docker is a platform which packages an application and all its dependencies together in the form of containers. What problem does Docker solve? The main problem it solves is dependency management. Docker Architecture Some Terms to Understand Docker Daemon: Daemon is a program which runs on our computer and manages docker containers. Docker file: It is a text document which contains all the commands that a user can call on the command line to assemble an image. Images: Template to create docker container. Container: Running instance of docker image.Containers hold entire package to run application. Basic Commands for Docker Check the version docker -v pull image docker pull &lt;image-name&gt; check all the images docker images search images docker search &lt;image-name&gt; container creation docker run &lt;image-name&gt; list all the running containers docker ps list all the running &#43; stopped containers docker ps -a run container in background(detached mode) &#43; change the name of container. docker run --name &lt;custom-name&gt; -d &lt;image-name/image-id&gt; run container in -it {interactive-mode}, your container will run continuously docker run --name &lt;custom-name&gt; -it -d &lt;image-id/name&gt; to execute the command inside your container docker exec -it &lt;container-id&gt; command{python3/bash/java/cpp} get all the information about the container docker inspect &lt;container-id&gt; stop the running container docker stop &lt;containerName&gt; remove image docker rm &lt;image-name&gt; to restart the running container docker restart &lt;container-id&gt; My-SQL Image Commands get the image docker install mysql run the mysql container docker run --name &lt;custome-mysql-name&gt; -e MYSQL_ROOT_PASSWORD=&lt;give-a-pass&gt; -d mysql use commands inside mysql container docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt; Docker for Touchstone MCQ Test 1. Docker Basics What is Docker? Benefits of using Docker Docker vs Virtual Machines Docker Architecture Docker Engine Docker Daemon Docker Client 2. Docker Images What is a Docker Image? Layers in Docker Images Docker Hub and Image Registries Pulling Images
+docker pull Listing Images
+docker images Removing Images
+docker rmi Custom Images using Dockerfile
+(See Dockerfile section below) 3. Docker Containers What is a Container? Creating Containers
+docker run Listing Containers
+docker ps, docker ps -a Starting/Stopping/Removing Containers
+docker start, docker stop, docker rm Inspecting Containers
+docker inspect Container Lifecycle Running containers in detached mode
+-d Executing commands inside containers
+docker exec, docker attach Logs and Terminal access
+docker logs, docker exec -it 4. Dockerfile (Creating Custom Images) What is a Dockerfile? Basic Dockerfile Instructions FROM RUN COPY ADD CMD ENTRYPOINT EXPOSE ENV WORKDIR Building Image from Dockerfile
+docker build Best practices Minimizing layers Using .dockerignore 5. Docker Volumes (Data Persistence) What is a Volume? Types Volumes Bind Mounts Creating Volumes
+docker volume create Mounting Volumes to Containers
+-v or --mount Inspecting Volumes
+docker volume inspect Volume Persistence and Sharing between Containers 6. Docker Networking Default Docker Networks bridge host none Creating Custom Networks
+docker network create Connecting Containers to Networks
+--network Inspecting Networks
+docker network inspect Communication between containers
+Via network name 7. Docker Compose (Multi-container Applications) What is Docker Compose? docker-compose.yml file structure version services build ports volumes depends_on networks Running with Compose
+docker-compose up, docker-compose down Building and Rebuilding
+docker-compose build, docker-compose up --build Scaling services
+docker-compose up --scale Use cases and benefits " />
 <meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/docker/" />
 <meta property="og:site_name" content="" />
 
@@ -154,7 +198,7 @@
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">2 min read (263 words)</span></div>
+<span class="post-reading-time">3 min read (525 words)</span></div>
 
   
     <span class="post-tags">
@@ -187,6 +231,16 @@
 
   <ul>
     <li><a href="#my-sql-image-commands">My-SQL Image Commands</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-docker-basics">1. Docker Basics</a></li>
+    <li><a href="#2-docker-images">2. Docker Images</a></li>
+    <li><a href="#3-docker-containers">3. Docker Containers</a></li>
+    <li><a href="#4-dockerfile-creating-custom-images">4. Dockerfile (Creating Custom Images)</a></li>
+    <li><a href="#5-docker-volumes-data-persistence">5. Docker Volumes (Data Persistence)</a></li>
+    <li><a href="#6-docker-networking">6. Docker Networking</a></li>
+    <li><a href="#7-docker-compose-multi-container-applications">7. Docker Compose (Multi-container Applications)</a></li>
   </ul>
 </nav>
     </div>
@@ -283,7 +337,143 @@
 <li>use commands inside mysql container</li>
 </ul>
 <pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt;
-</code></pre>
+</code></pre><hr>
+<h1 id="docker-for-touchstone-mcq-test">Docker for Touchstone MCQ Test<a href="#docker-for-touchstone-mcq-test" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="1-docker-basics">1. Docker Basics<a href="#1-docker-basics" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><strong>What is Docker?</strong></li>
+<li><strong>Benefits of using Docker</strong></li>
+<li><strong>Docker vs Virtual Machines</strong></li>
+<li><strong>Docker Architecture</strong>
+<ul>
+<li>Docker Engine</li>
+<li>Docker Daemon</li>
+<li>Docker Client</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-docker-images">2. Docker Images<a href="#2-docker-images" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><strong>What is a Docker Image?</strong></li>
+<li><strong>Layers in Docker Images</strong></li>
+<li><strong>Docker Hub and Image Registries</strong></li>
+<li><strong>Pulling Images</strong><br>
+<code>docker pull</code></li>
+<li><strong>Listing Images</strong><br>
+<code>docker images</code></li>
+<li><strong>Removing Images</strong><br>
+<code>docker rmi</code></li>
+<li><strong>Custom Images using Dockerfile</strong><br>
+(See Dockerfile section below)</li>
+</ul>
+<hr>
+<h2 id="3-docker-containers">3. Docker Containers<a href="#3-docker-containers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><strong>What is a Container?</strong></li>
+<li><strong>Creating Containers</strong><br>
+<code>docker run</code></li>
+<li><strong>Listing Containers</strong><br>
+<code>docker ps</code>, <code>docker ps -a</code></li>
+<li><strong>Starting/Stopping/Removing Containers</strong><br>
+<code>docker start</code>, <code>docker stop</code>, <code>docker rm</code></li>
+<li><strong>Inspecting Containers</strong><br>
+<code>docker inspect</code></li>
+<li><strong>Container Lifecycle</strong></li>
+<li><strong>Running containers in detached mode</strong><br>
+<code>-d</code></li>
+<li><strong>Executing commands inside containers</strong><br>
+<code>docker exec</code>, <code>docker attach</code></li>
+<li><strong>Logs and Terminal access</strong><br>
+<code>docker logs</code>, <code>docker exec -it</code></li>
+</ul>
+<hr>
+<h2 id="4-dockerfile-creating-custom-images">4. Dockerfile (Creating Custom Images)<a href="#4-dockerfile-creating-custom-images" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><strong>What is a Dockerfile?</strong></li>
+<li><strong>Basic Dockerfile Instructions</strong>
+<ul>
+<li><code>FROM</code></li>
+<li><code>RUN</code></li>
+<li><code>COPY</code></li>
+<li><code>ADD</code></li>
+<li><code>CMD</code></li>
+<li><code>ENTRYPOINT</code></li>
+<li><code>EXPOSE</code></li>
+<li><code>ENV</code></li>
+<li><code>WORKDIR</code></li>
+</ul>
+</li>
+<li><strong>Building Image from Dockerfile</strong><br>
+<code>docker build</code></li>
+<li><strong>Best practices</strong>
+<ul>
+<li>Minimizing layers</li>
+<li>Using <code>.dockerignore</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="5-docker-volumes-data-persistence">5. Docker Volumes (Data Persistence)<a href="#5-docker-volumes-data-persistence" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><strong>What is a Volume?</strong></li>
+<li><strong>Types</strong>
+<ul>
+<li>Volumes</li>
+<li>Bind Mounts</li>
+</ul>
+</li>
+<li><strong>Creating Volumes</strong><br>
+<code>docker volume create</code></li>
+<li><strong>Mounting Volumes to Containers</strong><br>
+<code>-v</code> or <code>--mount</code></li>
+<li><strong>Inspecting Volumes</strong><br>
+<code>docker volume inspect</code></li>
+<li><strong>Volume Persistence and Sharing between Containers</strong></li>
+</ul>
+<hr>
+<h2 id="6-docker-networking">6. Docker Networking<a href="#6-docker-networking" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><strong>Default Docker Networks</strong>
+<ul>
+<li><code>bridge</code></li>
+<li><code>host</code></li>
+<li><code>none</code></li>
+</ul>
+</li>
+<li><strong>Creating Custom Networks</strong><br>
+<code>docker network create</code></li>
+<li><strong>Connecting Containers to Networks</strong><br>
+<code>--network</code></li>
+<li><strong>Inspecting Networks</strong><br>
+<code>docker network inspect</code></li>
+<li><strong>Communication between containers</strong><br>
+Via network name</li>
+</ul>
+<hr>
+<h2 id="7-docker-compose-multi-container-applications">7. Docker Compose (Multi-container Applications)<a href="#7-docker-compose-multi-container-applications" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><strong>What is Docker Compose?</strong></li>
+<li><strong><code>docker-compose.yml</code> file structure</strong>
+<ul>
+<li><code>version</code></li>
+<li><code>services</code></li>
+<li><code>build</code></li>
+<li><code>ports</code></li>
+<li><code>volumes</code></li>
+<li><code>depends_on</code></li>
+<li><code>networks</code></li>
+</ul>
+</li>
+<li><strong>Running with Compose</strong><br>
+<code>docker-compose up</code>, <code>docker-compose down</code></li>
+<li><strong>Building and Rebuilding</strong><br>
+<code>docker-compose build</code>, <code>docker-compose up --build</code></li>
+<li><strong>Scaling services</strong><br>
+<code>docker-compose up --scale</code></li>
+<li><strong>Use cases and benefits</strong></li>
+</ul>
+
       </div></div>
 
   

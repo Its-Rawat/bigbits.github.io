@@ -272,7 +272,142 @@
 <li>use commands inside mysql container</li>
 </ul>
 <pre tabindex="0"><code class="language-Copy" data-lang="Copy">docker exec -it &lt;custom-sql-name&gt; &lt;command-type&gt;
-</code></pre>
+</code></pre><hr>
+<h1 id="docker-for-touchstone-mcq-test">Docker for Touchstone MCQ Test</h1>
+<h2 id="1-docker-basics">1. Docker Basics</h2>
+<ul>
+<li><strong>What is Docker?</strong></li>
+<li><strong>Benefits of using Docker</strong></li>
+<li><strong>Docker vs Virtual Machines</strong></li>
+<li><strong>Docker Architecture</strong>
+<ul>
+<li>Docker Engine</li>
+<li>Docker Daemon</li>
+<li>Docker Client</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-docker-images">2. Docker Images</h2>
+<ul>
+<li><strong>What is a Docker Image?</strong></li>
+<li><strong>Layers in Docker Images</strong></li>
+<li><strong>Docker Hub and Image Registries</strong></li>
+<li><strong>Pulling Images</strong><br>
+<code>docker pull</code></li>
+<li><strong>Listing Images</strong><br>
+<code>docker images</code></li>
+<li><strong>Removing Images</strong><br>
+<code>docker rmi</code></li>
+<li><strong>Custom Images using Dockerfile</strong><br>
+(See Dockerfile section below)</li>
+</ul>
+<hr>
+<h2 id="3-docker-containers">3. Docker Containers</h2>
+<ul>
+<li><strong>What is a Container?</strong></li>
+<li><strong>Creating Containers</strong><br>
+<code>docker run</code></li>
+<li><strong>Listing Containers</strong><br>
+<code>docker ps</code>, <code>docker ps -a</code></li>
+<li><strong>Starting/Stopping/Removing Containers</strong><br>
+<code>docker start</code>, <code>docker stop</code>, <code>docker rm</code></li>
+<li><strong>Inspecting Containers</strong><br>
+<code>docker inspect</code></li>
+<li><strong>Container Lifecycle</strong></li>
+<li><strong>Running containers in detached mode</strong><br>
+<code>-d</code></li>
+<li><strong>Executing commands inside containers</strong><br>
+<code>docker exec</code>, <code>docker attach</code></li>
+<li><strong>Logs and Terminal access</strong><br>
+<code>docker logs</code>, <code>docker exec -it</code></li>
+</ul>
+<hr>
+<h2 id="4-dockerfile-creating-custom-images">4. Dockerfile (Creating Custom Images)</h2>
+<ul>
+<li><strong>What is a Dockerfile?</strong></li>
+<li><strong>Basic Dockerfile Instructions</strong>
+<ul>
+<li><code>FROM</code></li>
+<li><code>RUN</code></li>
+<li><code>COPY</code></li>
+<li><code>ADD</code></li>
+<li><code>CMD</code></li>
+<li><code>ENTRYPOINT</code></li>
+<li><code>EXPOSE</code></li>
+<li><code>ENV</code></li>
+<li><code>WORKDIR</code></li>
+</ul>
+</li>
+<li><strong>Building Image from Dockerfile</strong><br>
+<code>docker build</code></li>
+<li><strong>Best practices</strong>
+<ul>
+<li>Minimizing layers</li>
+<li>Using <code>.dockerignore</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="5-docker-volumes-data-persistence">5. Docker Volumes (Data Persistence)</h2>
+<ul>
+<li><strong>What is a Volume?</strong></li>
+<li><strong>Types</strong>
+<ul>
+<li>Volumes</li>
+<li>Bind Mounts</li>
+</ul>
+</li>
+<li><strong>Creating Volumes</strong><br>
+<code>docker volume create</code></li>
+<li><strong>Mounting Volumes to Containers</strong><br>
+<code>-v</code> or <code>--mount</code></li>
+<li><strong>Inspecting Volumes</strong><br>
+<code>docker volume inspect</code></li>
+<li><strong>Volume Persistence and Sharing between Containers</strong></li>
+</ul>
+<hr>
+<h2 id="6-docker-networking">6. Docker Networking</h2>
+<ul>
+<li><strong>Default Docker Networks</strong>
+<ul>
+<li><code>bridge</code></li>
+<li><code>host</code></li>
+<li><code>none</code></li>
+</ul>
+</li>
+<li><strong>Creating Custom Networks</strong><br>
+<code>docker network create</code></li>
+<li><strong>Connecting Containers to Networks</strong><br>
+<code>--network</code></li>
+<li><strong>Inspecting Networks</strong><br>
+<code>docker network inspect</code></li>
+<li><strong>Communication between containers</strong><br>
+Via network name</li>
+</ul>
+<hr>
+<h2 id="7-docker-compose-multi-container-applications">7. Docker Compose (Multi-container Applications)</h2>
+<ul>
+<li><strong>What is Docker Compose?</strong></li>
+<li><strong><code>docker-compose.yml</code> file structure</strong>
+<ul>
+<li><code>version</code></li>
+<li><code>services</code></li>
+<li><code>build</code></li>
+<li><code>ports</code></li>
+<li><code>volumes</code></li>
+<li><code>depends_on</code></li>
+<li><code>networks</code></li>
+</ul>
+</li>
+<li><strong>Running with Compose</strong><br>
+<code>docker-compose up</code>, <code>docker-compose down</code></li>
+<li><strong>Building and Rebuilding</strong><br>
+<code>docker-compose build</code>, <code>docker-compose up --build</code></li>
+<li><strong>Scaling services</strong><br>
+<code>docker-compose up --scale</code></li>
+<li><strong>Use cases and benefits</strong></li>
+</ul>
           
         </div>
 
