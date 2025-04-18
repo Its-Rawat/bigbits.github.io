@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Loadtesting on </title>
+    <link>https://its-rawat.github.io/bigbits.github.io/tags/loadtesting/</link>
+    <description>Recent content in Loadtesting on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/loadtesting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jmeter Full Notes</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/</guid>
+      <description>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;</description>
+      <content>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
