@@ -1228,11 +1228,17 @@ export default App;
       <description>&lt;h1 id=&#34;what-is-dsa&#34;&gt;What is DSA?&lt;/h1&gt;
 &lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;types-of-data-structure&#34;&gt;Types of Data Structure&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34;&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;sequential-data-structure&#34;&gt;Sequential Data Structure&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;non-linear-data-structure&#34;&gt;Non-Linear Data Structure&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-dsa&#34;&gt;What is DSA?&lt;/h1&gt;
 &lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;types-of-data-structure&#34;&gt;Types of Data Structure&lt;/h1&gt;
+&lt;h2 id=&#34;sequential-data-structure&#34;&gt;Sequential Data Structure&lt;/h2&gt;
 &lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;non-linear-data-structure&#34;&gt;Non-Linear Data Structure&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png&#34;&gt;&lt;/p&gt;
 </content>
     </item>
     
