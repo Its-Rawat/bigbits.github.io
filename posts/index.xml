@@ -7,6 +7,388 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/java_stream_api_notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/java_stream_api_notes/</guid>
+      <description>&lt;h1 id=&#34;-java-stream-api&#34;&gt;📘 Java Stream API&lt;/h1&gt;
+&lt;h2 id=&#34;-what-is-stream-api&#34;&gt;🔹 What is Stream API?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduced in Java 8&lt;/li&gt;
+&lt;li&gt;Used to process collections (like List, Set) in a &lt;strong&gt;functional&lt;/strong&gt; and &lt;strong&gt;declarative&lt;/strong&gt; style&lt;/li&gt;
+&lt;li&gt;Streams are not data structures — they don&amp;rsquo;t store data&lt;/li&gt;
+&lt;li&gt;Allows for &lt;strong&gt;pipelining&lt;/strong&gt; operations (chaining of multiple operations)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-stream-lifecycle&#34;&gt;🔹 Stream Lifecycle&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: From a Collection or array&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intermediate Operations&lt;/strong&gt;: Transformations (lazy)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terminal Operation&lt;/strong&gt;: Triggers the processing (eager)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-stream-creation&#34;&gt;🔹 Stream Creation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; list &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Stream.&lt;span style=&#34;color:#a6e22e&#34;&gt;of&lt;/span&gt;(1, 2, 3, 4);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-intermediate-operations&#34;&gt;🔹 Intermediate Operations&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Method&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;filter(Predicate)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Filters elements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;map(Function)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Transforms elements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;flatMap(Function)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Flattens nested structures&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;sorted()&lt;/code&gt; / &lt;code&gt;sorted(Comparator)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Sorts elements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;distinct()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Removes duplicates&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;limit(n)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Limits output to &lt;code&gt;n&lt;/code&gt; items&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;skip(n)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Skips first &lt;code&gt;n&lt;/code&gt; elements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;peek()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;For debugging/side-effects&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-terminal-operations&#34;&gt;🔹 Terminal Operations&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Method&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;collect()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Collects result into list, set, map&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;forEach()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Performs action on each element&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;toArray()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Converts to array&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;reduce()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Reduces to a single value&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;count()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Counts elements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;anyMatch()&lt;/code&gt; / &lt;code&gt;allMatch()&lt;/code&gt; / &lt;code&gt;noneMatch()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Matching conditions&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;findFirst()&lt;/code&gt; / &lt;code&gt;findAny()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Finds element&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-collectors&#34;&gt;🔹 Collectors&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toSet&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toMap&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;joining&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, &amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;groupingBy&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;partitioningBy&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-examples&#34;&gt;🔹 Examples&lt;/h2&gt;
+&lt;h3 id=&#34;-filter-numbers-greater-than-10&#34;&gt;✅ Filter numbers greater than 10&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;filter&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; 10)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-convert-to-uppercase&#34;&gt;✅ Convert to uppercase&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;map&lt;/span&gt;(String::toUpperCase)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-get-first-5-sorted-items&#34;&gt;✅ Get first 5 sorted items&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;sorted&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;limit&lt;/span&gt;(5)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;forEach&lt;/span&gt;(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;::println);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-group-employees-by-department&#34;&gt;✅ Group employees by department&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String, List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Employee&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; byDept &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; employees.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;groupingBy&lt;/span&gt;(Employee::getDepartment));
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-advanced-operations&#34;&gt;🔹 Advanced Operations&lt;/h2&gt;
+&lt;h3 id=&#34;-reduce-example&#34;&gt;🔁 Reduce Example&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;reduce&lt;/span&gt;(0, (a, b) &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; b);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-flatmap-example&#34;&gt;📦 FlatMap Example&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; listOfLists &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(1, 2),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(3, 4)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; flatList &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; listOfLists.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;flatMap&lt;/span&gt;(List::stream)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-tips&#34;&gt;🧠 Tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Streams can only be used once (they get consumed after a terminal op)&lt;/li&gt;
+&lt;li&gt;Avoid modifying external mutable state inside streams&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;parallelStream()&lt;/code&gt; for parallel processing (only when necessary)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-practice-questions&#34;&gt;📝 Practice Questions&lt;/h2&gt;
+&lt;h3 id=&#34;-easy&#34;&gt;✅ Easy&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Filter even numbers from a list of integers.&lt;/li&gt;
+&lt;li&gt;Convert a list of strings to uppercase.&lt;/li&gt;
+&lt;li&gt;Count the number of empty strings in a list.&lt;/li&gt;
+&lt;li&gt;Remove null values from a list.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-medium&#34;&gt;🔁 Medium&lt;/h3&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Given a list of names, return names starting with &amp;ldquo;A&amp;rdquo;, sorted alphabetically.&lt;/li&gt;
+&lt;li&gt;Return the average of a list of integers.&lt;/li&gt;
+&lt;li&gt;Get a list of distinct elements from a list.&lt;/li&gt;
+&lt;li&gt;Group a list of employees by department (using &lt;code&gt;Collectors.groupingBy&lt;/code&gt;).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-advanced&#34;&gt;🧩 Advanced&lt;/h3&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;Find the second highest number in a list.&lt;/li&gt;
+&lt;li&gt;Flatten a list of lists of integers into a single list.&lt;/li&gt;
+&lt;li&gt;Partition a list of integers into even and odd numbers.&lt;/li&gt;
+&lt;li&gt;From a list of Person objects, get names of all adults (age &amp;gt; 18), sorted by age.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;</description>
+      <content>&lt;h1 id=&#34;-java-stream-api&#34;&gt;📘 Java Stream API&lt;/h1&gt;
+&lt;h2 id=&#34;-what-is-stream-api&#34;&gt;🔹 What is Stream API?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduced in Java 8&lt;/li&gt;
+&lt;li&gt;Used to process collections (like List, Set) in a &lt;strong&gt;functional&lt;/strong&gt; and &lt;strong&gt;declarative&lt;/strong&gt; style&lt;/li&gt;
+&lt;li&gt;Streams are not data structures — they don&amp;rsquo;t store data&lt;/li&gt;
+&lt;li&gt;Allows for &lt;strong&gt;pipelining&lt;/strong&gt; operations (chaining of multiple operations)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-stream-lifecycle&#34;&gt;🔹 Stream Lifecycle&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: From a Collection or array&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intermediate Operations&lt;/strong&gt;: Transformations (lazy)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terminal Operation&lt;/strong&gt;: Triggers the processing (eager)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-stream-creation&#34;&gt;🔹 Stream Creation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; list &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Stream.&lt;span style=&#34;color:#a6e22e&#34;&gt;of&lt;/span&gt;(1, 2, 3, 4);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-intermediate-operations&#34;&gt;🔹 Intermediate Operations&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Method&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;filter(Predicate)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Filters elements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;map(Function)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Transforms elements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;flatMap(Function)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Flattens nested structures&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;sorted()&lt;/code&gt; / &lt;code&gt;sorted(Comparator)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Sorts elements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;distinct()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Removes duplicates&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;limit(n)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Limits output to &lt;code&gt;n&lt;/code&gt; items&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;skip(n)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Skips first &lt;code&gt;n&lt;/code&gt; elements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;peek()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;For debugging/side-effects&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-terminal-operations&#34;&gt;🔹 Terminal Operations&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Method&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;collect()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Collects result into list, set, map&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;forEach()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Performs action on each element&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;toArray()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Converts to array&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;reduce()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Reduces to a single value&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;count()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Counts elements&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;anyMatch()&lt;/code&gt; / &lt;code&gt;allMatch()&lt;/code&gt; / &lt;code&gt;noneMatch()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Matching conditions&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;findFirst()&lt;/code&gt; / &lt;code&gt;findAny()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Finds element&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-collectors&#34;&gt;🔹 Collectors&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toSet&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toMap&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;joining&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, &amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;groupingBy&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;partitioningBy&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-examples&#34;&gt;🔹 Examples&lt;/h2&gt;
+&lt;h3 id=&#34;-filter-numbers-greater-than-10&#34;&gt;✅ Filter numbers greater than 10&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;filter&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; 10)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-convert-to-uppercase&#34;&gt;✅ Convert to uppercase&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;map&lt;/span&gt;(String::toUpperCase)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-get-first-5-sorted-items&#34;&gt;✅ Get first 5 sorted items&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;sorted&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;limit&lt;/span&gt;(5)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;forEach&lt;/span&gt;(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;::println);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-group-employees-by-department&#34;&gt;✅ Group employees by department&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String, List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Employee&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; byDept &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; employees.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;groupingBy&lt;/span&gt;(Employee::getDepartment));
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-advanced-operations&#34;&gt;🔹 Advanced Operations&lt;/h2&gt;
+&lt;h3 id=&#34;-reduce-example&#34;&gt;🔁 Reduce Example&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;reduce&lt;/span&gt;(0, (a, b) &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; b);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-flatmap-example&#34;&gt;📦 FlatMap Example&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; listOfLists &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(1, 2),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(3, 4)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; flatList &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; listOfLists.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;flatMap&lt;/span&gt;(List::stream)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-tips&#34;&gt;🧠 Tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Streams can only be used once (they get consumed after a terminal op)&lt;/li&gt;
+&lt;li&gt;Avoid modifying external mutable state inside streams&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;parallelStream()&lt;/code&gt; for parallel processing (only when necessary)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-practice-questions&#34;&gt;📝 Practice Questions&lt;/h2&gt;
+&lt;h3 id=&#34;-easy&#34;&gt;✅ Easy&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Filter even numbers from a list of integers.&lt;/li&gt;
+&lt;li&gt;Convert a list of strings to uppercase.&lt;/li&gt;
+&lt;li&gt;Count the number of empty strings in a list.&lt;/li&gt;
+&lt;li&gt;Remove null values from a list.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-medium&#34;&gt;🔁 Medium&lt;/h3&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Given a list of names, return names starting with &amp;ldquo;A&amp;rdquo;, sorted alphabetically.&lt;/li&gt;
+&lt;li&gt;Return the average of a list of integers.&lt;/li&gt;
+&lt;li&gt;Get a list of distinct elements from a list.&lt;/li&gt;
+&lt;li&gt;Group a list of employees by department (using &lt;code&gt;Collectors.groupingBy&lt;/code&gt;).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-advanced&#34;&gt;🧩 Advanced&lt;/h3&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;Find the second highest number in a list.&lt;/li&gt;
+&lt;li&gt;Flatten a list of lists of integers into a single list.&lt;/li&gt;
+&lt;li&gt;Partition a list of integers into even and odd numbers.&lt;/li&gt;
+&lt;li&gt;From a list of Person objects, get names of all adults (age &amp;gt; 18), sorted by age.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+</content>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/</guid>
+      <description>&lt;h1 id=&#34;need-of-dtos-when-working-with-apis&#34;&gt;Need of DTOs when working with APIs&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png&#34;&gt;
+&lt;code&gt;In Short:&lt;/code&gt;
+We use DTOs to ensure our entity data won’t be affected directly, promoting data encapsulation, security, and cleaner API design.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Extra Info&lt;/code&gt;
+DTO is a design pattern.&lt;/p&gt;
+&lt;hr&gt;</description>
+      <content>&lt;h1 id=&#34;need-of-dtos-when-working-with-apis&#34;&gt;Need of DTOs when working with APIs&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png&#34;&gt;
+&lt;code&gt;In Short:&lt;/code&gt;
+We use DTOs to ensure our entity data won’t be affected directly, promoting data encapsulation, security, and cleaner API design.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Extra Info&lt;/code&gt;
+DTO is a design pattern.&lt;/p&gt;
+&lt;hr&gt;
+</content>
+    </item>
+    
+    <item>
       <title>AGILE CRASH COURSE UDEMY</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/agile-crash-course/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -937,7 +1319,7 @@ Via network name&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;![[WhatsApp Image 2025-03-15 at 19.26.24_681f38a3.jpg]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
@@ -958,7 +1340,7 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;![[WhatsApp Image 2025-03-15 at 21.14.48_f2a85a5d.jpg]]&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-plsql&#34;&gt;What is PL/SQL?&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;PL/SQL stands for Procedural Language Extension to SQL&lt;/code&gt;&lt;/li&gt;
@@ -967,7 +1349,7 @@ Via network name&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;![[WhatsApp Image 2025-03-15 at 19.26.24_681f38a3.jpg]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
@@ -988,7 +1370,7 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;![[WhatsApp Image 2025-03-15 at 21.14.48_f2a85a5d.jpg]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what-is-pdb&#34;&gt;What is PDB?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Pluggable Database (PDB)&lt;/strong&gt; is a portable collection of schemas, tables, and objects that can be plugged into a &lt;strong&gt;Container Database (CDB)&lt;/strong&gt; in Oracle.&lt;/p&gt;
 &lt;h2 id=&#34;why-pdb&#34;&gt;Why PDB?&lt;/h2&gt;
@@ -1014,7 +1396,7 @@ Via network name&lt;/li&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;what-are-blocks&#34;&gt;What are Blocks?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Block is a logical unit of code that groups related declarations, statements. &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;![[WhatsApp Image 2025-03-16 at 13.41.51_65816a2f.jpg]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl3.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;structure-1&#34;&gt;Structure&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;DECLARE&lt;/strong&gt;&lt;/em&gt; Block.&lt;/li&gt;
@@ -1216,6 +1598,28 @@ const App = () =&amp;gt;{
   );
 }
 export default App;
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Sastra Computer Organization and Architect Full Notes</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/computer-organization--architect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/computer-organization--architect/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;base-system-in-computer-architecture&#34;&gt;Base System in Computer Architecture&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;code&gt;Refer Unit 1 FIT Notes &lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/bWrsk0QizEk?si=6XBleKlCR-PaCF_C
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;best-one-shot&#34;&gt;Best One Shot&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/NY2gz_Kzc0Q?si=YburSfFaLyNTFhf0
+&lt;/code&gt;&lt;/pre&gt;</description>
+      <content>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;base-system-in-computer-architecture&#34;&gt;Base System in Computer Architecture&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;code&gt;Refer Unit 1 FIT Notes &lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/bWrsk0QizEk?si=6XBleKlCR-PaCF_C
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;best-one-shot&#34;&gt;Best One Shot&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/NY2gz_Kzc0Q?si=YburSfFaLyNTFhf0
 &lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     

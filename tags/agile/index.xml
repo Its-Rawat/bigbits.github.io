@@ -839,7 +839,7 @@ Via network name&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;![[WhatsApp Image 2025-03-15 at 19.26.24_681f38a3.jpg]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
@@ -860,7 +860,7 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;![[WhatsApp Image 2025-03-15 at 21.14.48_f2a85a5d.jpg]]&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-plsql&#34;&gt;What is PL/SQL?&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;PL/SQL stands for Procedural Language Extension to SQL&lt;/code&gt;&lt;/li&gt;
@@ -869,7 +869,7 @@ Via network name&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;![[WhatsApp Image 2025-03-15 at 19.26.24_681f38a3.jpg]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
@@ -890,7 +890,7 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;![[WhatsApp Image 2025-03-15 at 21.14.48_f2a85a5d.jpg]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what-is-pdb&#34;&gt;What is PDB?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Pluggable Database (PDB)&lt;/strong&gt; is a portable collection of schemas, tables, and objects that can be plugged into a &lt;strong&gt;Container Database (CDB)&lt;/strong&gt; in Oracle.&lt;/p&gt;
 &lt;h2 id=&#34;why-pdb&#34;&gt;Why PDB?&lt;/h2&gt;
@@ -916,7 +916,7 @@ Via network name&lt;/li&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;what-are-blocks&#34;&gt;What are Blocks?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Block is a logical unit of code that groups related declarations, statements. &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;![[WhatsApp Image 2025-03-16 at 13.41.51_65816a2f.jpg]]&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl3.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;structure-1&#34;&gt;Structure&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;DECLARE&lt;/strong&gt;&lt;/em&gt; Block.&lt;/li&gt;
@@ -997,6 +997,432 @@ Hold more then one data type.&lt;/li&gt;
 &lt;li&gt;INTERVAL(P) DAY TO SECOND(P)&lt;/li&gt;
 &lt;/ol&gt;
 </content>
+    </item>
+    
+    <item>
+      <title>Selenium Notes</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/selenium-v4.29/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/selenium-v4.29/</guid>
+      <description>&lt;h1 id=&#34;important-libraries&#34;&gt;Important Libraries&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver 
+from selenium.webdriver.chrome.service import Service 
+from selenium.webdriver.support.ui import Select 
+from selenium.webdriver.common.by lmport By 
+from selenium.webdriver.support import expected_conditions as EC 
+from selenium.webdriver.support.ui import WebDriverWait 
+import time 
+from selenium.webdriver.common.action_chains import ActionChains 
+from selenium.webdriver.chrome.options import Options 
+from selenium webdriver.remote.webelement import WebElement
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;webdriver&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Service&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Service&lt;/code&gt; is used to manage the lifecycle of the &lt;code&gt;chromedriver.exe&lt;/code&gt; process (starting, stopping, and communication).&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;important-libraries&#34;&gt;Important Libraries&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver 
+from selenium.webdriver.chrome.service import Service 
+from selenium.webdriver.support.ui import Select 
+from selenium.webdriver.common.by lmport By 
+from selenium.webdriver.support import expected_conditions as EC 
+from selenium.webdriver.support.ui import WebDriverWait 
+import time 
+from selenium.webdriver.common.action_chains import ActionChains 
+from selenium.webdriver.chrome.options import Options 
+from selenium webdriver.remote.webelement import WebElement
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;webdriver&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Service&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Service&lt;/code&gt; is used to manage the lifecycle of the &lt;code&gt;chromedriver.exe&lt;/code&gt; process (starting, stopping, and communication).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Select&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import Select&lt;/code&gt; imports the &lt;code&gt;Select&lt;/code&gt; class, which is used to handle dropdown menus in Selenium.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;expected_conditions&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support import expected_conditions as EC&lt;/code&gt; imports &lt;code&gt;expected_conditions&lt;/code&gt;, which defines conditions to wait for (like element visibility) before performing actions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;WebDriverWait&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import WebDriverWait&lt;/code&gt; imports &lt;code&gt;WebDriverWait&lt;/code&gt;, which is used to wait for a specific condition to be met before proceeding.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;ActionChains&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.common.action_chains import ActionChains&lt;/code&gt; imports &lt;code&gt;ActionChains&lt;/code&gt;, which is used to perform complex user interactions like hover, drag-and-drop, and right-click.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Options&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.chrome.options import Options&lt;/code&gt; imports &lt;code&gt;Options&lt;/code&gt;, which is used to set Chrome-specific settings like headless mode, disabling extensions, etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;WebElement&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Represents an HTML element.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;basic-code-examples&#34;&gt;Basic Code Examples&lt;/h1&gt;
+&lt;h2 id=&#34;google-search-example&#34;&gt;Google Search Example&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+
+# Path to chromedriver.exe
+service = Service(r&amp;#34;Drivers\chromedriver.exe&amp;#34;)
+# Initialize WebDriver using Service
+driver = webdriver.Chrome(service=service)
+# Set page load timeout
+driver.set_page_load_timeout(10)
+# Open Google
+driver.get(&amp;#34;https://google.com&amp;#34;)
+# Find search input and send keys
+driver.find_element(By.NAME, &amp;#34;q&amp;#34;).send_keys(&amp;#34;Hello Google&amp;#34;)
+time.sleep(5)
+# Wait until the search button is clickable, then click
+driver.find_element(By.NAME,&amp;#34;btnK&amp;#34;).click()
+# Wait for results to load
+time.sleep(5)
+# Close browser
+driver.close()
+driver.quit()
+print(&amp;#34;Test Completed&amp;#34;)
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;switch-windows-example&#34;&gt;Switch Windows Example&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+import time
+
+from selenium.webdriver.common.by import By
+service = Service(r&amp;#34;Drivers\chromedriver.exe&amp;#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(&amp;#34;https://www.examples.com/&amp;#34;)
+time.sleep(2)
+driver.maximize_window()
+time.sleep(2)
+time.sleep(2)
+home_window = driver.current_window_handle
+print(home_window)
+time.sleep(2)
+driver.switch_to.new_window(&amp;#39;tab&amp;#39;)
+time.sleep(2)
+driver.switch_to.window(home_window)
+time.sleep(2)
+ele = driver.find_elements(By.CLASS_NAME,&amp;#34;cat-img&amp;#34;)
+ele[0].click()
+time.sleep(2)
+time.sleep(2)
+driver.close()
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id=&#34;things-to-know&#34;&gt;Things to know&amp;hellip;&lt;/h3&gt;
+&lt;h4 id=&#34;headless-chrome&#34;&gt;Headless Chrome&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;Headless mode is a configuration option in Selenium that enables running browser instances without displaying a visible UI.&lt;/em&gt;&lt;/p&gt;
+&lt;h5 id=&#34;why&#34;&gt;Why?&lt;/h5&gt;
+&lt;p&gt;This mode is particularly useful for automating tasks on cloud infrastructure, where a graphical interface is not available, or for running tests on a continuous integration/continuous deployment (CI/CD) pipeline.&lt;/p&gt;
+&lt;h5 id=&#34;example&#34;&gt;Example&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+import time
+
+chromeOptions = Options()
+chromeOptions.add_argument(&amp;#34;--headless&amp;#34;);
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;);
+driver = webdriver.Chrome(service=service,options=chromeOptions);
+driver.get(&amp;#34;https://google.com&amp;#34;);
+print(driver.title)
+searchBox = driver.find_element(By.NAME,&amp;#39;q&amp;#39;)
+searchBox.send_keys(&amp;#34;What is Selenuium?&amp;#34;);
+time.sleep(3)
+driver.find_element(By.NAME,&amp;#34;btnK&amp;#34;).click();
+time.sleep(3)
+print(driver.title)
+driver.close();
+driver.quit();
+print(&amp;#34;Completed&amp;#34;);
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📎 &lt;strong&gt;List of Chrome Driver Arguments:&lt;/strong&gt; &lt;a href=&#34;https://gist.github.com/ntamvl/4f93bbb7c9b4829c601104a2d2f91fe5&#34;&gt;View the Resource&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;topic-wise-examples&#34;&gt;Topic-Wise-Examples&lt;/h1&gt;
+&lt;h2 id=&#34;switch-to-new-browser-instance-of-window--tab&#34;&gt;Switch to new browser instance of &amp;lsquo;window&amp;rsquo; || &amp;rsquo;tab&amp;rsquo;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;driver.switch_to.new_window()&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service  import Service
+from selenium.webdriver.common.by import By
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(&amp;#34;https://search.brave.com/&amp;#34;)
+time.sleep(2)
+googleSearchBox = driver.find_element(By.ID,&amp;#34;searchbox&amp;#34;);
+googleSearchBox.send_keys(&amp;#34;What is NVIDIA Omniverse?&amp;#34;);
+time.sleep(2)
+searchBtn = driver.find_element(By.ID,&amp;#34;submit-button&amp;#34;);
+searchBtn.click()
+time.sleep(3)
+print(driver.title)
+driver.switch_to.new_window(&amp;#34;tab&amp;#34;);
+driver.get(&amp;#34;https://www.blender.org/&amp;#34;)
+print(driver.title)
+time.sleep(5)
+driver.close();
+driver.quit();
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;to-select-a-radio-button--print-a-text-in-console&#34;&gt;To Select a Radio Button &amp;amp;&amp;amp; Print a Text in Console&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+
+from selenium import webdriver
+
+from selenium.webdriver.chrome.service import Service
+
+from selenium.webdriver.common.by import By
+
+  
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+
+driver = webdriver.Chrome(service=service)
+
+driver.get(&amp;#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio&amp;#34;)
+
+time.sleep(2)
+
+print(driver.title)
+
+driver.switch_to.frame(&amp;#34;iframeResult&amp;#34;)
+
+radioBtn = driver.find_element(By.ID,&amp;#34;html&amp;#34;);
+
+radioBtn.click()
+
+textArea = driver.find_elements(By.TAG_NAME,&amp;#34;p&amp;#34;)[0ii].text
+
+print(textArea)
+
+time.sleep(2)
+
+driver.quit()
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;select-dropdown-value-and-print-text&#34;&gt;Select Dropdown Value and Print Text&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+
+from selenium import webdriver
+
+from selenium.webdriver.chrome.service import Service
+
+from selenium.webdriver.common.by import By
+
+from selenium.webdriver.support.ui import Select
+
+  
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+
+driver = webdriver.Chrome(service = service)
+
+driver.get(&amp;#34;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select&amp;#34;)
+
+time.sleep(2)
+
+driver.switch_to.frame(&amp;#34;iframeResult&amp;#34;)
+
+time.sleep(1)
+
+dropdown = driver.find_element(By.ID,&amp;#34;cars&amp;#34;);
+
+time.sleep(2)
+
+dropdowned = Select(dropdown);
+
+time.sleep(2)
+
+dropdowned.select_by_value(&amp;#34;audi&amp;#34;)
+
+selected_text = dropdowned.first_selected_option.text
+
+print(selected_text)
+
+time.sleep(2)
+
+driver.quit()
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;handle-alert-window&#34;&gt;Handle Alert Window&lt;/h2&gt;
+&lt;p&gt;*The Following code will click on alert btn then send keys to alert.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(&amp;#34;https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt&amp;#34;)
+time.sleep(2)
+driver.switch_to.frame(&amp;#34;iframeResult&amp;#34;)
+time.sleep(2)
+driver.find_element(By.XPATH,&amp;#34;/html/body/button&amp;#34;).click()
+time.sleep(1)
+alert1 = driver.switch_to.alert
+time.sleep(1)
+alert1.send_keys(&amp;#34;Someone give me Chole Bhature and Kurkure Momos😭😭😭😭😭plzzz&amp;#34;);
+time.sleep(5)
+alert1.accept()
+time.sleep(5)
+driver.close()
+driver.quit()
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;expected-conditions-ec&#34;&gt;Expected Conditions (EC)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Expected Conditions (EC)&lt;/strong&gt; are used with &lt;strong&gt;WebDriverWait&lt;/strong&gt; to handle dynamic web elements and ensure synchronization between the script and the browser.&lt;/p&gt;
+&lt;p&gt;Without &lt;code&gt;EC&lt;/code&gt;, Selenium might try to interact with elements before they exist, causing &lt;strong&gt;NoSuchElementException&lt;/strong&gt; or &lt;strong&gt;StaleElementReferenceException&lt;/strong&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Alert Html Script&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt;
+    &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt;
+    &amp;lt;title&amp;gt;Random Alert Box&amp;lt;/title&amp;gt;
+    &amp;lt;script&amp;gt;
+        function showAlert() {
+            let randomDelay = Math.floor(Math.random() * 5000) + 1000; // Random delay between 1s to 5s
+            setTimeout(() =&amp;gt; {
+                alert(&amp;#34;This is a random alert!&amp;#34;);
+            }, randomDelay);
+        }
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body onload=&amp;#34;showAlert()&amp;#34;&amp;gt;
+    &amp;lt;h2&amp;gt;Random Alert Box Example&amp;lt;/h2&amp;gt;
+    &amp;lt;p&amp;gt;Wait for the alert to appear randomly between 1 to 5 seconds.&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Selenium Code to handle EC&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+driver = webdriver.Chrome(service=service)
+driver.get(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\TestingChrome\Test1\delayAlert.html&amp;#34;)
+wait = WebDriverWait(driver, 10);
+delayAlert = wait.until(EC.alert_is_present());
+alert = driver.switch_to.alert
+print(&amp;#34;Alert Text:&amp;#34;, alert.text)
+alert.accept()
+print(&amp;#34;Alert accepted successfully!&amp;#34;)
+driver.quit()
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;action-chains&#34;&gt;Action Chains&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Action Chains&lt;/strong&gt; in Selenium allow you to perform &lt;strong&gt;mouse and keyboard actions&lt;/strong&gt; like hover, drag-and-drop, right-click, double-click, etc.&lt;/p&gt;
+&lt;p&gt;Html Script&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt;
+    &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt;
+    &amp;lt;title&amp;gt;Action Chains Example&amp;lt;/title&amp;gt;
+    &amp;lt;style&amp;gt;
+        #hoverText {
+            display: none;
+            color: red;
+            font-weight: bold;
+        }
+        #hoverArea:hover + #hoverText {
+            display: block;
+        }
+        #draggable {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            cursor: grab;
+        }
+        #droppable {
+            width: 120px;
+            height: 120px;
+            border: 2px dashed black;
+            text-align: center;
+            line-height: 120px;
+            margin-top: 20px;
+        }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;h2&amp;gt;Action Chains Example&amp;lt;/h2&amp;gt;
+    &amp;lt;!-- Right Click and Double Click Example --&amp;gt;
+    &amp;lt;button id=&amp;#34;actionButton&amp;#34;&amp;gt;Right Click or Double Click&amp;lt;/button&amp;gt;
+    &amp;lt;!-- Hover Example --&amp;gt;
+    &amp;lt;div id=&amp;#34;hoverArea&amp;#34; style=&amp;#34;margin-top: 20px; background: yellow; padding: 10px; display: inline-block;&amp;#34;&amp;gt;
+        Hover over me
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;#34;hoverText&amp;#34;&amp;gt;You hovered!&amp;lt;/div&amp;gt;
+    &amp;lt;!-- Drag and Drop Example --&amp;gt;
+    &amp;lt;div id=&amp;#34;draggable&amp;#34;&amp;gt;Drag Me&amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;#34;droppable&amp;#34;&amp;gt;Drop Here&amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        document.getElementById(&amp;#34;actionButton&amp;#34;).addEventListener(&amp;#34;contextmenu&amp;#34;, function(event) {
+            event.preventDefault();
+            alert(&amp;#34;Right-click detected!&amp;#34;);
+        });
+        document.getElementById(&amp;#34;actionButton&amp;#34;).addEventListener(&amp;#34;dblclick&amp;#34;, function() {
+            alert(&amp;#34;Double-click detected!&amp;#34;);
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Selenium Code&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import time
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By;
+from selenium.webdriver.common.action_chains import ActionChains;
+from selenium import webdriver;
+
+service = Service(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\Drivers\chromedriver.exe&amp;#34;)
+driver = webdriver.Chrome(service=service);
+driver.get(r&amp;#34;E:\Jobs\TCS\Testing\Selenium\TestingChrome\Test1\actionChain.html&amp;#34;)
+actions = ActionChains(driver);
+hoverArea = driver.find_element(By.ID,&amp;#34;hoverArea&amp;#34;)
+time.sleep(3);
+actions.move_to_element(hoverArea).perform()
+time.sleep(3);
+&lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     
   </channel>

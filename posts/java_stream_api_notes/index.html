@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   
-    <title>Posts :: </title>
+    <title> :: </title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
+<meta name="description" content="📘 Java Stream API 🔹 What is Stream API? Introduced in Java 8 Used to process collections (like List, Set) in a functional and declarative style Streams are not data structures — they don&rsquo;t store data Allows for pipelining operations (chaining of multiple operations) 🔹 Stream Lifecycle Source: From a Collection or array Intermediate Operations: Transformations (lazy) Terminal Operation: Triggers the processing (eager) 🔹 Stream Creation List&lt;String&gt; list = Arrays.asList(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;); Stream&lt;String&gt; stream = list.stream(); Stream&lt;Integer&gt; stream = Stream.of(1, 2, 3, 4); 🔹 Intermediate Operations Method Description filter(Predicate) Filters elements map(Function) Transforms elements flatMap(Function) Flattens nested structures sorted() / sorted(Comparator) Sorts elements distinct() Removes duplicates limit(n) Limits output to n items skip(n) Skips first n elements peek() For debugging/side-effects 🔹 Terminal Operations Method Description collect() Collects result into list, set, map forEach() Performs action on each element toArray() Converts to array reduce() Reduces to a single value count() Counts elements anyMatch() / allMatch() / noneMatch() Matching conditions findFirst() / findAny() Finds element 🔹 Collectors Collectors.toList() Collectors.toSet() Collectors.toMap() Collectors.joining(&#34;, &#34;) Collectors.groupingBy() Collectors.partitioningBy() 🔹 Examples ✅ Filter numbers greater than 10 List&lt;Integer&gt; result = list.stream() .filter(x -&gt; x &gt; 10) .collect(Collectors.toList()); ✅ Convert to uppercase List&lt;String&gt; result = list.stream() .map(String::toUpperCase) .collect(Collectors.toList()); ✅ Get first 5 sorted items list.stream() .sorted() .limit(5) .forEach(System.out::println); ✅ Group employees by department Map&lt;String, List&lt;Employee&gt;&gt; byDept = employees.stream() .collect(Collectors.groupingBy(Employee::getDepartment)); 🔹 Advanced Operations 🔁 Reduce Example int sum = list.stream() .reduce(0, (a, b) -&gt; a &#43; b); 📦 FlatMap Example List&lt;List&lt;Integer&gt;&gt; listOfLists = Arrays.asList( Arrays.asList(1, 2), Arrays.asList(3, 4) ); List&lt;Integer&gt; flatList = listOfLists.stream() .flatMap(List::stream) .collect(Collectors.toList()); 🧠 Tips Streams can only be used once (they get consumed after a terminal op) Avoid modifying external mutable state inside streams Use parallelStream() for parallel processing (only when necessary) 📝 Practice Questions ✅ Easy Filter even numbers from a list of integers. Convert a list of strings to uppercase. Count the number of empty strings in a list. Remove null values from a list. 🔁 Medium Given a list of names, return names starting with &ldquo;A&rdquo;, sorted alphabetically. Return the average of a list of integers. Get a list of distinct elements from a list. Group a list of employees by department (using Collectors.groupingBy). 🧩 Advanced Find the second highest number in a list. Flatten a list of lists of integers into a single list. Partition a list of integers into even and odd numbers. From a list of Person objects, get names of all adults (age &gt; 18), sorted by age. " />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/" />
+<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/java_stream_api_notes/" />
 
 
 
@@ -41,10 +41,10 @@
 
 
 <meta property="og:locale" content="en" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Posts">
-<meta property="og:description" content="" />
-<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="">
+<meta property="og:description" content="📘 Java Stream API 🔹 What is Stream API? Introduced in Java 8 Used to process collections (like List, Set) in a functional and declarative style Streams are not data structures — they don&rsquo;t store data Allows for pipelining operations (chaining of multiple operations) 🔹 Stream Lifecycle Source: From a Collection or array Intermediate Operations: Transformations (lazy) Terminal Operation: Triggers the processing (eager) 🔹 Stream Creation List&lt;String&gt; list = Arrays.asList(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;); Stream&lt;String&gt; stream = list.stream(); Stream&lt;Integer&gt; stream = Stream.of(1, 2, 3, 4); 🔹 Intermediate Operations Method Description filter(Predicate) Filters elements map(Function) Transforms elements flatMap(Function) Flattens nested structures sorted() / sorted(Comparator) Sorts elements distinct() Removes duplicates limit(n) Limits output to n items skip(n) Skips first n elements peek() For debugging/side-effects 🔹 Terminal Operations Method Description collect() Collects result into list, set, map forEach() Performs action on each element toArray() Converts to array reduce() Reduces to a single value count() Counts elements anyMatch() / allMatch() / noneMatch() Matching conditions findFirst() / findAny() Finds element 🔹 Collectors Collectors.toList() Collectors.toSet() Collectors.toMap() Collectors.joining(&#34;, &#34;) Collectors.groupingBy() Collectors.partitioningBy() 🔹 Examples ✅ Filter numbers greater than 10 List&lt;Integer&gt; result = list.stream() .filter(x -&gt; x &gt; 10) .collect(Collectors.toList()); ✅ Convert to uppercase List&lt;String&gt; result = list.stream() .map(String::toUpperCase) .collect(Collectors.toList()); ✅ Get first 5 sorted items list.stream() .sorted() .limit(5) .forEach(System.out::println); ✅ Group employees by department Map&lt;String, List&lt;Employee&gt;&gt; byDept = employees.stream() .collect(Collectors.groupingBy(Employee::getDepartment)); 🔹 Advanced Operations 🔁 Reduce Example int sum = list.stream() .reduce(0, (a, b) -&gt; a &#43; b); 📦 FlatMap Example List&lt;List&lt;Integer&gt;&gt; listOfLists = Arrays.asList( Arrays.asList(1, 2), Arrays.asList(3, 4) ); List&lt;Integer&gt; flatList = listOfLists.stream() .flatMap(List::stream) .collect(Collectors.toList()); 🧠 Tips Streams can only be used once (they get consumed after a terminal op) Avoid modifying external mutable state inside streams Use parallelStream() for parallel processing (only when necessary) 📝 Practice Questions ✅ Easy Filter even numbers from a list of integers. Convert a list of strings to uppercase. Count the number of empty strings in a list. Remove null values from a list. 🔁 Medium Given a list of names, return names starting with &ldquo;A&rdquo;, sorted alphabetically. Return the average of a list of integers. Get a list of distinct elements from a list. Group a list of employees by department (using Collectors.groupingBy). 🧩 Advanced Find the second highest number in a list. Flatten a list of lists of integers into a single list. Partition a list of integers into even and odd numbers. From a list of Person objects, get names of all adults (age &gt; 18), sorted by age. " />
+<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/java_stream_api_notes/" />
 <meta property="og:site_name" content="" />
 
   
@@ -57,8 +57,6 @@
 
 
 
-
-  <link href="/bigbits.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="" />
 
 
 
@@ -150,28 +148,62 @@
 
   <div class="content">
     
-  
-  <div class="posts">
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/java_stream_api_notes/"></a>
+  </h1>
+  <div class="post-meta">
     
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/java_stream_api_notes/"></a>
-        </h1>
-        <div class="post-meta">
-          
+<span class="post-reading-time">2 min read (409 words)</span></div>
 
-        </div>
-
-        
-
-        
+  
+  
 
 
 
-        <div class="post-content">
-          
-            <h1 id="-java-stream-api">📘 Java Stream API</h1>
-<h2 id="-what-is-stream-api">🔹 What is Stream API?</h2>
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-what-is-stream-api">🔹 What is Stream API?</a></li>
+    <li><a href="#-stream-lifecycle">🔹 Stream Lifecycle</a></li>
+    <li><a href="#-stream-creation">🔹 Stream Creation</a></li>
+    <li><a href="#-intermediate-operations">🔹 Intermediate Operations</a></li>
+    <li><a href="#-terminal-operations">🔹 Terminal Operations</a></li>
+    <li><a href="#-collectors">🔹 Collectors</a></li>
+    <li><a href="#-examples">🔹 Examples</a>
+      <ul>
+        <li><a href="#-filter-numbers-greater-than-10">✅ Filter numbers greater than 10</a></li>
+        <li><a href="#-convert-to-uppercase">✅ Convert to uppercase</a></li>
+        <li><a href="#-get-first-5-sorted-items">✅ Get first 5 sorted items</a></li>
+        <li><a href="#-group-employees-by-department">✅ Group employees by department</a></li>
+      </ul>
+    </li>
+    <li><a href="#-advanced-operations">🔹 Advanced Operations</a>
+      <ul>
+        <li><a href="#-reduce-example">🔁 Reduce Example</a></li>
+        <li><a href="#-flatmap-example">📦 FlatMap Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#-tips">🧠 Tips</a></li>
+    <li><a href="#-practice-questions">📝 Practice Questions</a>
+      <ul>
+        <li><a href="#-easy">✅ Easy</a></li>
+        <li><a href="#-medium">🔁 Medium</a></li>
+        <li><a href="#-advanced">🧩 Advanced</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h1 id="-java-stream-api">📘 Java Stream API<a href="#-java-stream-api" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="-what-is-stream-api">🔹 What is Stream API?<a href="#-what-is-stream-api" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li>Introduced in Java 8</li>
 <li>Used to process collections (like List, Set) in a <strong>functional</strong> and <strong>declarative</strong> style</li>
@@ -179,19 +211,19 @@
 <li>Allows for <strong>pipelining</strong> operations (chaining of multiple operations)</li>
 </ul>
 <hr>
-<h2 id="-stream-lifecycle">🔹 Stream Lifecycle</h2>
+<h2 id="-stream-lifecycle">🔹 Stream Lifecycle<a href="#-stream-lifecycle" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ol>
 <li><strong>Source</strong>: From a Collection or array</li>
 <li><strong>Intermediate Operations</strong>: Transformations (lazy)</li>
 <li><strong>Terminal Operation</strong>: Triggers the processing (eager)</li>
 </ol>
 <hr>
-<h2 id="-stream-creation">🔹 Stream Creation</h2>
+<h2 id="-stream-creation">🔹 Stream Creation<a href="#-stream-creation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>);
 </span></span><span style="display:flex;"><span>Stream<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> stream <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">stream</span>();
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Stream<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> stream <span style="color:#f92672">=</span> Stream.<span style="color:#a6e22e">of</span>(1, 2, 3, 4);
 </span></span></code></pre></div><hr>
-<h2 id="-intermediate-operations">🔹 Intermediate Operations</h2>
+<h2 id="-intermediate-operations">🔹 Intermediate Operations<a href="#-intermediate-operations" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <table>
   <thead>
       <tr>
@@ -235,7 +267,7 @@
   </tbody>
 </table>
 <hr>
-<h2 id="-terminal-operations">🔹 Terminal Operations</h2>
+<h2 id="-terminal-operations">🔹 Terminal Operations<a href="#-terminal-operations" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <table>
   <thead>
       <tr>
@@ -275,7 +307,7 @@
   </tbody>
 </table>
 <hr>
-<h2 id="-collectors">🔹 Collectors</h2>
+<h2 id="-collectors">🔹 Collectors<a href="#-collectors" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">toList</span>()
 </span></span><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">toSet</span>()
 </span></span><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">toMap</span>()
@@ -283,29 +315,29 @@
 </span></span><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">groupingBy</span>()
 </span></span><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">partitioningBy</span>()
 </span></span></code></pre></div><hr>
-<h2 id="-examples">🔹 Examples</h2>
-<h3 id="-filter-numbers-greater-than-10">✅ Filter numbers greater than 10</h3>
+<h2 id="-examples">🔹 Examples<a href="#-examples" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-filter-numbers-greater-than-10">✅ Filter numbers greater than 10<a href="#-filter-numbers-greater-than-10" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">stream</span>()
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">filter</span>(x <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">&gt;</span> 10)
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span>(Collectors.<span style="color:#a6e22e">toList</span>());
-</span></span></code></pre></div><h3 id="-convert-to-uppercase">✅ Convert to uppercase</h3>
+</span></span></code></pre></div><h3 id="-convert-to-uppercase">✅ Convert to uppercase<a href="#-convert-to-uppercase" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">stream</span>()
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">map</span>(String::toUpperCase)
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span>(Collectors.<span style="color:#a6e22e">toList</span>());
-</span></span></code></pre></div><h3 id="-get-first-5-sorted-items">✅ Get first 5 sorted items</h3>
+</span></span></code></pre></div><h3 id="-get-first-5-sorted-items">✅ Get first 5 sorted items<a href="#-get-first-5-sorted-items" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>list.<span style="color:#a6e22e">stream</span>()
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">sorted</span>()
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">limit</span>(5)
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">forEach</span>(System.<span style="color:#a6e22e">out</span>::println);
-</span></span></code></pre></div><h3 id="-group-employees-by-department">✅ Group employees by department</h3>
+</span></span></code></pre></div><h3 id="-group-employees-by-department">✅ Group employees by department<a href="#-group-employees-by-department" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Map<span style="color:#f92672">&lt;</span>String, List<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">&gt;&gt;</span> byDept <span style="color:#f92672">=</span> employees.<span style="color:#a6e22e">stream</span>()
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span>(Collectors.<span style="color:#a6e22e">groupingBy</span>(Employee::getDepartment));
 </span></span></code></pre></div><hr>
-<h2 id="-advanced-operations">🔹 Advanced Operations</h2>
-<h3 id="-reduce-example">🔁 Reduce Example</h3>
+<h2 id="-advanced-operations">🔹 Advanced Operations<a href="#-advanced-operations" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-reduce-example">🔁 Reduce Example<a href="#-reduce-example" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">stream</span>()
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">reduce</span>(0, (a, b) <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">+</span> b);
-</span></span></code></pre></div><h3 id="-flatmap-example">📦 FlatMap Example</h3>
+</span></span></code></pre></div><h3 id="-flatmap-example">📦 FlatMap Example<a href="#-flatmap-example" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> listOfLists <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(
 </span></span><span style="display:flex;"><span>    Arrays.<span style="color:#a6e22e">asList</span>(1, 2),
 </span></span><span style="display:flex;"><span>    Arrays.<span style="color:#a6e22e">asList</span>(3, 4)
@@ -315,29 +347,29 @@
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">flatMap</span>(List::stream)
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span>(Collectors.<span style="color:#a6e22e">toList</span>());
 </span></span></code></pre></div><hr>
-<h2 id="-tips">🧠 Tips</h2>
+<h2 id="-tips">🧠 Tips<a href="#-tips" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li>Streams can only be used once (they get consumed after a terminal op)</li>
 <li>Avoid modifying external mutable state inside streams</li>
 <li>Use <code>parallelStream()</code> for parallel processing (only when necessary)</li>
 </ul>
 <hr>
-<h2 id="-practice-questions">📝 Practice Questions</h2>
-<h3 id="-easy">✅ Easy</h3>
+<h2 id="-practice-questions">📝 Practice Questions<a href="#-practice-questions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-easy">✅ Easy<a href="#-easy" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ol>
 <li>Filter even numbers from a list of integers.</li>
 <li>Convert a list of strings to uppercase.</li>
 <li>Count the number of empty strings in a list.</li>
 <li>Remove null values from a list.</li>
 </ol>
-<h3 id="-medium">🔁 Medium</h3>
+<h3 id="-medium">🔁 Medium<a href="#-medium" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ol start="5">
 <li>Given a list of names, return names starting with &ldquo;A&rdquo;, sorted alphabetically.</li>
 <li>Return the average of a list of integers.</li>
 <li>Get a list of distinct elements from a list.</li>
 <li>Group a list of employees by department (using <code>Collectors.groupingBy</code>).</li>
 </ol>
-<h3 id="-advanced">🧩 Advanced</h3>
+<h3 id="-advanced">🧩 Advanced<a href="#-advanced" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ol start="9">
 <li>Find the second highest number in a list.</li>
 <li>Flatten a list of lists of integers into a single list.</li>
@@ -345,223 +377,36 @@
 <li>From a list of Person objects, get names of all adults (age &gt; 18), sorted by age.</li>
 </ol>
 <hr>
-          
-        </div>
 
-        
-          <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/java_stream_api_notes/">Read more →</a>
-          </div>
-        
-      </article>
+      </div></div>
+
+  
     
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/"></a>
-        </h1>
-        <div class="post-meta">
-          
-
-        </div>
-
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
         
-
         
-
-
-
-        <div class="post-content">
-          
-            <h1 id="need-of-dtos-when-working-with-apis">Need of DTOs when working with APIs</h1>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png">
-<code>In Short:</code>
-We use DTOs to ensure our entity data won’t be affected directly, promoting data encapsulation, security, and cleaner API design.</p>
-<p><code>Extra Info</code>
-DTO is a design pattern.</p>
-<hr>
-          
-        </div>
-
+        <span class="button next">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/">
+                <span class="button__text"></span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
         
-          <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/spring-random-concepts/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/agile-crash-course/">AGILE CRASH COURSE UDEMY</a>
-        </h1>
-        <div class="post-meta">
-          
-
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/agile/">Agile</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/udemy/">UDEMY</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/course/">COURSE</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-
-        <div class="post-content">
-          
-            <h2 id="agile-principles">Agile Principles</h2>
-<ol>
-<li>Customer satisfaction by early and continuous delivery of useful software.</li>
-<li>Welcome changing requirements, even late in development.</li>
-<li>Working software is delivered frequently (weeks rather than months).</li>
-<li>Close, daily cooperation between business people and developers.</li>
-<li>Projects are built around motivated individuals, who should be trusted.</li>
-<li>Face-to-face conversation is the best form of communication (co-location).</li>
-<li>Working software is the principal measure of progress.</li>
-<li>Sustainable development, able to maintain a constant pace.</li>
-<li>Continuous attention to technical excellence and good design.</li>
-<li>Simplicity- only build what is really essential.</li>
-<li>Self-organizing teams.</li>
-<li>Regular adaptation to changing circumstance.</li>
-</ol>
-<hr>
-<h4 id="what-does-mvp-stands-for">What does MVP stands for?</h4>
-<p><code>MVP is an acronym for Minimum Viable Product. It basically means keep it simple!!! Don't build a Ferrari if all you need is a skateboard!</code></p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/agile-crash-course/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/namaste/">bigbits</a>
-        </h1>
-        <div class="post-meta">
-          
-
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/blog/">blog</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/welcome/">welcome</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-
-        <div class="post-content">
-          
-            <h2 id="welcome-to-aditya-rawats-big-bits-blogs">Welcome to Aditya Rawat&rsquo;s Big Bits Blogs</h2>
-<p>Hi there! I&rsquo;m Aditya, a passionate developer with many years of experience in Java, Spring Boot, and embedded systems. I specialize in building robust backend applications and innovative solutions. Explore my repositories to see the projects I&rsquo;ve worked on, and feel free to connect with me for collaboration or discussions.</p>
-<p>Let&rsquo;s code something amazing!</p>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/tech.png"></p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/namaste/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/course-id-65172-agile-ci-cd-pipeline-and-devops/">CI/CD Pipeline and Devops Introduction</a>
-        </h1>
-        <div class="post-meta">
-          
-
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/post/">post</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/agile/">Agile</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/#devops/">#devops</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-
-        <div class="post-content">
-          
-            <h2 id="old-sdlc">OLD SDLC</h2>
-<h6 id="development-team">{Development Team}</h6>
-<p>Developer 1 &ndash;&gt;
-Developer 2 &ndash;&gt;  &gt; Build &amp; Integration Team -&gt; Ensures Code Compiles -&gt; Package
-Developer 3 &ndash;&gt;</p>
-<h6 id="operations-team">Operations Team</h6>
-<p>Package is given with instructions to operations team</p>
-<p>The Operations team deploys the app and then testers test.
-<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png"></p>
-<p>#Cons</p>
-<ol>
-<li>Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.</li>
-<li>Defects are detected late.</li>
-<li>Any intermediate code merge can cause issues.</li>
-<li>If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.</li>
-<li>Long Feedback cycle</li>
-<li>Long Iteration
-<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png"></li>
-</ol>
-<hr>
-<h2 id="continuous-integration">Continuous Integration</h2>
-<p><code>Continuous integration is a development practice that requires developers to integrate code into a shared repo several times a day.</code></p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/course-id-65172-agile-ci-cd-pipeline-and-devops/">Read more →</a>
-          </div>
-        
-      </article>
-    
-
-    <div class="pagination">
-  <div class="pagination__buttons">
-    
-    
-      <a href="/bigbits.github.io/posts/page/2/" class="button next">
-        <span class="button__text">Older posts</span>
-        <span class="button__icon">→</span>
-      </a>
-    
-  </div>
+    </div>
 </div>
 
-  </div>
+  
+
+  
+    
+
+  
+</article>
 
   </div>
 
