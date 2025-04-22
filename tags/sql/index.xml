@@ -177,7 +177,47 @@ Hold more then one data type.&lt;/li&gt;
 &lt;li&gt;INTERVAL(P) YEAR TO MONTH&lt;/li&gt;
 &lt;li&gt;INTERVAL(P) DAY TO SECOND(P)&lt;/li&gt;
 &lt;/ol&gt;
-</content>
+&lt;h3 id=&#34;variable-naming-conventions&#34;&gt;Variable Naming Conventions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Must Start with letter.&lt;/li&gt;
+&lt;li&gt;Can contain some special character.(like _ ,#,$)&lt;/li&gt;
+&lt;li&gt;Can be maximum 30 char&lt;/li&gt;
+&lt;li&gt;can not have oracle reserved words.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;operations-in-pl-sql&#34;&gt;Operations in PL-SQL&lt;/h1&gt;
+&lt;h2 id=&#34;setting-default-variables&#34;&gt;Setting default variables&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;SET SERVEROUTPUT ON;
+DECLARE
+    V_TEXT STRING(50) NOT NULL DEFAULT &amp;#39;ITS_RAWAT&amp;#39;;
+BEGIN
+DBMS_OUTPUT.PUT_LINE(V_TEXT);
+END;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;assigning-variables&#34;&gt;Assigning variables&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;SET SERVEROUTPUT ON;
+DECLARE
+    V_TEXT STRING(50) NOT NULL DEFAULT &amp;#39;ITS_RAWAT&amp;#39;;
+BEGIN
+    V_TEXT:= &amp;#39;PL/SQL&amp;#39;;
+    DBMS_OUTPUT.PUT_LINE(V_TEXT);
+END;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;concatenation-of-strings&#34;&gt;Concatenation of Strings&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;SET SERVEROUTPUT ON;
+DECLARE
+    V_TEXT STRING(50) NOT NULL DEFAULT &amp;#39;ITS_RAWAT&amp;#39;;
+BEGIN
+    V_TEXT:= &amp;#39;PL/SQL&amp;#39; || &amp;#39; IS DIFFERENT&amp;#39;;
+    DBMS_OUTPUT.PUT_LINE(V_TEXT || &amp;#39; BUT MANAGEABLE&amp;#39;);
+END;
+    
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;OR&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;SET SERVEROUTPUT ON;
+DECLARE
+    V_TEXT STRING(50) NOT NULL := &amp;#39;WELCOME&amp;#39;;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE(V_TEXT || &amp;#39; ITS_RAWAT&amp;#39;);
+END;
+    
+&lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     
   </channel>

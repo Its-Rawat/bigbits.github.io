@@ -154,7 +154,7 @@
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">2 min read (403 words)</span></div>
+<span class="post-reading-time">3 min read (507 words)</span></div>
 
   
     <span class="post-tags">
@@ -220,8 +220,15 @@
     <li><a href="#plsql-variable-types">PL/SQL Variable Types</a>
       <ul>
         <li><a href="#scalar-data-types">SCALAR DATA TYPES</a></li>
+        <li><a href="#variable-naming-conventions">Variable Naming Conventions</a></li>
       </ul>
     </li>
+  </ul>
+
+  <ul>
+    <li><a href="#setting-default-variables">Setting default variables</a></li>
+    <li><a href="#assigning-variables">Assigning variables</a></li>
+    <li><a href="#concatenation-of-strings">Concatenation of Strings</a></li>
   </ul>
 </nav>
     </div>
@@ -363,7 +370,47 @@ Hold more then one data type.</li>
 <li>INTERVAL(P) YEAR TO MONTH</li>
 <li>INTERVAL(P) DAY TO SECOND(P)</li>
 </ol>
-
+<h3 id="variable-naming-conventions">Variable Naming Conventions<a href="#variable-naming-conventions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>Must Start with letter.</li>
+<li>Can contain some special character.(like _ ,#,$)</li>
+<li>Can be maximum 30 char</li>
+<li>can not have oracle reserved words.</li>
+</ul>
+<h1 id="operations-in-pl-sql">Operations in PL-SQL<a href="#operations-in-pl-sql" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="setting-default-variables">Setting default variables<a href="#setting-default-variables" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">SET SERVEROUTPUT ON;
+DECLARE
+    V_TEXT STRING(50) NOT NULL DEFAULT &#39;ITS_RAWAT&#39;;
+BEGIN
+DBMS_OUTPUT.PUT_LINE(V_TEXT);
+END;
+</code></pre><h2 id="assigning-variables">Assigning variables<a href="#assigning-variables" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">SET SERVEROUTPUT ON;
+DECLARE
+    V_TEXT STRING(50) NOT NULL DEFAULT &#39;ITS_RAWAT&#39;;
+BEGIN
+    V_TEXT:= &#39;PL/SQL&#39;;
+    DBMS_OUTPUT.PUT_LINE(V_TEXT);
+END;
+</code></pre><h2 id="concatenation-of-strings">Concatenation of Strings<a href="#concatenation-of-strings" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">SET SERVEROUTPUT ON;
+DECLARE
+    V_TEXT STRING(50) NOT NULL DEFAULT &#39;ITS_RAWAT&#39;;
+BEGIN
+    V_TEXT:= &#39;PL/SQL&#39; || &#39; IS DIFFERENT&#39;;
+    DBMS_OUTPUT.PUT_LINE(V_TEXT || &#39; BUT MANAGEABLE&#39;);
+END;
+    
+</code></pre><p><code>OR</code></p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">SET SERVEROUTPUT ON;
+DECLARE
+    V_TEXT STRING(50) NOT NULL := &#39;WELCOME&#39;;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE(V_TEXT || &#39; ITS_RAWAT&#39;);
+END;
+    
+</code></pre>
       </div></div>
 
   
