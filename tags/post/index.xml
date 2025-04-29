@@ -20,7 +20,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
 &lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
 &lt;p&gt;The Operations team deploys the app and then testers test.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34;&gt;&lt;/p&gt;
+![[Pasted image 20250307014401.png]]&lt;/p&gt;
 &lt;p&gt;#Cons&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
@@ -29,7 +29,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
 &lt;li&gt;Long Feedback cycle&lt;/li&gt;
 &lt;li&gt;Long Iteration
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250307015213.png]]&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
@@ -42,7 +42,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
 &lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
 &lt;p&gt;The Operations team deploys the app and then testers test.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34;&gt;&lt;/p&gt;
+![[Pasted image 20250307014401.png]]&lt;/p&gt;
 &lt;p&gt;#Cons&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
@@ -51,7 +51,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
 &lt;li&gt;Long Feedback cycle&lt;/li&gt;
 &lt;li&gt;Long Iteration
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250307015213.png]]&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
@@ -91,7 +91,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;CI&lt;/em&gt; (&lt;em&gt;Continuous Integration&lt;/em&gt;) pipeline means where developers frequently merge code changes into a central repository, allowing early detection of issues.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;CD&lt;/em&gt; refers to &lt;em&gt;continuous deployment&lt;/em&gt; or &lt;em&gt;continuous delivery&lt;/em&gt;, which automates the application&amp;rsquo;s release to its intended environment, ensuring that it is readily available to users.&lt;/strong&gt;
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c1.png&#34;&gt;&lt;/p&gt;
+![[c1.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;old-school-operations-pain-points&#34;&gt;OLD School Operations Pain Points&lt;/h2&gt;
 &lt;ol&gt;
@@ -102,7 +102,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-development&#34;&gt;Continuous Development&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[c2.png]]&lt;/p&gt;
 &lt;h2 id=&#34;what-is-devops&#34;&gt;What is DevOps?&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;DevOps combines development (Dev) and operations (Ops) to increase the efficiency, speed, and security of software development and delivery compared to traditional processes.&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;why-we-need-devops&#34;&gt;Why we need DevOps?&lt;/h3&gt;
@@ -118,29 +118,29 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/</guid>
       <description>&lt;h2 id=&#34;spring-boot-banners&#34;&gt;Spring Boot Banners&lt;/h2&gt;
 &lt;p&gt;In this endpoint of internet, we’ll explore how to create a custom banner in a Spring Boot application.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/custombanner.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[custombanner.png]]&lt;/p&gt;
 &lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 &lt;p&gt;When a Spring Boot application starts, it prints a &lt;strong&gt;banner&lt;/strong&gt;, a visual representation, or text (often with ASCII graphics or branding information). The banner is a way to provide a more engaging and informative startup experience for developers and users such as the application name, version, or any other relevant data.&lt;/p&gt;</description>
       <content>&lt;h2 id=&#34;spring-boot-banners&#34;&gt;Spring Boot Banners&lt;/h2&gt;
 &lt;p&gt;In this endpoint of internet, we’ll explore how to create a custom banner in a Spring Boot application.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/custombanner.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[custombanner.png]]&lt;/p&gt;
 &lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 &lt;p&gt;When a Spring Boot application starts, it prints a &lt;strong&gt;banner&lt;/strong&gt;, a visual representation, or text (often with ASCII graphics or branding information). The banner is a way to provide a more engaging and informative startup experience for developers and users such as the application name, version, or any other relevant data.&lt;/p&gt;
 &lt;p&gt;By default, Spring Boot includes a simple banner displaying the Spring logo and the version number. Here’s an example of what the default banner looks like:
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdgvfsgffs.png&#34;&gt;&lt;/p&gt;
+![[sdgvfsgffs.png]]&lt;/p&gt;
 &lt;h2 id=&#34;how-to-create-custom-spring-boot-banners&#34;&gt;How to create Custom Spring Boot Banners&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Create a banner.txt file under your resource directory.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdfsf.png&#34;&gt;&lt;/p&gt;
+![[sdfsf.png]]&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Go to this website &lt;a href=&#34;https://www.ascii-art.de/ascii/&#34;&gt;web&lt;/a&gt; and get the design of your preferences then &lt;code&gt;copy&lt;/code&gt; &amp;amp; &lt;code&gt;paste&lt;/code&gt; it in banner.txt.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/scs.png&#34;&gt;&lt;/p&gt;
+![[scs.png]]&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;You can also add some more information like.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/jkthghbgh.png&#34;&gt;&lt;/p&gt;
+![[jkthghbgh.png]]&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-copy&#34; data-lang=&#34;copy&#34;&gt;Welcome to Spring Boot App ${spring.application.name}  
@@ -149,11 +149,11 @@ Running on: ${os.name}
 &lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;To make these properties work you have to define them in your &lt;code&gt;application.properties&lt;/code&gt;  file.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdsdsds.png&#34;&gt;&lt;/p&gt;
+![[sdsdsds.png]]&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The Output will look like this:
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/llllfs.png&#34;&gt;&lt;/p&gt;
+![[llllfs.png]]&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
@@ -172,10 +172,10 @@ Running on: ${os.name}
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34;&gt;&lt;/p&gt;
+![[dock1.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250329102024.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -398,10 +398,10 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34;&gt;&lt;/p&gt;
+![[dock1.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250329102024.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -628,27 +628,27 @@ Via network name&lt;/li&gt;
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/chennai-in-bits/</guid>
       <description>&lt;h1 id=&#34;exploring-chennai-city-meets-coastal-charm&#34;&gt;&lt;strong&gt;Exploring Chennai: City Meets Coastal Charm&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;Chennai, the vibrant capital of Tamil Nadu, offers a unique blend of culture, history, and modernity. From serene beaches to bustling markets, the city has something for everyone.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_161026.png&#34;&gt;&lt;/p&gt;
+![[IMG_20250126_161026.png]]&lt;/p&gt;
 &lt;h3 id=&#34;beach-bliss&#34;&gt;&lt;strong&gt;Beach Bliss&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;One hidden gem is Olive Beach in Thoraipakkam. This peaceful spot is ideal for relaxation and offers picturesque views—perfect for turtle sightings too.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_162033.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[IMG_20250126_162033.png]]&lt;/p&gt;
 &lt;h3 id=&#34;navigating-the-city&#34;&gt;&lt;strong&gt;Navigating the City&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Chennai’s public transportation—Metro Rail, suburban trains, and buses—makes commuting efficient. Be cautious of auto-rickshaw scams; using ride-hailing apps is often safer and more economical, You Can use Rapido, Ola, Uber.&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;exploring-chennai-city-meets-coastal-charm&#34;&gt;&lt;strong&gt;Exploring Chennai: City Meets Coastal Charm&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;Chennai, the vibrant capital of Tamil Nadu, offers a unique blend of culture, history, and modernity. From serene beaches to bustling markets, the city has something for everyone.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_161026.png&#34;&gt;&lt;/p&gt;
+![[IMG_20250126_161026.png]]&lt;/p&gt;
 &lt;h3 id=&#34;beach-bliss&#34;&gt;&lt;strong&gt;Beach Bliss&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;One hidden gem is Olive Beach in Thoraipakkam. This peaceful spot is ideal for relaxation and offers picturesque views—perfect for turtle sightings too.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_162033.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[IMG_20250126_162033.png]]&lt;/p&gt;
 &lt;h3 id=&#34;navigating-the-city&#34;&gt;&lt;strong&gt;Navigating the City&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Chennai’s public transportation—Metro Rail, suburban trains, and buses—makes commuting efficient. Be cautious of auto-rickshaw scams; using ride-hailing apps is often safer and more economical, You Can use Rapido, Ola, Uber.&lt;/p&gt;
 &lt;h3 id=&#34;weather-and-climate&#34;&gt;&lt;strong&gt;Weather and Climate&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Chennai has a tropical climate with scorching summers reaching above 40°C. The monsoon brings some relief but humidity remains high.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_170308.png&#34;&gt;&lt;/p&gt;
+![[IMG_20250126_170308.png]]&lt;/p&gt;
 &lt;h3 id=&#34;shopping-on-a-budget&#34;&gt;&lt;strong&gt;Shopping on a Budget&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;For economical shopping, D-Marts are the go-to destination for essentials.&lt;/p&gt;
 &lt;h1 id=&#34;thanks&#34;&gt;THANKS&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_161444.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[IMG_20250126_161444.png]]&lt;/p&gt;
 </content>
     </item>
     
@@ -659,10 +659,10 @@ Via network name&lt;/li&gt;
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/</guid>
       <description>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Screenshot 2025-04-16 182824.png]]&lt;/p&gt;
 &lt;hr&gt;</description>
       <content>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Screenshot 2025-04-16 182824.png]]&lt;/p&gt;
 &lt;hr&gt;
 </content>
     </item>
@@ -681,13 +681,13 @@ Via network name&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[pl1.png]]&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250315195441.png]]&lt;/p&gt;
 &lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -702,7 +702,7 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;![[pl2.png]]&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-plsql&#34;&gt;What is PL/SQL?&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;PL/SQL stands for Procedural Language Extension to SQL&lt;/code&gt;&lt;/li&gt;
@@ -711,13 +711,13 @@ Via network name&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[pl1.png]]&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250315195441.png]]&lt;/p&gt;
 &lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -732,7 +732,7 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[pl2.png]]&lt;/p&gt;
 &lt;h2 id=&#34;what-is-pdb&#34;&gt;What is PDB?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Pluggable Database (PDB)&lt;/strong&gt; is a portable collection of schemas, tables, and objects that can be plugged into a &lt;strong&gt;Container Database (CDB)&lt;/strong&gt; in Oracle.&lt;/p&gt;
 &lt;h2 id=&#34;why-pdb&#34;&gt;Why PDB?&lt;/h2&gt;
@@ -758,7 +758,7 @@ Via network name&lt;/li&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;what-are-blocks&#34;&gt;What are Blocks?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Block is a logical unit of code that groups related declarations, statements. &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[pl3.png]]&lt;/p&gt;
 &lt;h2 id=&#34;structure-1&#34;&gt;Structure&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;DECLARE&lt;/strong&gt;&lt;/em&gt; Block.&lt;/li&gt;
@@ -906,7 +906,7 @@ END;
 &lt;hr&gt;
 &lt;h2 id=&#34;what-i-created&#34;&gt;What I Created&lt;/h2&gt;
 &lt;p&gt;The &lt;strong&gt;Library System&lt;/strong&gt; application consists of several modules, each designed to handle specific library operations. Here&amp;rsquo;s a breakdown of the functionalities:
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212542.png&#34;&gt;&lt;/p&gt;
+![[Pasted image 20250103212542.png]]&lt;/p&gt;
 &lt;h3 id=&#34;task-1-create-modules-and-forms&#34;&gt;Task 1: Create Modules and Forms&lt;/h3&gt;
 &lt;h4 id=&#34;1-books-module&#34;&gt;1. Books Module&lt;/h4&gt;
 &lt;ul&gt;
@@ -920,7 +920,7 @@ END;
 &lt;li&gt;&lt;strong&gt;Available Copies&lt;/strong&gt; (Number - Minimum value = 0)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;ISBN Number&lt;/strong&gt; (Text - Unique validation)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Rating&lt;/strong&gt; (Number - Values between 1 to 5)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212623.png&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250103212623.png]]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -935,7 +935,7 @@ END;
 &lt;li&gt;&lt;strong&gt;Membership Start Date&lt;/strong&gt; (Date - Default to the current date)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Membership Type&lt;/strong&gt; (Dropdown - Values: Basic, Premium, Elite)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Max Books Allowed&lt;/strong&gt; (Number - Auto-filled based on Membership Type: Basic=2, Premium=5, Elite=10)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212708.png&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250103212708.png]]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -950,7 +950,7 @@ END;
 &lt;li&gt;&lt;strong&gt;Return Date&lt;/strong&gt; (Date - Must be later than Issue Date)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; (Dropdown - Values: Issued, Returned, Overdue)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Fine Amount&lt;/strong&gt; (Currency - Auto-calculated for overdue books)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212739.png&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250103212739.png]]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -963,7 +963,7 @@ END;
 &lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt; (Email - Validated for proper format)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Role&lt;/strong&gt; (Dropdown - Values: Librarian, Assistant)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Phone Number&lt;/strong&gt; (Number - Validated for 10 digits)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212800.png&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250103212800.png]]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

@@ -48,7 +48,7 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;what-i-created&#34;&gt;What I Created&lt;/h2&gt;
 &lt;p&gt;The &lt;strong&gt;Library System&lt;/strong&gt; application consists of several modules, each designed to handle specific library operations. Here&amp;rsquo;s a breakdown of the functionalities:
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212542.png&#34;&gt;&lt;/p&gt;
+![[Pasted image 20250103212542.png]]&lt;/p&gt;
 &lt;h3 id=&#34;task-1-create-modules-and-forms&#34;&gt;Task 1: Create Modules and Forms&lt;/h3&gt;
 &lt;h4 id=&#34;1-books-module&#34;&gt;1. Books Module&lt;/h4&gt;
 &lt;ul&gt;
@@ -62,7 +62,7 @@
 &lt;li&gt;&lt;strong&gt;Available Copies&lt;/strong&gt; (Number - Minimum value = 0)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;ISBN Number&lt;/strong&gt; (Text - Unique validation)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Rating&lt;/strong&gt; (Number - Values between 1 to 5)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212623.png&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250103212623.png]]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -77,7 +77,7 @@
 &lt;li&gt;&lt;strong&gt;Membership Start Date&lt;/strong&gt; (Date - Default to the current date)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Membership Type&lt;/strong&gt; (Dropdown - Values: Basic, Premium, Elite)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Max Books Allowed&lt;/strong&gt; (Number - Auto-filled based on Membership Type: Basic=2, Premium=5, Elite=10)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212708.png&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250103212708.png]]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -92,7 +92,7 @@
 &lt;li&gt;&lt;strong&gt;Return Date&lt;/strong&gt; (Date - Must be later than Issue Date)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; (Dropdown - Values: Issued, Returned, Overdue)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Fine Amount&lt;/strong&gt; (Currency - Auto-calculated for overdue books)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212739.png&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250103212739.png]]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -105,7 +105,7 @@
 &lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt; (Email - Validated for proper format)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Role&lt;/strong&gt; (Dropdown - Values: Librarian, Assistant)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Phone Number&lt;/strong&gt; (Number - Validated for 10 digits)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212800.png&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250103212800.png]]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
