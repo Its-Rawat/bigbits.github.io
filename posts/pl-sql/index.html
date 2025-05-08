@@ -154,7 +154,7 @@
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">3 min read (507 words)</span></div>
+<span class="post-reading-time">3 min read (594 words)</span></div>
 
   
     <span class="post-tags">
@@ -229,6 +229,7 @@
     <li><a href="#setting-default-variables">Setting default variables</a></li>
     <li><a href="#assigning-variables">Assigning variables</a></li>
     <li><a href="#concatenation-of-strings">Concatenation of Strings</a></li>
+    <li><a href="#temporary-changes">Temporary Changes</a></li>
   </ul>
 </nav>
     </div>
@@ -410,6 +411,43 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE(V_TEXT || &#39; ITS_RAWAT&#39;);
 END;
     
+</code></pre><hr>
+<h2 id="temporary-changes">Temporary Changes<a href="#temporary-changes" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">CREATE OR REPLACE FUNCTION get_product_price(p_product_id INT)
+RETURNS INTEGER AS $$
+DECLARE
+  v_price INTEGER;
+BEGIN
+  SELECT price::INTEGER INTO v_price
+  FROM products
+  WHERE product_id = p_product_id;
+
+  RETURN v_price;
+END;
+$$ LANGUAGE plpgsql;
+</code></pre><pre tabindex="0"><code class="language-Copy" data-lang="Copy">create or replace function update_product_stock(
+  p_product_id numeric,
+  p_new_stock numeric
+)
+returns void as $$
+begin 
+  update products
+  set stock_quantity = p_new_stock
+  where product_id = p_product_id;
+end;
+$$ LANGUAGE plpgsql;
+</code></pre><pre tabindex="0"><code class="language-Copy" data-lang="Copy">create or replace function get_total_stock_value()
+returns decimal as $$
+declare
+  total_value decimal :=0;
+  BEGIN
+  select coalesce(sum(price*stock_quantity),0)
+  into total_value
+  from products;
+
+  return total_value;
+end;
+$$ LANGUAGE plpgsql;
 </code></pre>
       </div></div>
 

@@ -2245,6 +2245,43 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE(V_TEXT || &amp;#39; ITS_RAWAT&amp;#39;);
 END;
     
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;temporary-changes&#34;&gt;Temporary Changes&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;CREATE OR REPLACE FUNCTION get_product_price(p_product_id INT)
+RETURNS INTEGER AS $$
+DECLARE
+  v_price INTEGER;
+BEGIN
+  SELECT price::INTEGER INTO v_price
+  FROM products
+  WHERE product_id = p_product_id;
+
+  RETURN v_price;
+END;
+$$ LANGUAGE plpgsql;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;create or replace function update_product_stock(
+  p_product_id numeric,
+  p_new_stock numeric
+)
+returns void as $$
+begin 
+  update products
+  set stock_quantity = p_new_stock
+  where product_id = p_product_id;
+end;
+$$ LANGUAGE plpgsql;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;create or replace function get_total_stock_value()
+returns decimal as $$
+declare
+  total_value decimal :=0;
+  BEGIN
+  select coalesce(sum(price*stock_quantity),0)
+  into total_value
+  from products;
+
+  return total_value;
+end;
+$$ LANGUAGE plpgsql;
 &lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     
