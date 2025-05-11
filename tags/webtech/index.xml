@@ -142,6 +142,415 @@ const App = () =&amp;gt;{
   );
 }
 export default App;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;incubator-quote-app&#34;&gt;Incubator Quote App&lt;/h1&gt;
+&lt;h2 id=&#34;usestate&#34;&gt;UseState&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;useState&lt;/code&gt; is a &lt;strong&gt;React Hook&lt;/strong&gt; that allows functional components to have and manage &lt;strong&gt;state&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;axios&#34;&gt;Axios&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Axios&lt;/strong&gt; is a &lt;strong&gt;JavaScript library&lt;/strong&gt; used to make &lt;strong&gt;HTTP requests&lt;/strong&gt; from the browser (or Node.js) to a server.
+Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it uses &lt;strong&gt;Promises&lt;/strong&gt; to handle asynchronous operations like fetching data from an API.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;It simplifies making GET, POST, PUT, DELETE, etc. requests.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Works both in &lt;strong&gt;client-side (browser)&lt;/strong&gt; and &lt;strong&gt;server-side (Node.js)&lt;/strong&gt; apps.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Automatically transforms JSON data.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Handles request and response &lt;strong&gt;interceptors&lt;/strong&gt;, &lt;strong&gt;cancellation&lt;/strong&gt;, and &lt;strong&gt;timeout&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;axios-response-and-data-fetching&#34;&gt;Axios response and data fetching&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;      const response = await axios.get(&amp;#34;/data/quotes.json&amp;#34;);
+
+      const quotes = response.data;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this above code &lt;code&gt;axios.get(&amp;quot;&amp;quot;)&lt;/code&gt; will give you  a promise which when awaited gives a object.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Here axios is a promise based http client where it assures that it will return a promise object if request was successful, else it will return false and reject.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;quotesjson&#34;&gt;quotes.json&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;[
+
+    { &amp;#34;text&amp;#34;: &amp;#34;The best way to predict the future is to create it.&amp;#34;, &amp;#34;author&amp;#34;: &amp;#34;Peter Drucker&amp;#34; },
+
+    { &amp;#34;text&amp;#34;: &amp;#34;Do one thing every day that scares you.&amp;#34;, &amp;#34;author&amp;#34;: &amp;#34;Eleanor Roosevelt&amp;#34; },
+
+    { &amp;#34;text&amp;#34;: &amp;#34;Success is not final, failure is not fatal: It is the courage to continue that counts.&amp;#34;, &amp;#34;author&amp;#34;: &amp;#34;Winston Churchill&amp;#34; }
+
+  ]
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;appjsx&#34;&gt;App.jsx&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;import { useState, useEffect } from &amp;#34;react&amp;#34;;
+
+import axios from &amp;#34;axios&amp;#34;;
+
+  
+
+export default function QuoteApp() {
+
+  const [quote, setQuote] = useState(null);
+
+  const [loading, setLoading] = useState(false);
+
+  const [error, setError] = useState(&amp;#34;&amp;#34;);
+
+  
+
+  const fetchQuote = async () =&amp;gt; {
+
+    setLoading(true);
+
+    setError(&amp;#34;&amp;#34;);
+
+    try {
+
+      const response = await axios.get(&amp;#34;/data/quotes.json&amp;#34;);
+
+      const quotes = response.data;
+
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+
+      // Simulate a 3 second loading delay
+
+      setTimeout(() =&amp;gt; {
+
+        setQuote(quotes[randomIndex]);
+
+        setLoading(false);
+
+      }, 1000);
+
+    } catch (err) {
+
+      setError(&amp;#34;Failed to load quote. Please try again later.&amp;#34;);
+
+      setLoading(false);
+
+    }
+
+  };
+
+  
+
+  useEffect(() =&amp;gt; {
+
+    fetchQuote();
+
+  }, []);
+
+  
+
+  return (
+
+    &amp;lt;div className=&amp;#34;container&amp;#34;&amp;gt;
+
+  &amp;lt;video className=&amp;#34;bg-video&amp;#34; autoPlay loop muted&amp;gt;
+
+      &amp;lt;source src=&amp;#34;src\assets\bg_video.mp4&amp;#34; type=&amp;#34;video/mp4&amp;#34; /&amp;gt;
+
+      Your browser does not support the video tag.
+
+    &amp;lt;/video&amp;gt;
+
+  
+  
+
+  &amp;lt;div className=&amp;#34;quote-card&amp;#34;&amp;gt;
+
+    &amp;lt;h1 className=&amp;#34;title&amp;#34;&amp;gt;Quote of the Day&amp;lt;/h1&amp;gt;
+
+  
+
+    {quote &amp;amp;&amp;amp; (
+
+      &amp;lt;&amp;gt;
+
+        &amp;lt;p className=&amp;#34;quote-text&amp;#34;&amp;gt;“{quote.text}”&amp;lt;/p&amp;gt;
+
+        &amp;lt;p className=&amp;#34;author&amp;#34;&amp;gt;— {quote.author}&amp;lt;/p&amp;gt;
+
+      &amp;lt;/&amp;gt;
+
+    )}
+
+  
+
+    {loading &amp;amp;&amp;amp; (
+
+      &amp;lt;div className=&amp;#34;loading-overlay&amp;#34;&amp;gt;
+
+        &amp;lt;div className=&amp;#34;loading-spinner&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+      &amp;lt;/div&amp;gt;
+
+    )}
+
+  
+
+    {error &amp;amp;&amp;amp; &amp;lt;p className=&amp;#34;error&amp;#34;&amp;gt;{error}&amp;lt;/p&amp;gt;}
+
+  
+
+    &amp;lt;button
+
+      onClick={fetchQuote}
+
+      disabled={loading}
+
+      className={`refresh-btn ${loading ? &amp;#39;disabled&amp;#39; : &amp;#39;&amp;#39;}`}
+
+    &amp;gt;
+
+      {loading ? &amp;#39;Refreshing...&amp;#39; : &amp;#39;Refresh Quote&amp;#39;}
+
+    &amp;lt;/button&amp;gt;
+
+  &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+
+  
+
+  );
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;indexcss&#34;&gt;index.css&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;html, body, #root {
+
+  margin: 0px;
+
+  padding: 0;
+
+  height: 100%;
+
+}
+
+  
+
+* {
+
+  box-sizing: border-box;
+
+  
+
+}
+
+  
+
+.container {
+
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  width: 100%;
+
+}
+
+  
+  
+
+.bg-video {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: -1;
+
+}
+
+  
+  
+
+.quote-card {
+
+  position: relative;
+
+  padding: 32px;
+
+  background-color: rgba(255, 255, 255, 0.8);
+
+  border-radius: 16px;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  width: 100%;
+
+  max-width: 600px;
+
+  text-align: center;
+
+  z-index: 1;
+
+}
+
+  
+  
+  
+
+.title {
+
+  color: #4c51bf;
+
+  margin-bottom: 15px;
+
+  font-size: 2rem;
+
+  font-weight: bold;
+
+}
+
+  
+
+.quote-text {
+
+  color: #333333;
+
+  font-style: italic;
+
+  font-size: 1.9rem;
+
+  margin-bottom: 20px;
+
+}
+
+  
+
+.author {
+
+  font-weight: bold;
+
+  font-size: 1rem;
+
+  color: #4c51bf;
+
+}
+
+  
+
+.loading-overlay {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+}
+
+  
+
+.loading-spinner {
+
+  border: 4px dashed #4c51bf;
+
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+
+}
+
+  
+
+@keyframes spin {
+
+  to { transform: rotate(360deg); }
+
+}
+
+  
+
+.error {
+
+  margin-top: 10px;
+
+  color: red;
+
+  font-weight: bold;
+
+}
+
+  
+
+.refresh-btn {
+
+  padding: 10px 20px;
+
+  background-color: #4c51bf;
+
+  color: white;
+
+  border-radius: 10px;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+
+}
+
+  
+
+.refresh-btn:hover {
+
+  background-color: #3e4bb3;
+
+}
+
+  
+
+.refresh-btn.disabled {
+
+  cursor: not-allowed;
+
+  opacity: 0.6;
+
+}
 &lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     

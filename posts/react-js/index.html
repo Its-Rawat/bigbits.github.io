@@ -162,7 +162,7 @@ Example: const element = &lt;h1&gt;Hello, React!&lt;/h1&gt;; React Components Re
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">2 min read (352 words)</span></div>
+<span class="post-reading-time">5 min read (928 words)</span></div>
 
   
     <span class="post-tags">
@@ -223,6 +223,12 @@ Example: const element = &lt;h1&gt;Hello, React!&lt;/h1&gt;; React Components Re
         <li><a href="#example-2">Example:</a></li>
       </ul>
     </li>
+  </ul>
+
+  <ul>
+    <li><a href="#usestate">UseState</a></li>
+    <li><a href="#axios">Axios</a></li>
+    <li><a href="#axios-response-and-data-fetching">Axios response and data fetching</a></li>
   </ul>
 </nav>
     </div>
@@ -329,6 +335,415 @@ const App = () =&gt;{
   );
 }
 export default App;
+</code></pre><h1 id="incubator-quote-app">Incubator Quote App<a href="#incubator-quote-app" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="usestate">UseState<a href="#usestate" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<blockquote>
+<p><code>useState</code> is a <strong>React Hook</strong> that allows functional components to have and manage <strong>state</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="axios">Axios<a href="#axios" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<blockquote>
+<p><strong>Axios</strong> is a <strong>JavaScript library</strong> used to make <strong>HTTP requests</strong> from the browser (or Node.js) to a server.
+Axios is a <strong>promise-based HTTP client</strong>, meaning it uses <strong>Promises</strong> to handle asynchronous operations like fetching data from an API.</p>
+</blockquote>
+<ul>
+<li>
+<p>It simplifies making GET, POST, PUT, DELETE, etc. requests.</p>
+</li>
+<li>
+<p>Works both in <strong>client-side (browser)</strong> and <strong>server-side (Node.js)</strong> apps.</p>
+</li>
+<li>
+<p>Automatically transforms JSON data.</p>
+</li>
+<li>
+<p>Handles request and response <strong>interceptors</strong>, <strong>cancellation</strong>, and <strong>timeout</strong>.</p>
+</li>
+</ul>
+<hr>
+<h2 id="axios-response-and-data-fetching">Axios response and data fetching<a href="#axios-response-and-data-fetching" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">      const response = await axios.get(&#34;/data/quotes.json&#34;);
+
+      const quotes = response.data;
+</code></pre><p>In this above code <code>axios.get(&quot;&quot;)</code> will give you  a promise which when awaited gives a object.</p>
+<ul>
+<li>Here axios is a promise based http client where it assures that it will return a promise object if request was successful, else it will return false and reject.</li>
+</ul>
+<h1 id="quotesjson">quotes.json<a href="#quotesjson" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">[
+
+    { &#34;text&#34;: &#34;The best way to predict the future is to create it.&#34;, &#34;author&#34;: &#34;Peter Drucker&#34; },
+
+    { &#34;text&#34;: &#34;Do one thing every day that scares you.&#34;, &#34;author&#34;: &#34;Eleanor Roosevelt&#34; },
+
+    { &#34;text&#34;: &#34;Success is not final, failure is not fatal: It is the courage to continue that counts.&#34;, &#34;author&#34;: &#34;Winston Churchill&#34; }
+
+  ]
+</code></pre><h1 id="appjsx">App.jsx<a href="#appjsx" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import { useState, useEffect } from &#34;react&#34;;
+
+import axios from &#34;axios&#34;;
+
+  
+
+export default function QuoteApp() {
+
+  const [quote, setQuote] = useState(null);
+
+  const [loading, setLoading] = useState(false);
+
+  const [error, setError] = useState(&#34;&#34;);
+
+  
+
+  const fetchQuote = async () =&gt; {
+
+    setLoading(true);
+
+    setError(&#34;&#34;);
+
+    try {
+
+      const response = await axios.get(&#34;/data/quotes.json&#34;);
+
+      const quotes = response.data;
+
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+
+      // Simulate a 3 second loading delay
+
+      setTimeout(() =&gt; {
+
+        setQuote(quotes[randomIndex]);
+
+        setLoading(false);
+
+      }, 1000);
+
+    } catch (err) {
+
+      setError(&#34;Failed to load quote. Please try again later.&#34;);
+
+      setLoading(false);
+
+    }
+
+  };
+
+  
+
+  useEffect(() =&gt; {
+
+    fetchQuote();
+
+  }, []);
+
+  
+
+  return (
+
+    &lt;div className=&#34;container&#34;&gt;
+
+  &lt;video className=&#34;bg-video&#34; autoPlay loop muted&gt;
+
+      &lt;source src=&#34;src\assets\bg_video.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+
+      Your browser does not support the video tag.
+
+    &lt;/video&gt;
+
+  
+  
+
+  &lt;div className=&#34;quote-card&#34;&gt;
+
+    &lt;h1 className=&#34;title&#34;&gt;Quote of the Day&lt;/h1&gt;
+
+  
+
+    {quote &amp;&amp; (
+
+      &lt;&gt;
+
+        &lt;p className=&#34;quote-text&#34;&gt;“{quote.text}”&lt;/p&gt;
+
+        &lt;p className=&#34;author&#34;&gt;— {quote.author}&lt;/p&gt;
+
+      &lt;/&gt;
+
+    )}
+
+  
+
+    {loading &amp;&amp; (
+
+      &lt;div className=&#34;loading-overlay&#34;&gt;
+
+        &lt;div className=&#34;loading-spinner&#34;&gt;&lt;/div&gt;
+
+      &lt;/div&gt;
+
+    )}
+
+  
+
+    {error &amp;&amp; &lt;p className=&#34;error&#34;&gt;{error}&lt;/p&gt;}
+
+  
+
+    &lt;button
+
+      onClick={fetchQuote}
+
+      disabled={loading}
+
+      className={`refresh-btn ${loading ? &#39;disabled&#39; : &#39;&#39;}`}
+
+    &gt;
+
+      {loading ? &#39;Refreshing...&#39; : &#39;Refresh Quote&#39;}
+
+    &lt;/button&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+  
+
+  );
+
+}
+</code></pre><h1 id="indexcss">index.css<a href="#indexcss" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">html, body, #root {
+
+  margin: 0px;
+
+  padding: 0;
+
+  height: 100%;
+
+}
+
+  
+
+* {
+
+  box-sizing: border-box;
+
+  
+
+}
+
+  
+
+.container {
+
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  width: 100%;
+
+}
+
+  
+  
+
+.bg-video {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: -1;
+
+}
+
+  
+  
+
+.quote-card {
+
+  position: relative;
+
+  padding: 32px;
+
+  background-color: rgba(255, 255, 255, 0.8);
+
+  border-radius: 16px;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  width: 100%;
+
+  max-width: 600px;
+
+  text-align: center;
+
+  z-index: 1;
+
+}
+
+  
+  
+  
+
+.title {
+
+  color: #4c51bf;
+
+  margin-bottom: 15px;
+
+  font-size: 2rem;
+
+  font-weight: bold;
+
+}
+
+  
+
+.quote-text {
+
+  color: #333333;
+
+  font-style: italic;
+
+  font-size: 1.9rem;
+
+  margin-bottom: 20px;
+
+}
+
+  
+
+.author {
+
+  font-weight: bold;
+
+  font-size: 1rem;
+
+  color: #4c51bf;
+
+}
+
+  
+
+.loading-overlay {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+}
+
+  
+
+.loading-spinner {
+
+  border: 4px dashed #4c51bf;
+
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+
+}
+
+  
+
+@keyframes spin {
+
+  to { transform: rotate(360deg); }
+
+}
+
+  
+
+.error {
+
+  margin-top: 10px;
+
+  color: red;
+
+  font-weight: bold;
+
+}
+
+  
+
+.refresh-btn {
+
+  padding: 10px 20px;
+
+  background-color: #4c51bf;
+
+  color: white;
+
+  border-radius: 10px;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+
+}
+
+  
+
+.refresh-btn:hover {
+
+  background-color: #3e4bb3;
+
+}
+
+  
+
+.refresh-btn.disabled {
+
+  cursor: not-allowed;
+
+  opacity: 0.6;
+
+}
 </code></pre>
       </div></div>
 
