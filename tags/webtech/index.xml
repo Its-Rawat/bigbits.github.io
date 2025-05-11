@@ -551,6 +551,475 @@ export default function QuoteApp() {
   opacity: 0.6;
 
 }
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;pl&#34;&gt;PL&lt;/h1&gt;
+&lt;h2 id=&#34;old&#34;&gt;Old&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;***functions*********
+1.
+create or replace function get_employee_salary(p_employee_id int)
+returns INTEGER as $$
+declare
+  v_salary integer;
+BEGIN
+  select salary into v_salary
+  from employees
+  where employee_id = p_employee_id;
+
+  if not found then
+      return null;
+  end if;
+
+  return v_salary;
+end;
+$$ LANGUAGE plpgsql;
+
+
+2.
+CREATE OR REPLACE FUNCTION get_product_price(p_product_id INT)
+RETURNS INTEGER AS $$
+DECLARE
+  v_price INTEGER;
+BEGIN
+  SELECT price::INTEGER INTO v_price
+  FROM products
+  WHERE product_id = p_product_id;
+
+  RETURN v_price;
+END;
+$$ LANGUAGE plpgsql;
+
+3.
+create or replace function update_product_stock(
+  p_product_id numeric,
+  p_new_stock numeric
+)
+returns void as $$
+begin 
+  update products
+  set stock_quantity = p_new_stock
+  where product_id = p_product_id;
+end;
+$$ LANGUAGE plpgsql;
+
+
+4. 
+create or replace function get_total_stock_value()
+returns decimal as $$
+declare
+  total_value decimal :=0;
+  BEGIN
+  select coalesce(sum(price*stock_quantity),0)
+  into total_value
+  from products;
+
+  return total_value;
+end;
+$$ LANGUAGE plpgsql;
+
+5.
+create or replace function count_products_by_category(p_category_id integer)
+returns integer as $$
+declare
+  product_count integer :=0;
+BEGIN
+  select count(*)
+  into product_count
+  from products
+  where category_id = p_categoery_id;
+
+  return product_count;
+end;
+$$ LANGUAGE plpgsql;
+
+6.
+create or replace function get_products_below_price(p_price_threshold numeric)
+returns text as $$
+declare 
+  product_list text:=&amp;#39;&amp;#39;;
+begin 
+  select string_agg(product_name,&amp;#39;, &amp;#39; order by product_name)
+  into product_list
+  from products
+  where price &amp;lt; p_price_threshold;
+
+  return coalesce(product_list, &amp;#39;&amp;#39;);
+end;
+$$ LANGUAGE plpgsql;
+
+
+
+*********** procedures: **********
+1.
+create or replace procedure add_new_book(
+  p_title text,
+  p_author text,
+  p_published_year integer,
+  p_genre text
+)
+LANGUAGE plpgsql
+as $$
+begin 
+  insert into books(title, author, published_year, genre)
+  values(p_title, p_author, p_published_year, p_genre);
+end;
+$$;
+
+2.
+create or replace procedure loan_book(
+  p_book_id integer,
+  p_member_id integer
+)
+LANGUAGE plpgsql
+as $$
+begin 
+  insert into loans(book_id, member_id, loan_date, return_date)
+  values (p_book_id, p_member_id, CURRENT_DATE, null);
+end;
+$$;
+
+3.XXX
+create or replace procedure return_book(p_loan_id integer)
+LANGUAGE plpgsql
+as $$
+BEGIN
+  update LOANS
+  set return_date = &amp;#39;18-Mar-2025&amp;#39;
+  where loan_id = p_loan_id;
+end;
+$$;
+
+4.
+create or replace function get_member_loans(p_member_id integer)
+returns table(title text, loan_date date)
+LANGUAGE plpgsql
+as $$
+BEGIN 
+  return query
+  select b.title, l.loan_date
+  from loans l
+  join books b on l.book_id = b.book_id
+  where l.member_id = p_member_id
+    and l.return_date is null;
+end;
+$$;
+
+5.
+create or replace procedure count_books_by_genre(p_genre text, out book_count integer)
+LANGUAGE plpgsql
+as $$
+begin 
+  select count(*) into book_count
+  from books
+  where genre = p_genre;
+end;
+$$;
+
+
+***** Triggers *******
+1.
+create  or replace function check_negative_marks()
+returns trigger as $$
+BEGIN 
+  if NEW.marks &amp;lt; 0 then 
+      raise exception &amp;#39;Marks cannot be negative&amp;#39;;
+  end if;
+  return NEW;
+end;
+$$ LANGUAGE plpgsql;
+
+2.
+create or replace function calculate_discount()
+returns trigger as $$
+BEGIN 
+  new.discount := new.purchase_amount * 0.10;
+  return new;
+end;
+$$ LANGUAGE plpgsql;
+
+create trigger trg_calculate_discount
+after insert on customers
+for each row
+excute function calculate_discount();
+
+3. 
+create or replace function log_deleted_booking()
+returns trigger as $$
+BEGIN 
+  insert into log_table(log_message)
+  values(concat(&amp;#39;Booking deleted: ID&amp;#39;,OLD.booking_id,&amp;#39;, Customer:&amp;#39;, OLD.customer_name, &amp;#39;, Date: &amp;#39;, OLD.booking_date, &amp;#39;, Status: &amp;#39;,OLD.booking_status));
+
+  return old;
+end;
+$$ LANGUAGE plpgsql;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;new&#34;&gt;New&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;Function 2
+CREATE or REPLACE FUNCTION get_product_price(p_product_id INTEGER)
+RETURNS INTEGER
+LANGUAGE plpgsql
+AS
+$$
+  DECLARE
+    pro_price INTEGER;
+  BEGIN
+    SELECT price INTO pro_price from products WHERE p_product_id = product_id;
+    RETURN pro_price;
+  END;
+$$;
+
+
+1.
+
+-----------------
+2.
+CREATE or REPLACE FUNCTION get_product_price(p_product_id INTEGER)
+RETURNS INTEGER
+LANGUAGE plpgsql
+AS
+$$
+  DECLARE
+    pro_price INTEGER;
+  BEGIN
+    SELECT price INTO pro_price from products WHERE p_product_id = product_id;
+    RETURN pro_price;
+  END;
+$$;
+--------------------------
+3.
+CREATE or REPLACE FUNCTION update_product_stock(p_product_id NUMERIC, p_new_stock NUMERIC)
+RETURNS VOID
+LANGUAGE plpgsql
+AS
+$$
+  BEGIN
+    UPDATE products SET
+    stock_quantity = p_new_stock 
+    WHERE p_product_id = product_id;
+  END;
+$$;
+------------------------
+4.
+CREATE or REPLACE FUNCTION get_total_stock_value()
+RETURNS DECIMAL
+LANGUAGE plpgsql
+AS
+$$
+  DECLARE
+    total DECIMAL;
+  BEGIN
+    SELECT sum(price*stock_quantity) INTO total from products;
+    RETURN total;
+  END;
+$$;
+---------------------------
+5.
+CREATE or REPLACE FUNCTION count_products_by_category(p_category_id NUMERIC)
+RETURNS INTEGER
+LANGUAGE plpgsql
+AS
+$$
+  DECLARE
+    total INTEGER;
+  BEGIN
+    SELECT count(*) INTO total from products where p_category_id = category_id;
+    RETURN total;
+  END;
+$$;
+-----------------------
+6.
+create or replace function get_products_below_price
+(p INTEGER)
+returns TEXT
+LANGUAGE plpgsql
+as
+$$
+declare
+str text;
+BEGIN
+  SELECT string_AGG(product_name, &amp;#39;, &amp;#39;order by product_name asc) into str
+FROM products where price&amp;lt;=p ;
+return str;
+END;
+$$;
+
+select get_products_below_price(1000000);
+
+========================================================================================================================================================================================================================================================================================================================
+
+---Procedure---
+---------------
+1.
+create or replace PROCEDURE add_new_book(p_title TEXT, p_author TEXT, p_published_year INTEGER, p_genre TEXT)
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+  insert into books(title, author, published_year, genre)
+  values(p_title, p_author,p_published_year, p_genre);
+END;
+$$;
+----------------------
+
+2.
+create or replace PROCEDURE loan_book(p_book_id INTEGER, p_member_id INTEGER)
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+  insert into loans(book_id, member_id, loan_date, return_date)
+  values(p_book_id, p_member_id, now()::date, null);
+END;
+$$;
+------------------------
+
+3.
+create or replace PROCEDURE return_book(p_loan_id INTEGER)
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+  update loans
+  SET return_date = &amp;#39;2025-03-18&amp;#39; where loan_id = p_loan_id;
+END;
+$$;
+-----------------------
+
+4.
+create or replace FUNCTION get_member_loans(p_member_id INTEGER)
+returns TABLE(title TEXT, loan_date DATE)
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+  RETURN QUERY
+  select books.title, loans.loan_date from books join loans on loans.book_id = books.book_id where loans.member_id = p_member_id;
+END;
+$$;
+-------------------------
+
+5.
+
+
+========================================================================================================================================================================================================================================================================================================================
+
+TRIGGERS
+------------
+1.
+CREATE OR REPLACE FUNCTION check_negative_marks()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF NEW.marks &amp;lt; 0 THEN
+        RAISE EXCEPTION &amp;#39;Marks cannot be negative&amp;#39;;
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE or REPLACE TRIGGER prevent_negative_marks
+BEFORE INSERT OR UPDATE ON students
+FOR EACH ROW
+EXECUTE FUNCTION check_negative_marks();
+-- INSERT INTO STUDENTS(student_id,student_name,marks) VALUES(1,&amp;#39;ABC&amp;#39;,80);
+-- INSERT INTO STUDENTS(student_id,student_name,marks) VALUES(2,&amp;#39;ABC&amp;#39;,-80);
+
+-- select * FROM STUDENTS;
+
+-----------------
+
+2.
+create or replace function calculate_discount()
+RETURNS TRIGGER AS $$
+  DECLARE
+  disc decimal;
+BEGIN
+disc=new.purchase_amount*0.1;
+update customers set discount=disc where customer_id=new.customer_id;
+Return new;
+END;
+$$ LANGUAGE plpgsql;
+
+create or replace trigger apply_discount
+AFTER INSERT ON CUSTOMERS
+FOR EACH ROW  
+EXECUTE FUNCTION calculate_discount();
+
+-------------------
+
+3.
+CREATE OR REPLACE FUNCTION log_salary_update()
+RETURNS TRIGGER AS $$
+  declare
+  message TEXT;
+BEGIN
+  message=&amp;#39;Salary updated for employee ID &amp;#39;||new.emp_id||&amp;#39;: from &amp;#39;||old.salary||&amp;#39; to &amp;#39;||new.salary; 
+insert into log_table(log_message,log_timestamp) values (message,current_timestamp);
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE or REPLACE TRIGGER salary_update_trigger
+AFTER UPDATE ON employees
+FOR EACH ROW
+  when (new.salary &amp;lt;&amp;gt; old.salary)
+EXECUTE FUNCTION log_salary_update();
+
+--------------------------
+
+4.
+CREATE OR REPLACE FUNCTION prevent_price_update()
+RETURNS TRIGGER AS $$
+BEGIN
+    RAISE EXCEPTION &amp;#39;Price updates are not allowed.&amp;#39;;
+return old;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE TRIGGER prevent_price_update_trigger
+AFTER UPDATE ON shopping
+FOR EACH ROW
+  when (new.price &amp;lt;&amp;gt; old.price)
+EXECUTE FUNCTION prevent_price_update();
+
+----------------------
+
+5.
+CREATE OR REPLACE FUNCTION log_booking_deletion()
+RETURNS TRIGGER AS $$
+BEGIN
+    INSERT INTO log_table (log_message)
+    VALUES (CONCAT(&amp;#39;Booking deleted: ID &amp;#39;, OLD.booking_id, 
+                   &amp;#39;, Customer: &amp;#39;, OLD.customer_name, 
+                   &amp;#39;, Date: &amp;#39;, OLD.booking_date, 
+                   &amp;#39;, Status: &amp;#39;, OLD.booking_status));
+    RETURN OLD;
+END;
+$$ LANGUAGE plpgsql;
+CREATE or replace TRIGGER booking_deletion_trigger
+AFTER DELETE ON bookings
+FOR EACH ROW
+EXECUTE FUNCTION log_booking_deletion();
+
+
+CREATE OR REPLACE FUNCTION get_employee_salary(emp_id INTEGER)
+RETURNS INTEGER
+LANGUAGE plpgsql
+AS
+$$
+DECLARE
+    emp_salary INTEGER;
+BEGIN
+    SELECT salary
+    INTO emp_salary
+    FROM employees
+    WHERE employee_id = emp_id;
+
+    RETURN emp_salary;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RETURN NULL;
+END;
+$$;
+
+-- To call the function:
+-- SELECT get_employee_salary(101);
 &lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     
