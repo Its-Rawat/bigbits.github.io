@@ -156,6 +156,82 @@
     
       <article class="post on-list">
         <h1 class="post-title">
+          <a href="https://its-rawat.github.io/bigbits.github.io/posts/sentiment-analysis-with-nlp--pytorch/">Machine Learning</a>
+        </h1>
+        <div class="post-meta"></div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/ai/">AI</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/ml/">ML</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/code/">Theory/code</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/handson/">HandsOn</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/nlp/">NLP</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+
+
+        <div class="post-content">
+          
+            <h2 id="-import-libraries">📦 Import Libraries</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> sklearn <span style="color:#66d9ef">as</span> skl
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span></code></pre></div><ul>
+<li>
+<p><code>numpy</code>, <code>pandas</code>: Data manipulation</p>
+</li>
+<li>
+<p><code>sklearn</code>: ML tools like vectorizers and train/test split</p>
+</li>
+<li>
+<p><code>matplotlib</code>: Visualization (optional)</p>
+</li>
+</ul>
+<hr>
+<h2 id="-nlp-preprocessing-setup">📚 NLP Preprocessing Setup</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> nltk
+</span></span><span style="display:flex;"><span>nltk<span style="color:#f92672">.</span>download(<span style="color:#e6db74">&#39;stopwords&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> nltk.corpus <span style="color:#f92672">import</span> stopwords
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> nltk.stem.porter <span style="color:#f92672">import</span> PorterStemmer
+</span></span></code></pre></div><ul>
+<li>
+<p><code>re</code>: Regex for text cleaning</p>
+</li>
+<li>
+<p><code>nltk</code>: Tokenization, stopwords, and stemming</p>
+</li>
+</ul>
+<hr>
+<h2 id="-custom-stopwords">🚫 Custom Stopwords</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>negatives <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;no&#39;</span>, <span style="color:#e6db74">&#39;nor&#39;</span>, <span style="color:#e6db74">&#39;not&#39;</span>, <span style="color:#e6db74">&#34;don&#39;t&#34;</span>, <span style="color:#f92672">...</span>]
+</span></span><span style="display:flex;"><span>all_stopwords <span style="color:#f92672">=</span> [w <span style="color:#66d9ef">for</span> w <span style="color:#f92672">in</span> stopwords<span style="color:#f92672">.</span>words(<span style="color:#e6db74">&#39;english&#39;</span>) <span style="color:#66d9ef">if</span> w <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> negatives]
+</span></span></code></pre></div><p>Retains negative words like &ldquo;not&rdquo;, which are important for sentiment.</p>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button" href="/bigbits.github.io/posts/sentiment-analysis-with-nlp--pytorch/">Read more →</a>
+          </div>
+        
+      </article>
+    
+      <article class="post on-list">
+        <h1 class="post-title">
           <a href="https://its-rawat.github.io/bigbits.github.io/posts/topic-tags/">my-projects</a>
         </h1>
         <div class="post-meta"></div>
@@ -386,82 +462,6 @@
         
           <div>
             <a class="read-more button" href="/bigbits.github.io/posts/computer-organization--architect/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/dsa/">Sastra DSA Full Notes</a>
-        </h1>
-        <div class="post-meta"></div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/dsa/">DSA</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/sastra/">SASTRA</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/mca/">MCA</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-
-        <div class="post-content">
-          
-            <h1 id="what-is-dsa">What is DSA?</h1>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png"></p>
-<h1 id="types-of-data-structure">Types of Data Structure</h1>
-<h2 id="sequential-data-structure">Sequential Data Structure</h2>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png"></p>
-<h2 id="non-linear-data-structure">Non-Linear Data Structure</h2>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png"></p>
-<hr>
-<h1 id="categories-of-data-structure">Categories of Data Structure</h1>
-<h2 id="primitive-and-non-primitive">Primitive and Non-Primitive</h2>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418195720.png"></p>
-<hr>
-<h1 id="need-of-data-structure">Need of Data Structure</h1>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418200016.png"></p>
-<h1 id="efficiency-of-an-algorithm">Efficiency of an Algorithm</h1>
-<ol>
-<li>
-<p>Time Complexity
-<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/yashClick.png"></p>
-</li>
-<li>
-<p>Space Complexity
-<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201520.png"></p>
-</li>
-</ol>
-<h1 id="abstract-data-type">Abstract Data Type</h1>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201848.png"></p>
-<h2 id="abstract-data-types-implementation">Abstract Data Types Implementation</h2>
-<ol>
-<li>Arrays ADT</li>
-<li>Linked List ADT
-<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418202511.png"></li>
-<li>Stack ADT
-<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418203734.png"></li>
-</ol>
-<h2 id="stack-operations">Stack Operations</h2>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204559.png">
-<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204610.png"></p>
-<h3 id="stack-adt-operations-using-arrays">Stack ADT Operations using Arrays</h3>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204833.png"></p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/dsa/">Read more →</a>
           </div>
         
       </article>

@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Docker Full Notes :: </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="📘 PL/SQL Practice Guide: Functions, Procedures, Triggers 📌 Functions in PL/SQL 🔹 Syntax CREATE OR REPLACE FUNCTION function_name ( param1 IN data_type, param2 IN data_type ) RETURN return_data_type IS BEGIN -- logic RETURN some_value; END; / ✅ Practice Questions with Solutions 1. Check Even or Odd CREATE OR REPLACE FUNCTION check_even_odd(n IN NUMBER) RETURN VARCHAR2 IS BEGIN IF MOD(n, 2) = 0 THEN RETURN &#39;EVEN&#39;; ELSE RETURN &#39;ODD&#39;; END IF; END; / 2. Get Maximum of Two Numbers CREATE OR REPLACE FUNCTION get_max(a IN NUMBER, b IN NUMBER) RETURN NUMBER IS BEGIN IF a &gt; b THEN RETURN a; ELSE RETURN b; END IF; END; / 3. Count Vowels in a String CREATE OR REPLACE FUNCTION count_vowels(str IN VARCHAR2) RETURN NUMBER IS count NUMBER := 0; ch CHAR; BEGIN FOR i IN 1..LENGTH(str) LOOP ch := LOWER(SUBSTR(str, i, 1)); IF ch IN (&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;) THEN count := count &#43; 1; END IF; END LOOP; RETURN count; END; / 4. Check Palindrome CREATE OR REPLACE FUNCTION is_palindrome(str IN VARCHAR2) RETURN VARCHAR2 IS reversed_str VARCHAR2(1000) := &#39;&#39;; BEGIN FOR i IN REVERSE 1..LENGTH(str) LOOP reversed_str := reversed_str || SUBSTR(str, i, 1); END LOOP; IF LOWER(str) = LOWER(reversed_str) THEN RETURN &#39;YES&#39;; ELSE RETURN &#39;NO&#39;; END IF; END; / 5. Sum of Digits CREATE OR REPLACE FUNCTION sum_of_digits(n IN NUMBER) RETURN NUMBER IS sum NUMBER := 0; digit NUMBER; num NUMBER := n; BEGIN WHILE num &gt; 0 LOOP digit := MOD(num, 10); sum := sum &#43; digit; num := FLOOR(num / 10); END LOOP; RETURN sum; END; / 🔧 Procedures in PL/SQL 🔹 Syntax CREATE OR REPLACE PROCEDURE procedure_name (param1 IN/OUT data_type) IS BEGIN -- logic END; / ✅ Practice Questions with Solutions 1. Procedure to Print Square CREATE OR REPLACE PROCEDURE print_square(n IN NUMBER) IS BEGIN DBMS_OUTPUT.PUT_LINE(&#39;Square: &#39; || (n * n)); END; / 2. Procedure to Update Employee Salary CREATE OR REPLACE PROCEDURE increase_salary(empId IN NUMBER) IS BEGIN UPDATE employees SET salary = salary * 1.10 WHERE emp_id = empId; COMMIT; END; / 3. Procedure with OUT Parameter for Factorial CREATE OR REPLACE PROCEDURE find_factorial(n IN NUMBER, result OUT NUMBER) IS fact NUMBER := 1; BEGIN FOR i IN 1..n LOOP fact := fact * i; END LOOP; result := fact; END; / 🔥 Triggers in PL/SQL 🔹 Syntax CREATE OR REPLACE TRIGGER trigger_name BEFORE/AFTER INSERT/UPDATE/DELETE ON table_name FOR EACH ROW BEGIN -- logic END; / ✅ Practice Questions with Solutions 1. BEFORE INSERT Trigger CREATE OR REPLACE TRIGGER trg_set_created_at BEFORE INSERT ON students FOR EACH ROW BEGIN :NEW.created_at := SYSDATE; END; / 2. AFTER UPDATE Trigger for Salary Audit CREATE OR REPLACE TRIGGER trg_salary_audit AFTER UPDATE OF salary ON employees FOR EACH ROW BEGIN INSERT INTO salary_audit(emp_id, old_salary, new_salary, change_date) VALUES(:OLD.emp_id, :OLD.salary, :NEW.salary, SYSDATE); END; / 3. BEFORE DELETE Trigger to Prevent Deletion CREATE OR REPLACE TRIGGER trg_prevent_delete BEFORE DELETE ON departments FOR EACH ROW BEGIN RAISE_APPLICATION_ERROR(-20001, &#39;Deletion is not allowed on departments table.&#39;); END; / 📚 Additional Practice Questions 🔧 Functions 🔹 6. Reverse a String Question: Write a function to reverse a given string.
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/plsql_functions_procedures_triggers-only/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://its-rawat.github.io/bigbits.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Docker Full Notes">
+<meta property="og:description" content="📘 PL/SQL Practice Guide: Functions, Procedures, Triggers 📌 Functions in PL/SQL 🔹 Syntax CREATE OR REPLACE FUNCTION function_name ( param1 IN data_type, param2 IN data_type ) RETURN return_data_type IS BEGIN -- logic RETURN some_value; END; / ✅ Practice Questions with Solutions 1. Check Even or Odd CREATE OR REPLACE FUNCTION check_even_odd(n IN NUMBER) RETURN VARCHAR2 IS BEGIN IF MOD(n, 2) = 0 THEN RETURN &#39;EVEN&#39;; ELSE RETURN &#39;ODD&#39;; END IF; END; / 2. Get Maximum of Two Numbers CREATE OR REPLACE FUNCTION get_max(a IN NUMBER, b IN NUMBER) RETURN NUMBER IS BEGIN IF a &gt; b THEN RETURN a; ELSE RETURN b; END IF; END; / 3. Count Vowels in a String CREATE OR REPLACE FUNCTION count_vowels(str IN VARCHAR2) RETURN NUMBER IS count NUMBER := 0; ch CHAR; BEGIN FOR i IN 1..LENGTH(str) LOOP ch := LOWER(SUBSTR(str, i, 1)); IF ch IN (&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;) THEN count := count &#43; 1; END IF; END LOOP; RETURN count; END; / 4. Check Palindrome CREATE OR REPLACE FUNCTION is_palindrome(str IN VARCHAR2) RETURN VARCHAR2 IS reversed_str VARCHAR2(1000) := &#39;&#39;; BEGIN FOR i IN REVERSE 1..LENGTH(str) LOOP reversed_str := reversed_str || SUBSTR(str, i, 1); END LOOP; IF LOWER(str) = LOWER(reversed_str) THEN RETURN &#39;YES&#39;; ELSE RETURN &#39;NO&#39;; END IF; END; / 5. Sum of Digits CREATE OR REPLACE FUNCTION sum_of_digits(n IN NUMBER) RETURN NUMBER IS sum NUMBER := 0; digit NUMBER; num NUMBER := n; BEGIN WHILE num &gt; 0 LOOP digit := MOD(num, 10); sum := sum &#43; digit; num := FLOOR(num / 10); END LOOP; RETURN sum; END; / 🔧 Procedures in PL/SQL 🔹 Syntax CREATE OR REPLACE PROCEDURE procedure_name (param1 IN/OUT data_type) IS BEGIN -- logic END; / ✅ Practice Questions with Solutions 1. Procedure to Print Square CREATE OR REPLACE PROCEDURE print_square(n IN NUMBER) IS BEGIN DBMS_OUTPUT.PUT_LINE(&#39;Square: &#39; || (n * n)); END; / 2. Procedure to Update Employee Salary CREATE OR REPLACE PROCEDURE increase_salary(empId IN NUMBER) IS BEGIN UPDATE employees SET salary = salary * 1.10 WHERE emp_id = empId; COMMIT; END; / 3. Procedure with OUT Parameter for Factorial CREATE OR REPLACE PROCEDURE find_factorial(n IN NUMBER, result OUT NUMBER) IS fact NUMBER := 1; BEGIN FOR i IN 1..n LOOP fact := fact * i; END LOOP; result := fact; END; / 🔥 Triggers in PL/SQL 🔹 Syntax CREATE OR REPLACE TRIGGER trigger_name BEFORE/AFTER INSERT/UPDATE/DELETE ON table_name FOR EACH ROW BEGIN -- logic END; / ✅ Practice Questions with Solutions 1. BEFORE INSERT Trigger CREATE OR REPLACE TRIGGER trg_set_created_at BEFORE INSERT ON students FOR EACH ROW BEGIN :NEW.created_at := SYSDATE; END; / 2. AFTER UPDATE Trigger for Salary Audit CREATE OR REPLACE TRIGGER trg_salary_audit AFTER UPDATE OF salary ON employees FOR EACH ROW BEGIN INSERT INTO salary_audit(emp_id, old_salary, new_salary, change_date) VALUES(:OLD.emp_id, :OLD.salary, :NEW.salary, SYSDATE); END; / 3. BEFORE DELETE Trigger to Prevent Deletion CREATE OR REPLACE TRIGGER trg_prevent_delete BEFORE DELETE ON departments FOR EACH ROW BEGIN RAISE_APPLICATION_ERROR(-20001, &#39;Deletion is not allowed on departments table.&#39;); END; / 📚 Additional Practice Questions 🔧 Functions 🔹 6. Reverse a String Question: Write a function to reverse a given string.
+" />
+<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/plsql_functions_procedures_triggers-only/" />
+<meta property="og:site_name" content="" />
+
+  
+    <meta property="og:image" content="https://its-rawat.github.io/bigbits.github.io/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="orange">
+
+  
+    <div id="banner">
+      <span>
+        
+          <a href="https://github.com/Its-Rawat">Also Check My GitHub</a>
+        
+      </span>
+      
+        <button type="button">x</button>
+      
+    </div>
+  
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://its-rawat.github.io/bigbits.github.io/">
+  <div class="logo">
+    re-Terminal
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/">About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/" >About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/plsql_functions_procedures_triggers-only/">Docker Full Notes</a>
+  </h1>
+  <div class="post-meta">
+    
+<span class="post-reading-time">12 min read (2502 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/plsql/">PLSQL</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/hands_on/">Hands_On</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-functions-in-plsql">📌 Functions in PL/SQL</a>
+      <ul>
+        <li><a href="#-syntax">🔹 Syntax</a></li>
+        <li><a href="#-practice-questions-with-solutions">✅ Practice Questions with Solutions</a></li>
+      </ul>
+    </li>
+    <li><a href="#-procedures-in-plsql">🔧 Procedures in PL/SQL</a>
+      <ul>
+        <li><a href="#-syntax-1">🔹 Syntax</a></li>
+        <li><a href="#-practice-questions-with-solutions-1">✅ Practice Questions with Solutions</a></li>
+      </ul>
+    </li>
+    <li><a href="#-triggers-in-plsql">🔥 Triggers in PL/SQL</a>
+      <ul>
+        <li><a href="#-syntax-2">🔹 Syntax</a></li>
+        <li><a href="#-practice-questions-with-solutions-2">✅ Practice Questions with Solutions</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#-functions">🔧 Functions</a>
+      <ul>
+        <li><a href="#-6-reverse-a-string">🔹 6. Reverse a String</a></li>
+        <li><a href="#-7-prime-number-check">🔹 7. Prime Number Check</a></li>
+      </ul>
+    </li>
+    <li><a href="#-procedures">🔧 Procedures</a>
+      <ul>
+        <li><a href="#-4-display-employee-details">🔹 4. Display Employee Details</a></li>
+        <li><a href="#-5-delete-department-by-id">🔹 5. Delete Department by ID</a></li>
+      </ul>
+    </li>
+    <li><a href="#-triggers">🔥 Triggers</a>
+      <ul>
+        <li><a href="#-4-after-insert-trigger-to-log-insertions">🔹 4. AFTER INSERT Trigger to Log Insertions</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#-functions-1">🔧 Functions</a>
+      <ul>
+        <li><a href="#-8-count-words-in-a-string">🔹 8. Count Words in a String</a></li>
+        <li><a href="#-9-find-gcd-of-two-numbers">🔹 9. Find GCD of Two Numbers</a></li>
+      </ul>
+    </li>
+    <li><a href="#-procedures-1">🔧 Procedures</a>
+      <ul>
+        <li><a href="#-6-transfer-funds-between-accounts">🔹 6. Transfer Funds Between Accounts</a></li>
+        <li><a href="#-7-generate-fibonacci-series">🔹 7. Generate Fibonacci Series</a></li>
+      </ul>
+    </li>
+    <li><a href="#-triggers-1">🔥 Triggers</a>
+      <ul>
+        <li><a href="#-5-restrict-high-salary-update">🔹 5. Restrict High Salary Update</a></li>
+        <li><a href="#-6-audit-all-dml-actions">🔹 6. Audit All DML Actions</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#write-a-plpgsql-function-named-get_product_price-that-returns-the-price-of-a-product-based-on-its-product-id">Write a PL/pgSQL function named get_product_price that returns the price of a product based on its product ID.</a></li>
+        <li><a href="#write-a-plpgsql-function-named-update_product_stock-that-updates-the-stock-quantity-of-a-product-given-its-product-id">Write a PL/pgSQL function named <code>update_product_stock</code> that updates the stock quantity of a product given its product ID.</a></li>
+        <li><a href="#write-a-plpgsql-function-named-get_total_stock_value-that-returns-the-total-monetary-value-of-all-products-in-stock">Write a PL/pgSQL function named <code>get_total_stock_value</code> that returns the total monetary value of all products in stock.</a></li>
+        <li><a href="#write-a-plpgsql-function-named-count_products_by_category-that-returns-the-number-of-products-in-a-specific-category">Write a PL/pgSQL function named <code>count_products_by_category</code> that returns the number of products in a specific category.</a></li>
+        <li><a href="#write-a-plpgsql-function-get_products_below_pricep-integer-that-returns-a-comma-separated-string-of-product-names-whose-price-is-less-than-or-equal-to-the-given-price">Write a PL/pgSQL function <code>get_products_below_price(p INTEGER)</code> that returns a comma-separated string of product names whose price is less than or equal to the given price.</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#write-a-plpgsql-procedure-add_new_bookp_title-p_author-p_published_year-p_genre-that-inserts-a-new-book-into-the-books-table-using-the-provided-parameters">Write a PL/pgSQL procedure <code>add_new_book(p_title, p_author, p_published_year, p_genre)</code> that inserts a new book into the <code>books</code> table using the provided parameters.</a></li>
+        <li><a href="#write-a-plpgsql-procedure-loan_bookp_book_id-integer-p_member_id-integer-that-records-a-book-being-loaned-to-a-member-by-inserting-a-row-into-a-loans-table-the-current-date-should-be-recorded-as-the-loan-date-and-the-return-date-should-initially-be-null">Write a PL/pgSQL procedure <code>loan_book(p_book_id INTEGER, p_member_id INTEGER)</code> that records a book being loaned to a member by inserting a row into a <code>loans</code> table. The current date should be recorded as the loan date, and the return date should initially be <code>NULL</code>.</a></li>
+        <li><a href="#write-a-plpgsql-procedure-return_bookp_loan_id-integer-that-updates-the-return_date-of-a-loan-to-a-fixed-date-2025-03-18">Write a PL/pgSQL procedure <code>return_book(p_loan_id INTEGER)</code> that updates the <code>return_date</code> of a loan to a fixed date (&lsquo;2025-03-18&rsquo;).</a></li>
+        <li><a href="#write-a-plpgsql-function-get_member_loansp_member_id-integer-that-returns-a-list-of-books-title-and-loan-date-borrowed-by-a-member">Write a PL/pgSQL function <code>get_member_loans(p_member_id INTEGER)</code> that returns a list of books (title and loan date) borrowed by a member.</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-prevent-insertion-of-negative-marks-using-a-trigger">1. Prevent insertion of negative marks using a trigger</a></li>
+        <li><a href="#2-automatically-apply-10-discount-after-a-customer-makes-a-purchase">2. Automatically apply 10% discount after a customer makes a purchase</a></li>
+        <li><a href="#3-log-salary-updates-using-a-trigger">3. Log salary updates using a trigger</a></li>
+        <li><a href="#4-prevent-price-updates-on-shopping-table">4. Prevent price updates on shopping table</a></li>
+        <li><a href="#5-log-booking-deletion-events-using-a-trigger">5. Log booking deletion events using a trigger</a></li>
+        <li><a href="#6-create-a-function-to-get-employee-salary">6. Create a function to get employee salary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h1 id="-plsql-practice-guide-functions-procedures-triggers">📘 PL/SQL Practice Guide: Functions, Procedures, Triggers<a href="#-plsql-practice-guide-functions-procedures-triggers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="-functions-in-plsql">📌 Functions in PL/SQL<a href="#-functions-in-plsql" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-syntax">🔹 Syntax<a href="#-syntax" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> function_name (
+</span></span><span style="display:flex;"><span>    param1 <span style="color:#66d9ef">IN</span> data_type,
+</span></span><span style="display:flex;"><span>    param2 <span style="color:#66d9ef">IN</span> data_type
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">RETURN</span> return_data_type <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- logic
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">RETURN</span> some_value;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h3 id="-practice-questions-with-solutions">✅ Practice Questions with Solutions<a href="#-practice-questions-with-solutions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="1-check-even-or-odd">1. Check Even or Odd<a href="#1-check-even-or-odd" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> check_even_odd(n <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">RETURN</span> VARCHAR2 <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">MOD</span>(n, <span style="color:#ae81ff">2</span>) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;EVEN&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ELSE</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;ODD&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h4 id="2-get-maximum-of-two-numbers">2. Get Maximum of Two Numbers<a href="#2-get-maximum-of-two-numbers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> get_max(a <span style="color:#66d9ef">IN</span> NUMBER, b <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">RETURN</span> NUMBER <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">IF</span> a <span style="color:#f92672">&gt;</span> b <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> a;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ELSE</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> b;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h4 id="3-count-vowels-in-a-string">3. Count Vowels in a String<a href="#3-count-vowels-in-a-string" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> count_vowels(str <span style="color:#66d9ef">IN</span> VARCHAR2) <span style="color:#66d9ef">RETURN</span> NUMBER <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">count</span> NUMBER :<span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    ch CHAR;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> i <span style="color:#66d9ef">IN</span> <span style="color:#ae81ff">1</span>..<span style="color:#66d9ef">LENGTH</span>(str) LOOP
+</span></span><span style="display:flex;"><span>        ch :<span style="color:#f92672">=</span> <span style="color:#66d9ef">LOWER</span>(SUBSTR(str, i, <span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">IF</span> ch <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>, <span style="color:#e6db74">&#39;o&#39;</span>, <span style="color:#e6db74">&#39;u&#39;</span>) <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">count</span> :<span style="color:#f92672">=</span> <span style="color:#66d9ef">count</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">RETURN</span> <span style="color:#66d9ef">count</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h4 id="4-check-palindrome">4. Check Palindrome<a href="#4-check-palindrome" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> is_palindrome(str <span style="color:#66d9ef">IN</span> VARCHAR2) <span style="color:#66d9ef">RETURN</span> VARCHAR2 <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span>    reversed_str VARCHAR2(<span style="color:#ae81ff">1000</span>) :<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> i <span style="color:#66d9ef">IN</span> REVERSE <span style="color:#ae81ff">1</span>..<span style="color:#66d9ef">LENGTH</span>(str) LOOP
+</span></span><span style="display:flex;"><span>        reversed_str :<span style="color:#f92672">=</span> reversed_str <span style="color:#f92672">||</span> SUBSTR(str, i, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">LOWER</span>(str) <span style="color:#f92672">=</span> <span style="color:#66d9ef">LOWER</span>(reversed_str) <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;YES&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ELSE</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;NO&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h4 id="5-sum-of-digits">5. Sum of Digits<a href="#5-sum-of-digits" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> sum_of_digits(n <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">RETURN</span> NUMBER <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">sum</span> NUMBER :<span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    digit NUMBER;
+</span></span><span style="display:flex;"><span>    num NUMBER :<span style="color:#f92672">=</span> n;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    WHILE num <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> LOOP
+</span></span><span style="display:flex;"><span>        digit :<span style="color:#f92672">=</span> <span style="color:#66d9ef">MOD</span>(num, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">sum</span> :<span style="color:#f92672">=</span> <span style="color:#66d9ef">sum</span> <span style="color:#f92672">+</span> digit;
+</span></span><span style="display:flex;"><span>        num :<span style="color:#f92672">=</span> FLOOR(num <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">RETURN</span> <span style="color:#66d9ef">sum</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><hr>
+<h2 id="-procedures-in-plsql">🔧 Procedures in PL/SQL<a href="#-procedures-in-plsql" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-syntax-1">🔹 Syntax<a href="#-syntax-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> procedure_name (param1 <span style="color:#66d9ef">IN</span><span style="color:#f92672">/</span><span style="color:#66d9ef">OUT</span> data_type) <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- logic
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h3 id="-practice-questions-with-solutions-1">✅ Practice Questions with Solutions<a href="#-practice-questions-with-solutions-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="1-procedure-to-print-square">1. Procedure to Print Square<a href="#1-procedure-to-print-square" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> print_square(n <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    DBMS_OUTPUT.PUT_LINE(<span style="color:#e6db74">&#39;Square: &#39;</span> <span style="color:#f92672">||</span> (n <span style="color:#f92672">*</span> n));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h4 id="2-procedure-to-update-employee-salary">2. Procedure to Update Employee Salary<a href="#2-procedure-to-update-employee-salary" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> increase_salary(empId <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">UPDATE</span> employees
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SET</span> salary <span style="color:#f92672">=</span> salary <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> emp_id <span style="color:#f92672">=</span> empId;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">COMMIT</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h4 id="3-procedure-with-out-parameter-for-factorial">3. Procedure with OUT Parameter for Factorial<a href="#3-procedure-with-out-parameter-for-factorial" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> find_factorial(n <span style="color:#66d9ef">IN</span> NUMBER, <span style="color:#66d9ef">result</span> <span style="color:#66d9ef">OUT</span> NUMBER) <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span>    fact NUMBER :<span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> i <span style="color:#66d9ef">IN</span> <span style="color:#ae81ff">1</span>..n LOOP
+</span></span><span style="display:flex;"><span>        fact :<span style="color:#f92672">=</span> fact <span style="color:#f92672">*</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">result</span> :<span style="color:#f92672">=</span> fact;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><hr>
+<h2 id="-triggers-in-plsql">🔥 Triggers in PL/SQL<a href="#-triggers-in-plsql" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-syntax-2">🔹 Syntax<a href="#-syntax-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> <span style="color:#66d9ef">trigger_name</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEFORE</span><span style="color:#f92672">/</span><span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">INSERT</span><span style="color:#f92672">/</span><span style="color:#66d9ef">UPDATE</span><span style="color:#f92672">/</span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">table_name</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- logic
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h3 id="-practice-questions-with-solutions-2">✅ Practice Questions with Solutions<a href="#-practice-questions-with-solutions-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="1-before-insert-trigger">1. BEFORE INSERT Trigger<a href="#1-before-insert-trigger" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> trg_set_created_at
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">ON</span> students
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    :<span style="color:#66d9ef">NEW</span>.created_at :<span style="color:#f92672">=</span> SYSDATE;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h4 id="2-after-update-trigger-for-salary-audit">2. AFTER UPDATE Trigger for Salary Audit<a href="#2-after-update-trigger-for-salary-audit" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> trg_salary_audit
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">UPDATE</span> <span style="color:#66d9ef">OF</span> salary <span style="color:#66d9ef">ON</span> employees
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> salary_audit(emp_id, old_salary, new_salary, change_date)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">VALUES</span>(:<span style="color:#66d9ef">OLD</span>.emp_id, :<span style="color:#66d9ef">OLD</span>.salary, :<span style="color:#66d9ef">NEW</span>.salary, SYSDATE);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h4 id="3-before-delete-trigger-to-prevent-deletion">3. BEFORE DELETE Trigger to Prevent Deletion<a href="#3-before-delete-trigger-to-prevent-deletion" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> trg_prevent_delete
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">ON</span> departments
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    RAISE_APPLICATION_ERROR(<span style="color:#f92672">-</span><span style="color:#ae81ff">20001</span>, <span style="color:#e6db74">&#39;Deletion is not allowed on departments table.&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><hr>
+<h1 id="-additional-practice-questions">📚 Additional Practice Questions<a href="#-additional-practice-questions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="-functions">🔧 Functions<a href="#-functions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-6-reverse-a-string">🔹 6. Reverse a String<a href="#-6-reverse-a-string" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Write a function to reverse a given string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> reverse_string(str <span style="color:#66d9ef">IN</span> VARCHAR2) <span style="color:#66d9ef">RETURN</span> VARCHAR2 <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span>    reversed_str VARCHAR2(<span style="color:#ae81ff">1000</span>) :<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> i <span style="color:#66d9ef">IN</span> REVERSE <span style="color:#ae81ff">1</span>..<span style="color:#66d9ef">LENGTH</span>(str) LOOP
+</span></span><span style="display:flex;"><span>        reversed_str :<span style="color:#f92672">=</span> reversed_str <span style="color:#f92672">||</span> SUBSTR(str, i, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">RETURN</span> reversed_str;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h3 id="-7-prime-number-check">🔹 7. Prime Number Check<a href="#-7-prime-number-check" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Write a function to check if a number is prime. Return &lsquo;YES&rsquo; or &lsquo;NO&rsquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> is_prime(n <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">RETURN</span> VARCHAR2 <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span>    i NUMBER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">IF</span> n <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;NO&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> i <span style="color:#66d9ef">IN</span> <span style="color:#ae81ff">2</span>..FLOOR(SQRT(n)) LOOP
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">MOD</span>(n, i) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;NO&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;YES&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h2 id="-procedures">🔧 Procedures<a href="#-procedures" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-4-display-employee-details">🔹 4. Display Employee Details<a href="#-4-display-employee-details" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Write a procedure that takes employee ID and displays employee details.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> show_employee(empId <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span>    emp_name employees.emp_name<span style="color:#f92672">%</span><span style="color:#66d9ef">TYPE</span>;
+</span></span><span style="display:flex;"><span>    emp_salary employees.salary<span style="color:#f92672">%</span><span style="color:#66d9ef">TYPE</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> emp_name, salary <span style="color:#66d9ef">INTO</span> emp_name, emp_salary
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> employees
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> emp_id <span style="color:#f92672">=</span> empId;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    DBMS_OUTPUT.PUT_LINE(<span style="color:#e6db74">&#39;Name: &#39;</span> <span style="color:#f92672">||</span> emp_name <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;, Salary: &#39;</span> <span style="color:#f92672">||</span> emp_salary);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">EXCEPTION</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHEN</span> NO_DATA_FOUND <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>        DBMS_OUTPUT.PUT_LINE(<span style="color:#e6db74">&#39;Employee not found.&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h3 id="-5-delete-department-by-id">🔹 5. Delete Department by ID<a href="#-5-delete-department-by-id" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Write a procedure that deletes a department by ID.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> delete_department(deptId <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> departments <span style="color:#66d9ef">WHERE</span> dept_id <span style="color:#f92672">=</span> deptId;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">COMMIT</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h2 id="-triggers">🔥 Triggers<a href="#-triggers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-4-after-insert-trigger-to-log-insertions">🔹 4. AFTER INSERT Trigger to Log Insertions<a href="#-4-after-insert-trigger-to-log-insertions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Create a trigger that logs new employee entries into a table <code>employee_log</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> employee_log (
+</span></span><span style="display:flex;"><span>    emp_id NUMBER,
+</span></span><span style="display:flex;"><span>    emp_name VARCHAR2(<span style="color:#ae81ff">100</span>),
+</span></span><span style="display:flex;"><span>    log_time DATE
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p><strong>Trigger:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> trg_log_employee_insert
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">ON</span> employees
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employee_log(emp_id, emp_name, log_time)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">VALUES</span>(:<span style="color:#66d9ef">NEW</span>.emp_id, :<span style="color:#66d9ef">NEW</span>.emp_name, SYSDATE);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><hr>
+<h1 id="-intermediate-and-hard-plsql-questions">🚀 Intermediate and Hard PL/SQL Questions<a href="#-intermediate-and-hard-plsql-questions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="-functions-1">🔧 Functions<a href="#-functions-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-8-count-words-in-a-string">🔹 8. Count Words in a String<a href="#-8-count-words-in-a-string" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Write a function to count the number of words in a given string (words are separated by spaces).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> count_words(str <span style="color:#66d9ef">IN</span> VARCHAR2) <span style="color:#66d9ef">RETURN</span> NUMBER <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span>    word_count NUMBER :<span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    i NUMBER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> i <span style="color:#66d9ef">IN</span> <span style="color:#ae81ff">1</span>..<span style="color:#66d9ef">LENGTH</span>(str) LOOP
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">IF</span> SUBSTR(str, i, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>            word_count :<span style="color:#f92672">=</span> word_count <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">RETURN</span> word_count <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h3 id="-9-find-gcd-of-two-numbers">🔹 9. Find GCD of Two Numbers<a href="#-9-find-gcd-of-two-numbers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Write a function to return the greatest common divisor (GCD) of two integers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> find_gcd(a <span style="color:#66d9ef">IN</span> NUMBER, b <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">RETURN</span> NUMBER <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    WHILE b <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> LOOP
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">DECLARE</span>
+</span></span><span style="display:flex;"><span>            temp NUMBER :<span style="color:#f92672">=</span> b;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>            b :<span style="color:#f92672">=</span> <span style="color:#66d9ef">MOD</span>(a, b);
+</span></span><span style="display:flex;"><span>            a :<span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">RETURN</span> a;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h2 id="-procedures-1">🔧 Procedures<a href="#-procedures-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-6-transfer-funds-between-accounts">🔹 6. Transfer Funds Between Accounts<a href="#-6-transfer-funds-between-accounts" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Write a procedure that transfers money from one account to another.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> accounts (
+</span></span><span style="display:flex;"><span>    acc_id NUMBER <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    acc_name VARCHAR2(<span style="color:#ae81ff">100</span>),
+</span></span><span style="display:flex;"><span>    balance NUMBER
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> transfer_funds(
+</span></span><span style="display:flex;"><span>    from_acc <span style="color:#66d9ef">IN</span> NUMBER,
+</span></span><span style="display:flex;"><span>    to_acc <span style="color:#66d9ef">IN</span> NUMBER,
+</span></span><span style="display:flex;"><span>    amount <span style="color:#66d9ef">IN</span> NUMBER
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">UPDATE</span> accounts <span style="color:#66d9ef">SET</span> balance <span style="color:#f92672">=</span> balance <span style="color:#f92672">-</span> amount <span style="color:#66d9ef">WHERE</span> acc_id <span style="color:#f92672">=</span> from_acc;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">UPDATE</span> accounts <span style="color:#66d9ef">SET</span> balance <span style="color:#f92672">=</span> balance <span style="color:#f92672">+</span> amount <span style="color:#66d9ef">WHERE</span> acc_id <span style="color:#f92672">=</span> to_acc;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">COMMIT</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h3 id="-7-generate-fibonacci-series">🔹 7. Generate Fibonacci Series<a href="#-7-generate-fibonacci-series" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Write a procedure to print the first N terms of the Fibonacci series.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> print_fibonacci(n <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">IS</span>
+</span></span><span style="display:flex;"><span>    a NUMBER :<span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    b NUMBER :<span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    temp NUMBER;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    DBMS_OUTPUT.PUT_LINE(a);
+</span></span><span style="display:flex;"><span>    DBMS_OUTPUT.PUT_LINE(b);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> i <span style="color:#66d9ef">IN</span> <span style="color:#ae81ff">3</span>..n LOOP
+</span></span><span style="display:flex;"><span>        temp :<span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b;
+</span></span><span style="display:flex;"><span>        DBMS_OUTPUT.PUT_LINE(temp);
+</span></span><span style="display:flex;"><span>        a :<span style="color:#f92672">=</span> b;
+</span></span><span style="display:flex;"><span>        b :<span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h2 id="-triggers-1">🔥 Triggers<a href="#-triggers-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-5-restrict-high-salary-update">🔹 5. Restrict High Salary Update<a href="#-5-restrict-high-salary-update" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Create a trigger that prevents updating salary to more than 100000.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> trg_salary_limit
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">UPDATE</span> <span style="color:#66d9ef">OF</span> salary <span style="color:#66d9ef">ON</span> employees
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">IF</span> :<span style="color:#66d9ef">NEW</span>.salary <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100000</span> <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>        RAISE_APPLICATION_ERROR(<span style="color:#f92672">-</span><span style="color:#ae81ff">20002</span>, <span style="color:#e6db74">&#39;Salary cannot exceed 100000&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><h3 id="-6-audit-all-dml-actions">🔹 6. Audit All DML Actions<a href="#-6-audit-all-dml-actions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Question:</strong> Write a trigger to log all INSERT, UPDATE, and DELETE operations on the <code>employees</code> table.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> employee_dml_log (
+</span></span><span style="display:flex;"><span>    action_type VARCHAR2(<span style="color:#ae81ff">10</span>),
+</span></span><span style="display:flex;"><span>    emp_id NUMBER,
+</span></span><span style="display:flex;"><span>    action_date DATE
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> trg_employee_dml_log
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">UPDATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">ON</span> employees
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">IF</span> INSERTING <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employee_dml_log <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;INSERT&#39;</span>, :<span style="color:#66d9ef">NEW</span>.emp_id, SYSDATE);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ELSIF</span> UPDATING <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employee_dml_log <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;UPDATE&#39;</span>, :<span style="color:#66d9ef">NEW</span>.emp_id, SYSDATE);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ELSIF</span> DELETING <span style="color:#66d9ef">THEN</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employee_dml_log <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;DELETE&#39;</span>, :<span style="color:#66d9ef">OLD</span>.emp_id, SYSDATE);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><hr>
+<h1 id="functions">FUNCTIONS<a href="#functions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h3 id="write-a-plpgsql-function-named-get_product_price-that-returns-the-price-of-a-product-based-on-its-product-id">Write a PL/pgSQL function named get_product_price that returns the price of a product based on its product ID.<a href="#write-a-plpgsql-function-named-get_product_price-that-returns-the-price-of-a-product-based-on-its-product-id" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE products (
+    product_id INTEGER PRIMARY KEY,
+    product_name VARCHAR(100),
+    price INTEGER
+);
+
+    
+    
+INSERT INTO products (product_id, product_name, price) VALUES
+(1, &#39;Laptop&#39;, 80000),
+(2, &#39;Smartphone&#39;, 40000),
+(3, &#39;Tablet&#39;, 25000),
+(4, &#39;Headphones&#39;, 5000);
+
+CREATE OR REPLACE FUNCTION GET_PRODUCT_PRICE(P_ID INTEGER)
+	RETURNS INTEGER
+    LANGUAGE PLPGSQL
+    AS $$
+    DECLARE
+		PRODUCT_PRICE INTEGER;
+    BEGIN
+    	SELECT PRICE INTO PRODUCT_PRICE
+        FROM PRODUCTS
+        WHERE PRODUCT_ID = P_ID;
+    RETURN PRODUCT_PRICE;
+END;
+$$;
+    
+SELECT GET_PRODUCT_PRICE(1)
+</code></pre><hr>
+<h3 id="write-a-plpgsql-function-named-update_product_stock-that-updates-the-stock-quantity-of-a-product-given-its-product-id">Write a PL/pgSQL function named <code>update_product_stock</code> that updates the stock quantity of a product given its product ID.<a href="#write-a-plpgsql-function-named-update_product_stock-that-updates-the-stock-quantity-of-a-product-given-its-product-id" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE products (
+    product_id NUMERIC PRIMARY KEY,
+    product_name VARCHAR(100),
+    price NUMERIC,
+    stock_quantity NUMERIC
+);
+INSERT INTO products (product_id, product_name, price, stock_quantity) VALUES
+(1, &#39;Laptop&#39;, 80000, 20),
+(2, &#39;Smartphone&#39;, 40000, 50),
+(3, &#39;Tablet&#39;, 25000, 30);
+
+CREATE OR REPLACE FUNCTION UPDATE_PRODUCT_STOCK(P_ID NUMERIC, UPDATED_STOCK NUMERIC)
+	RETURNS VOID
+    LANGUAGE PLPGSQL
+    AS $$
+    BEGIN
+    	UPDATE PRODUCTS
+        SET STOCK_QUANTITY = UPDATED_STOCK
+        WHERE PRODUCT_ID = P_ID;
+    END;
+    $$;
+    
+SELECT UPDATE_PRODUCT_STOCK(1,60);
+SELECT * FROM PRODUCTS;
+</code></pre><hr>
+<h3 id="write-a-plpgsql-function-named-get_total_stock_value-that-returns-the-total-monetary-value-of-all-products-in-stock">Write a PL/pgSQL function named <code>get_total_stock_value</code> that returns the total monetary value of all products in stock.<a href="#write-a-plpgsql-function-named-get_total_stock_value-that-returns-the-total-monetary-value-of-all-products-in-stock" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE products (
+    product_id NUMERIC PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL,
+    stock_quantity NUMERIC
+);
+INSERT INTO products (product_id, product_name, price, stock_quantity) VALUES
+(1, &#39;Laptop&#39;, 80000, 10),
+(2, &#39;Smartphone&#39;, 40000, 20),
+(3, &#39;Tablet&#39;, 25000, 15);
+
+CREATE OR REPLACE FUNCTION GET_TOTAL_STOCK_VALUE()
+	RETURNS DECIMAL
+	LANGUAGE PLPGSQL 
+	AS $$
+	DECLARE
+    	TOTAL DECIMAL;
+    BEGIN
+    	SELECT SUM(PRICE * STOCK_QUANTITY) INTO TOTAL
+        FROM PRODUCTS;
+    	RETURN TOTAL;
+    END;
+    $$;
+
+SELECT GET_TOTAL_STOCK_VALUE();
+        
+</code></pre><hr>
+<h3 id="write-a-plpgsql-function-named-count_products_by_category-that-returns-the-number-of-products-in-a-specific-category">Write a PL/pgSQL function named <code>count_products_by_category</code> that returns the number of products in a specific category.<a href="#write-a-plpgsql-function-named-count_products_by_category-that-returns-the-number-of-products-in-a-specific-category" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE products (
+    product_id NUMERIC PRIMARY KEY,
+    product_name VARCHAR(100),
+    category_id NUMERIC,
+    price DECIMAL,
+    stock_quantity NUMERIC
+);
+
+INSERT INTO products (product_id, product_name, category_id, price, stock_quantity) VALUES
+(1, &#39;Laptop&#39;, 101, 80000, 10),
+(2, &#39;Smartphone&#39;, 101, 40000, 20),
+(3, &#39;Tablet&#39;, 102, 25000, 15),
+(4, &#39;Monitor&#39;, 103, 15000, 5),
+(5, &#39;Keyboard&#39;, 103, 2000, 50);
+
+
+CREATE OR REPLACE FUNCTION count_products_by_category(p_category_id NUMERIC)
+RETURNS NUMERIC
+LANGUAGE plpgsql
+AS $$
+DECLARE 
+    c_count NUMERIC;
+BEGIN
+    SELECT COUNT(*) INTO c_count
+    FROM products
+    WHERE category_id = p_category_id;
+
+    RETURN c_count;
+END;
+$$;
+
+
+SELECT count_products_by_category(101);  
+</code></pre><hr>
+<h3 id="write-a-plpgsql-function-get_products_below_pricep-integer-that-returns-a-comma-separated-string-of-product-names-whose-price-is-less-than-or-equal-to-the-given-price">Write a PL/pgSQL function <code>get_products_below_price(p INTEGER)</code> that returns a comma-separated string of product names whose price is less than or equal to the given price.<a href="#write-a-plpgsql-function-get_products_below_pricep-integer-that-returns-a-comma-separated-string-of-product-names-whose-price-is-less-than-or-equal-to-the-given-price" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-copy" data-lang="copy">CREATE TABLE products (
+    product_id INTEGER PRIMARY KEY,
+    product_name VARCHAR(100),
+    price INTEGER,
+    stock_quantity INTEGER
+);
+INSERT INTO products (product_id, product_name, price, stock_quantity) VALUES
+(1, &#39;Laptop&#39;, 80000, 10),
+(2, &#39;Smartphone&#39;, 40000, 20),
+(3, &#39;Tablet&#39;, 25000, 15),
+(4, &#39;Monitor&#39;, 15000, 8),
+(5, &#39;Keyboard&#39;, 2000, 30),
+(6, &#39;Mouse&#39;, 1000, 40);
+
+--SELECT * FROM PRODUCTS;
+
+CREATE OR REPLACE FUNCTION get_products_below_price(P INTEGER)
+RETURNS TEXT
+LANGUAGE plpgsql
+AS $$ 
+DECLARE
+	P_NAMES TEXT;
+BEGIN
+	SELECT STRING_AGG(PRODUCT_NAME,&#39;,&#39; ORDER BY PRODUCT_NAME ASC) INTO P_NAMES
+    FROM PRODUCTS
+    WHERE PRICE &lt;= P;
+    
+    RETURN P_NAMES;
+END;
+$$;
+    
+    
+SELECT get_products_below_price(8000);
+</code></pre><hr>
+<h1 id="procedure">Procedure<a href="#procedure" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h3 id="write-a-plpgsql-procedure-add_new_bookp_title-p_author-p_published_year-p_genre-that-inserts-a-new-book-into-the-books-table-using-the-provided-parameters">Write a PL/pgSQL procedure <code>add_new_book(p_title, p_author, p_published_year, p_genre)</code> that inserts a new book into the <code>books</code> table using the provided parameters.<a href="#write-a-plpgsql-procedure-add_new_bookp_title-p_author-p_published_year-p_genre-that-inserts-a-new-book-into-the-books-table-using-the-provided-parameters" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE books (
+    book_id SERIAL PRIMARY KEY,
+    title TEXT,
+    author TEXT,
+    published_year INTEGER,
+    genre TEXT
+);
+
+SELECT * FROM BOOKS;
+
+CREATE OR REPLACE PROCEDURE ADD_NEW_BOOK(
+  P_TITLE TEXT,
+  P_AUTHOR TEXT,	
+  P_PUBLISHED_YEAR INTEGER,
+  P_GENRE TEXT
+)
+LANGUAGE PLPGSQL
+AS
+$$
+BEGIN
+	INSERT INTO BOOKS(TITLE,AUTHOR,PUBLISHED_YEAR,GENRE) 
+    VALUES(P_TITLE,P_AUTHOR, P_PUBLISHED_YEAR,P_GENRE);
+END;
+$$;
+
+CALL ADD_NEW_BOOK(&#39;GAME OF THRONES&#39;,&#39;ADITYA&#39;,2002,&#39;STRATAGY&#39;);
+SELECT * FROM BOOKS;
+</code></pre><hr>
+<h3 id="write-a-plpgsql-procedure-loan_bookp_book_id-integer-p_member_id-integer-that-records-a-book-being-loaned-to-a-member-by-inserting-a-row-into-a-loans-table-the-current-date-should-be-recorded-as-the-loan-date-and-the-return-date-should-initially-be-null">Write a PL/pgSQL procedure <code>loan_book(p_book_id INTEGER, p_member_id INTEGER)</code> that records a book being loaned to a member by inserting a row into a <code>loans</code> table. The current date should be recorded as the loan date, and the return date should initially be <code>NULL</code>.<a href="#write-a-plpgsql-procedure-loan_bookp_book_id-integer-p_member_id-integer-that-records-a-book-being-loaned-to-a-member-by-inserting-a-row-into-a-loans-table-the-current-date-should-be-recorded-as-the-loan-date-and-the-return-date-should-initially-be-null" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE books (
+    book_id SERIAL PRIMARY KEY,
+    title TEXT,
+    author TEXT
+);
+CREATE TABLE members (
+    member_id SERIAL PRIMARY KEY,
+    name TEXT
+);
+CREATE TABLE loans (
+    loan_id SERIAL PRIMARY KEY,
+    book_id INTEGER REFERENCES books(book_id),
+    member_id INTEGER REFERENCES members(member_id),
+    loan_date DATE,
+    return_date DATE
+);
+CREATE OR REPLACE PROCEDURE loan_book(
+    p_book_id INTEGER,
+    p_member_id INTEGER
+)
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+  INSERT INTO loans(book_id, member_id, loan_date, return_date)
+  VALUES (p_book_id, p_member_id, now()::date, NULL);
+END;
+$$;
+
+-- Insert sample books
+INSERT INTO books (title, author) VALUES
+(&#39;1984&#39;, &#39;George Orwell&#39;),
+(&#39;The Alchemist&#39;, &#39;Paulo Coelho&#39;);
+
+-- Insert sample members
+INSERT INTO members (name) VALUES
+(&#39;Alice&#39;),
+(&#39;Bob&#39;);
+
+-- Call the procedure to loan a book
+CALL loan_book(1, 1);  -- Loans book_id=1 to member_id=1
+
+-- Check loan record
+SELECT * FROM loans;
+</code></pre><hr>
+<h3 id="write-a-plpgsql-procedure-return_bookp_loan_id-integer-that-updates-the-return_date-of-a-loan-to-a-fixed-date-2025-03-18">Write a PL/pgSQL procedure <code>return_book(p_loan_id INTEGER)</code> that updates the <code>return_date</code> of a loan to a fixed date (&lsquo;2025-03-18&rsquo;).<a href="#write-a-plpgsql-procedure-return_bookp_loan_id-integer-that-updates-the-return_date-of-a-loan-to-a-fixed-date-2025-03-18" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE loans (
+    loan_id SERIAL PRIMARY KEY,
+    book_id INTEGER REFERENCES books(book_id),
+    member_id INTEGER REFERENCES members(member_id),
+    loan_date DATE,
+    return_date DATE
+);
+CREATE OR REPLACE PROCEDURE return_book(p_loan_id INTEGER)
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+  UPDATE loans
+  SET return_date = &#39;2025-03-18&#39;
+  WHERE loan_id = p_loan_id;
+END;
+$$;
+CALL return_book(1);  -- Set return_date for loan_id = 1
+
+SELECT * FROM loans;  -- Check result
+</code></pre><hr>
+<h3 id="write-a-plpgsql-function-get_member_loansp_member_id-integer-that-returns-a-list-of-books-title-and-loan-date-borrowed-by-a-member">Write a PL/pgSQL function <code>get_member_loans(p_member_id INTEGER)</code> that returns a list of books (title and loan date) borrowed by a member.<a href="#write-a-plpgsql-function-get_member_loansp_member_id-integer-that-returns-a-list-of-books-title-and-loan-date-borrowed-by-a-member" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE OR REPLACE FUNCTION get_member_loans(p_member_id INTEGER)
+RETURNS TABLE(title TEXT, loan_date DATE)
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+  RETURN QUERY
+  SELECT books.title, loans.loan_date
+  FROM books
+  JOIN loans ON loans.book_id = books.book_id
+  WHERE loans.member_id = p_member_id;
+END;
+$$;
+SELECT * FROM get_member_loans(1);  -- Show books loaned by member_id = 1
+</code></pre><hr>
+<h1 id="triggers">TRIGGERS<a href="#triggers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<h3 id="1-prevent-insertion-of-negative-marks-using-a-trigger">1. Prevent insertion of negative marks using a trigger<a href="#1-prevent-insertion-of-negative-marks-using-a-trigger" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    student_name TEXT,
+    marks INTEGER
+);
+
+CREATE OR REPLACE FUNCTION check_negative_marks()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF NEW.marks &lt; 0 THEN
+        RAISE EXCEPTION &#39;Marks cannot be negative&#39;;
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE TRIGGER prevent_negative_marks
+BEFORE INSERT OR UPDATE ON students
+FOR EACH ROW
+EXECUTE FUNCTION check_negative_marks();
+
+-- Example:
+-- INSERT INTO students(student_id, student_name, marks) VALUES (1, &#39;ABC&#39;, 80); -- Works
+-- INSERT INTO students(student_id, student_name, marks) VALUES (2, &#39;DEF&#39;, -10); -- Fails
+</code></pre><hr>
+<h3 id="2-automatically-apply-10-discount-after-a-customer-makes-a-purchase">2. Automatically apply 10% discount after a customer makes a purchase<a href="#2-automatically-apply-10-discount-after-a-customer-makes-a-purchase" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name TEXT,
+    purchase_amount DECIMAL,
+    discount DECIMAL
+);
+
+CREATE OR REPLACE FUNCTION calculate_discount()
+RETURNS TRIGGER AS $$
+DECLARE
+    disc DECIMAL;
+BEGIN
+    disc := NEW.purchase_amount * 0.1;
+    UPDATE customers SET discount = disc WHERE customer_id = NEW.customer_id;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE TRIGGER apply_discount
+AFTER INSERT ON customers
+FOR EACH ROW
+EXECUTE FUNCTION calculate_discount();
+</code></pre><hr>
+<h3 id="3-log-salary-updates-using-a-trigger">3. Log salary updates using a trigger<a href="#3-log-salary-updates-using-a-trigger" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name TEXT,
+    salary INT
+);
+
+CREATE TABLE log_table (
+    log_message TEXT,
+    log_timestamp TIMESTAMP
+);
+
+CREATE OR REPLACE FUNCTION log_salary_update()
+RETURNS TRIGGER AS $$
+DECLARE
+    message TEXT;
+BEGIN
+    message := &#39;Salary updated for employee ID &#39; || NEW.emp_id || &#39;: from &#39; || OLD.salary || &#39; to &#39; || NEW.salary;
+    INSERT INTO log_table(log_message, log_timestamp) VALUES (message, current_timestamp);
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE TRIGGER salary_update_trigger
+AFTER UPDATE ON employees
+FOR EACH ROW
+WHEN (NEW.salary &lt;&gt; OLD.salary)
+EXECUTE FUNCTION log_salary_update();
+</code></pre><hr>
+<h3 id="4-prevent-price-updates-on-shopping-table">4. Prevent price updates on shopping table<a href="#4-prevent-price-updates-on-shopping-table" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE shopping (
+    item_id INT PRIMARY KEY,
+    item_name TEXT,
+    price DECIMAL
+);
+
+CREATE OR REPLACE FUNCTION prevent_price_update()
+RETURNS TRIGGER AS $$
+BEGIN
+    RAISE EXCEPTION &#39;Price updates are not allowed.&#39;;
+    RETURN OLD;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE TRIGGER prevent_price_update_trigger
+AFTER UPDATE ON shopping
+FOR EACH ROW
+WHEN (NEW.price &lt;&gt; OLD.price)
+EXECUTE FUNCTION prevent_price_update();
+</code></pre><hr>
+<h3 id="5-log-booking-deletion-events-using-a-trigger">5. Log booking deletion events using a trigger<a href="#5-log-booking-deletion-events-using-a-trigger" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE bookings (
+    booking_id INT PRIMARY KEY,
+    customer_name TEXT,
+    booking_date DATE,
+    booking_status TEXT
+);
+
+CREATE TABLE log_table (
+    log_message TEXT,
+    log_timestamp TIMESTAMP DEFAULT current_timestamp
+);
+
+CREATE OR REPLACE FUNCTION log_booking_deletion()
+RETURNS TRIGGER AS $$
+BEGIN
+    INSERT INTO log_table (log_message)
+    VALUES (
+        CONCAT(&#39;Booking deleted: ID &#39;, OLD.booking_id, 
+               &#39;, Customer: &#39;, OLD.customer_name, 
+               &#39;, Date: &#39;, OLD.booking_date, 
+               &#39;, Status: &#39;, OLD.booking_status)
+    );
+    RETURN OLD;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE TRIGGER booking_deletion_trigger
+AFTER DELETE ON bookings
+FOR EACH ROW
+EXECUTE FUNCTION log_booking_deletion();
+</code></pre><hr>
+<h3 id="6-create-a-function-to-get-employee-salary">6. Create a function to get employee salary<a href="#6-create-a-function-to-get-employee-salary" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    employee_name TEXT,
+    salary INTEGER
+);
+
+CREATE OR REPLACE FUNCTION get_employee_salary(emp_id INTEGER)
+RETURNS INTEGER
+LANGUAGE plpgsql
+AS
+$$
+DECLARE
+    emp_salary INTEGER;
+BEGIN
+    SELECT salary INTO emp_salary FROM employees WHERE employee_id = emp_id;
+    RETURN emp_salary;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RETURN NULL;
+END;
+$$;
+
+-- Example usage:
+SELECT get_employee_salary(101);
+</code></pre>
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/docker/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Docker Full Notes</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/chennai-in-bits/">
+                <span class="button__text">First Immpression of CHENNAI</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/Its-Rawat" target="_blank">Theme</a> made by <a href="https://github.com/Its-Rawat" target="_blank">Its_Rawat</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bigbits.github.io/bundle.min.js"></script>
+
+
+
+  
+
+  <script type="text/javascript" src="/bigbits.github.io/js/banner.min.js"></script>
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
