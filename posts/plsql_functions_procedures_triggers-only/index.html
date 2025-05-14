@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-    <title>Docker Full Notes :: </title>
+    <title>PL SQL Questions HandsOn :: </title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +43,7 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Docker Full Notes">
+<meta property="og:title" content="PL SQL Questions HandsOn">
 <meta property="og:description" content="📘 PL/SQL Practice Guide: Functions, Procedures, Triggers 📌 Functions in PL/SQL 🔹 Syntax CREATE OR REPLACE FUNCTION function_name ( param1 IN data_type, param2 IN data_type ) RETURN return_data_type IS BEGIN -- logic RETURN some_value; END; / ✅ Practice Questions with Solutions 1. Check Even or Odd CREATE OR REPLACE FUNCTION check_even_odd(n IN NUMBER) RETURN VARCHAR2 IS BEGIN IF MOD(n, 2) = 0 THEN RETURN &#39;EVEN&#39;; ELSE RETURN &#39;ODD&#39;; END IF; END; / 2. Get Maximum of Two Numbers CREATE OR REPLACE FUNCTION get_max(a IN NUMBER, b IN NUMBER) RETURN NUMBER IS BEGIN IF a &gt; b THEN RETURN a; ELSE RETURN b; END IF; END; / 3. Count Vowels in a String CREATE OR REPLACE FUNCTION count_vowels(str IN VARCHAR2) RETURN NUMBER IS count NUMBER := 0; ch CHAR; BEGIN FOR i IN 1..LENGTH(str) LOOP ch := LOWER(SUBSTR(str, i, 1)); IF ch IN (&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;) THEN count := count &#43; 1; END IF; END LOOP; RETURN count; END; / 4. Check Palindrome CREATE OR REPLACE FUNCTION is_palindrome(str IN VARCHAR2) RETURN VARCHAR2 IS reversed_str VARCHAR2(1000) := &#39;&#39;; BEGIN FOR i IN REVERSE 1..LENGTH(str) LOOP reversed_str := reversed_str || SUBSTR(str, i, 1); END LOOP; IF LOWER(str) = LOWER(reversed_str) THEN RETURN &#39;YES&#39;; ELSE RETURN &#39;NO&#39;; END IF; END; / 5. Sum of Digits CREATE OR REPLACE FUNCTION sum_of_digits(n IN NUMBER) RETURN NUMBER IS sum NUMBER := 0; digit NUMBER; num NUMBER := n; BEGIN WHILE num &gt; 0 LOOP digit := MOD(num, 10); sum := sum &#43; digit; num := FLOOR(num / 10); END LOOP; RETURN sum; END; / 🔧 Procedures in PL/SQL 🔹 Syntax CREATE OR REPLACE PROCEDURE procedure_name (param1 IN/OUT data_type) IS BEGIN -- logic END; / ✅ Practice Questions with Solutions 1. Procedure to Print Square CREATE OR REPLACE PROCEDURE print_square(n IN NUMBER) IS BEGIN DBMS_OUTPUT.PUT_LINE(&#39;Square: &#39; || (n * n)); END; / 2. Procedure to Update Employee Salary CREATE OR REPLACE PROCEDURE increase_salary(empId IN NUMBER) IS BEGIN UPDATE employees SET salary = salary * 1.10 WHERE emp_id = empId; COMMIT; END; / 3. Procedure with OUT Parameter for Factorial CREATE OR REPLACE PROCEDURE find_factorial(n IN NUMBER, result OUT NUMBER) IS fact NUMBER := 1; BEGIN FOR i IN 1..n LOOP fact := fact * i; END LOOP; result := fact; END; / 🔥 Triggers in PL/SQL 🔹 Syntax CREATE OR REPLACE TRIGGER trigger_name BEFORE/AFTER INSERT/UPDATE/DELETE ON table_name FOR EACH ROW BEGIN -- logic END; / ✅ Practice Questions with Solutions 1. BEFORE INSERT Trigger CREATE OR REPLACE TRIGGER trg_set_created_at BEFORE INSERT ON students FOR EACH ROW BEGIN :NEW.created_at := SYSDATE; END; / 2. AFTER UPDATE Trigger for Salary Audit CREATE OR REPLACE TRIGGER trg_salary_audit AFTER UPDATE OF salary ON employees FOR EACH ROW BEGIN INSERT INTO salary_audit(emp_id, old_salary, new_salary, change_date) VALUES(:OLD.emp_id, :OLD.salary, :NEW.salary, SYSDATE); END; / 3. BEFORE DELETE Trigger to Prevent Deletion CREATE OR REPLACE TRIGGER trg_prevent_delete BEFORE DELETE ON departments FOR EACH ROW BEGIN RAISE_APPLICATION_ERROR(-20001, &#39;Deletion is not allowed on departments table.&#39;); END; / 📚 Additional Practice Questions 🔧 Functions 🔹 6. Reverse a String Question: Write a function to reverse a given string.
 " />
 <meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/plsql_functions_procedures_triggers-only/" />
@@ -152,7 +152,7 @@
     
 <article class="post">
   <h1 class="post-title">
-    <a href="https://its-rawat.github.io/bigbits.github.io/posts/plsql_functions_procedures_triggers-only/">Docker Full Notes</a>
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/plsql_functions_procedures_triggers-only/">PL SQL Questions HandsOn</a>
   </h1>
   <div class="post-meta">
     
@@ -164,8 +164,6 @@
       #<a href="https://its-rawat.github.io/bigbits.github.io/tags/plsql/">PLSQL</a>&nbsp;
       
       #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
-      
-      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
       
       #<a href="https://its-rawat.github.io/bigbits.github.io/tags/hands_on/">Hands_On</a>&nbsp;
       
@@ -1046,16 +1044,16 @@ SELECT get_employee_salary(101);
     <div class="pagination__buttons">
         
         <span class="button previous">
-            <a href="https://its-rawat.github.io/bigbits.github.io/posts/docker/">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/topic-tags/">
                 <span class="button__icon">←</span>
-                <span class="button__text">Docker Full Notes</span>
+                <span class="button__text">my-projects</span>
             </a>
         </span>
         
         
         <span class="button next">
-            <a href="https://its-rawat.github.io/bigbits.github.io/posts/chennai-in-bits/">
-                <span class="button__text">First Immpression of CHENNAI</span>
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/pl-sql/">
+                <span class="button__text">PL/SQL Full Notes</span>
                 <span class="button__icon">→</span>
             </a>
         </span>
