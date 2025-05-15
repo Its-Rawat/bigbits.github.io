@@ -7,6 +7,58 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/handson/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Incubator Speech</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/incubator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/incubator/</guid>
+      <description>&lt;h1 id=&#34;incubator-presentation-summary&#34;&gt;Incubator Presentation Summary&lt;/h1&gt;
+&lt;h2 id=&#34;good-morning-everyone&#34;&gt;Good morning, everyone.&lt;/h2&gt;
+&lt;p&gt;First and foremost, thank you for taking the time to join us.&lt;br&gt;
+I’m here to present a summary of our incubator and share what we’ve learned from the experience.&lt;/p&gt;
+&lt;p&gt;As part of our incubator, we worked on two simulations developed in &lt;strong&gt;Isaac Sim&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-first-project--drift-simulation&#34;&gt;🌀 The First Project – Drift Simulation&lt;/h2&gt;
+&lt;p&gt;The objective of this project was to simulate &lt;strong&gt;realistic drifting behavior&lt;/strong&gt; of a wheeled robot across different surface and steering conditions.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;incubator-presentation-summary&#34;&gt;Incubator Presentation Summary&lt;/h1&gt;
+&lt;h2 id=&#34;good-morning-everyone&#34;&gt;Good morning, everyone.&lt;/h2&gt;
+&lt;p&gt;First and foremost, thank you for taking the time to join us.&lt;br&gt;
+I’m here to present a summary of our incubator and share what we’ve learned from the experience.&lt;/p&gt;
+&lt;p&gt;As part of our incubator, we worked on two simulations developed in &lt;strong&gt;Isaac Sim&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-first-project--drift-simulation&#34;&gt;🌀 The First Project – Drift Simulation&lt;/h2&gt;
+&lt;p&gt;The objective of this project was to simulate &lt;strong&gt;realistic drifting behavior&lt;/strong&gt; of a wheeled robot across different surface and steering conditions.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;-to-explain-this-in-simple-terms&#34;&gt;🧠 To explain this in simple terms:&lt;/h3&gt;
+&lt;p&gt;Imagine you went to Ladakh on a  car, in that case scenario you might be  driving on various surfaces like &lt;strong&gt;sand&lt;/strong&gt;, &lt;strong&gt;ice&lt;/strong&gt;, or &lt;strong&gt;concrete&lt;/strong&gt;.&lt;br&gt;
+Each surface affects how the car turns or skids.&lt;br&gt;
+Similarly, our simulation replicates how a robot might behave under such varying conditions, helping us understand and train it better.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This simulation was built using the &lt;strong&gt;Wheeled Lab&lt;/strong&gt; package available inside Isaac Sim.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important Note:&lt;/strong&gt;&lt;br&gt;
+The primary goal of the incubator was &lt;em&gt;not&lt;/em&gt; 3D model development.&lt;br&gt;
+Instead, it was to &lt;strong&gt;generate synthetic data&lt;/strong&gt; by training models to perform specific actions across different environments.&lt;/p&gt;
+&lt;h3 id=&#34;-technical-details&#34;&gt;🔧 Technical Details:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;3D models of the wheeled robots were imported in &lt;code&gt;.urdf&lt;/code&gt; format.&lt;/li&gt;
+&lt;li&gt;The environment or scene was imported into the simulation using the &lt;code&gt;.usd&lt;/code&gt; format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-second-project--so-100-arm-pick-task&#34;&gt;🤖 The Second Project – SO-100 Arm: Pick Task&lt;/h2&gt;
+&lt;p&gt;The second project focused on simulating the &lt;strong&gt;SO-100 articulated robotic arm&lt;/strong&gt; performing a basic pick task.&lt;/p&gt;
+&lt;h3 id=&#34;-objective&#34;&gt;🎯 Objective:&lt;/h3&gt;
+&lt;p&gt;To have the robot &lt;strong&gt;identify and grasp a cube&lt;/strong&gt; using articulation and grasping logic within a physics-enabled environment.&lt;/p&gt;
+&lt;h3 id=&#34;-key-features&#34;&gt;🔑 Key Features:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Joint-based control&lt;/strong&gt; for precise movement&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Collision-aware contact sensors&lt;/strong&gt; for accurate interaction&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Grasping&lt;/strong&gt; implemented using &lt;strong&gt;rigid body constraints&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This setup lays a solid foundation for future exploration into &lt;strong&gt;learning-based approaches&lt;/strong&gt;, such as &lt;strong&gt;reinforcement learning&lt;/strong&gt; for autonomous manipulation tasks.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Machine Learning</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/sentiment-analysis-with-nlp--pytorch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
