@@ -22,7 +22,7 @@ I’m here to present the summary of our incubator and share what we’ve learne
 &lt;p&gt;So the name of our project is Wheeled and arm Robotic simulation.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h1&gt;
-&lt;p&gt;Our project is focused on building realistic training simulations using &lt;strong&gt;NVIDIA Omniverse&lt;/strong&gt;, specifically leveraging the &lt;strong&gt;Isaac Sim&lt;/strong&gt; platform. The goal is to bridge the gap between simulation and the real world (&lt;em&gt;sim-to-real&lt;/em&gt;), by exposing models to a variety of steering conditions.&lt;/p&gt;</description>
+&lt;p&gt;Our project is focused on training  simulations models using &lt;strong&gt;NVIDIA Omniverse&lt;/strong&gt;, specifically  &lt;strong&gt;Isaac Sim&lt;/strong&gt; platform. The goal is to bridge the gap between simulation and the real world (&lt;em&gt;sim-to-real&lt;/em&gt;), by exposing models to a variety of steering conditions.&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;incubator-presentation-summary&#34;&gt;Incubator Presentation Summary&lt;/h1&gt;
 &lt;h2 id=&#34;good-morning-everyone&#34;&gt;Good morning, everyone.&lt;/h2&gt;
 &lt;p&gt;First and foremost, thank you for taking the time out to hear us.&lt;br&gt;
@@ -33,7 +33,7 @@ I’m here to present the summary of our incubator and share what we’ve learne
 &lt;p&gt;So the name of our project is Wheeled and arm Robotic simulation.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h1&gt;
-&lt;p&gt;Our project is focused on building realistic training simulations using &lt;strong&gt;NVIDIA Omniverse&lt;/strong&gt;, specifically leveraging the &lt;strong&gt;Isaac Sim&lt;/strong&gt; platform. The goal is to bridge the gap between simulation and the real world (&lt;em&gt;sim-to-real&lt;/em&gt;), by exposing models to a variety of steering conditions.&lt;/p&gt;
+&lt;p&gt;Our project is focused on training  simulations models using &lt;strong&gt;NVIDIA Omniverse&lt;/strong&gt;, specifically  &lt;strong&gt;Isaac Sim&lt;/strong&gt; platform. The goal is to bridge the gap between simulation and the real world (&lt;em&gt;sim-to-real&lt;/em&gt;), by exposing models to a variety of steering conditions.&lt;/p&gt;
 &lt;p&gt;We’ve developed and tested two key use cases:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Drift Simulation&lt;/strong&gt;&lt;/li&gt;
