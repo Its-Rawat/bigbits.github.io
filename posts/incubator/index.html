@@ -6,10 +6,10 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Incubator Presentation Summary Good morning, everyone. First and foremost, thank you for taking the time to join us.
-I’m here to present a summary of our incubator and share what we’ve learned from the experience.
-As part of our incubator, we worked on two simulations developed in Isaac Sim.
-🌀 The First Project – Drift Simulation The objective of this project was to simulate realistic drifting behavior of a wheeled robot across different surface and steering conditions.
+<meta name="description" content="Incubator Presentation Summary Good morning, everyone. First and foremost, thank you for taking the time out to hear us.
+I&rsquo;m Aditya Rawat I’m here to present the summary of our incubator and share what we’ve learned from it.
+Name of Project So the name of our project is Wheeled and arm Robotic simulation.
+Project Overview Our project is focused on building realistic training simulations using NVIDIA Omniverse, specifically leveraging the Isaac Sim platform. The goal is to bridge the gap between simulation and the real world (sim-to-real), by exposing models to a variety of steering conditions.
 " />
 <meta name="keywords" content="" />
 
@@ -47,10 +47,10 @@ As part of our incubator, we worked on two simulations developed in Isaac Sim.
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Incubator Speech">
-<meta property="og:description" content="Incubator Presentation Summary Good morning, everyone. First and foremost, thank you for taking the time to join us.
-I’m here to present a summary of our incubator and share what we’ve learned from the experience.
-As part of our incubator, we worked on two simulations developed in Isaac Sim.
-🌀 The First Project – Drift Simulation The objective of this project was to simulate realistic drifting behavior of a wheeled robot across different surface and steering conditions.
+<meta property="og:description" content="Incubator Presentation Summary Good morning, everyone. First and foremost, thank you for taking the time out to hear us.
+I&rsquo;m Aditya Rawat I’m here to present the summary of our incubator and share what we’ve learned from it.
+Name of Project So the name of our project is Wheeled and arm Robotic simulation.
+Project Overview Our project is focused on building realistic training simulations using NVIDIA Omniverse, specifically leveraging the Isaac Sim platform. The goal is to bridge the gap between simulation and the real world (sim-to-real), by exposing models to a variety of steering conditions.
 " />
 <meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/incubator/" />
 <meta property="og:site_name" content="" />
@@ -162,7 +162,7 @@ As part of our incubator, we worked on two simulations developed in Isaac Sim.
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">2 min read (292 words)</span></div>
+<span class="post-reading-time">3 min read (475 words)</span></div>
 
   
     <span class="post-tags">
@@ -189,16 +189,30 @@ As part of our incubator, we worked on two simulations developed in Isaac Sim.
       <nav id="TableOfContents">
   <ul>
     <li><a href="#good-morning-everyone">Good morning, everyone.</a></li>
-    <li><a href="#-the-first-project--drift-simulation">🌀 The First Project – Drift Simulation</a>
+  </ul>
+
+  <ul>
+    <li><a href="#-our-first-use-case--drift-simulation">🌀 Our First Use case – Drift Simulation</a>
       <ul>
         <li><a href="#-to-explain-this-in-simple-terms">🧠 To explain this in simple terms:</a></li>
         <li><a href="#-technical-details">🔧 Technical Details:</a></li>
       </ul>
     </li>
-    <li><a href="#-the-second-project--so-100-arm-pick-task">🤖 The Second Project – SO-100 Arm: Pick Task</a>
+    <li><a href="#-the-second-use-case--so-100-arm">🤖 The Second use case – SO-100 Arm</a>
       <ul>
-        <li><a href="#-objective">🎯 Objective:</a></li>
-        <li><a href="#-key-features">🔑 Key Features:</a></li>
+        <li><a href="#-objective">🎯 <strong>Objective:</strong></a></li>
+        <li><a href="#-features">🔑 <strong>Features:</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#questions">Questions</a>
+      <ul>
+        <li><a href="#isaac-lab">Isaac lab?</a></li>
+        <li><a href="#isaac-sim">Isaac sim?</a></li>
+        <li><a href="#how-your-incubator-is-different-from-other-physical-robot-pickup-arm">How your incubator is different from other physical robot pickup arm?</a></li>
+        <li><a href="#how-you-implemented-rl-in-your-incubator">How you implemented RL in your Incubator?</a></li>
+        <li><a href="#where-are-we-using-python-script-in-our-incubator">Where are we using python script in our Incubator.</a></li>
+        <li><a href="#why-are-we-using-physicx-">Why are we using physicX ?</a></li>
+        <li><a href="#why-the-car-needs-to-be-drift">Why the car needs to be drift?</a></li>
       </ul>
     </li>
   </ul>
@@ -209,11 +223,22 @@ As part of our incubator, we worked on two simulations developed in Isaac Sim.
   <div class="post-content"><div>
         <h1 id="incubator-presentation-summary">Incubator Presentation Summary<a href="#incubator-presentation-summary" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <h2 id="good-morning-everyone">Good morning, everyone.<a href="#good-morning-everyone" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>First and foremost, thank you for taking the time to join us.<br>
-I’m here to present a summary of our incubator and share what we’ve learned from the experience.</p>
-<p>As part of our incubator, we worked on two simulations developed in <strong>Isaac Sim</strong>.</p>
+<p>First and foremost, thank you for taking the time out to hear us.<br>
+I&rsquo;m Aditya Rawat
+I’m here to present the summary of our incubator and share what we’ve learned from it.</p>
 <hr>
-<h2 id="-the-first-project--drift-simulation">🌀 The First Project – Drift Simulation<a href="#-the-first-project--drift-simulation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h1 id="name-of-project">Name of Project<a href="#name-of-project" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>So the name of our project is Wheeled and arm Robotic simulation.</p>
+<hr>
+<h1 id="project-overview">Project Overview<a href="#project-overview" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Our project is focused on building realistic training simulations using <strong>NVIDIA Omniverse</strong>, specifically leveraging the <strong>Isaac Sim</strong> platform. The goal is to bridge the gap between simulation and the real world (<em>sim-to-real</em>), by exposing models to a variety of steering conditions.</p>
+<p>We’ve developed and tested two key use cases:</p>
+<ol>
+<li><strong>Drift Simulation</strong></li>
+<li><strong>S0-100 Arm Pick</strong></li>
+</ol>
+<hr>
+<h2 id="-our-first-use-case--drift-simulation">🌀 Our First Use case – Drift Simulation<a href="#-our-first-use-case--drift-simulation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>The objective of this project was to simulate <strong>realistic drifting behavior</strong> of a wheeled robot across different surface and steering conditions.</p>
 <blockquote>
 <h3 id="-to-explain-this-in-simple-terms">🧠 To explain this in simple terms:<a href="#-to-explain-this-in-simple-terms" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
@@ -231,17 +256,54 @@ Instead, it was to <strong>generate synthetic data</strong> by training models t
 <li>The environment or scene was imported into the simulation using the <code>.usd</code> format.</li>
 </ul>
 <hr>
-<h2 id="-the-second-project--so-100-arm-pick-task">🤖 The Second Project – SO-100 Arm: Pick Task<a href="#-the-second-project--so-100-arm-pick-task" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>The second project focused on simulating the <strong>SO-100 articulated robotic arm</strong> performing a basic pick task.</p>
-<h3 id="-objective">🎯 Objective:<a href="#-objective" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p>To have the robot <strong>identify and grasp a cube</strong> using articulation and grasping logic within a physics-enabled environment.</p>
-<h3 id="-key-features">🔑 Key Features:<a href="#-key-features" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<ul>
-<li><strong>Joint-based control</strong> for precise movement</li>
-<li><strong>Collision-aware contact sensors</strong> for accurate interaction</li>
-<li><strong>Grasping</strong> implemented using <strong>rigid body constraints</strong></li>
-</ul>
-<p>This setup lays a solid foundation for future exploration into <strong>learning-based approaches</strong>, such as <strong>reinforcement learning</strong> for autonomous manipulation tasks.</p>
+<h2 id="-the-second-use-case--so-100-arm">🤖 The Second use case – SO-100 Arm<a href="#-the-second-use-case--so-100-arm" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>The second use case focuses on simulating the <strong>SO-100 robotic arm</strong> to perform a basic <strong>pick-up task</strong> in a virtual physics enabled simulation.</p>
+<h3 id="-objective">🎯 <strong>Objective:</strong><a href="#-objective" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>To have the robot <strong>identify, articulate to pick up a cube using its grasping logic</strong>, simulating how it would perform in a real-world industrial setting.</p>
+<h3 id="-features">🔑 <strong>Features:</strong><a href="#-features" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ol>
+<li>Physics-enabled articulated robotic arm.</li>
+<li>Collision-aware contact sensors.</li>
+<li>Grasping implemented via joint control and rigid body simulation.</li>
+</ol>
+<hr>
+<p>#END</p>
+<hr>
+<h2 id="questions">Questions<a href="#questions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="isaac-lab">Isaac lab?<a href="#isaac-lab" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<blockquote>
+<p>Specifically Only for robot learning.</p>
+</blockquote>
+<h3 id="isaac-sim">Isaac sim?<a href="#isaac-sim" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<blockquote>
+<p>Robot learning can be done in it but it also being used for more things then robots.</p>
+</blockquote>
+<h3 id="how-your-incubator-is-different-from-other-physical-robot-pickup-arm">How your incubator is different from other physical robot pickup arm?<a href="#how-your-incubator-is-different-from-other-physical-robot-pickup-arm" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<blockquote>
+<ol>
+<li>Our project is made in simulation.</li>
+<li>Less const</li>
+<li>Efficient Development Cycle</li>
+<li>Multiple virtual Environments.</li>
+</ol>
+</blockquote>
+<h3 id="how-you-implemented-rl-in-your-incubator">How you implemented RL in your Incubator?<a href="#how-you-implemented-rl-in-your-incubator" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<blockquote>
+<p>RL is in-built inside Isaac sim.</p>
+</blockquote>
+<h3 id="where-are-we-using-python-script-in-our-incubator">Where are we using python script in our Incubator.<a href="#where-are-we-using-python-script-in-our-incubator" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<blockquote>
+<p>You can control robots, add sensors, move objects, and simulate environments using <strong>Python</strong> arguments.</p>
+</blockquote>
+<h3 id="why-are-we-using-physicx-">Why are we using physicX ?<a href="#why-are-we-using-physicx-" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<blockquote>
+<p>Used for accelerating the GPU.</p>
+</blockquote>
+<hr>
+<h3 id="why-the-car-needs-to-be-drift">Why the car needs to be drift?<a href="#why-the-car-needs-to-be-drift" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<blockquote>
+<p>we are simulating drifting to study complex vehicle dynamics like traction loss, yaw control, and how cars behave under different environment  and steering conditions.</p>
+</blockquote>
 
       </div></div>
 
