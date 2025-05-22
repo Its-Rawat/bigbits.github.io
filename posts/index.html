@@ -155,208 +155,6 @@
     
       <article class="post on-list">
         <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/java_stream_api_notes/"></a>
-        </h1>
-        <div class="post-meta">
-          
-
-        </div>
-
-        
-
-        
-
-
-
-        <div class="post-content">
-          
-            <h1 id="-java-stream-api">📘 Java Stream API</h1>
-<h2 id="-what-is-stream-api">🔹 What is Stream API?</h2>
-<ul>
-<li>Introduced in Java 8</li>
-<li>Used to process collections (like List, Set) in a <strong>functional</strong> and <strong>declarative</strong> style</li>
-<li>Streams are not data structures — they don&rsquo;t store data</li>
-<li>Allows for <strong>pipelining</strong> operations (chaining of multiple operations)</li>
-</ul>
-<hr>
-<h2 id="-stream-lifecycle">🔹 Stream Lifecycle</h2>
-<ol>
-<li><strong>Source</strong>: From a Collection or array</li>
-<li><strong>Intermediate Operations</strong>: Transformations (lazy)</li>
-<li><strong>Terminal Operation</strong>: Triggers the processing (eager)</li>
-</ol>
-<hr>
-<h2 id="-stream-creation">🔹 Stream Creation</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>);
-</span></span><span style="display:flex;"><span>Stream<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> stream <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">stream</span>();
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Stream<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> stream <span style="color:#f92672">=</span> Stream.<span style="color:#a6e22e">of</span>(1, 2, 3, 4);
-</span></span></code></pre></div><hr>
-<h2 id="-intermediate-operations">🔹 Intermediate Operations</h2>
-<table>
-  <thead>
-      <tr>
-          <th>Method</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>filter(Predicate)</code></td>
-          <td>Filters elements</td>
-      </tr>
-      <tr>
-          <td><code>map(Function)</code></td>
-          <td>Transforms elements</td>
-      </tr>
-      <tr>
-          <td><code>flatMap(Function)</code></td>
-          <td>Flattens nested structures</td>
-      </tr>
-      <tr>
-          <td><code>sorted()</code> / <code>sorted(Comparator)</code></td>
-          <td>Sorts elements</td>
-      </tr>
-      <tr>
-          <td><code>distinct()</code></td>
-          <td>Removes duplicates</td>
-      </tr>
-      <tr>
-          <td><code>limit(n)</code></td>
-          <td>Limits output to <code>n</code> items</td>
-      </tr>
-      <tr>
-          <td><code>skip(n)</code></td>
-          <td>Skips first <code>n</code> elements</td>
-      </tr>
-      <tr>
-          <td><code>peek()</code></td>
-          <td>For debugging/side-effects</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h2 id="-terminal-operations">🔹 Terminal Operations</h2>
-<table>
-  <thead>
-      <tr>
-          <th>Method</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>collect()</code></td>
-          <td>Collects result into list, set, map</td>
-      </tr>
-      <tr>
-          <td><code>forEach()</code></td>
-          <td>Performs action on each element</td>
-      </tr>
-      <tr>
-          <td><code>toArray()</code></td>
-          <td>Converts to array</td>
-      </tr>
-      <tr>
-          <td><code>reduce()</code></td>
-          <td>Reduces to a single value</td>
-      </tr>
-      <tr>
-          <td><code>count()</code></td>
-          <td>Counts elements</td>
-      </tr>
-      <tr>
-          <td><code>anyMatch()</code> / <code>allMatch()</code> / <code>noneMatch()</code></td>
-          <td>Matching conditions</td>
-      </tr>
-      <tr>
-          <td><code>findFirst()</code> / <code>findAny()</code></td>
-          <td>Finds element</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h2 id="-collectors">🔹 Collectors</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">toList</span>()
-</span></span><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">toSet</span>()
-</span></span><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">toMap</span>()
-</span></span><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">joining</span>(<span style="color:#e6db74">&#34;, &#34;</span>)
-</span></span><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">groupingBy</span>()
-</span></span><span style="display:flex;"><span>Collectors.<span style="color:#a6e22e">partitioningBy</span>()
-</span></span></code></pre></div><hr>
-<h2 id="-examples">🔹 Examples</h2>
-<h3 id="-filter-numbers-greater-than-10">✅ Filter numbers greater than 10</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">stream</span>()
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">filter</span>(x <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">&gt;</span> 10)
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span>(Collectors.<span style="color:#a6e22e">toList</span>());
-</span></span></code></pre></div><h3 id="-convert-to-uppercase">✅ Convert to uppercase</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">stream</span>()
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">map</span>(String::toUpperCase)
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span>(Collectors.<span style="color:#a6e22e">toList</span>());
-</span></span></code></pre></div><h3 id="-get-first-5-sorted-items">✅ Get first 5 sorted items</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>list.<span style="color:#a6e22e">stream</span>()
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">sorted</span>()
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">limit</span>(5)
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">forEach</span>(System.<span style="color:#a6e22e">out</span>::println);
-</span></span></code></pre></div><h3 id="-group-employees-by-department">✅ Group employees by department</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Map<span style="color:#f92672">&lt;</span>String, List<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">&gt;&gt;</span> byDept <span style="color:#f92672">=</span> employees.<span style="color:#a6e22e">stream</span>()
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span>(Collectors.<span style="color:#a6e22e">groupingBy</span>(Employee::getDepartment));
-</span></span></code></pre></div><hr>
-<h2 id="-advanced-operations">🔹 Advanced Operations</h2>
-<h3 id="-reduce-example">🔁 Reduce Example</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">stream</span>()
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">reduce</span>(0, (a, b) <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">+</span> b);
-</span></span></code></pre></div><h3 id="-flatmap-example">📦 FlatMap Example</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> listOfLists <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(
-</span></span><span style="display:flex;"><span>    Arrays.<span style="color:#a6e22e">asList</span>(1, 2),
-</span></span><span style="display:flex;"><span>    Arrays.<span style="color:#a6e22e">asList</span>(3, 4)
-</span></span><span style="display:flex;"><span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> flatList <span style="color:#f92672">=</span> listOfLists.<span style="color:#a6e22e">stream</span>()
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">flatMap</span>(List::stream)
-</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span>(Collectors.<span style="color:#a6e22e">toList</span>());
-</span></span></code></pre></div><hr>
-<h2 id="-tips">🧠 Tips</h2>
-<ul>
-<li>Streams can only be used once (they get consumed after a terminal op)</li>
-<li>Avoid modifying external mutable state inside streams</li>
-<li>Use <code>parallelStream()</code> for parallel processing (only when necessary)</li>
-</ul>
-<hr>
-<h2 id="-practice-questions">📝 Practice Questions</h2>
-<h3 id="-easy">✅ Easy</h3>
-<ol>
-<li>Filter even numbers from a list of integers.</li>
-<li>Convert a list of strings to uppercase.</li>
-<li>Count the number of empty strings in a list.</li>
-<li>Remove null values from a list.</li>
-</ol>
-<h3 id="-medium">🔁 Medium</h3>
-<ol start="5">
-<li>Given a list of names, return names starting with &ldquo;A&rdquo;, sorted alphabetically.</li>
-<li>Return the average of a list of integers.</li>
-<li>Get a list of distinct elements from a list.</li>
-<li>Group a list of employees by department (using <code>Collectors.groupingBy</code>).</li>
-</ol>
-<h3 id="-advanced">🧩 Advanced</h3>
-<ol start="9">
-<li>Find the second highest number in a list.</li>
-<li>Flatten a list of lists of integers into a single list.</li>
-<li>Partition a list of integers into even and odd numbers.</li>
-<li>From a list of Person objects, get names of all adults (age &gt; 18), sorted by age.</li>
-</ol>
-<hr>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/java_stream_api_notes/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
           <a href="https://its-rawat.github.io/bigbits.github.io/posts/mapping-using-hibernate-in-springboot/"></a>
         </h1>
         <div class="post-meta">
@@ -510,6 +308,169 @@ DTO is a design pattern.</p>
         
           <div>
             <a class="read-more button" href="/bigbits.github.io/posts/namaste/">Read more →</a>
+          </div>
+        
+      </article>
+    
+      <article class="post on-list">
+        <h1 class="post-title">
+          <a href="https://its-rawat.github.io/bigbits.github.io/posts/blender-shortcuts/">Blender Keymappings</a>
+        </h1>
+        <div class="post-meta">
+          
+
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/blender/">blender</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/incubator/">incubator</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/shortcuts/">shortcuts</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/cheatsheet/">cheatsheet</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+
+
+        <div class="post-content">
+          
+            <h2 id="general-most-window-types">General (most window types)</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Toolbar</th>
+          <th style="text-align: left">T</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Properties</td>
+          <td style="text-align: left">N</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Add Object/Node</td>
+          <td style="text-align: left">Shift + A</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Delete</td>
+          <td style="text-align: left">X <em>or</em> Delete</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Search</td>
+          <td style="text-align: left">F3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Move</td>
+          <td style="text-align: left">G</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Scale</td>
+          <td style="text-align: left">S</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Rotate</td>
+          <td style="text-align: left">R</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Rotate along axis</td>
+          <td style="text-align: left">R <em>then</em> X/Y/Z</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Rotate along local axis</td>
+          <td style="text-align: left">R <em>then</em> X,X/Y,Y/Z,Z</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Trackball Rotate</td>
+          <td style="text-align: left">R, R</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Precise movement</td>
+          <td style="text-align: left">Shift (<em>hold</em>)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Incremental movement</td>
+          <td style="text-align: left">Ctrl (<em>hold</em>)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Duplicate</td>
+          <td style="text-align: left">Shift + D</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Duplicate Linked</td>
+          <td style="text-align: left">Alt + D</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Hide</td>
+          <td style="text-align: left">H</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Unhide All</td>
+          <td style="text-align: left">Alt + H</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Hide all Except Selected</td>
+          <td style="text-align: left">Shift + H</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Annotate</td>
+          <td style="text-align: left">D (<em>hold</em>) + LMB (<em>drag</em>)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Erase Annotation</td>
+          <td style="text-align: left">D (<em>hold</em>) + RMB (<em>drag</em>)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Quick favs menu</td>
+          <td style="text-align: left">Q</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="navigation-3d-viewport">Navigation (3D viewport)</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Orbit</th>
+          <th style="text-align: left">MMB</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Pan</td>
+          <td style="text-align: left">Shift + MMB</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Zoom In/Out</td>
+          <td style="text-align: left">Scroll <em>or</em> Ctrl + MMB</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Fly</td>
+          <td style="text-align: left">Shift + ~</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="view-3d-viewport">View (3D viewport)</h2>
+<p>Numpad views:</p>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button" href="/bigbits.github.io/posts/blender-shortcuts/">Read more →</a>
           </div>
         
       </article>

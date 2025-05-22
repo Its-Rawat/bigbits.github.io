@@ -162,7 +162,7 @@ How to add spring security in your spring boot project STEP 1 {Configuration} Ad
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">3 min read (634 words)</span></div>
+<span class="post-reading-time">7 min read (1333 words)</span></div>
 
   
     <span class="post-tags">
@@ -199,7 +199,9 @@ How to add spring security in your spring boot project STEP 1 {Configuration} Ad
       <ul>
         <li><a href="#diagram">Diagram</a></li>
         <li><a href="#login-process-in-short">Login Process in Short</a></li>
+        <li><a href="#above-process-in-a-story-format">Above Process in a story format</a></li>
         <li><a href="#login-process-in-depth">Login Process in Depth</a></li>
+        <li><a href="#above-process-in-story-format-by-ai">Above Process in story format by AI</a></li>
       </ul>
     </li>
   </ul>
@@ -280,6 +282,17 @@ public class SecurityConfig {
 <li>The response is sent to user.</li>
 <li>Done.</li>
 </ol>
+<hr>
+<h3 id="above-process-in-a-story-format">Above Process in a story format<a href="#above-process-in-a-story-format" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>When a user tries to log in, they start by entering their <strong>username and password</strong> in the login form and sending the request.</p>
+<p>As soon as the request reaches the server, <strong>Spring Security</strong> steps in. The request is first <strong>intercepted by a series of security filters</strong>, which are part of Spring Security&rsquo;s filter chain.</p>
+<p>These filters take the credentials and create an <strong><code>Authentication</code> object</strong> that holds the username and password. This object doesn’t confirm anything yet — it just represents the user&rsquo;s attempt to log in.</p>
+<p>Next, the <code>Authentication</code> object is passed to the <strong>Authentication Manager</strong>, whose job is to figure out how to verify the credentials. It does this by checking all the available <strong>Authentication Providers</strong> that know how to handle this type of login.</p>
+<p>One of the providers picks up the request and starts the actual authentication process. To verify the user&rsquo;s identity, it uses the <strong>UserDetailsService</strong> — a component responsible for loading user data from the database.</p>
+<p>The <strong>UserDetailsService</strong> looks up the user by the provided username and compares the submitted password with the stored (usually encoded) one. If they match, the user is considered authenticated.</p>
+<p>At this point, the Authentication object’s flag is set to <strong>authenticated = true</strong>, and this verified object is stored in the <strong>SecurityContextHolder</strong> — Spring’s way of keeping track of who’s logged in during the session.</p>
+<p>Finally, a success response is sent back to the client, confirming the user is logged in — and the process is complete.</p>
+<hr>
 <h3 id="login-process-in-depth">Login Process in Depth<a href="#login-process-in-depth" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241209114553.png">
 <strong>We all remember this sign in page when we just started learning spring security. Although this page style is basic but when we click on <code>sign in</code> the working behind it is not the basic one which we encounter.</strong></p>
@@ -300,6 +313,78 @@ public class SecurityConfig {
 <li>The appropriate provider after implementing logic calls the <code>retriveUser(username, UsernamePasswordToken token)</code>, this method fetch the user from Database/InMemoryUser/CustomUser.</li>
 <li>The fetched data will go through some more additional check and post additional checks and then returned back as a response.</li>
 </ol>
+<hr>
+<h3 id="above-process-in-story-format-by-ai">Above Process in story format by AI<a href="#above-process-in-story-format-by-ai" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="-the-story-behind-the-spring-security-login-page">🔐 <strong>The Story Behind the Spring Security Login Page</strong><a href="#-the-story-behind-the-spring-security-login-page" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>We all remember that <strong>simple white login form</strong> Spring Security gives us when we first start learning.<br>
+It may look plain and straightforward, but behind that innocent-looking <strong>Sign In</strong> button lies a <strong>powerful and detailed security process</strong>.</p>
+<p>Let’s walk through what really happens when you hit &ldquo;Sign In&rdquo;.</p>
+<hr>
+<h4 id="-step-1-knocking-on-the-door--user-submits-credentials">🚪 Step 1: Knocking on the Door – User Submits Credentials<a href="#-step-1-knocking-on-the-door--user-submits-credentials" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>A user enters their <strong>username</strong> and <strong>password</strong>, then clicks the login button.<br>
+At this moment, Spring Security triggers a method called <code>attemptAuthentication()</code>.</p>
+<p>This method is like a <strong>doorman checking the credentials</strong>. Here’s what it quietly does behind the scenes:</p>
+<ol>
+<li>
+<p><strong>Extracts Credentials</strong><br>
+It grabs the username and password from the HTTP request.</p>
+</li>
+<li>
+<p><strong>Creates a Token</strong><br>
+It creates a <code>UsernamePasswordAuthenticationToken</code> — think of this as a little ID card with the username, password, and a flag that says &ldquo;not authenticated yet&rdquo;.</p>
+</li>
+<li>
+<p><strong>Starts Authentication</strong><br>
+This token is passed to the <code>authenticate()</code> method inside <code>ProviderManager</code>, which is Spring’s <strong>authentication boss</strong>.</p>
+</li>
+</ol>
+<hr>
+<h4 id="-step-2-who-can-verify-this-token">🧠 Step 2: Who Can Verify This Token?<a href="#-step-2-who-can-verify-this-token" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Now that Spring has this authentication token, it asks:<br>
+<strong>“Which of my Authentication Providers can handle this?”</strong></p>
+<p>It scans through all its available <strong>Authentication Providers</strong> to find one that can work with the token.</p>
+<p>🧩 Think of an <strong>Authentication Provider</strong> as the brain that knows how to validate the login details — it could check a database, an in-memory list, a remote service, etc.</p>
+<hr>
+<h4 id="-step-3-retrieving-user-details">📇 Step 3: Retrieving User Details<a href="#-step-3-retrieving-user-details" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Once the right provider is found, it says:<br>
+<strong>“Let me look up this user&hellip;”</strong></p>
+<p>It calls the method <code>retrieveUser(username, token)</code>, which does the job of:</p>
+<ul>
+<li>
+<p>Looking up the user from your database, or</p>
+</li>
+<li>
+<p>Fetching from in-memory users, or</p>
+</li>
+<li>
+<p>Calling a custom user service, depending on your setup.</p>
+</li>
+</ul>
+<hr>
+<h4 id="-step-4-final-checks-and-response">✅ Step 4: Final Checks and Response<a href="#-step-4-final-checks-and-response" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>With the user details in hand, Spring Security runs a few <strong>additional checks</strong> — like verifying the password, checking if the account is locked or expired, etc.</p>
+<p>If everything is valid:</p>
+<ul>
+<li>
+<p>The authentication token’s flag is set to <strong>true</strong> (authenticated).</p>
+</li>
+<li>
+<p>The user is now considered logged in.</p>
+</li>
+<li>
+<p>Spring stores this in the <strong>Security Context</strong>, so it knows who you are for future requests.</p>
+</li>
+</ul>
+<p>If anything is invalid:</p>
+<ul>
+<li>Spring throws an <strong>authentication exception</strong> and sends you back to the login page with an error.</li>
+</ul>
+<hr>
+<h4 id="-and-thats-it">🏁 And That’s It!<a href="#-and-thats-it" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>From a simple &ldquo;Sign In&rdquo; button click to a series of secure checks and authentications —<br>
+Spring Security does <strong>a lot</strong> under the hood to keep your app safe.</p>
+<p>So the next time you see that plain login form, you’ll know there’s a whole team of security guards working in the background to protect your app. 🛡️</p>
+<hr>
 
       </div></div>
 

@@ -8,365 +8,6 @@
     <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/java_stream_api_notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/java_stream_api_notes/</guid>
-      <description>&lt;h1 id=&#34;-java-stream-api&#34;&gt;📘 Java Stream API&lt;/h1&gt;
-&lt;h2 id=&#34;-what-is-stream-api&#34;&gt;🔹 What is Stream API?&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Introduced in Java 8&lt;/li&gt;
-&lt;li&gt;Used to process collections (like List, Set) in a &lt;strong&gt;functional&lt;/strong&gt; and &lt;strong&gt;declarative&lt;/strong&gt; style&lt;/li&gt;
-&lt;li&gt;Streams are not data structures — they don&amp;rsquo;t store data&lt;/li&gt;
-&lt;li&gt;Allows for &lt;strong&gt;pipelining&lt;/strong&gt; operations (chaining of multiple operations)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-stream-lifecycle&#34;&gt;🔹 Stream Lifecycle&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: From a Collection or array&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Intermediate Operations&lt;/strong&gt;: Transformations (lazy)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Terminal Operation&lt;/strong&gt;: Triggers the processing (eager)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-stream-creation&#34;&gt;🔹 Stream Creation&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; list &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Stream.&lt;span style=&#34;color:#a6e22e&#34;&gt;of&lt;/span&gt;(1, 2, 3, 4);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-intermediate-operations&#34;&gt;🔹 Intermediate Operations&lt;/h2&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Method&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;filter(Predicate)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Filters elements&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;map(Function)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Transforms elements&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;flatMap(Function)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Flattens nested structures&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;sorted()&lt;/code&gt; / &lt;code&gt;sorted(Comparator)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Sorts elements&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;distinct()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Removes duplicates&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;limit(n)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Limits output to &lt;code&gt;n&lt;/code&gt; items&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;skip(n)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Skips first &lt;code&gt;n&lt;/code&gt; elements&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;peek()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;For debugging/side-effects&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-terminal-operations&#34;&gt;🔹 Terminal Operations&lt;/h2&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Method&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;collect()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Collects result into list, set, map&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;forEach()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Performs action on each element&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;toArray()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Converts to array&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;reduce()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Reduces to a single value&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;count()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Counts elements&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;anyMatch()&lt;/code&gt; / &lt;code&gt;allMatch()&lt;/code&gt; / &lt;code&gt;noneMatch()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Matching conditions&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;findFirst()&lt;/code&gt; / &lt;code&gt;findAny()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Finds element&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-collectors&#34;&gt;🔹 Collectors&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toSet&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toMap&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;joining&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, &amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;groupingBy&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;partitioningBy&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-examples&#34;&gt;🔹 Examples&lt;/h2&gt;
-&lt;h3 id=&#34;-filter-numbers-greater-than-10&#34;&gt;✅ Filter numbers greater than 10&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;filter&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; 10)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-convert-to-uppercase&#34;&gt;✅ Convert to uppercase&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;map&lt;/span&gt;(String::toUpperCase)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-get-first-5-sorted-items&#34;&gt;✅ Get first 5 sorted items&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;sorted&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;limit&lt;/span&gt;(5)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;forEach&lt;/span&gt;(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;::println);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-group-employees-by-department&#34;&gt;✅ Group employees by department&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String, List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Employee&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; byDept &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; employees.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;groupingBy&lt;/span&gt;(Employee::getDepartment));
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-advanced-operations&#34;&gt;🔹 Advanced Operations&lt;/h2&gt;
-&lt;h3 id=&#34;-reduce-example&#34;&gt;🔁 Reduce Example&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;reduce&lt;/span&gt;(0, (a, b) &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; b);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-flatmap-example&#34;&gt;📦 FlatMap Example&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; listOfLists &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(1, 2),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(3, 4)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; flatList &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; listOfLists.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;flatMap&lt;/span&gt;(List::stream)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-tips&#34;&gt;🧠 Tips&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Streams can only be used once (they get consumed after a terminal op)&lt;/li&gt;
-&lt;li&gt;Avoid modifying external mutable state inside streams&lt;/li&gt;
-&lt;li&gt;Use &lt;code&gt;parallelStream()&lt;/code&gt; for parallel processing (only when necessary)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-practice-questions&#34;&gt;📝 Practice Questions&lt;/h2&gt;
-&lt;h3 id=&#34;-easy&#34;&gt;✅ Easy&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Filter even numbers from a list of integers.&lt;/li&gt;
-&lt;li&gt;Convert a list of strings to uppercase.&lt;/li&gt;
-&lt;li&gt;Count the number of empty strings in a list.&lt;/li&gt;
-&lt;li&gt;Remove null values from a list.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;-medium&#34;&gt;🔁 Medium&lt;/h3&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;Given a list of names, return names starting with &amp;ldquo;A&amp;rdquo;, sorted alphabetically.&lt;/li&gt;
-&lt;li&gt;Return the average of a list of integers.&lt;/li&gt;
-&lt;li&gt;Get a list of distinct elements from a list.&lt;/li&gt;
-&lt;li&gt;Group a list of employees by department (using &lt;code&gt;Collectors.groupingBy&lt;/code&gt;).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;-advanced&#34;&gt;🧩 Advanced&lt;/h3&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;Find the second highest number in a list.&lt;/li&gt;
-&lt;li&gt;Flatten a list of lists of integers into a single list.&lt;/li&gt;
-&lt;li&gt;Partition a list of integers into even and odd numbers.&lt;/li&gt;
-&lt;li&gt;From a list of Person objects, get names of all adults (age &amp;gt; 18), sorted by age.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;</description>
-      <content>&lt;h1 id=&#34;-java-stream-api&#34;&gt;📘 Java Stream API&lt;/h1&gt;
-&lt;h2 id=&#34;-what-is-stream-api&#34;&gt;🔹 What is Stream API?&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Introduced in Java 8&lt;/li&gt;
-&lt;li&gt;Used to process collections (like List, Set) in a &lt;strong&gt;functional&lt;/strong&gt; and &lt;strong&gt;declarative&lt;/strong&gt; style&lt;/li&gt;
-&lt;li&gt;Streams are not data structures — they don&amp;rsquo;t store data&lt;/li&gt;
-&lt;li&gt;Allows for &lt;strong&gt;pipelining&lt;/strong&gt; operations (chaining of multiple operations)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-stream-lifecycle&#34;&gt;🔹 Stream Lifecycle&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Source&lt;/strong&gt;: From a Collection or array&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Intermediate Operations&lt;/strong&gt;: Transformations (lazy)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Terminal Operation&lt;/strong&gt;: Triggers the processing (eager)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-stream-creation&#34;&gt;🔹 Stream Creation&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; list &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Stream.&lt;span style=&#34;color:#a6e22e&#34;&gt;of&lt;/span&gt;(1, 2, 3, 4);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-intermediate-operations&#34;&gt;🔹 Intermediate Operations&lt;/h2&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Method&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;filter(Predicate)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Filters elements&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;map(Function)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Transforms elements&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;flatMap(Function)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Flattens nested structures&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;sorted()&lt;/code&gt; / &lt;code&gt;sorted(Comparator)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Sorts elements&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;distinct()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Removes duplicates&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;limit(n)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Limits output to &lt;code&gt;n&lt;/code&gt; items&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;skip(n)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Skips first &lt;code&gt;n&lt;/code&gt; elements&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;peek()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;For debugging/side-effects&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-terminal-operations&#34;&gt;🔹 Terminal Operations&lt;/h2&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Method&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;collect()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Collects result into list, set, map&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;forEach()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Performs action on each element&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;toArray()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Converts to array&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;reduce()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Reduces to a single value&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;count()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Counts elements&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;anyMatch()&lt;/code&gt; / &lt;code&gt;allMatch()&lt;/code&gt; / &lt;code&gt;noneMatch()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Matching conditions&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;findFirst()&lt;/code&gt; / &lt;code&gt;findAny()&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Finds element&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-collectors&#34;&gt;🔹 Collectors&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toSet&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toMap&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;joining&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, &amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;groupingBy&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;partitioningBy&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-examples&#34;&gt;🔹 Examples&lt;/h2&gt;
-&lt;h3 id=&#34;-filter-numbers-greater-than-10&#34;&gt;✅ Filter numbers greater than 10&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;filter&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; 10)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-convert-to-uppercase&#34;&gt;✅ Convert to uppercase&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;map&lt;/span&gt;(String::toUpperCase)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-get-first-5-sorted-items&#34;&gt;✅ Get first 5 sorted items&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;sorted&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;limit&lt;/span&gt;(5)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;forEach&lt;/span&gt;(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;::println);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-group-employees-by-department&#34;&gt;✅ Group employees by department&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String, List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Employee&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; byDept &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; employees.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;groupingBy&lt;/span&gt;(Employee::getDepartment));
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-advanced-operations&#34;&gt;🔹 Advanced Operations&lt;/h2&gt;
-&lt;h3 id=&#34;-reduce-example&#34;&gt;🔁 Reduce Example&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;reduce&lt;/span&gt;(0, (a, b) &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; b);
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-flatmap-example&#34;&gt;📦 FlatMap Example&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; listOfLists &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(1, 2),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(3, 4)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; flatList &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; listOfLists.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;flatMap&lt;/span&gt;(List::stream)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;collect&lt;/span&gt;(Collectors.&lt;span style=&#34;color:#a6e22e&#34;&gt;toList&lt;/span&gt;());
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;-tips&#34;&gt;🧠 Tips&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Streams can only be used once (they get consumed after a terminal op)&lt;/li&gt;
-&lt;li&gt;Avoid modifying external mutable state inside streams&lt;/li&gt;
-&lt;li&gt;Use &lt;code&gt;parallelStream()&lt;/code&gt; for parallel processing (only when necessary)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-practice-questions&#34;&gt;📝 Practice Questions&lt;/h2&gt;
-&lt;h3 id=&#34;-easy&#34;&gt;✅ Easy&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Filter even numbers from a list of integers.&lt;/li&gt;
-&lt;li&gt;Convert a list of strings to uppercase.&lt;/li&gt;
-&lt;li&gt;Count the number of empty strings in a list.&lt;/li&gt;
-&lt;li&gt;Remove null values from a list.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;-medium&#34;&gt;🔁 Medium&lt;/h3&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;Given a list of names, return names starting with &amp;ldquo;A&amp;rdquo;, sorted alphabetically.&lt;/li&gt;
-&lt;li&gt;Return the average of a list of integers.&lt;/li&gt;
-&lt;li&gt;Get a list of distinct elements from a list.&lt;/li&gt;
-&lt;li&gt;Group a list of employees by department (using &lt;code&gt;Collectors.groupingBy&lt;/code&gt;).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;-advanced&#34;&gt;🧩 Advanced&lt;/h3&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;Find the second highest number in a list.&lt;/li&gt;
-&lt;li&gt;Flatten a list of lists of integers into a single list.&lt;/li&gt;
-&lt;li&gt;Partition a list of integers into even and odd numbers.&lt;/li&gt;
-&lt;li&gt;From a list of Person objects, get names of all adults (age &amp;gt; 18), sorted by age.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-</content>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/mapping-using-hibernate-in-springboot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -4763,6 +4404,17 @@ public class SecurityConfig {
 &lt;li&gt;The response is sent to user.&lt;/li&gt;
 &lt;li&gt;Done.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;above-process-in-a-story-format&#34;&gt;Above Process in a story format&lt;/h3&gt;
+&lt;p&gt;When a user tries to log in, they start by entering their &lt;strong&gt;username and password&lt;/strong&gt; in the login form and sending the request.&lt;/p&gt;
+&lt;p&gt;As soon as the request reaches the server, &lt;strong&gt;Spring Security&lt;/strong&gt; steps in. The request is first &lt;strong&gt;intercepted by a series of security filters&lt;/strong&gt;, which are part of Spring Security&amp;rsquo;s filter chain.&lt;/p&gt;
+&lt;p&gt;These filters take the credentials and create an &lt;strong&gt;&lt;code&gt;Authentication&lt;/code&gt; object&lt;/strong&gt; that holds the username and password. This object doesn’t confirm anything yet — it just represents the user&amp;rsquo;s attempt to log in.&lt;/p&gt;
+&lt;p&gt;Next, the &lt;code&gt;Authentication&lt;/code&gt; object is passed to the &lt;strong&gt;Authentication Manager&lt;/strong&gt;, whose job is to figure out how to verify the credentials. It does this by checking all the available &lt;strong&gt;Authentication Providers&lt;/strong&gt; that know how to handle this type of login.&lt;/p&gt;
+&lt;p&gt;One of the providers picks up the request and starts the actual authentication process. To verify the user&amp;rsquo;s identity, it uses the &lt;strong&gt;UserDetailsService&lt;/strong&gt; — a component responsible for loading user data from the database.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;UserDetailsService&lt;/strong&gt; looks up the user by the provided username and compares the submitted password with the stored (usually encoded) one. If they match, the user is considered authenticated.&lt;/p&gt;
+&lt;p&gt;At this point, the Authentication object’s flag is set to &lt;strong&gt;authenticated = true&lt;/strong&gt;, and this verified object is stored in the &lt;strong&gt;SecurityContextHolder&lt;/strong&gt; — Spring’s way of keeping track of who’s logged in during the session.&lt;/p&gt;
+&lt;p&gt;Finally, a success response is sent back to the client, confirming the user is logged in — and the process is complete.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;login-process-in-depth&#34;&gt;Login Process in Depth&lt;/h3&gt;
 &lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241209114553.png&#34;&gt;
 &lt;strong&gt;We all remember this sign in page when we just started learning spring security. Although this page style is basic but when we click on &lt;code&gt;sign in&lt;/code&gt; the working behind it is not the basic one which we encounter.&lt;/strong&gt;&lt;/p&gt;
@@ -4783,6 +4435,78 @@ public class SecurityConfig {
 &lt;li&gt;The appropriate provider after implementing logic calls the &lt;code&gt;retriveUser(username, UsernamePasswordToken token)&lt;/code&gt;, this method fetch the user from Database/InMemoryUser/CustomUser.&lt;/li&gt;
 &lt;li&gt;The fetched data will go through some more additional check and post additional checks and then returned back as a response.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;above-process-in-story-format-by-ai&#34;&gt;Above Process in story format by AI&lt;/h3&gt;
+&lt;h4 id=&#34;-the-story-behind-the-spring-security-login-page&#34;&gt;🔐 &lt;strong&gt;The Story Behind the Spring Security Login Page&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;We all remember that &lt;strong&gt;simple white login form&lt;/strong&gt; Spring Security gives us when we first start learning.&lt;br&gt;
+It may look plain and straightforward, but behind that innocent-looking &lt;strong&gt;Sign In&lt;/strong&gt; button lies a &lt;strong&gt;powerful and detailed security process&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s walk through what really happens when you hit &amp;ldquo;Sign In&amp;rdquo;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;-step-1-knocking-on-the-door--user-submits-credentials&#34;&gt;🚪 Step 1: Knocking on the Door – User Submits Credentials&lt;/h4&gt;
+&lt;p&gt;A user enters their &lt;strong&gt;username&lt;/strong&gt; and &lt;strong&gt;password&lt;/strong&gt;, then clicks the login button.&lt;br&gt;
+At this moment, Spring Security triggers a method called &lt;code&gt;attemptAuthentication()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This method is like a &lt;strong&gt;doorman checking the credentials&lt;/strong&gt;. Here’s what it quietly does behind the scenes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Extracts Credentials&lt;/strong&gt;&lt;br&gt;
+It grabs the username and password from the HTTP request.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Creates a Token&lt;/strong&gt;&lt;br&gt;
+It creates a &lt;code&gt;UsernamePasswordAuthenticationToken&lt;/code&gt; — think of this as a little ID card with the username, password, and a flag that says &amp;ldquo;not authenticated yet&amp;rdquo;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Starts Authentication&lt;/strong&gt;&lt;br&gt;
+This token is passed to the &lt;code&gt;authenticate()&lt;/code&gt; method inside &lt;code&gt;ProviderManager&lt;/code&gt;, which is Spring’s &lt;strong&gt;authentication boss&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;-step-2-who-can-verify-this-token&#34;&gt;🧠 Step 2: Who Can Verify This Token?&lt;/h4&gt;
+&lt;p&gt;Now that Spring has this authentication token, it asks:&lt;br&gt;
+&lt;strong&gt;“Which of my Authentication Providers can handle this?”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It scans through all its available &lt;strong&gt;Authentication Providers&lt;/strong&gt; to find one that can work with the token.&lt;/p&gt;
+&lt;p&gt;🧩 Think of an &lt;strong&gt;Authentication Provider&lt;/strong&gt; as the brain that knows how to validate the login details — it could check a database, an in-memory list, a remote service, etc.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;-step-3-retrieving-user-details&#34;&gt;📇 Step 3: Retrieving User Details&lt;/h4&gt;
+&lt;p&gt;Once the right provider is found, it says:&lt;br&gt;
+&lt;strong&gt;“Let me look up this user&amp;hellip;”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It calls the method &lt;code&gt;retrieveUser(username, token)&lt;/code&gt;, which does the job of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Looking up the user from your database, or&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fetching from in-memory users, or&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Calling a custom user service, depending on your setup.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;-step-4-final-checks-and-response&#34;&gt;✅ Step 4: Final Checks and Response&lt;/h4&gt;
+&lt;p&gt;With the user details in hand, Spring Security runs a few &lt;strong&gt;additional checks&lt;/strong&gt; — like verifying the password, checking if the account is locked or expired, etc.&lt;/p&gt;
+&lt;p&gt;If everything is valid:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The authentication token’s flag is set to &lt;strong&gt;true&lt;/strong&gt; (authenticated).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The user is now considered logged in.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring stores this in the &lt;strong&gt;Security Context&lt;/strong&gt;, so it knows who you are for future requests.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If anything is invalid:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring throws an &lt;strong&gt;authentication exception&lt;/strong&gt; and sends you back to the login page with an error.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;-and-thats-it&#34;&gt;🏁 And That’s It!&lt;/h4&gt;
+&lt;p&gt;From a simple &amp;ldquo;Sign In&amp;rdquo; button click to a series of secure checks and authentications —&lt;br&gt;
+Spring Security does &lt;strong&gt;a lot&lt;/strong&gt; under the hood to keep your app safe.&lt;/p&gt;
+&lt;p&gt;So the next time you see that plain login form, you’ll know there’s a whole team of security guards working in the background to protect your app. 🛡️&lt;/p&gt;
+&lt;hr&gt;
 </content>
     </item>
     
