@@ -1250,25 +1250,27 @@
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/incubator/</guid>
       <description>&lt;h1 id=&#34;incubator-presentation-summary&#34;&gt;Incubator Presentation Summary&lt;/h1&gt;
 &lt;h2 id=&#34;good-morning-everyone&#34;&gt;Good morning, everyone.&lt;/h2&gt;
-&lt;p&gt;First and foremost, thank you for taking the time out to hear us.&lt;br&gt;
-I&amp;rsquo;m Aditya Rawat
-I’m here to present the summary of our incubator and share what we’ve learned from it.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m Aditya Rawat and he is Jensilin.
+We are here to present the summary of our incubator and share what we’ve learned from it.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;name-of-project&#34;&gt;Name of Project&lt;/h1&gt;
 &lt;p&gt;So the name of our project is Wheeled and arm Robotic simulation.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h1&gt;
-&lt;p&gt;Our project is focused on training  simulations models using &lt;strong&gt;NVIDIA Omniverse&lt;/strong&gt;, specifically  &lt;strong&gt;Isaac Sim&lt;/strong&gt; platform. The goal is to bridge the gap between simulation and the real world (&lt;em&gt;sim-to-real&lt;/em&gt;), by training models on different  conditions.&lt;/p&gt;</description>
+&lt;p&gt;But before giving you the project overview let&amp;rsquo;s understand the problem statement for understanding the project better&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s assume we have to send a robot rover to the moon surface to get some samples, without knowing about the terrain how can we train our rover for sample collection?&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;incubator-presentation-summary&#34;&gt;Incubator Presentation Summary&lt;/h1&gt;
 &lt;h2 id=&#34;good-morning-everyone&#34;&gt;Good morning, everyone.&lt;/h2&gt;
-&lt;p&gt;First and foremost, thank you for taking the time out to hear us.&lt;br&gt;
-I&amp;rsquo;m Aditya Rawat
-I’m here to present the summary of our incubator and share what we’ve learned from it.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m Aditya Rawat and he is Jensilin.
+We are here to present the summary of our incubator and share what we’ve learned from it.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;name-of-project&#34;&gt;Name of Project&lt;/h1&gt;
 &lt;p&gt;So the name of our project is Wheeled and arm Robotic simulation.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h1&gt;
+&lt;p&gt;But before giving you the project overview let&amp;rsquo;s understand the problem statement for understanding the project better&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s assume we have to send a robot rover to the moon surface to get some samples, without knowing about the terrain how can we train our rover for sample collection?&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s where our project comes into picture.&lt;/p&gt;
 &lt;p&gt;Our project is focused on training  simulations models using &lt;strong&gt;NVIDIA Omniverse&lt;/strong&gt;, specifically  &lt;strong&gt;Isaac Sim&lt;/strong&gt; platform. The goal is to bridge the gap between simulation and the real world (&lt;em&gt;sim-to-real&lt;/em&gt;), by training models on different  conditions.&lt;/p&gt;
 &lt;p&gt;We’ve developed and tested two key use cases:&lt;/p&gt;
 &lt;ol&gt;
