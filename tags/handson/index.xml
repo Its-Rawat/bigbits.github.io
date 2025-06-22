@@ -48,8 +48,7 @@ We are here to present the summary of our incubator and share what we’ve learn
 &lt;h3 id=&#34;-to-explain-this-in-simple-terms&#34;&gt;🧠 To explain this in simple terms:&lt;/h3&gt;
 &lt;p&gt;Imagine you went to Ladakh on a  car, in that case scenario you might be  driving on various surfaces like &lt;strong&gt;sand&lt;/strong&gt;, &lt;strong&gt;ice&lt;/strong&gt;, or &lt;strong&gt;concrete&lt;/strong&gt;.&lt;br&gt;
 Each surface affects how the car turns or skids.&lt;br&gt;
-Similarly, our simulation replicates how a robot might behave under such varying conditions, helping us understand and train it better.&lt;/p&gt;
-&lt;/blockquote&gt;
+Similarly, our simulation replicates how a robot might behave under such varying conditions, helping us understand and train it better.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;This simulation was built using the &lt;strong&gt;Wheeled Lab&lt;/strong&gt; package available inside Isaac Sim.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Important Note:&lt;/strong&gt;&lt;br&gt;
 The primary goal of the incubator was &lt;em&gt;not&lt;/em&gt; 3D model development.&lt;br&gt;
@@ -76,12 +75,10 @@ Instead, it was to &lt;strong&gt;generate synthetic data&lt;/strong&gt; by train
 &lt;h2 id=&#34;questions&#34;&gt;Questions&lt;/h2&gt;
 &lt;h3 id=&#34;isaac-lab&#34;&gt;Isaac lab?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Specifically Only for robot learning.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Specifically Only for robot learning.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;isaac-sim&#34;&gt;Isaac sim?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Robot learning can be done in it but it also being used for more things then robots.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Robot learning can be done in it but it also being used for more things then robots.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;how-your-incubator-is-different-from-other-physical-robot-pickup-arm&#34;&gt;How your incubator is different from other physical robot pickup arm?&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
@@ -89,25 +86,20 @@ Instead, it was to &lt;strong&gt;generate synthetic data&lt;/strong&gt; by train
 &lt;li&gt;Less const&lt;/li&gt;
 &lt;li&gt;Efficient Development Cycle&lt;/li&gt;
 &lt;li&gt;Multiple virtual Environments.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;how-you-implemented-rl-in-your-incubator&#34;&gt;How you implemented RL in your Incubator?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;RL is in-built inside Isaac sim.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;RL is in-built inside Isaac sim.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;where-are-we-using-python-script-in-our-incubator&#34;&gt;Where are we using python script in our Incubator.&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;You can control robots, add sensors, move objects, and simulate environments using &lt;strong&gt;Python&lt;/strong&gt; arguments.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;You can control robots, add sensors, move objects, and simulate environments using &lt;strong&gt;Python&lt;/strong&gt; arguments.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;why-are-we-using-physicx-&#34;&gt;Why are we using physicX ?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Used for accelerating the GPU.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Used for accelerating the GPU.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;why-the-car-needs-to-be-drift&#34;&gt;Why the car needs to be drift?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;we are simulating drifting to study complex vehicle dynamics like traction loss, yaw control, and how cars behave under different environment  and steering conditions.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;we are simulating drifting to study complex vehicle dynamics like traction loss, yaw control, and how cars behave under different environment  and steering conditions.&lt;/p&gt;&lt;/blockquote&gt;
 </content>
     </item>
     
@@ -251,8 +243,8 @@ Instead, it was to &lt;strong&gt;generate synthetic data&lt;/strong&gt; by train
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;-define-the-model&#34;&gt;🧠 Define the Model&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SentimentAnalysis&lt;/span&gt;(nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Module):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __init__(self, input_dim):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        super()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;__init__()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;__init__&lt;/span&gt;(self, input_dim):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        super()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;__init__&lt;/span&gt;()
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;l1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Linear(input_dim, &lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;l2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Linear(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;l3 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Linear(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)

@@ -243,13 +243,13 @@
 </ol>
 <h1 id="plsql-architecture">PL/SQL Architecture<a href="#plsql-architecture" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <h2 id="physical-architecture">Physical Architecture<a href="#physical-architecture" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/pl1.png"></p>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/pl1.png" alt="Image Description"></p>
 <ul>
 <li>PL/SQL engine processes the entire PL/SQL block of code.</li>
 <li>It Separate SQL statements and Procedural statements.</li>
 </ul>
 <h3 id="simple-architecture-flow">Simple Architecture Flow<a href="#simple-architecture-flow" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png"></p>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png" alt="Image Description"></p>
 <h2 id="plsql-logical-architecture">PL/SQL Logical Architecture<a href="#plsql-logical-architecture" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li><em><strong>Corporates with SQL Engine</strong></em>.</li>
@@ -264,7 +264,7 @@
 </ul>
 <hr>
 <h1 id="pluggable-database">Pluggable Database<a href="#pluggable-database" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/pl2.png"></p>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/pl2.png" alt="Image Description"></p>
 <h2 id="what-is-pdb">What is PDB?<a href="#what-is-pdb" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p><strong>Pluggable Database (PDB)</strong> is a portable collection of schemas, tables, and objects that can be plugged into a <strong>Container Database (CDB)</strong> in Oracle.</p>
 <h2 id="why-pdb">Why PDB?<a href="#why-pdb" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
@@ -290,28 +290,25 @@
 <hr>
 <h1 id="what-are-blocks">What are Blocks?<a href="#what-are-blocks" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p><code>Block is a logical unit of code that groups related declarations, statements. </code></p>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/pl3.png"></p>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/pl3.png" alt="Image Description"></p>
 <h2 id="structure-1">Structure<a href="#structure-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ol>
 <li><em><strong>DECLARE</strong></em> Block.</li>
 </ol>
 <blockquote>
-<p>Here we declare Variables, const, exceptions.</p>
-</blockquote>
+<p>Here we declare Variables, const, exceptions.</p></blockquote>
 <ol start="2">
 <li><em><strong>EXECUTION</strong></em> BLOCK.</li>
 </ol>
 <blockquote>
 <p>Contains Executable Statements like SQL, procedural statements.
-Starts with <em><strong>BEGIN</strong></em></p>
-</blockquote>
+Starts with <em><strong>BEGIN</strong></em></p></blockquote>
 <ol start="3">
 <li><em><strong>EXCEPTION HANDLING</strong></em> BLOCK.</li>
 </ol>
 <blockquote>
 <p>Starts with <em><strong>EXCEPTION</strong></em>
-Handles exceptions and errors during execution.</p>
-</blockquote>
+Handles exceptions and errors during execution.</p></blockquote>
 <h3 id="syntax-of-plsql-block">Syntax of PL/SQL Block<a href="#syntax-of-plsql-block" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <pre tabindex="0"><code class="language-Copy" data-lang="Copy">DECLARE 
    -- Declaration statements (optional)

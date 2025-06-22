@@ -305,7 +305,7 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;object-mode-3d-viewport&#34;&gt;Object Mode (3D viewport)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -466,7 +466,7 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;selection-edit-mode&#34;&gt;Selection (Edit Mode)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -545,8 +545,8 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;heading-3&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;modeling-edit-mode&#34;&gt;Modeling (Edit Mode)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -1160,7 +1160,7 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-4&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;window-general-most-window-types&#34;&gt;Window General (most window types)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -1284,8 +1284,7 @@ We are here to present the summary of our incubator and share what we’ve learn
 &lt;h3 id=&#34;-to-explain-this-in-simple-terms&#34;&gt;🧠 To explain this in simple terms:&lt;/h3&gt;
 &lt;p&gt;Imagine you went to Ladakh on a  car, in that case scenario you might be  driving on various surfaces like &lt;strong&gt;sand&lt;/strong&gt;, &lt;strong&gt;ice&lt;/strong&gt;, or &lt;strong&gt;concrete&lt;/strong&gt;.&lt;br&gt;
 Each surface affects how the car turns or skids.&lt;br&gt;
-Similarly, our simulation replicates how a robot might behave under such varying conditions, helping us understand and train it better.&lt;/p&gt;
-&lt;/blockquote&gt;
+Similarly, our simulation replicates how a robot might behave under such varying conditions, helping us understand and train it better.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;This simulation was built using the &lt;strong&gt;Wheeled Lab&lt;/strong&gt; package available inside Isaac Sim.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Important Note:&lt;/strong&gt;&lt;br&gt;
 The primary goal of the incubator was &lt;em&gt;not&lt;/em&gt; 3D model development.&lt;br&gt;
@@ -1312,12 +1311,10 @@ Instead, it was to &lt;strong&gt;generate synthetic data&lt;/strong&gt; by train
 &lt;h2 id=&#34;questions&#34;&gt;Questions&lt;/h2&gt;
 &lt;h3 id=&#34;isaac-lab&#34;&gt;Isaac lab?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Specifically Only for robot learning.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Specifically Only for robot learning.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;isaac-sim&#34;&gt;Isaac sim?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Robot learning can be done in it but it also being used for more things then robots.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Robot learning can be done in it but it also being used for more things then robots.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;how-your-incubator-is-different-from-other-physical-robot-pickup-arm&#34;&gt;How your incubator is different from other physical robot pickup arm?&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
@@ -1325,25 +1322,20 @@ Instead, it was to &lt;strong&gt;generate synthetic data&lt;/strong&gt; by train
 &lt;li&gt;Less const&lt;/li&gt;
 &lt;li&gt;Efficient Development Cycle&lt;/li&gt;
 &lt;li&gt;Multiple virtual Environments.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;how-you-implemented-rl-in-your-incubator&#34;&gt;How you implemented RL in your Incubator?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;RL is in-built inside Isaac sim.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;RL is in-built inside Isaac sim.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;where-are-we-using-python-script-in-our-incubator&#34;&gt;Where are we using python script in our Incubator.&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;You can control robots, add sensors, move objects, and simulate environments using &lt;strong&gt;Python&lt;/strong&gt; arguments.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;You can control robots, add sensors, move objects, and simulate environments using &lt;strong&gt;Python&lt;/strong&gt; arguments.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;why-are-we-using-physicx-&#34;&gt;Why are we using physicX ?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Used for accelerating the GPU.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Used for accelerating the GPU.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;why-the-car-needs-to-be-drift&#34;&gt;Why the car needs to be drift?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;we are simulating drifting to study complex vehicle dynamics like traction loss, yaw control, and how cars behave under different environment  and steering conditions.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;we are simulating drifting to study complex vehicle dynamics like traction loss, yaw control, and how cars behave under different environment  and steering conditions.&lt;/p&gt;&lt;/blockquote&gt;
 </content>
     </item>
     

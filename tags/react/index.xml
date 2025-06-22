@@ -145,14 +145,12 @@ export default App;
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;incubator-quote-app&#34;&gt;Incubator Quote App&lt;/h1&gt;
 &lt;h2 id=&#34;usestate&#34;&gt;UseState&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;useState&lt;/code&gt; is a &lt;strong&gt;React Hook&lt;/strong&gt; that allows functional components to have and manage &lt;strong&gt;state&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;useState&lt;/code&gt; is a &lt;strong&gt;React Hook&lt;/strong&gt; that allows functional components to have and manage &lt;strong&gt;state&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;axios&#34;&gt;Axios&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Axios&lt;/strong&gt; is a &lt;strong&gt;JavaScript library&lt;/strong&gt; used to make &lt;strong&gt;HTTP requests&lt;/strong&gt; from the browser (or Node.js) to a server.
-Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it uses &lt;strong&gt;Promises&lt;/strong&gt; to handle asynchronous operations like fetching data from an API.&lt;/p&gt;
-&lt;/blockquote&gt;
+Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it uses &lt;strong&gt;Promises&lt;/strong&gt; to handle asynchronous operations like fetching data from an API.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;It simplifies making GET, POST, PUT, DELETE, etc. requests.&lt;/p&gt;

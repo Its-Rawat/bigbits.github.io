@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.139.3">
+	<meta name="generator" content="Hugo 0.147.8">
   
     <title></title>
   
@@ -165,134 +165,7 @@
     
       <article class="post on-list">
         <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/">Jmeter Full Notes</a>
-        </h1>
-
-        <div class="post-meta">
-          
-
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/post/">post</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/agile/">Agile</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/testing/">testing</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/loadtesting/">loadtesting</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-
-        <div class="post-content">
-          
-            <h1 id="types-of-software-testing">Types of Software Testing</h1>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png"></p>
-<hr>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/jmeter-testing/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/sentiment-analysis-with-nlp--pytorch/">Machine Learning</a>
-        </h1>
-
-        <div class="post-meta">
-          
-
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/ai/">AI</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/ml/">ML</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/code/">Theory/code</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/handson/">HandsOn</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/nlp/">NLP</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-
-        <div class="post-content">
-          
-            <h2 id="-import-libraries">📦 Import Libraries</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> sklearn <span style="color:#66d9ef">as</span> skl
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
-</span></span></code></pre></div><ul>
-<li>
-<p><code>numpy</code>, <code>pandas</code>: Data manipulation</p>
-</li>
-<li>
-<p><code>sklearn</code>: ML tools like vectorizers and train/test split</p>
-</li>
-<li>
-<p><code>matplotlib</code>: Visualization (optional)</p>
-</li>
-</ul>
-<hr>
-<h2 id="-nlp-preprocessing-setup">📚 NLP Preprocessing Setup</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> nltk
-</span></span><span style="display:flex;"><span>nltk<span style="color:#f92672">.</span>download(<span style="color:#e6db74">&#39;stopwords&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> nltk.corpus <span style="color:#f92672">import</span> stopwords
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> nltk.stem.porter <span style="color:#f92672">import</span> PorterStemmer
-</span></span></code></pre></div><ul>
-<li>
-<p><code>re</code>: Regex for text cleaning</p>
-</li>
-<li>
-<p><code>nltk</code>: Tokenization, stopwords, and stemming</p>
-</li>
-</ul>
-<hr>
-<h2 id="-custom-stopwords">🚫 Custom Stopwords</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>negatives <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;no&#39;</span>, <span style="color:#e6db74">&#39;nor&#39;</span>, <span style="color:#e6db74">&#39;not&#39;</span>, <span style="color:#e6db74">&#34;don&#39;t&#34;</span>, <span style="color:#f92672">...</span>]
-</span></span><span style="display:flex;"><span>all_stopwords <span style="color:#f92672">=</span> [w <span style="color:#66d9ef">for</span> w <span style="color:#f92672">in</span> stopwords<span style="color:#f92672">.</span>words(<span style="color:#e6db74">&#39;english&#39;</span>) <span style="color:#66d9ef">if</span> w <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> negatives]
-</span></span></code></pre></div><p>Retains negative words like &ldquo;not&rdquo;, which are important for sentiment.</p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/sentiment-analysis-with-nlp--pytorch/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/topic-tags/">my-projects</a>
+          <a href="https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/">spring-security</a>
         </h1>
 
         <div class="post-meta">
@@ -305,39 +178,9 @@
             
             #<a href="https://its-rawat.github.io/bigbits.github.io/tags/blog/">blog</a>&nbsp;
             
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/all/">all</a>&nbsp;
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/spring/">spring</a>&nbsp;
             
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/projects/">projects</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/#tcs/">#TCS</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/agile/">Agile</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/chennai/">Chennai</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/devops/">devops</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/docker/">Docker</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/elite_tech_park/">Elite_Tech_Park</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/js/">js</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/pl/sql/">PL/SQL</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/react/">react</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/selenium/">selenium</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/springboot/">springboot</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/webtech/">webtech</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/zoho/">Zoho</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/welcome/">welcome</a>&nbsp;
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/security/">security</a>&nbsp;
             
           </span>
         
@@ -348,212 +191,28 @@
 
         <div class="post-content">
           
-            <h1 id="introduction">Introduction</h1>
-<p>Welcome to my Project Space, It&rsquo;s hard to update this, as I don&rsquo;t usually public what I have developed or developing, but here are the things which you might check.</p>
-<h2 id="easy-access">Easy Access</h2>
-<p>To Easily navigate through my notes use tags&hellip;..</p>
+            <p><img src="https://its-rawat.github.io/bigbits.github.io/images/security.png" alt="Image Description"></p>
+<h2 id="what">What</h2>
+<p>Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.</p>
+<h2 id="why">Why</h2>
+<p>It helps in protecting user data, It also protects developer&rsquo;s logic.</p>
+<h2 id="how-to-add-spring-security-in-your-spring-boot-project">How to add spring security in your spring boot project</h2>
+<h3 id="step-1-configuration">STEP 1 {Configuration}</h3>
+<p>Add the latest <code>spring-boot-starter-security</code> dependency in your pom.xml file.
+You can check the latest version from <a href="https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security">here</a>.</p>
           
         </div>
 
         
           <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/topic-tags/">Read more →</a>
+            <a class="read-more button" href="/bigbits.github.io/posts/spring-security-introduction/">Read more →</a>
           </div>
         
       </article>
     
       <article class="post on-list">
         <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/plsql_functions_procedures_triggers-only/">PL SQL Questions HandsOn</a>
-        </h1>
-
-        <div class="post-meta">
-          
-
-        </div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/plsql/">PLSQL</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/hands_on/">Hands_On</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-
-        <div class="post-content">
-          
-            <h1 id="-plsql-practice-guide-functions-procedures-triggers">📘 PL/SQL Practice Guide: Functions, Procedures, Triggers</h1>
-<h2 id="-functions-in-plsql">📌 Functions in PL/SQL</h2>
-<h3 id="-syntax">🔹 Syntax</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> function_name (
-</span></span><span style="display:flex;"><span>    param1 <span style="color:#66d9ef">IN</span> data_type,
-</span></span><span style="display:flex;"><span>    param2 <span style="color:#66d9ef">IN</span> data_type
-</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">RETURN</span> return_data_type <span style="color:#66d9ef">IS</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- logic
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">RETURN</span> some_value;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h3 id="-practice-questions-with-solutions">✅ Practice Questions with Solutions</h3>
-<h4 id="1-check-even-or-odd">1. Check Even or Odd</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> check_even_odd(n <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">RETURN</span> VARCHAR2 <span style="color:#66d9ef">IS</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">MOD</span>(n, <span style="color:#ae81ff">2</span>) <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">THEN</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;EVEN&#39;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ELSE</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;ODD&#39;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h4 id="2-get-maximum-of-two-numbers">2. Get Maximum of Two Numbers</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> get_max(a <span style="color:#66d9ef">IN</span> NUMBER, b <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">RETURN</span> NUMBER <span style="color:#66d9ef">IS</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">IF</span> a <span style="color:#f92672">&gt;</span> b <span style="color:#66d9ef">THEN</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> a;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ELSE</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> b;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h4 id="3-count-vowels-in-a-string">3. Count Vowels in a String</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> count_vowels(str <span style="color:#66d9ef">IN</span> VARCHAR2) <span style="color:#66d9ef">RETURN</span> NUMBER <span style="color:#66d9ef">IS</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">count</span> NUMBER :<span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>    ch CHAR;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> i <span style="color:#66d9ef">IN</span> <span style="color:#ae81ff">1</span>..<span style="color:#66d9ef">LENGTH</span>(str) LOOP
-</span></span><span style="display:flex;"><span>        ch :<span style="color:#f92672">=</span> <span style="color:#66d9ef">LOWER</span>(SUBSTR(str, i, <span style="color:#ae81ff">1</span>));
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">IF</span> ch <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>, <span style="color:#e6db74">&#39;o&#39;</span>, <span style="color:#e6db74">&#39;u&#39;</span>) <span style="color:#66d9ef">THEN</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">count</span> :<span style="color:#f92672">=</span> <span style="color:#66d9ef">count</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">RETURN</span> <span style="color:#66d9ef">count</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h4 id="4-check-palindrome">4. Check Palindrome</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> is_palindrome(str <span style="color:#66d9ef">IN</span> VARCHAR2) <span style="color:#66d9ef">RETURN</span> VARCHAR2 <span style="color:#66d9ef">IS</span>
-</span></span><span style="display:flex;"><span>    reversed_str VARCHAR2(<span style="color:#ae81ff">1000</span>) :<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> i <span style="color:#66d9ef">IN</span> REVERSE <span style="color:#ae81ff">1</span>..<span style="color:#66d9ef">LENGTH</span>(str) LOOP
-</span></span><span style="display:flex;"><span>        reversed_str :<span style="color:#f92672">=</span> reversed_str <span style="color:#f92672">||</span> SUBSTR(str, i, <span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">LOWER</span>(str) <span style="color:#f92672">=</span> <span style="color:#66d9ef">LOWER</span>(reversed_str) <span style="color:#66d9ef">THEN</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;YES&#39;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ELSE</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">RETURN</span> <span style="color:#e6db74">&#39;NO&#39;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">IF</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h4 id="5-sum-of-digits">5. Sum of Digits</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> sum_of_digits(n <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">RETURN</span> NUMBER <span style="color:#66d9ef">IS</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">sum</span> NUMBER :<span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>    digit NUMBER;
-</span></span><span style="display:flex;"><span>    num NUMBER :<span style="color:#f92672">=</span> n;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    WHILE num <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> LOOP
-</span></span><span style="display:flex;"><span>        digit :<span style="color:#f92672">=</span> <span style="color:#66d9ef">MOD</span>(num, <span style="color:#ae81ff">10</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">sum</span> :<span style="color:#f92672">=</span> <span style="color:#66d9ef">sum</span> <span style="color:#f92672">+</span> digit;
-</span></span><span style="display:flex;"><span>        num :<span style="color:#f92672">=</span> FLOOR(num <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">RETURN</span> <span style="color:#66d9ef">sum</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><hr>
-<h2 id="-procedures-in-plsql">🔧 Procedures in PL/SQL</h2>
-<h3 id="-syntax-1">🔹 Syntax</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> procedure_name (param1 <span style="color:#66d9ef">IN</span><span style="color:#f92672">/</span><span style="color:#66d9ef">OUT</span> data_type) <span style="color:#66d9ef">IS</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- logic
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h3 id="-practice-questions-with-solutions-1">✅ Practice Questions with Solutions</h3>
-<h4 id="1-procedure-to-print-square">1. Procedure to Print Square</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> print_square(n <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">IS</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    DBMS_OUTPUT.PUT_LINE(<span style="color:#e6db74">&#39;Square: &#39;</span> <span style="color:#f92672">||</span> (n <span style="color:#f92672">*</span> n));
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h4 id="2-procedure-to-update-employee-salary">2. Procedure to Update Employee Salary</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> increase_salary(empId <span style="color:#66d9ef">IN</span> NUMBER) <span style="color:#66d9ef">IS</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">UPDATE</span> employees
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SET</span> salary <span style="color:#f92672">=</span> salary <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">10</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> emp_id <span style="color:#f92672">=</span> empId;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">COMMIT</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h4 id="3-procedure-with-out-parameter-for-factorial">3. Procedure with OUT Parameter for Factorial</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">PROCEDURE</span> find_factorial(n <span style="color:#66d9ef">IN</span> NUMBER, <span style="color:#66d9ef">result</span> <span style="color:#66d9ef">OUT</span> NUMBER) <span style="color:#66d9ef">IS</span>
-</span></span><span style="display:flex;"><span>    fact NUMBER :<span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> i <span style="color:#66d9ef">IN</span> <span style="color:#ae81ff">1</span>..n LOOP
-</span></span><span style="display:flex;"><span>        fact :<span style="color:#f92672">=</span> fact <span style="color:#f92672">*</span> i;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">result</span> :<span style="color:#f92672">=</span> fact;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><hr>
-<h2 id="-triggers-in-plsql">🔥 Triggers in PL/SQL</h2>
-<h3 id="-syntax-2">🔹 Syntax</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> <span style="color:#66d9ef">trigger_name</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEFORE</span><span style="color:#f92672">/</span><span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">INSERT</span><span style="color:#f92672">/</span><span style="color:#66d9ef">UPDATE</span><span style="color:#f92672">/</span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">table_name</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- logic
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h3 id="-practice-questions-with-solutions-2">✅ Practice Questions with Solutions</h3>
-<h4 id="1-before-insert-trigger">1. BEFORE INSERT Trigger</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> trg_set_created_at
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">ON</span> students
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    :<span style="color:#66d9ef">NEW</span>.created_at :<span style="color:#f92672">=</span> SYSDATE;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h4 id="2-after-update-trigger-for-salary-audit">2. AFTER UPDATE Trigger for Salary Audit</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> trg_salary_audit
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AFTER</span> <span style="color:#66d9ef">UPDATE</span> <span style="color:#66d9ef">OF</span> salary <span style="color:#66d9ef">ON</span> employees
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> salary_audit(emp_id, old_salary, new_salary, change_date)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">VALUES</span>(:<span style="color:#66d9ef">OLD</span>.emp_id, :<span style="color:#66d9ef">OLD</span>.salary, :<span style="color:#66d9ef">NEW</span>.salary, SYSDATE);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><h4 id="3-before-delete-trigger-to-prevent-deletion">3. BEFORE DELETE Trigger to Prevent Deletion</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">TRIGGER</span> trg_prevent_delete
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">ON</span> departments
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
-</span></span><span style="display:flex;"><span>    RAISE_APPLICATION_ERROR(<span style="color:#f92672">-</span><span style="color:#ae81ff">20001</span>, <span style="color:#e6db74">&#39;Deletion is not allowed on departments table.&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>
-</span></span></code></pre></div><hr>
-<h1 id="-additional-practice-questions">📚 Additional Practice Questions</h1>
-<h2 id="-functions">🔧 Functions</h2>
-<h3 id="-6-reverse-a-string">🔹 6. Reverse a String</h3>
-<p><strong>Question:</strong> Write a function to reverse a given string.</p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/plsql_functions_procedures_triggers-only/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="https://its-rawat.github.io/bigbits.github.io/posts/pl-sql/">PL/SQL Full Notes</a>
+          <a href="https://its-rawat.github.io/bigbits.github.io/posts/elite-tech-park-zoho-creator-assessment/">Zoho Library System App</a>
         </h1>
 
         <div class="post-meta">
@@ -566,19 +225,9 @@
             
             #<a href="https://its-rawat.github.io/bigbits.github.io/tags/post/">post</a>&nbsp;
             
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/agile/">Agile</a>&nbsp;
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/zoho/">Zoho</a>&nbsp;
             
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/hands/">Hands</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/sbooltrue/">true</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/sql/">sql</a>&nbsp;
-            
-            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/pl/sql/">PL/SQL</a>&nbsp;
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/elite_tech_park/">Elite_Tech_Park</a>&nbsp;
             
           </span>
         
@@ -589,42 +238,20 @@
 
         <div class="post-content">
           
-            <h1 id="what-is-plsql">What is PL/SQL?</h1>
-<ol>
-<li><code>PL/SQL stands for Procedural Language Extension to SQL</code></li>
-<li>It is a Extension of SQL developed by Oracle.</li>
-<li>It adds SQL capabilities of procedural programming like variables, loops and conditional statements in SQL.</li>
-</ol>
-<h1 id="plsql-architecture">PL/SQL Architecture</h1>
-<h2 id="physical-architecture">Physical Architecture</h2>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/pl1.png"></p>
+            <h2 id="objective">Objective</h2>
+<p>As part of the <strong>Elite Tech Park - Zoho Creator Assessment</strong>, I developed a <strong>Library System</strong> application in Zoho Creator. The app features robust validations, workflows, and dynamic reporting to ensure efficient library management.</p>
 <ul>
-<li>PL/SQL engine processes the entire PL/SQL block of code.</li>
-<li>It Separate SQL statements and Procedural statements.</li>
+<li><strong><a href="https://drive.google.com/drive/u/3/folders/13QsjO3fwi1e8jjSm0T9MgS3c4ooTUz0D">Watch the Demo Video</a></strong>: A comprehensive walkthrough of the application&rsquo;s functionalities and workflows.</li>
+<li><strong><a href="https://github.com/Its-Rawat/Zoho_Library_System_App">Download the Application (.ds file)</a></strong>: Access the complete application file for deployment.</li>
+<li>YOUTUBE~<a href="https://youtu.be/rWEzYghffrI">Video Youtube Link:</a></li>
 </ul>
-<h3 id="simple-architecture-flow">Simple Architecture Flow</h3>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png"></p>
-<h2 id="plsql-logical-architecture">PL/SQL Logical Architecture</h2>
-<ul>
-<li><em><strong>Corporates with SQL Engine</strong></em>.</li>
-<li><em><strong>Enables Subprograms</strong></em> -&gt; Allows re-usability of code/script like variables and functions.</li>
-<li><em><strong>Dynamic Queries</strong></em>-&gt; We can modify or create new Queries.</li>
-<li><em><strong>Case Insensitivity</strong></em></li>
-<li><em><strong>Optimizer</strong></em>-&gt; It optimizes our code for better performance.</li>
-<li><strong>Enables Object-Oriented Programming</strong></li>
-<li><em><strong>Web Development</strong></em>
-#Extras
-<em><strong>Context Switching</strong></em>: <code>When you write SQL Query in PL/SQL the PL/SQL send the query to SQL Engine and the result will be returned this operation is called Context Switching.</code></li>
-</ul>
-<hr>
-<h1 id="pluggable-database">Pluggable Database</h1>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/pl2.png"></p>
+<p>Below, I explain what the application offers and how it works.</p>
           
         </div>
 
         
           <div>
-            <a class="read-more button" href="/bigbits.github.io/posts/pl-sql/">Read more →</a>
+            <a class="read-more button" href="/bigbits.github.io/posts/elite-tech-park-zoho-creator-assessment/">Read more →</a>
           </div>
         
       </article>
@@ -638,11 +265,6 @@
         <span class="button__text">Newer posts</span>
       </a>
     
-    
-      <a href="/bigbits.github.io/page/4/" class="button next">
-        <span class="button__text">Older posts</span>
-        <span class="button__icon">→</span>
-      </a>
     
   </div>
 </div>

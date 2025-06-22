@@ -15,11 +15,11 @@
       <description>&lt;h2 id=&#34;welcome-to-aditya-rawats-big-bits-blogs&#34;&gt;Welcome to Aditya Rawat&amp;rsquo;s Big Bits Blogs&lt;/h2&gt;
 &lt;p&gt;Hi there! I&amp;rsquo;m Aditya, a passionate developer with many years of experience in Java, Spring Boot, and embedded systems. I specialize in building robust backend applications and innovative solutions. Explore my repositories to see the projects I&amp;rsquo;ve worked on, and feel free to connect with me for collaboration or discussions.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s code something amazing!&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h2 id=&#34;welcome-to-aditya-rawats-big-bits-blogs&#34;&gt;Welcome to Aditya Rawat&amp;rsquo;s Big Bits Blogs&lt;/h2&gt;
 &lt;p&gt;Hi there! I&amp;rsquo;m Aditya, a passionate developer with many years of experience in Java, Spring Boot, and embedded systems. I specialize in building robust backend applications and innovative solutions. Explore my repositories to see the projects I&amp;rsquo;ve worked on, and feel free to connect with me for collaboration or discussions.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s code something amazing!&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -46,7 +46,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
 &lt;p&gt;Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.&lt;/p&gt;
 &lt;h2 id=&#34;why&#34;&gt;Why&lt;/h2&gt;
@@ -55,7 +55,7 @@
 &lt;h3 id=&#34;step-1-configuration&#34;&gt;STEP 1 {Configuration}&lt;/h3&gt;
 &lt;p&gt;Add the latest &lt;code&gt;spring-boot-starter-security&lt;/code&gt; dependency in your pom.xml file.
 You can check the latest version from &lt;a href=&#34;https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-      <content>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
 &lt;p&gt;Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.&lt;/p&gt;
 &lt;h2 id=&#34;why&#34;&gt;Why&lt;/h2&gt;
@@ -113,7 +113,7 @@ public class SecurityConfig {
 &lt;/ul&gt;
 &lt;h2 id=&#34;internal-flow-of-spring-security&#34;&gt;Internal Flow Of Spring Security&lt;/h2&gt;
 &lt;h3 id=&#34;diagram&#34;&gt;Diagram&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241208135216.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241208135216.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;login-process-in-short&#34;&gt;Login Process in Short&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Client enter username and password and send.&lt;/li&gt;
@@ -139,7 +139,7 @@ public class SecurityConfig {
 &lt;p&gt;Finally, a success response is sent back to the client, confirming the user is logged in — and the process is complete.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;login-process-in-depth&#34;&gt;Login Process in Depth&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241209114553.png&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241209114553.png&#34; alt=&#34;Image Description&#34;&gt;
 &lt;strong&gt;We all remember this sign in page when we just started learning spring security. Although this page style is basic but when we click on &lt;code&gt;sign in&lt;/code&gt; the working behind it is not the basic one which we encounter.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lets dive deep into it&amp;rsquo;s working:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -230,6 +230,76 @@ This token is passed to the &lt;code&gt;authenticate()&lt;/code&gt; method insid
 Spring Security does &lt;strong&gt;a lot&lt;/strong&gt; under the hood to keep your app safe.&lt;/p&gt;
 &lt;p&gt;So the next time you see that plain login form, you’ll know there’s a whole team of security guards working in the background to protect your app. 🛡️&lt;/p&gt;
 &lt;hr&gt;
+&lt;h1 id=&#34;filters-chains&#34;&gt;Filters Chains&lt;/h1&gt;
+&lt;h2 id=&#34;-login-request-flow-in-spring-security&#34;&gt;🔐 Login Request Flow in Spring Security&lt;/h2&gt;
+&lt;h3 id=&#34;1-disableencodeurlfilter&#34;&gt;1. DisableEncodeUrlFilter&lt;/h3&gt;
+&lt;p&gt;📛 Prevents session IDs from being added to URLs (old-school fallback).&lt;/p&gt;
+&lt;h3 id=&#34;2-webasyncmanagerintegrationfilter&#34;&gt;2. WebAsyncManagerIntegrationFilter&lt;/h3&gt;
+&lt;p&gt;🔄 If you&amp;rsquo;re using async calls, this keeps your security info safe across threads.&lt;/p&gt;
+&lt;h3 id=&#34;3-securitycontextholderfilter&#34;&gt;3. SecurityContextHolderFilter&lt;/h3&gt;
+&lt;p&gt;🧠 Sets up the &lt;code&gt;SecurityContext&lt;/code&gt; — stores details about the logged-in user.&lt;/p&gt;
+&lt;h3 id=&#34;4-headerwriterfilter&#34;&gt;4. HeaderWriterFilter&lt;/h3&gt;
+&lt;p&gt;🛡️ Adds security headers like X-Frame-Options, Strict-Transport-Security, etc.&lt;/p&gt;
+&lt;h3 id=&#34;5-csrffilter&#34;&gt;5. CsrfFilter&lt;/h3&gt;
+&lt;p&gt;🧾 If you&amp;rsquo;re submitting a form (POST), this checks if the CSRF token is valid.&lt;/p&gt;
+&lt;h3 id=&#34;6-logoutfilter&#34;&gt;6. LogoutFilter&lt;/h3&gt;
+&lt;p&gt;🚪 If the URL is &lt;code&gt;/logout&lt;/code&gt;, this clears session and logs out the user.&lt;/p&gt;
+&lt;h3 id=&#34;7-usernamepasswordauthenticationfilter&#34;&gt;7. UsernamePasswordAuthenticationFilter&lt;/h3&gt;
+&lt;p&gt;🔐 If you&amp;rsquo;re submitting login credentials (&lt;code&gt;/login&lt;/code&gt;), this filter handles authentication.&lt;/p&gt;
+&lt;h3 id=&#34;8-defaultloginpagegeneratingfilter&#34;&gt;8. DefaultLoginPageGeneratingFilter&lt;/h3&gt;
+&lt;p&gt;📄 If no custom login page is defined, this auto-generates a login form.&lt;/p&gt;
+&lt;h3 id=&#34;9-defaultlogoutpagegeneratingfilter&#34;&gt;9. DefaultLogoutPageGeneratingFilter&lt;/h3&gt;
+&lt;p&gt;📄 Shows a logout success page if no custom one is given.&lt;/p&gt;
+&lt;h3 id=&#34;10-basicauthenticationfilter&#34;&gt;10. BasicAuthenticationFilter&lt;/h3&gt;
+&lt;p&gt;🔑 If using HTTP Basic Auth (like &lt;code&gt;Authorization: Basic ...&lt;/code&gt;), this authenticates the user.&lt;/p&gt;
+&lt;h3 id=&#34;11-requestcacheawarefilter&#34;&gt;11. RequestCacheAwareFilter&lt;/h3&gt;
+&lt;p&gt;💾 Remembers which page you wanted to access before login, so it can send you back there after login.&lt;/p&gt;
+&lt;h3 id=&#34;12-securitycontextholderawarerequestfilter&#34;&gt;12. SecurityContextHolderAwareRequestFilter&lt;/h3&gt;
+&lt;p&gt;🧩 Adds helper methods to your request object like &lt;code&gt;isUserInRole()&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;13-anonymousauthenticationfilter&#34;&gt;13. AnonymousAuthenticationFilter&lt;/h3&gt;
+&lt;p&gt;👤 If no one is logged in, this sets an &amp;ldquo;anonymous&amp;rdquo; user so nothing breaks.&lt;/p&gt;
+&lt;h3 id=&#34;14-exceptiontranslationfilter&#34;&gt;14. ExceptionTranslationFilter&lt;/h3&gt;
+&lt;p&gt;🚨 Catches errors like access denied or not logged in and handles redirects or 403 errors.&lt;/p&gt;
+&lt;h3 id=&#34;15-authorizationfilter&#34;&gt;15. AuthorizationFilter&lt;/h3&gt;
+&lt;p&gt;🔓 Final check: Is the user allowed to access this URL? If yes → allow, else → deny.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;internals-of-spring-security&#34;&gt;Internals of Spring Security&lt;/h1&gt;
+&lt;h3 id=&#34;important-classes&#34;&gt;Important Classes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;SpringBootWebSecurityConfiguration&lt;/strong&gt;&lt;/em&gt;
+-&amp;gt; This class  is the default configuration class of spring security.
+-&amp;gt; This class have method{defaultSecurityFilterChain} to authorize every request.
+-&amp;gt; It applies when no custom &lt;code&gt;SecurityFilterChain&lt;/code&gt; bean is defined.
+-&amp;gt; Used for basic form based login.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;HttpSecurity&lt;/strong&gt;&lt;/em&gt;
+-&amp;gt; It allows configuring web based security for specific http requests.
+-&amp;gt;By default it will be applied to all requests, but can be restricted using requestMatcher(RequestMatcher) or other similar methods.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;important-methods&#34;&gt;Important Methods&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;authorizeHttpRequests&lt;/strong&gt;&lt;/em&gt;
+-&amp;gt; It&amp;rsquo;s a child of HttpSecurity class.
+-&amp;gt; It is used to define &lt;strong&gt;authorization rules&lt;/strong&gt;
+-&amp;gt; eg: &lt;strong&gt;which HTTP requests require authentication and what roles/authorities are needed to access them&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;authentication-and-authorization&#34;&gt;Authentication and Authorization&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Authentication is about verifying who you are.&lt;/li&gt;
+&lt;li&gt;Authorization determines what you can do once you are Authenticated.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;authority-and-role-inside-authorization&#34;&gt;Authority and Role inside Authorization&lt;/h2&gt;
+&lt;h3 id=&#34;authority&#34;&gt;Authority&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Authority represents a single permission or privilege  a user has within the application.&lt;/li&gt;
+&lt;li&gt;Spring security uses GrantedAuthority objects to determine if a user can perform a specific action.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;role&#34;&gt;Role&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;GrantedAuthority that groups related permissions together.&lt;/li&gt;
+&lt;li&gt;It represents a broader user designation like &amp;ldquo;USER&amp;rdquo;, &amp;ldquo;ADMIN&amp;rdquo;, &amp;ldquo;EDITOR&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;By default  spring security have  a &amp;ldquo;ROLE_&amp;rdquo; prefix attached (eg, &amp;ldquo;ROLE_ADMIN&amp;rdquo;)&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     </item>
     

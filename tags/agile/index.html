@@ -244,7 +244,7 @@ Developer 3 &ndash;&gt;</p>
 <h6 id="operations-team">Operations Team</h6>
 <p>Package is given with instructions to operations team</p>
 <p>The Operations team deploys the app and then testers test.
-<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png"></p>
+<img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png" alt="Image Description"></p>
 <p>#Cons</p>
 <ol>
 <li>Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.</li>
@@ -253,7 +253,7 @@ Developer 3 &ndash;&gt;</p>
 <li>If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.</li>
 <li>Long Feedback cycle</li>
 <li>Long Iteration
-<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png"></li>
+<img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png" alt="Image Description"></li>
 </ol>
 <hr>
 <h2 id="continuous-integration">Continuous Integration</h2>
@@ -303,10 +303,10 @@ Developer 3 &ndash;&gt;</p>
 </ul>
 <h1 id="what-problem-does-docker-solve">What problem does Docker solve?</h1>
 <p>The main problem it solves is <em>dependency management</em>.
-<img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/dock1.png"></p>
+<img src="https://its-rawat.github.io/bigbits.github.io/images/dock1.png" alt="Image Description"></p>
 <hr>
 <h1 id="docker-architecture">Docker Architecture</h1>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png"></p>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png" alt="Image Description"></p>
 <hr>
 <h2 id="some-terms-to-understand">Some Terms to Understand</h2>
 <ol>
@@ -563,7 +563,7 @@ Via network name</li>
         <div class="post-content">
           
             <h1 id="types-of-software-testing">Types of Software Testing</h1>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png"></p>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png" alt="Image Description"></p>
 <hr>
           
         </div>
@@ -643,15 +643,145 @@ Via network name</li>
         
       </article>
     
+      <article class="post on-list">
+        <h1 class="post-title">
+          <a href="https://its-rawat.github.io/bigbits.github.io/posts/pl-sql/">PL/SQL Full Notes</a>
+        </h1>
+        <div class="post-meta"></div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/post/">post</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/agile/">Agile</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/">Theory</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/hands/">Hands</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/sbooltrue/">true</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/sql/">sql</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/pl/sql/">PL/SQL</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+
+
+        <div class="post-content">
+          
+            <h1 id="what-is-plsql">What is PL/SQL?</h1>
+<ol>
+<li><code>PL/SQL stands for Procedural Language Extension to SQL</code></li>
+<li>It is a Extension of SQL developed by Oracle.</li>
+<li>It adds SQL capabilities of procedural programming like variables, loops and conditional statements in SQL.</li>
+</ol>
+<h1 id="plsql-architecture">PL/SQL Architecture</h1>
+<h2 id="physical-architecture">Physical Architecture</h2>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/pl1.png" alt="Image Description"></p>
+<ul>
+<li>PL/SQL engine processes the entire PL/SQL block of code.</li>
+<li>It Separate SQL statements and Procedural statements.</li>
+</ul>
+<h3 id="simple-architecture-flow">Simple Architecture Flow</h3>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png" alt="Image Description"></p>
+<h2 id="plsql-logical-architecture">PL/SQL Logical Architecture</h2>
+<ul>
+<li><em><strong>Corporates with SQL Engine</strong></em>.</li>
+<li><em><strong>Enables Subprograms</strong></em> -&gt; Allows re-usability of code/script like variables and functions.</li>
+<li><em><strong>Dynamic Queries</strong></em>-&gt; We can modify or create new Queries.</li>
+<li><em><strong>Case Insensitivity</strong></em></li>
+<li><em><strong>Optimizer</strong></em>-&gt; It optimizes our code for better performance.</li>
+<li><strong>Enables Object-Oriented Programming</strong></li>
+<li><em><strong>Web Development</strong></em>
+#Extras
+<em><strong>Context Switching</strong></em>: <code>When you write SQL Query in PL/SQL the PL/SQL send the query to SQL Engine and the result will be returned this operation is called Context Switching.</code></li>
+</ul>
+<hr>
+<h1 id="pluggable-database">Pluggable Database</h1>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/pl2.png" alt="Image Description"></p>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button" href="/bigbits.github.io/posts/pl-sql/">Read more →</a>
+          </div>
+        
+      </article>
+    
+      <article class="post on-list">
+        <h1 class="post-title">
+          <a href="https://its-rawat.github.io/bigbits.github.io/posts/selenium-v4.29/">Selenium Notes</a>
+        </h1>
+        <div class="post-meta"></div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/testing/">testing</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/agile/">Agile</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/tcs/">TCS</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/code/">Theory/code</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/selenium/">selenium</a>&nbsp;
+            
+            #<a href="https://its-rawat.github.io/bigbits.github.io/tags/python/">python</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+
+
+        <div class="post-content">
+          
+            <h1 id="important-libraries">Important Libraries</h1>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">from selenium import webdriver 
+from selenium.webdriver.chrome.service import Service 
+from selenium.webdriver.support.ui import Select 
+from selenium.webdriver.common.by lmport By 
+from selenium.webdriver.support import expected_conditions as EC 
+from selenium.webdriver.support.ui import WebDriverWait 
+import time 
+from selenium.webdriver.common.action_chains import ActionChains 
+from selenium.webdriver.chrome.options import Options 
+from selenium webdriver.remote.webelement import WebElement
+</code></pre><ol>
+<li><em><strong>webdriver</strong></em></li>
+</ol>
+<blockquote>
+<p>imports the <code>webdriver</code> module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.</p></blockquote>
+<ol start="2">
+<li><em><strong>Service</strong></em></li>
+</ol>
+<blockquote>
+<p><code>Service</code> is used to manage the lifecycle of the <code>chromedriver.exe</code> process (starting, stopping, and communication).</p>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button" href="/bigbits.github.io/posts/selenium-v4.29/">Read more →</a>
+          </div>
+        
+      </article>
+    
 
     <div class="pagination">
   <div class="pagination__buttons">
     
-    
-      <a href="/bigbits.github.io/tags/agile/page/2/" class="button next">
-        <span class="button__text">Older posts</span>
-        <span class="button__icon">→</span>
-      </a>
     
   </div>
 </div>

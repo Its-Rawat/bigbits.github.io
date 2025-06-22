@@ -313,8 +313,8 @@ nltk: Tokenization, stopwords, and stemming
 </span></span></code></pre></div><hr>
 <h2 id="-define-the-model">🧠 Define the Model<a href="#-define-the-model" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SentimentAnalysis</span>(nn<span style="color:#f92672">.</span>Module):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, input_dim):
-</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, input_dim):
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span><span style="color:#a6e22e">__init__</span>()
 </span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>l1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(input_dim, <span style="color:#ae81ff">60</span>)
 </span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>l2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">10</span>)
 </span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>l3 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span>)

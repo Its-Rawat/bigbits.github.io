@@ -162,7 +162,7 @@ How to add spring security in your spring boot project STEP 1 {Configuration} Ad
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">7 min read (1333 words)</span></div>
+<span class="post-reading-time">9 min read (1764 words)</span></div>
 
   
     <span class="post-tags">
@@ -205,12 +205,52 @@ How to add spring security in your spring boot project STEP 1 {Configuration} Ad
       </ul>
     </li>
   </ul>
+
+  <ul>
+    <li><a href="#-login-request-flow-in-spring-security">🔐 Login Request Flow in Spring Security</a>
+      <ul>
+        <li><a href="#1-disableencodeurlfilter">1. DisableEncodeUrlFilter</a></li>
+        <li><a href="#2-webasyncmanagerintegrationfilter">2. WebAsyncManagerIntegrationFilter</a></li>
+        <li><a href="#3-securitycontextholderfilter">3. SecurityContextHolderFilter</a></li>
+        <li><a href="#4-headerwriterfilter">4. HeaderWriterFilter</a></li>
+        <li><a href="#5-csrffilter">5. CsrfFilter</a></li>
+        <li><a href="#6-logoutfilter">6. LogoutFilter</a></li>
+        <li><a href="#7-usernamepasswordauthenticationfilter">7. UsernamePasswordAuthenticationFilter</a></li>
+        <li><a href="#8-defaultloginpagegeneratingfilter">8. DefaultLoginPageGeneratingFilter</a></li>
+        <li><a href="#9-defaultlogoutpagegeneratingfilter">9. DefaultLogoutPageGeneratingFilter</a></li>
+        <li><a href="#10-basicauthenticationfilter">10. BasicAuthenticationFilter</a></li>
+        <li><a href="#11-requestcacheawarefilter">11. RequestCacheAwareFilter</a></li>
+        <li><a href="#12-securitycontextholderawarerequestfilter">12. SecurityContextHolderAwareRequestFilter</a></li>
+        <li><a href="#13-anonymousauthenticationfilter">13. AnonymousAuthenticationFilter</a></li>
+        <li><a href="#14-exceptiontranslationfilter">14. ExceptionTranslationFilter</a></li>
+        <li><a href="#15-authorizationfilter">15. AuthorizationFilter</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#important-classes">Important Classes</a></li>
+        <li><a href="#important-methods">Important Methods</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#authority-and-role-inside-authorization">Authority and Role inside Authorization</a>
+      <ul>
+        <li><a href="#authority">Authority</a></li>
+        <li><a href="#role">Role</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
   
 
   <div class="post-content"><div>
-        <p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/security.png"></p>
+        <p><img src="https://its-rawat.github.io/bigbits.github.io/images/security.png" alt="Image Description"></p>
 <h2 id="what">What<a href="#what" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.</p>
 <h2 id="why">Why<a href="#why" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
@@ -268,7 +308,7 @@ public class SecurityConfig {
 </ul>
 <h2 id="internal-flow-of-spring-security">Internal Flow Of Spring Security<a href="#internal-flow-of-spring-security" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <h3 id="diagram">Diagram<a href="#diagram" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241208135216.png"></p>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241208135216.png" alt="Image Description"></p>
 <h3 id="login-process-in-short">Login Process in Short<a href="#login-process-in-short" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ol>
 <li>Client enter username and password and send.</li>
@@ -294,7 +334,7 @@ public class SecurityConfig {
 <p>Finally, a success response is sent back to the client, confirming the user is logged in — and the process is complete.</p>
 <hr>
 <h3 id="login-process-in-depth">Login Process in Depth<a href="#login-process-in-depth" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<p><img alt="Image Description" src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241209114553.png">
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241209114553.png" alt="Image Description">
 <strong>We all remember this sign in page when we just started learning spring security. Although this page style is basic but when we click on <code>sign in</code> the working behind it is not the basic one which we encounter.</strong></p>
 <p><strong>Lets dive deep into it&rsquo;s working:</strong></p>
 <ol>
@@ -385,6 +425,76 @@ This token is passed to the <code>authenticate()</code> method inside <code>Prov
 Spring Security does <strong>a lot</strong> under the hood to keep your app safe.</p>
 <p>So the next time you see that plain login form, you’ll know there’s a whole team of security guards working in the background to protect your app. 🛡️</p>
 <hr>
+<h1 id="filters-chains">Filters Chains<a href="#filters-chains" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="-login-request-flow-in-spring-security">🔐 Login Request Flow in Spring Security<a href="#-login-request-flow-in-spring-security" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="1-disableencodeurlfilter">1. DisableEncodeUrlFilter<a href="#1-disableencodeurlfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>📛 Prevents session IDs from being added to URLs (old-school fallback).</p>
+<h3 id="2-webasyncmanagerintegrationfilter">2. WebAsyncManagerIntegrationFilter<a href="#2-webasyncmanagerintegrationfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>🔄 If you&rsquo;re using async calls, this keeps your security info safe across threads.</p>
+<h3 id="3-securitycontextholderfilter">3. SecurityContextHolderFilter<a href="#3-securitycontextholderfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>🧠 Sets up the <code>SecurityContext</code> — stores details about the logged-in user.</p>
+<h3 id="4-headerwriterfilter">4. HeaderWriterFilter<a href="#4-headerwriterfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>🛡️ Adds security headers like X-Frame-Options, Strict-Transport-Security, etc.</p>
+<h3 id="5-csrffilter">5. CsrfFilter<a href="#5-csrffilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>🧾 If you&rsquo;re submitting a form (POST), this checks if the CSRF token is valid.</p>
+<h3 id="6-logoutfilter">6. LogoutFilter<a href="#6-logoutfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>🚪 If the URL is <code>/logout</code>, this clears session and logs out the user.</p>
+<h3 id="7-usernamepasswordauthenticationfilter">7. UsernamePasswordAuthenticationFilter<a href="#7-usernamepasswordauthenticationfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>🔐 If you&rsquo;re submitting login credentials (<code>/login</code>), this filter handles authentication.</p>
+<h3 id="8-defaultloginpagegeneratingfilter">8. DefaultLoginPageGeneratingFilter<a href="#8-defaultloginpagegeneratingfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>📄 If no custom login page is defined, this auto-generates a login form.</p>
+<h3 id="9-defaultlogoutpagegeneratingfilter">9. DefaultLogoutPageGeneratingFilter<a href="#9-defaultlogoutpagegeneratingfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>📄 Shows a logout success page if no custom one is given.</p>
+<h3 id="10-basicauthenticationfilter">10. BasicAuthenticationFilter<a href="#10-basicauthenticationfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>🔑 If using HTTP Basic Auth (like <code>Authorization: Basic ...</code>), this authenticates the user.</p>
+<h3 id="11-requestcacheawarefilter">11. RequestCacheAwareFilter<a href="#11-requestcacheawarefilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>💾 Remembers which page you wanted to access before login, so it can send you back there after login.</p>
+<h3 id="12-securitycontextholderawarerequestfilter">12. SecurityContextHolderAwareRequestFilter<a href="#12-securitycontextholderawarerequestfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>🧩 Adds helper methods to your request object like <code>isUserInRole()</code>.</p>
+<h3 id="13-anonymousauthenticationfilter">13. AnonymousAuthenticationFilter<a href="#13-anonymousauthenticationfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>👤 If no one is logged in, this sets an &ldquo;anonymous&rdquo; user so nothing breaks.</p>
+<h3 id="14-exceptiontranslationfilter">14. ExceptionTranslationFilter<a href="#14-exceptiontranslationfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>🚨 Catches errors like access denied or not logged in and handles redirects or 403 errors.</p>
+<h3 id="15-authorizationfilter">15. AuthorizationFilter<a href="#15-authorizationfilter" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>🔓 Final check: Is the user allowed to access this URL? If yes → allow, else → deny.</p>
+<hr>
+<h1 id="internals-of-spring-security">Internals of Spring Security<a href="#internals-of-spring-security" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h3 id="important-classes">Important Classes<a href="#important-classes" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><em><strong>SpringBootWebSecurityConfiguration</strong></em>
+-&gt; This class  is the default configuration class of spring security.
+-&gt; This class have method{defaultSecurityFilterChain} to authorize every request.
+-&gt; It applies when no custom <code>SecurityFilterChain</code> bean is defined.
+-&gt; Used for basic form based login.</li>
+<li><em><strong>HttpSecurity</strong></em>
+-&gt; It allows configuring web based security for specific http requests.
+-&gt;By default it will be applied to all requests, but can be restricted using requestMatcher(RequestMatcher) or other similar methods.</li>
+</ul>
+<h3 id="important-methods">Important Methods<a href="#important-methods" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><em><strong>authorizeHttpRequests</strong></em>
+-&gt; It&rsquo;s a child of HttpSecurity class.
+-&gt; It is used to define <strong>authorization rules</strong>
+-&gt; eg: <strong>which HTTP requests require authentication and what roles/authorities are needed to access them</strong>.</li>
+</ul>
+<hr>
+<h1 id="authentication-and-authorization">Authentication and Authorization<a href="#authentication-and-authorization" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li>Authentication is about verifying who you are.</li>
+<li>Authorization determines what you can do once you are Authenticated.</li>
+</ul>
+<h2 id="authority-and-role-inside-authorization">Authority and Role inside Authorization<a href="#authority-and-role-inside-authorization" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="authority">Authority<a href="#authority" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>Authority represents a single permission or privilege  a user has within the application.</li>
+<li>Spring security uses GrantedAuthority objects to determine if a user can perform a specific action.</li>
+</ul>
+<h3 id="role">Role<a href="#role" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>GrantedAuthority that groups related permissions together.</li>
+<li>It represents a broader user designation like &ldquo;USER&rdquo;, &ldquo;ADMIN&rdquo;, &ldquo;EDITOR&rdquo;.</li>
+<li>By default  spring security have  a &ldquo;ROLE_&rdquo; prefix attached (eg, &ldquo;ROLE_ADMIN&rdquo;)</li>
+</ul>
 
       </div></div>
 

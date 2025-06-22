@@ -8,6 +8,37 @@
     <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/git-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/git-workflow/</guid>
+      <description>&lt;h2 id=&#34;what-is-git-workflow&#34;&gt;What is Git workflow&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606222803.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;benefits-of-git-workflow&#34;&gt;Benefits of Git Workflow&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606223028.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;long-lived--branch-and-short-lived-branch&#34;&gt;Long Lived  branch and Short Lived branch&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Long lived branch are are branches which remain open throughout the project and short lived for bugs fixing or for single purposes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;workflow-selection&#34;&gt;Workflow selection&lt;/h2&gt;
+&lt;h3 id=&#34;team-size&#34;&gt;Team Size&lt;/h3&gt;</description>
+      <content>&lt;h2 id=&#34;what-is-git-workflow&#34;&gt;What is Git workflow&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606222803.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;benefits-of-git-workflow&#34;&gt;Benefits of Git Workflow&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606223028.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;long-lived--branch-and-short-lived-branch&#34;&gt;Long Lived  branch and Short Lived branch&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Long lived branch are are branches which remain open throughout the project and short lived for bugs fixing or for single purposes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;workflow-selection&#34;&gt;Workflow selection&lt;/h2&gt;
+&lt;h3 id=&#34;team-size&#34;&gt;Team Size&lt;/h3&gt;
+</content>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/mapping-using-hibernate-in-springboot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -26,14 +57,14 @@
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/</guid>
       <description>&lt;h1 id=&#34;need-of-dtos-when-working-with-apis&#34;&gt;Need of DTOs when working with APIs&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png&#34; alt=&#34;Image Description&#34;&gt;
 &lt;code&gt;In Short:&lt;/code&gt;
 We use DTOs to ensure our entity data won’t be affected directly, promoting data encapsulation, security, and cleaner API design.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Extra Info&lt;/code&gt;
 DTO is a design pattern.&lt;/p&gt;
 &lt;hr&gt;</description>
       <content>&lt;h1 id=&#34;need-of-dtos-when-working-with-apis&#34;&gt;Need of DTOs when working with APIs&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png&#34; alt=&#34;Image Description&#34;&gt;
 &lt;code&gt;In Short:&lt;/code&gt;
 We use DTOs to ensure our entity data won’t be affected directly, promoting data encapsulation, security, and cleaner API design.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Extra Info&lt;/code&gt;
@@ -111,7 +142,7 @@ DTO is a design pattern.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h4 id=&#34;how-to-verify-if-we-wrote-a-good-and-effective-user-story&#34;&gt;How to Verify if we wrote a good and effective user story?&lt;/h4&gt;
 &lt;h6 id=&#34;invest&#34;&gt;&lt;em&gt;&lt;strong&gt;{INVEST}&lt;/strong&gt;&lt;/em&gt;&lt;/h6&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250210232941.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250210232941.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;2-story-points&#34;&gt;2. Story Points&lt;/h4&gt;
 &lt;p&gt;Story points Story points are a relative unit of measure to assess whether a user story is big or small. You can use different scales for story points (e.g. 1, 3 or 5; t- shirt sizes s, m, l, xl, xxl).&lt;/p&gt;
 &lt;h4 id=&#34;3-product-backlog&#34;&gt;3. Product Backlog&lt;/h4&gt;
@@ -128,13 +159,13 @@ DTO is a design pattern.&lt;/p&gt;
 &lt;h4 id=&#34;9-sprint&#34;&gt;9. Sprint&lt;/h4&gt;
 &lt;p&gt;A period of time in which the team will work on a defined set of user stories.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/FirstNote.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/FirstNote.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/SecondNote.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/SecondNote.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/ThirdNote.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/ThirdNote.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/FourthNote.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/FourthNote.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;before-you-start-doing-agile&#34;&gt;Before you start doing Agile&amp;hellip;&lt;/h2&gt;
 &lt;p&gt;Start with Sprint O (Planning).&lt;/p&gt;
@@ -157,7 +188,7 @@ DTO is a design pattern.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;p&gt;Agile Case Study: How to break down a very complex project into manageable tasks&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-c.udemycdn.com/redactor/raw/article_lecture/2023-08-18_15-08-09-f1e365d1866d92a436b732c6ad103568.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-c.udemycdn.com/redactor/raw/article_lecture/2023-08-18_15-08-09-f1e365d1866d92a436b732c6ad103568.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Breaking down a complex project into manageable tasks is fundamental in Agile methodologies. Here’s a simplified step-by-step process:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1. Define the Vision:&lt;/strong&gt; Start with the end goal or the main objective of the project. What are you trying to achieve? This can be documented in a vision statement or a product roadmap.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2. Create Epics:&lt;/strong&gt; An epic is a large chunk of work that can be broken down into smaller tasks. It’s more granular than the vision but not as detailed as individual tasks. For example, “User Authentication” might be an epic for a software project.&lt;/p&gt;
@@ -273,11 +304,11 @@ DTO is a design pattern.&lt;/p&gt;
       <description>&lt;h2 id=&#34;welcome-to-aditya-rawats-big-bits-blogs&#34;&gt;Welcome to Aditya Rawat&amp;rsquo;s Big Bits Blogs&lt;/h2&gt;
 &lt;p&gt;Hi there! I&amp;rsquo;m Aditya, a passionate developer with many years of experience in Java, Spring Boot, and embedded systems. I specialize in building robust backend applications and innovative solutions. Explore my repositories to see the projects I&amp;rsquo;ve worked on, and feel free to connect with me for collaboration or discussions.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s code something amazing!&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h2 id=&#34;welcome-to-aditya-rawats-big-bits-blogs&#34;&gt;Welcome to Aditya Rawat&amp;rsquo;s Big Bits Blogs&lt;/h2&gt;
 &lt;p&gt;Hi there! I&amp;rsquo;m Aditya, a passionate developer with many years of experience in Java, Spring Boot, and embedded systems. I specialize in building robust backend applications and innovative solutions. Explore my repositories to see the projects I&amp;rsquo;ve worked on, and feel free to connect with me for collaboration or discussions.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s code something amazing!&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/tech.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -580,7 +611,7 @@ DTO is a design pattern.&lt;/p&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;object-mode-3d-viewport&#34;&gt;Object Mode (3D viewport)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -741,7 +772,7 @@ DTO is a design pattern.&lt;/p&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;selection-edit-mode&#34;&gt;Selection (Edit Mode)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -820,8 +851,8 @@ DTO is a design pattern.&lt;/p&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;heading-3&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;modeling-edit-mode&#34;&gt;Modeling (Edit Mode)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -1435,7 +1466,7 @@ DTO is a design pattern.&lt;/p&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-4&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;window-general-most-window-types&#34;&gt;Window General (most window types)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -1531,7 +1562,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
 &lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
 &lt;p&gt;The Operations team deploys the app and then testers test.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;p&gt;#Cons&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
@@ -1540,7 +1571,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
 &lt;li&gt;Long Feedback cycle&lt;/li&gt;
 &lt;li&gt;Long Iteration
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
@@ -1553,7 +1584,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
 &lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
 &lt;p&gt;The Operations team deploys the app and then testers test.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;p&gt;#Cons&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
@@ -1562,7 +1593,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
 &lt;li&gt;Long Feedback cycle&lt;/li&gt;
 &lt;li&gt;Long Iteration
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
@@ -1580,29 +1611,24 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;difference-between-old-school-integration-and-ci&#34;&gt;Difference Between Old School Integration and CI&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;Integration is painful and effort consuming.&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Integration is automated and quick.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Integration is automated and quick.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Fixing Issues at the end of interations&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Issues show up early, because of frequent integration.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Issues show up early, because of frequent integration.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Merge issues can hold up teams&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Broken builds are fixed with immediate priority by developers.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Broken builds are fixed with immediate priority by developers.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Long feedback cycle for functional defects&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Shorter feedback- developer is notified immediately.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Shorter feedback- developer is notified immediately.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Long Interation&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Shorter iterations. Faster time to market.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Shorter iterations. Faster time to market.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;CI&lt;/em&gt; (&lt;em&gt;Continuous Integration&lt;/em&gt;) pipeline means where developers frequently merge code changes into a central repository, allowing early detection of issues.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;CD&lt;/em&gt; refers to &lt;em&gt;continuous deployment&lt;/em&gt; or &lt;em&gt;continuous delivery&lt;/em&gt;, which automates the application&amp;rsquo;s release to its intended environment, ensuring that it is readily available to users.&lt;/strong&gt;
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c1.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;old-school-operations-pain-points&#34;&gt;OLD School Operations Pain Points&lt;/h2&gt;
 &lt;ol&gt;
@@ -1613,7 +1639,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-development&#34;&gt;Continuous Development&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what-is-devops&#34;&gt;What is DevOps?&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;DevOps combines development (Dev) and operations (Ops) to increase the efficiency, speed, and security of software development and delivery compared to traditional processes.&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;why-we-need-devops&#34;&gt;Why we need DevOps?&lt;/h3&gt;
@@ -1629,29 +1655,29 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/</guid>
       <description>&lt;h2 id=&#34;spring-boot-banners&#34;&gt;Spring Boot Banners&lt;/h2&gt;
 &lt;p&gt;In this endpoint of internet, we’ll explore how to create a custom banner in a Spring Boot application.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/custombanner.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/custombanner.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 &lt;p&gt;When a Spring Boot application starts, it prints a &lt;strong&gt;banner&lt;/strong&gt;, a visual representation, or text (often with ASCII graphics or branding information). The banner is a way to provide a more engaging and informative startup experience for developers and users such as the application name, version, or any other relevant data.&lt;/p&gt;</description>
       <content>&lt;h2 id=&#34;spring-boot-banners&#34;&gt;Spring Boot Banners&lt;/h2&gt;
 &lt;p&gt;In this endpoint of internet, we’ll explore how to create a custom banner in a Spring Boot application.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/custombanner.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/custombanner.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 &lt;p&gt;When a Spring Boot application starts, it prints a &lt;strong&gt;banner&lt;/strong&gt;, a visual representation, or text (often with ASCII graphics or branding information). The banner is a way to provide a more engaging and informative startup experience for developers and users such as the application name, version, or any other relevant data.&lt;/p&gt;
 &lt;p&gt;By default, Spring Boot includes a simple banner displaying the Spring logo and the version number. Here’s an example of what the default banner looks like:
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdgvfsgffs.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdgvfsgffs.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;how-to-create-custom-spring-boot-banners&#34;&gt;How to create Custom Spring Boot Banners&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Create a banner.txt file under your resource directory.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdfsf.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdfsf.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Go to this website &lt;a href=&#34;https://www.ascii-art.de/ascii/&#34;&gt;web&lt;/a&gt; and get the design of your preferences then &lt;code&gt;copy&lt;/code&gt; &amp;amp; &lt;code&gt;paste&lt;/code&gt; it in banner.txt.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/scs.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/scs.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;You can also add some more information like.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/jkthghbgh.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/jkthghbgh.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-copy&#34; data-lang=&#34;copy&#34;&gt;Welcome to Spring Boot App ${spring.application.name}  
@@ -1660,11 +1686,11 @@ Running on: ${os.name}
 &lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;To make these properties work you have to define them in your &lt;code&gt;application.properties&lt;/code&gt;  file.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdsdsds.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdsdsds.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The Output will look like this:
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/llllfs.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/llllfs.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
@@ -1683,10 +1709,10 @@ Running on: ${os.name}
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -1909,10 +1935,10 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -2139,27 +2165,27 @@ Via network name&lt;/li&gt;
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/chennai-in-bits/</guid>
       <description>&lt;h1 id=&#34;exploring-chennai-city-meets-coastal-charm&#34;&gt;&lt;strong&gt;Exploring Chennai: City Meets Coastal Charm&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;Chennai, the vibrant capital of Tamil Nadu, offers a unique blend of culture, history, and modernity. From serene beaches to bustling markets, the city has something for everyone.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_161026.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_161026.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;beach-bliss&#34;&gt;&lt;strong&gt;Beach Bliss&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;One hidden gem is Olive Beach in Thoraipakkam. This peaceful spot is ideal for relaxation and offers picturesque views—perfect for turtle sightings too.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_162033.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_162033.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;navigating-the-city&#34;&gt;&lt;strong&gt;Navigating the City&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Chennai’s public transportation—Metro Rail, suburban trains, and buses—makes commuting efficient. Be cautious of auto-rickshaw scams; using ride-hailing apps is often safer and more economical, You Can use Rapido, Ola, Uber.&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;exploring-chennai-city-meets-coastal-charm&#34;&gt;&lt;strong&gt;Exploring Chennai: City Meets Coastal Charm&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;Chennai, the vibrant capital of Tamil Nadu, offers a unique blend of culture, history, and modernity. From serene beaches to bustling markets, the city has something for everyone.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_161026.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_161026.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;beach-bliss&#34;&gt;&lt;strong&gt;Beach Bliss&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;One hidden gem is Olive Beach in Thoraipakkam. This peaceful spot is ideal for relaxation and offers picturesque views—perfect for turtle sightings too.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_162033.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_162033.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;navigating-the-city&#34;&gt;&lt;strong&gt;Navigating the City&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Chennai’s public transportation—Metro Rail, suburban trains, and buses—makes commuting efficient. Be cautious of auto-rickshaw scams; using ride-hailing apps is often safer and more economical, You Can use Rapido, Ola, Uber.&lt;/p&gt;
 &lt;h3 id=&#34;weather-and-climate&#34;&gt;&lt;strong&gt;Weather and Climate&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Chennai has a tropical climate with scorching summers reaching above 40°C. The monsoon brings some relief but humidity remains high.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_170308.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_170308.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;shopping-on-a-budget&#34;&gt;&lt;strong&gt;Shopping on a Budget&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;For economical shopping, D-Marts are the go-to destination for essentials.&lt;/p&gt;
 &lt;h1 id=&#34;thanks&#34;&gt;THANKS&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_161444.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/IMG_20250126_161444.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -2205,8 +2231,7 @@ We are here to present the summary of our incubator and share what we’ve learn
 &lt;h3 id=&#34;-to-explain-this-in-simple-terms&#34;&gt;🧠 To explain this in simple terms:&lt;/h3&gt;
 &lt;p&gt;Imagine you went to Ladakh on a  car, in that case scenario you might be  driving on various surfaces like &lt;strong&gt;sand&lt;/strong&gt;, &lt;strong&gt;ice&lt;/strong&gt;, or &lt;strong&gt;concrete&lt;/strong&gt;.&lt;br&gt;
 Each surface affects how the car turns or skids.&lt;br&gt;
-Similarly, our simulation replicates how a robot might behave under such varying conditions, helping us understand and train it better.&lt;/p&gt;
-&lt;/blockquote&gt;
+Similarly, our simulation replicates how a robot might behave under such varying conditions, helping us understand and train it better.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;This simulation was built using the &lt;strong&gt;Wheeled Lab&lt;/strong&gt; package available inside Isaac Sim.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Important Note:&lt;/strong&gt;&lt;br&gt;
 The primary goal of the incubator was &lt;em&gt;not&lt;/em&gt; 3D model development.&lt;br&gt;
@@ -2233,12 +2258,10 @@ Instead, it was to &lt;strong&gt;generate synthetic data&lt;/strong&gt; by train
 &lt;h2 id=&#34;questions&#34;&gt;Questions&lt;/h2&gt;
 &lt;h3 id=&#34;isaac-lab&#34;&gt;Isaac lab?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Specifically Only for robot learning.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Specifically Only for robot learning.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;isaac-sim&#34;&gt;Isaac sim?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Robot learning can be done in it but it also being used for more things then robots.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Robot learning can be done in it but it also being used for more things then robots.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;how-your-incubator-is-different-from-other-physical-robot-pickup-arm&#34;&gt;How your incubator is different from other physical robot pickup arm?&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
@@ -2246,25 +2269,20 @@ Instead, it was to &lt;strong&gt;generate synthetic data&lt;/strong&gt; by train
 &lt;li&gt;Less const&lt;/li&gt;
 &lt;li&gt;Efficient Development Cycle&lt;/li&gt;
 &lt;li&gt;Multiple virtual Environments.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;how-you-implemented-rl-in-your-incubator&#34;&gt;How you implemented RL in your Incubator?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;RL is in-built inside Isaac sim.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;RL is in-built inside Isaac sim.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;where-are-we-using-python-script-in-our-incubator&#34;&gt;Where are we using python script in our Incubator.&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;You can control robots, add sensors, move objects, and simulate environments using &lt;strong&gt;Python&lt;/strong&gt; arguments.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;You can control robots, add sensors, move objects, and simulate environments using &lt;strong&gt;Python&lt;/strong&gt; arguments.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;why-are-we-using-physicx-&#34;&gt;Why are we using physicX ?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Used for accelerating the GPU.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Used for accelerating the GPU.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;why-the-car-needs-to-be-drift&#34;&gt;Why the car needs to be drift?&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;we are simulating drifting to study complex vehicle dynamics like traction loss, yaw control, and how cars behave under different environment  and steering conditions.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;we are simulating drifting to study complex vehicle dynamics like traction loss, yaw control, and how cars behave under different environment  and steering conditions.&lt;/p&gt;&lt;/blockquote&gt;
 </content>
     </item>
     
@@ -2275,10 +2293,10 @@ Instead, it was to &lt;strong&gt;generate synthetic data&lt;/strong&gt; by train
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/</guid>
       <description>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;</description>
       <content>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 </content>
     </item>
@@ -2423,8 +2441,8 @@ Instead, it was to &lt;strong&gt;generate synthetic data&lt;/strong&gt; by train
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;-define-the-model&#34;&gt;🧠 Define the Model&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SentimentAnalysis&lt;/span&gt;(nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Module):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __init__(self, input_dim):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        super()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;__init__()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;__init__&lt;/span&gt;(self, input_dim):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        super()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;__init__&lt;/span&gt;()
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;l1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Linear(input_dim, &lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;l2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Linear(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;l3 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Linear(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
@@ -3419,13 +3437,13 @@ SELECT get_employee_salary(101);
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -3440,7 +3458,7 @@ SELECT get_employee_salary(101);
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-plsql&#34;&gt;What is PL/SQL?&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;PL/SQL stands for Procedural Language Extension to SQL&lt;/code&gt;&lt;/li&gt;
@@ -3449,13 +3467,13 @@ SELECT get_employee_salary(101);
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -3470,7 +3488,7 @@ SELECT get_employee_salary(101);
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what-is-pdb&#34;&gt;What is PDB?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Pluggable Database (PDB)&lt;/strong&gt; is a portable collection of schemas, tables, and objects that can be plugged into a &lt;strong&gt;Container Database (CDB)&lt;/strong&gt; in Oracle.&lt;/p&gt;
 &lt;h2 id=&#34;why-pdb&#34;&gt;Why PDB?&lt;/h2&gt;
@@ -3496,28 +3514,25 @@ SELECT get_employee_salary(101);
 &lt;hr&gt;
 &lt;h1 id=&#34;what-are-blocks&#34;&gt;What are Blocks?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Block is a logical unit of code that groups related declarations, statements. &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl3.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;structure-1&#34;&gt;Structure&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;DECLARE&lt;/strong&gt;&lt;/em&gt; Block.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Here we declare Variables, const, exceptions.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Here we declare Variables, const, exceptions.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;EXECUTION&lt;/strong&gt;&lt;/em&gt; BLOCK.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Contains Executable Statements like SQL, procedural statements.
-Starts with &lt;em&gt;&lt;strong&gt;BEGIN&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+Starts with &lt;em&gt;&lt;strong&gt;BEGIN&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;EXCEPTION HANDLING&lt;/strong&gt;&lt;/em&gt; BLOCK.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Starts with &lt;em&gt;&lt;strong&gt;EXCEPTION&lt;/strong&gt;&lt;/em&gt;
-Handles exceptions and errors during execution.&lt;/p&gt;
-&lt;/blockquote&gt;
+Handles exceptions and errors during execution.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;syntax-of-plsql-block&#34;&gt;Syntax of PL/SQL Block&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;DECLARE 
    -- Declaration statements (optional)
@@ -3742,14 +3757,12 @@ export default App;
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;incubator-quote-app&#34;&gt;Incubator Quote App&lt;/h1&gt;
 &lt;h2 id=&#34;usestate&#34;&gt;UseState&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;useState&lt;/code&gt; is a &lt;strong&gt;React Hook&lt;/strong&gt; that allows functional components to have and manage &lt;strong&gt;state&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;useState&lt;/code&gt; is a &lt;strong&gt;React Hook&lt;/strong&gt; that allows functional components to have and manage &lt;strong&gt;state&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;axios&#34;&gt;Axios&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Axios&lt;/strong&gt; is a &lt;strong&gt;JavaScript library&lt;/strong&gt; used to make &lt;strong&gt;HTTP requests&lt;/strong&gt; from the browser (or Node.js) to a server.
-Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it uses &lt;strong&gt;Promises&lt;/strong&gt; to handle asynchronous operations like fetching data from an API.&lt;/p&gt;
-&lt;/blockquote&gt;
+Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it uses &lt;strong&gt;Promises&lt;/strong&gt; to handle asynchronous operations like fetching data from an API.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;It simplifies making GET, POST, PUT, DELETE, etc. requests.&lt;/p&gt;
@@ -3782,14 +3795,14 @@ Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it us
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/computer-organization--architect/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;base-system-in-computer-architecture&#34;&gt;Base System in Computer Architecture&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;code&gt;Refer Unit 1 FIT Notes &lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/bWrsk0QizEk?si=6XBleKlCR-PaCF_C
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;best-one-shot&#34;&gt;Best One Shot&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/NY2gz_Kzc0Q?si=YburSfFaLyNTFhf0
 &lt;/code&gt;&lt;/pre&gt;</description>
-      <content>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;base-system-in-computer-architecture&#34;&gt;Base System in Computer Architecture&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;code&gt;Refer Unit 1 FIT Notes &lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/bWrsk0QizEk?si=6XBleKlCR-PaCF_C
@@ -3805,91 +3818,91 @@ Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it us
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/dsa/</guid>
       <description>&lt;h1 id=&#34;what-is-dsa&#34;&gt;What is DSA?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;types-of-data-structure&#34;&gt;Types of Data Structure&lt;/h1&gt;
 &lt;h2 id=&#34;sequential-data-structure&#34;&gt;Sequential Data Structure&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;non-linear-data-structure&#34;&gt;Non-Linear Data Structure&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;categories-of-data-structure&#34;&gt;Categories of Data Structure&lt;/h1&gt;
 &lt;h2 id=&#34;primitive-and-non-primitive&#34;&gt;Primitive and Non-Primitive&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418195720.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418195720.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;need-of-data-structure&#34;&gt;Need of Data Structure&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418200016.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418200016.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;efficiency-of-an-algorithm&#34;&gt;Efficiency of an Algorithm&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Time Complexity
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/yashClick.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/yashClick.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Space Complexity
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201520.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201520.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;abstract-data-type&#34;&gt;Abstract Data Type&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201848.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201848.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;abstract-data-types-implementation&#34;&gt;Abstract Data Types Implementation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Arrays ADT&lt;/li&gt;
 &lt;li&gt;Linked List ADT
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418202511.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418202511.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Stack ADT
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418203734.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418203734.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;stack-operations&#34;&gt;Stack Operations&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204559.png&#34;&gt;
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204610.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204559.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204610.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;stack-adt-operations-using-arrays&#34;&gt;Stack ADT Operations using Arrays&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204833.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204833.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-dsa&#34;&gt;What is DSA?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;types-of-data-structure&#34;&gt;Types of Data Structure&lt;/h1&gt;
 &lt;h2 id=&#34;sequential-data-structure&#34;&gt;Sequential Data Structure&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;non-linear-data-structure&#34;&gt;Non-Linear Data Structure&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;categories-of-data-structure&#34;&gt;Categories of Data Structure&lt;/h1&gt;
 &lt;h2 id=&#34;primitive-and-non-primitive&#34;&gt;Primitive and Non-Primitive&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418195720.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418195720.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;need-of-data-structure&#34;&gt;Need of Data Structure&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418200016.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418200016.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;efficiency-of-an-algorithm&#34;&gt;Efficiency of an Algorithm&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Time Complexity
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/yashClick.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/yashClick.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Space Complexity
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201520.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201520.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;abstract-data-type&#34;&gt;Abstract Data Type&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201848.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201848.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;abstract-data-types-implementation&#34;&gt;Abstract Data Types Implementation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Arrays ADT&lt;/li&gt;
 &lt;li&gt;Linked List ADT
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418202511.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418202511.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Stack ADT
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418203734.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418203734.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;stack-operations&#34;&gt;Stack Operations&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204559.png&#34;&gt;
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204610.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204559.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204610.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;stack-adt-operations-using-arrays&#34;&gt;Stack ADT Operations using Arrays&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204833.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204833.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;stack-operations-1&#34;&gt;Stack Operations&lt;/h4&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418205257.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418205257.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;stack-applications&#34;&gt;Stack Applications&lt;/h4&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418205419.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418205419.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;types-of-expression&#34;&gt;Types of Expression&lt;/h4&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418210220.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418210220.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -3914,8 +3927,7 @@ from selenium webdriver.remote.webelement import WebElement
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;webdriver&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Service&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -3936,50 +3948,42 @@ from selenium webdriver.remote.webelement import WebElement
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;webdriver&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Service&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;Service&lt;/code&gt; is used to manage the lifecycle of the &lt;code&gt;chromedriver.exe&lt;/code&gt; process (starting, stopping, and communication).&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Service&lt;/code&gt; is used to manage the lifecycle of the &lt;code&gt;chromedriver.exe&lt;/code&gt; process (starting, stopping, and communication).&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Select&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import Select&lt;/code&gt; imports the &lt;code&gt;Select&lt;/code&gt; class, which is used to handle dropdown menus in Selenium.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import Select&lt;/code&gt; imports the &lt;code&gt;Select&lt;/code&gt; class, which is used to handle dropdown menus in Selenium.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;expected_conditions&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;from selenium.webdriver.support import expected_conditions as EC&lt;/code&gt; imports &lt;code&gt;expected_conditions&lt;/code&gt;, which defines conditions to wait for (like element visibility) before performing actions.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support import expected_conditions as EC&lt;/code&gt; imports &lt;code&gt;expected_conditions&lt;/code&gt;, which defines conditions to wait for (like element visibility) before performing actions.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;WebDriverWait&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import WebDriverWait&lt;/code&gt; imports &lt;code&gt;WebDriverWait&lt;/code&gt;, which is used to wait for a specific condition to be met before proceeding.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import WebDriverWait&lt;/code&gt; imports &lt;code&gt;WebDriverWait&lt;/code&gt;, which is used to wait for a specific condition to be met before proceeding.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;6&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;ActionChains&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;from selenium.webdriver.common.action_chains import ActionChains&lt;/code&gt; imports &lt;code&gt;ActionChains&lt;/code&gt;, which is used to perform complex user interactions like hover, drag-and-drop, and right-click.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.common.action_chains import ActionChains&lt;/code&gt; imports &lt;code&gt;ActionChains&lt;/code&gt;, which is used to perform complex user interactions like hover, drag-and-drop, and right-click.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;7&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Options&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;from selenium.webdriver.chrome.options import Options&lt;/code&gt; imports &lt;code&gt;Options&lt;/code&gt;, which is used to set Chrome-specific settings like headless mode, disabling extensions, etc.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.chrome.options import Options&lt;/code&gt; imports &lt;code&gt;Options&lt;/code&gt;, which is used to set Chrome-specific settings like headless mode, disabling extensions, etc.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;8&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;WebElement&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Represents an HTML element.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Represents an HTML element.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h1 id=&#34;basic-code-examples&#34;&gt;Basic Code Examples&lt;/h1&gt;
 &lt;h2 id=&#34;google-search-example&#34;&gt;Google Search Example&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver
@@ -4064,8 +4068,7 @@ driver.quit();
 print(&amp;#34;Completed&amp;#34;);
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;blockquote&gt;
-&lt;p&gt;📎 &lt;strong&gt;List of Chrome Driver Arguments:&lt;/strong&gt; &lt;a href=&#34;https://gist.github.com/ntamvl/4f93bbb7c9b4829c601104a2d2f91fe5&#34;&gt;View the Resource&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;📎 &lt;strong&gt;List of Chrome Driver Arguments:&lt;/strong&gt; &lt;a href=&#34;https://gist.github.com/ntamvl/4f93bbb7c9b4829c601104a2d2f91fe5&#34;&gt;View the Resource&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;topic-wise-examples&#34;&gt;Topic-Wise-Examples&lt;/h1&gt;
 &lt;h2 id=&#34;switch-to-new-browser-instance-of-window--tab&#34;&gt;Switch to new browser instance of &amp;lsquo;window&amp;rsquo; || &amp;rsquo;tab&amp;rsquo;&lt;/h2&gt;
@@ -4325,7 +4328,7 @@ time.sleep(3);
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-security-introduction/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
 &lt;p&gt;Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.&lt;/p&gt;
 &lt;h2 id=&#34;why&#34;&gt;Why&lt;/h2&gt;
@@ -4334,7 +4337,7 @@ time.sleep(3);
 &lt;h3 id=&#34;step-1-configuration&#34;&gt;STEP 1 {Configuration}&lt;/h3&gt;
 &lt;p&gt;Add the latest &lt;code&gt;spring-boot-starter-security&lt;/code&gt; dependency in your pom.xml file.
 You can check the latest version from &lt;a href=&#34;https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-      <content>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/security.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
 &lt;p&gt;Spring Security is a powerful framework used to secure Java-based applications. It provides comprehensive support for authentication (Verifying the identity of a user), authorization (Determining what resources a user can access) for java application.&lt;/p&gt;
 &lt;h2 id=&#34;why&#34;&gt;Why&lt;/h2&gt;
@@ -4392,7 +4395,7 @@ public class SecurityConfig {
 &lt;/ul&gt;
 &lt;h2 id=&#34;internal-flow-of-spring-security&#34;&gt;Internal Flow Of Spring Security&lt;/h2&gt;
 &lt;h3 id=&#34;diagram&#34;&gt;Diagram&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241208135216.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241208135216.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;login-process-in-short&#34;&gt;Login Process in Short&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Client enter username and password and send.&lt;/li&gt;
@@ -4418,7 +4421,7 @@ public class SecurityConfig {
 &lt;p&gt;Finally, a success response is sent back to the client, confirming the user is logged in — and the process is complete.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;login-process-in-depth&#34;&gt;Login Process in Depth&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241209114553.png&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020241209114553.png&#34; alt=&#34;Image Description&#34;&gt;
 &lt;strong&gt;We all remember this sign in page when we just started learning spring security. Although this page style is basic but when we click on &lt;code&gt;sign in&lt;/code&gt; the working behind it is not the basic one which we encounter.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lets dive deep into it&amp;rsquo;s working:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -4509,6 +4512,76 @@ This token is passed to the &lt;code&gt;authenticate()&lt;/code&gt; method insid
 Spring Security does &lt;strong&gt;a lot&lt;/strong&gt; under the hood to keep your app safe.&lt;/p&gt;
 &lt;p&gt;So the next time you see that plain login form, you’ll know there’s a whole team of security guards working in the background to protect your app. 🛡️&lt;/p&gt;
 &lt;hr&gt;
+&lt;h1 id=&#34;filters-chains&#34;&gt;Filters Chains&lt;/h1&gt;
+&lt;h2 id=&#34;-login-request-flow-in-spring-security&#34;&gt;🔐 Login Request Flow in Spring Security&lt;/h2&gt;
+&lt;h3 id=&#34;1-disableencodeurlfilter&#34;&gt;1. DisableEncodeUrlFilter&lt;/h3&gt;
+&lt;p&gt;📛 Prevents session IDs from being added to URLs (old-school fallback).&lt;/p&gt;
+&lt;h3 id=&#34;2-webasyncmanagerintegrationfilter&#34;&gt;2. WebAsyncManagerIntegrationFilter&lt;/h3&gt;
+&lt;p&gt;🔄 If you&amp;rsquo;re using async calls, this keeps your security info safe across threads.&lt;/p&gt;
+&lt;h3 id=&#34;3-securitycontextholderfilter&#34;&gt;3. SecurityContextHolderFilter&lt;/h3&gt;
+&lt;p&gt;🧠 Sets up the &lt;code&gt;SecurityContext&lt;/code&gt; — stores details about the logged-in user.&lt;/p&gt;
+&lt;h3 id=&#34;4-headerwriterfilter&#34;&gt;4. HeaderWriterFilter&lt;/h3&gt;
+&lt;p&gt;🛡️ Adds security headers like X-Frame-Options, Strict-Transport-Security, etc.&lt;/p&gt;
+&lt;h3 id=&#34;5-csrffilter&#34;&gt;5. CsrfFilter&lt;/h3&gt;
+&lt;p&gt;🧾 If you&amp;rsquo;re submitting a form (POST), this checks if the CSRF token is valid.&lt;/p&gt;
+&lt;h3 id=&#34;6-logoutfilter&#34;&gt;6. LogoutFilter&lt;/h3&gt;
+&lt;p&gt;🚪 If the URL is &lt;code&gt;/logout&lt;/code&gt;, this clears session and logs out the user.&lt;/p&gt;
+&lt;h3 id=&#34;7-usernamepasswordauthenticationfilter&#34;&gt;7. UsernamePasswordAuthenticationFilter&lt;/h3&gt;
+&lt;p&gt;🔐 If you&amp;rsquo;re submitting login credentials (&lt;code&gt;/login&lt;/code&gt;), this filter handles authentication.&lt;/p&gt;
+&lt;h3 id=&#34;8-defaultloginpagegeneratingfilter&#34;&gt;8. DefaultLoginPageGeneratingFilter&lt;/h3&gt;
+&lt;p&gt;📄 If no custom login page is defined, this auto-generates a login form.&lt;/p&gt;
+&lt;h3 id=&#34;9-defaultlogoutpagegeneratingfilter&#34;&gt;9. DefaultLogoutPageGeneratingFilter&lt;/h3&gt;
+&lt;p&gt;📄 Shows a logout success page if no custom one is given.&lt;/p&gt;
+&lt;h3 id=&#34;10-basicauthenticationfilter&#34;&gt;10. BasicAuthenticationFilter&lt;/h3&gt;
+&lt;p&gt;🔑 If using HTTP Basic Auth (like &lt;code&gt;Authorization: Basic ...&lt;/code&gt;), this authenticates the user.&lt;/p&gt;
+&lt;h3 id=&#34;11-requestcacheawarefilter&#34;&gt;11. RequestCacheAwareFilter&lt;/h3&gt;
+&lt;p&gt;💾 Remembers which page you wanted to access before login, so it can send you back there after login.&lt;/p&gt;
+&lt;h3 id=&#34;12-securitycontextholderawarerequestfilter&#34;&gt;12. SecurityContextHolderAwareRequestFilter&lt;/h3&gt;
+&lt;p&gt;🧩 Adds helper methods to your request object like &lt;code&gt;isUserInRole()&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;13-anonymousauthenticationfilter&#34;&gt;13. AnonymousAuthenticationFilter&lt;/h3&gt;
+&lt;p&gt;👤 If no one is logged in, this sets an &amp;ldquo;anonymous&amp;rdquo; user so nothing breaks.&lt;/p&gt;
+&lt;h3 id=&#34;14-exceptiontranslationfilter&#34;&gt;14. ExceptionTranslationFilter&lt;/h3&gt;
+&lt;p&gt;🚨 Catches errors like access denied or not logged in and handles redirects or 403 errors.&lt;/p&gt;
+&lt;h3 id=&#34;15-authorizationfilter&#34;&gt;15. AuthorizationFilter&lt;/h3&gt;
+&lt;p&gt;🔓 Final check: Is the user allowed to access this URL? If yes → allow, else → deny.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;internals-of-spring-security&#34;&gt;Internals of Spring Security&lt;/h1&gt;
+&lt;h3 id=&#34;important-classes&#34;&gt;Important Classes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;SpringBootWebSecurityConfiguration&lt;/strong&gt;&lt;/em&gt;
+-&amp;gt; This class  is the default configuration class of spring security.
+-&amp;gt; This class have method{defaultSecurityFilterChain} to authorize every request.
+-&amp;gt; It applies when no custom &lt;code&gt;SecurityFilterChain&lt;/code&gt; bean is defined.
+-&amp;gt; Used for basic form based login.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;HttpSecurity&lt;/strong&gt;&lt;/em&gt;
+-&amp;gt; It allows configuring web based security for specific http requests.
+-&amp;gt;By default it will be applied to all requests, but can be restricted using requestMatcher(RequestMatcher) or other similar methods.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;important-methods&#34;&gt;Important Methods&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;authorizeHttpRequests&lt;/strong&gt;&lt;/em&gt;
+-&amp;gt; It&amp;rsquo;s a child of HttpSecurity class.
+-&amp;gt; It is used to define &lt;strong&gt;authorization rules&lt;/strong&gt;
+-&amp;gt; eg: &lt;strong&gt;which HTTP requests require authentication and what roles/authorities are needed to access them&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;authentication-and-authorization&#34;&gt;Authentication and Authorization&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Authentication is about verifying who you are.&lt;/li&gt;
+&lt;li&gt;Authorization determines what you can do once you are Authenticated.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;authority-and-role-inside-authorization&#34;&gt;Authority and Role inside Authorization&lt;/h2&gt;
+&lt;h3 id=&#34;authority&#34;&gt;Authority&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Authority represents a single permission or privilege  a user has within the application.&lt;/li&gt;
+&lt;li&gt;Spring security uses GrantedAuthority objects to determine if a user can perform a specific action.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;role&#34;&gt;Role&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;GrantedAuthority that groups related permissions together.&lt;/li&gt;
+&lt;li&gt;It represents a broader user designation like &amp;ldquo;USER&amp;rdquo;, &amp;ldquo;ADMIN&amp;rdquo;, &amp;ldquo;EDITOR&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;By default  spring security have  a &amp;ldquo;ROLE_&amp;rdquo; prefix attached (eg, &amp;ldquo;ROLE_ADMIN&amp;rdquo;)&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     </item>
     
@@ -4537,7 +4610,7 @@ Spring Security does &lt;strong&gt;a lot&lt;/strong&gt; under the hood to keep y
 &lt;hr&gt;
 &lt;h2 id=&#34;what-i-created&#34;&gt;What I Created&lt;/h2&gt;
 &lt;p&gt;The &lt;strong&gt;Library System&lt;/strong&gt; application consists of several modules, each designed to handle specific library operations. Here&amp;rsquo;s a breakdown of the functionalities:
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212542.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212542.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;task-1-create-modules-and-forms&#34;&gt;Task 1: Create Modules and Forms&lt;/h3&gt;
 &lt;h4 id=&#34;1-books-module&#34;&gt;1. Books Module&lt;/h4&gt;
 &lt;ul&gt;
@@ -4551,7 +4624,7 @@ Spring Security does &lt;strong&gt;a lot&lt;/strong&gt; under the hood to keep y
 &lt;li&gt;&lt;strong&gt;Available Copies&lt;/strong&gt; (Number - Minimum value = 0)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;ISBN Number&lt;/strong&gt; (Text - Unique validation)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Rating&lt;/strong&gt; (Number - Values between 1 to 5)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212623.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212623.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4566,7 +4639,7 @@ Spring Security does &lt;strong&gt;a lot&lt;/strong&gt; under the hood to keep y
 &lt;li&gt;&lt;strong&gt;Membership Start Date&lt;/strong&gt; (Date - Default to the current date)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Membership Type&lt;/strong&gt; (Dropdown - Values: Basic, Premium, Elite)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Max Books Allowed&lt;/strong&gt; (Number - Auto-filled based on Membership Type: Basic=2, Premium=5, Elite=10)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212708.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212708.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4581,7 +4654,7 @@ Spring Security does &lt;strong&gt;a lot&lt;/strong&gt; under the hood to keep y
 &lt;li&gt;&lt;strong&gt;Return Date&lt;/strong&gt; (Date - Must be later than Issue Date)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; (Dropdown - Values: Issued, Returned, Overdue)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Fine Amount&lt;/strong&gt; (Currency - Auto-calculated for overdue books)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212739.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212739.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4594,7 +4667,7 @@ Spring Security does &lt;strong&gt;a lot&lt;/strong&gt; under the hood to keep y
 &lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt; (Email - Validated for proper format)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Role&lt;/strong&gt; (Dropdown - Values: Librarian, Assistant)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Phone Number&lt;/strong&gt; (Number - Validated for 10 digits)
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212800.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250103212800.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

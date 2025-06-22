@@ -305,7 +305,7 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;object-mode-3d-viewport&#34;&gt;Object Mode (3D viewport)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -466,7 +466,7 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;selection-edit-mode&#34;&gt;Selection (Edit Mode)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -545,8 +545,8 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;heading-3&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;modeling-edit-mode&#34;&gt;Modeling (Edit Mode)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -1160,7 +1160,7 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-4&#34;&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;window-general-most-window-types&#34;&gt;Window General (most window types)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -1256,7 +1256,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
 &lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
 &lt;p&gt;The Operations team deploys the app and then testers test.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;p&gt;#Cons&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
@@ -1265,7 +1265,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
 &lt;li&gt;Long Feedback cycle&lt;/li&gt;
 &lt;li&gt;Long Iteration
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
@@ -1278,7 +1278,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
 &lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
 &lt;p&gt;The Operations team deploys the app and then testers test.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;p&gt;#Cons&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
@@ -1287,7 +1287,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
 &lt;li&gt;Long Feedback cycle&lt;/li&gt;
 &lt;li&gt;Long Iteration
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
@@ -1305,29 +1305,24 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;difference-between-old-school-integration-and-ci&#34;&gt;Difference Between Old School Integration and CI&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;Integration is painful and effort consuming.&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Integration is automated and quick.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Integration is automated and quick.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Fixing Issues at the end of interations&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Issues show up early, because of frequent integration.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Issues show up early, because of frequent integration.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Merge issues can hold up teams&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Broken builds are fixed with immediate priority by developers.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Broken builds are fixed with immediate priority by developers.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Long feedback cycle for functional defects&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Shorter feedback- developer is notified immediately.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Shorter feedback- developer is notified immediately.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Long Interation&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Shorter iterations. Faster time to market.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Shorter iterations. Faster time to market.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;CI&lt;/em&gt; (&lt;em&gt;Continuous Integration&lt;/em&gt;) pipeline means where developers frequently merge code changes into a central repository, allowing early detection of issues.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;CD&lt;/em&gt; refers to &lt;em&gt;continuous deployment&lt;/em&gt; or &lt;em&gt;continuous delivery&lt;/em&gt;, which automates the application&amp;rsquo;s release to its intended environment, ensuring that it is readily available to users.&lt;/strong&gt;
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c1.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;old-school-operations-pain-points&#34;&gt;OLD School Operations Pain Points&lt;/h2&gt;
 &lt;ol&gt;
@@ -1338,7 +1333,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-development&#34;&gt;Continuous Development&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what-is-devops&#34;&gt;What is DevOps?&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;DevOps combines development (Dev) and operations (Ops) to increase the efficiency, speed, and security of software development and delivery compared to traditional processes.&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;why-we-need-devops&#34;&gt;Why we need DevOps?&lt;/h3&gt;
@@ -1359,10 +1354,10 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -1585,10 +1580,10 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -1814,10 +1809,10 @@ Via network name&lt;/li&gt;
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/</guid>
       <description>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;</description>
       <content>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 </content>
     </item>
@@ -1962,8 +1957,8 @@ Via network name&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;-define-the-model&#34;&gt;🧠 Define the Model&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SentimentAnalysis&lt;/span&gt;(nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Module):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __init__(self, input_dim):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        super()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;__init__()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;__init__&lt;/span&gt;(self, input_dim):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        super()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;__init__&lt;/span&gt;()
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;l1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Linear(input_dim, &lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;l2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Linear(&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;l3 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; nn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Linear(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
@@ -2048,13 +2043,13 @@ Via network name&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -2069,7 +2064,7 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-plsql&#34;&gt;What is PL/SQL?&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;PL/SQL stands for Procedural Language Extension to SQL&lt;/code&gt;&lt;/li&gt;
@@ -2078,13 +2073,13 @@ Via network name&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -2099,7 +2094,7 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what-is-pdb&#34;&gt;What is PDB?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Pluggable Database (PDB)&lt;/strong&gt; is a portable collection of schemas, tables, and objects that can be plugged into a &lt;strong&gt;Container Database (CDB)&lt;/strong&gt; in Oracle.&lt;/p&gt;
 &lt;h2 id=&#34;why-pdb&#34;&gt;Why PDB?&lt;/h2&gt;
@@ -2125,28 +2120,25 @@ Via network name&lt;/li&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;what-are-blocks&#34;&gt;What are Blocks?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Block is a logical unit of code that groups related declarations, statements. &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl3.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;structure-1&#34;&gt;Structure&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;DECLARE&lt;/strong&gt;&lt;/em&gt; Block.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Here we declare Variables, const, exceptions.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Here we declare Variables, const, exceptions.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;EXECUTION&lt;/strong&gt;&lt;/em&gt; BLOCK.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Contains Executable Statements like SQL, procedural statements.
-Starts with &lt;em&gt;&lt;strong&gt;BEGIN&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+Starts with &lt;em&gt;&lt;strong&gt;BEGIN&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;EXCEPTION HANDLING&lt;/strong&gt;&lt;/em&gt; BLOCK.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Starts with &lt;em&gt;&lt;strong&gt;EXCEPTION&lt;/strong&gt;&lt;/em&gt;
-Handles exceptions and errors during execution.&lt;/p&gt;
-&lt;/blockquote&gt;
+Handles exceptions and errors during execution.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;syntax-of-plsql-block&#34;&gt;Syntax of PL/SQL Block&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;DECLARE 
    -- Declaration statements (optional)
@@ -2371,14 +2363,12 @@ export default App;
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;incubator-quote-app&#34;&gt;Incubator Quote App&lt;/h1&gt;
 &lt;h2 id=&#34;usestate&#34;&gt;UseState&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;useState&lt;/code&gt; is a &lt;strong&gt;React Hook&lt;/strong&gt; that allows functional components to have and manage &lt;strong&gt;state&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;useState&lt;/code&gt; is a &lt;strong&gt;React Hook&lt;/strong&gt; that allows functional components to have and manage &lt;strong&gt;state&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;axios&#34;&gt;Axios&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Axios&lt;/strong&gt; is a &lt;strong&gt;JavaScript library&lt;/strong&gt; used to make &lt;strong&gt;HTTP requests&lt;/strong&gt; from the browser (or Node.js) to a server.
-Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it uses &lt;strong&gt;Promises&lt;/strong&gt; to handle asynchronous operations like fetching data from an API.&lt;/p&gt;
-&lt;/blockquote&gt;
+Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it uses &lt;strong&gt;Promises&lt;/strong&gt; to handle asynchronous operations like fetching data from an API.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;It simplifies making GET, POST, PUT, DELETE, etc. requests.&lt;/p&gt;
@@ -2411,14 +2401,14 @@ Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it us
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/computer-organization--architect/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;base-system-in-computer-architecture&#34;&gt;Base System in Computer Architecture&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;code&gt;Refer Unit 1 FIT Notes &lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/bWrsk0QizEk?si=6XBleKlCR-PaCF_C
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;best-one-shot&#34;&gt;Best One Shot&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/NY2gz_Kzc0Q?si=YburSfFaLyNTFhf0
 &lt;/code&gt;&lt;/pre&gt;</description>
-      <content>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;base-system-in-computer-architecture&#34;&gt;Base System in Computer Architecture&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;code&gt;Refer Unit 1 FIT Notes &lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/bWrsk0QizEk?si=6XBleKlCR-PaCF_C
@@ -2434,91 +2424,91 @@ Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it us
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/dsa/</guid>
       <description>&lt;h1 id=&#34;what-is-dsa&#34;&gt;What is DSA?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;types-of-data-structure&#34;&gt;Types of Data Structure&lt;/h1&gt;
 &lt;h2 id=&#34;sequential-data-structure&#34;&gt;Sequential Data Structure&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;non-linear-data-structure&#34;&gt;Non-Linear Data Structure&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;categories-of-data-structure&#34;&gt;Categories of Data Structure&lt;/h1&gt;
 &lt;h2 id=&#34;primitive-and-non-primitive&#34;&gt;Primitive and Non-Primitive&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418195720.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418195720.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;need-of-data-structure&#34;&gt;Need of Data Structure&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418200016.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418200016.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;efficiency-of-an-algorithm&#34;&gt;Efficiency of an Algorithm&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Time Complexity
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/yashClick.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/yashClick.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Space Complexity
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201520.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201520.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;abstract-data-type&#34;&gt;Abstract Data Type&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201848.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201848.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;abstract-data-types-implementation&#34;&gt;Abstract Data Types Implementation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Arrays ADT&lt;/li&gt;
 &lt;li&gt;Linked List ADT
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418202511.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418202511.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Stack ADT
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418203734.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418203734.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;stack-operations&#34;&gt;Stack Operations&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204559.png&#34;&gt;
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204610.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204559.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204610.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;stack-adt-operations-using-arrays&#34;&gt;Stack ADT Operations using Arrays&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204833.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204833.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-dsa&#34;&gt;What is DSA?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192210.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;types-of-data-structure&#34;&gt;Types of Data Structure&lt;/h1&gt;
 &lt;h2 id=&#34;sequential-data-structure&#34;&gt;Sequential Data Structure&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418192826.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;non-linear-data-structure&#34;&gt;Non-Linear Data Structure&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418194751.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;categories-of-data-structure&#34;&gt;Categories of Data Structure&lt;/h1&gt;
 &lt;h2 id=&#34;primitive-and-non-primitive&#34;&gt;Primitive and Non-Primitive&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418195720.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418195720.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;need-of-data-structure&#34;&gt;Need of Data Structure&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418200016.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418200016.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;efficiency-of-an-algorithm&#34;&gt;Efficiency of an Algorithm&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Time Complexity
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/yashClick.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/yashClick.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Space Complexity
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201520.png&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201520.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;abstract-data-type&#34;&gt;Abstract Data Type&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201848.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418201848.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;abstract-data-types-implementation&#34;&gt;Abstract Data Types Implementation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Arrays ADT&lt;/li&gt;
 &lt;li&gt;Linked List ADT
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418202511.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418202511.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Stack ADT
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418203734.png&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418203734.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;stack-operations&#34;&gt;Stack Operations&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204559.png&#34;&gt;
-&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204610.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204559.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204610.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;stack-adt-operations-using-arrays&#34;&gt;Stack ADT Operations using Arrays&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204833.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418204833.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;stack-operations-1&#34;&gt;Stack Operations&lt;/h4&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418205257.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418205257.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;stack-applications&#34;&gt;Stack Applications&lt;/h4&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418205419.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418205419.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;types-of-expression&#34;&gt;Types of Expression&lt;/h4&gt;
-&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418210220.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250418210220.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -2543,8 +2533,7 @@ from selenium webdriver.remote.webelement import WebElement
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;webdriver&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Service&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -2565,50 +2554,42 @@ from selenium webdriver.remote.webelement import WebElement
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;webdriver&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;imports the &lt;code&gt;webdriver&lt;/code&gt; module from the Selenium library, which allows you to automate browser actions like clicking, typing and navigating.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Service&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;Service&lt;/code&gt; is used to manage the lifecycle of the &lt;code&gt;chromedriver.exe&lt;/code&gt; process (starting, stopping, and communication).&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Service&lt;/code&gt; is used to manage the lifecycle of the &lt;code&gt;chromedriver.exe&lt;/code&gt; process (starting, stopping, and communication).&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Select&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import Select&lt;/code&gt; imports the &lt;code&gt;Select&lt;/code&gt; class, which is used to handle dropdown menus in Selenium.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import Select&lt;/code&gt; imports the &lt;code&gt;Select&lt;/code&gt; class, which is used to handle dropdown menus in Selenium.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;expected_conditions&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;from selenium.webdriver.support import expected_conditions as EC&lt;/code&gt; imports &lt;code&gt;expected_conditions&lt;/code&gt;, which defines conditions to wait for (like element visibility) before performing actions.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support import expected_conditions as EC&lt;/code&gt; imports &lt;code&gt;expected_conditions&lt;/code&gt;, which defines conditions to wait for (like element visibility) before performing actions.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;WebDriverWait&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import WebDriverWait&lt;/code&gt; imports &lt;code&gt;WebDriverWait&lt;/code&gt;, which is used to wait for a specific condition to be met before proceeding.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.support.ui import WebDriverWait&lt;/code&gt; imports &lt;code&gt;WebDriverWait&lt;/code&gt;, which is used to wait for a specific condition to be met before proceeding.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;6&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;ActionChains&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;from selenium.webdriver.common.action_chains import ActionChains&lt;/code&gt; imports &lt;code&gt;ActionChains&lt;/code&gt;, which is used to perform complex user interactions like hover, drag-and-drop, and right-click.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.common.action_chains import ActionChains&lt;/code&gt; imports &lt;code&gt;ActionChains&lt;/code&gt;, which is used to perform complex user interactions like hover, drag-and-drop, and right-click.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;7&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Options&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;from selenium.webdriver.chrome.options import Options&lt;/code&gt; imports &lt;code&gt;Options&lt;/code&gt;, which is used to set Chrome-specific settings like headless mode, disabling extensions, etc.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;from selenium.webdriver.chrome.options import Options&lt;/code&gt; imports &lt;code&gt;Options&lt;/code&gt;, which is used to set Chrome-specific settings like headless mode, disabling extensions, etc.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;8&#34;&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;WebElement&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Represents an HTML element.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Represents an HTML element.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h1 id=&#34;basic-code-examples&#34;&gt;Basic Code Examples&lt;/h1&gt;
 &lt;h2 id=&#34;google-search-example&#34;&gt;Google Search Example&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;from selenium import webdriver
@@ -2693,8 +2674,7 @@ driver.quit();
 print(&amp;#34;Completed&amp;#34;);
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;blockquote&gt;
-&lt;p&gt;📎 &lt;strong&gt;List of Chrome Driver Arguments:&lt;/strong&gt; &lt;a href=&#34;https://gist.github.com/ntamvl/4f93bbb7c9b4829c601104a2d2f91fe5&#34;&gt;View the Resource&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;📎 &lt;strong&gt;List of Chrome Driver Arguments:&lt;/strong&gt; &lt;a href=&#34;https://gist.github.com/ntamvl/4f93bbb7c9b4829c601104a2d2f91fe5&#34;&gt;View the Resource&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;topic-wise-examples&#34;&gt;Topic-Wise-Examples&lt;/h1&gt;
 &lt;h2 id=&#34;switch-to-new-browser-instance-of-window--tab&#34;&gt;Switch to new browser instance of &amp;lsquo;window&amp;rsquo; || &amp;rsquo;tab&amp;rsquo;&lt;/h2&gt;
