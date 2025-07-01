@@ -300,6 +300,7 @@ Spring Security does &lt;strong&gt;a lot&lt;/strong&gt; under the hood to keep y
 &lt;li&gt;It represents a broader user designation like &amp;ldquo;USER&amp;rdquo;, &amp;ldquo;ADMIN&amp;rdquo;, &amp;ldquo;EDITOR&amp;rdquo;.&lt;/li&gt;
 &lt;li&gt;By default  spring security have  a &amp;ldquo;ROLE_&amp;rdquo; prefix attached (eg, &amp;ldquo;ROLE_ADMIN&amp;rdquo;)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 </content>
     </item>
     

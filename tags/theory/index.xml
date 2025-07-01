@@ -1803,6 +1803,123 @@ Via network name&lt;/li&gt;
     </item>
     
     <item>
+      <title>Informatica Power Centre Full Notes</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/informatica-powercenter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/informatica-powercenter/</guid>
+      <description>&lt;h1 id=&#34;what-is-informatica&#34;&gt;What is Informatica?&lt;/h1&gt;
+&lt;p&gt;Informatica is a software development company, which offers data integration products.
+It offers products for ETL, data masking, data Quality, data replica, data visualization, master data management, etc.&lt;/p&gt;
+&lt;h1 id=&#34;why-use-informatica&#34;&gt;Why use Informatica?&lt;/h1&gt;
+&lt;p&gt;Enterprises which are setting up their Data Warehousing setup will require an ETL tool to move data from the production system to Warehouse which can be done using Informatica.&lt;/p&gt;
+&lt;h1 id=&#34;datawarehouse&#34;&gt;Datawarehouse&lt;/h1&gt;
+&lt;p&gt;It&amp;rsquo;s a Process of constructing and using a data warehouse.
+A data warehouse is constructed by integrating data from multiple heterogeneous sources that support analytical reporting, structured and/or ad hoc queries, and decision making. Data warehousing involves data cleaning, data integration, and data consolidations.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;what-is-informatica&#34;&gt;What is Informatica?&lt;/h1&gt;
+&lt;p&gt;Informatica is a software development company, which offers data integration products.
+It offers products for ETL, data masking, data Quality, data replica, data visualization, master data management, etc.&lt;/p&gt;
+&lt;h1 id=&#34;why-use-informatica&#34;&gt;Why use Informatica?&lt;/h1&gt;
+&lt;p&gt;Enterprises which are setting up their Data Warehousing setup will require an ETL tool to move data from the production system to Warehouse which can be done using Informatica.&lt;/p&gt;
+&lt;h1 id=&#34;datawarehouse&#34;&gt;Datawarehouse&lt;/h1&gt;
+&lt;p&gt;It&amp;rsquo;s a Process of constructing and using a data warehouse.
+A data warehouse is constructed by integrating data from multiple heterogeneous sources that support analytical reporting, structured and/or ad hoc queries, and decision making. Data warehousing involves data cleaning, data integration, and data consolidations.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250629203545.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;datamart&#34;&gt;Datamart&lt;/h1&gt;
+&lt;p&gt;A DataMart is the access layer of the data warehouse environment that is used to get data out to the users. The data mart is a subset of the data warehouse and is usually oriented to a specific business line or team.
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250629204713.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;power-centre-tools&#34;&gt;Power Centre Tools&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250629214629.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-1-powercenter-designer&#34;&gt;🔷 1. &lt;strong&gt;PowerCenter Designer&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;🛠️ &lt;strong&gt;What it is:&lt;/strong&gt;&lt;br&gt;
+A tool where you &lt;strong&gt;create the ETL logic&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;🧩 &lt;strong&gt;What you do in it:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Define &lt;strong&gt;Source&lt;/strong&gt; (where data comes from)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Define &lt;strong&gt;Target&lt;/strong&gt; (where data goes)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create &lt;strong&gt;Mappings&lt;/strong&gt; (how data moves and transforms between source and target)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use &lt;strong&gt;Transformations&lt;/strong&gt; like Filter, Join, Expression, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;📌 &lt;strong&gt;Think of it as&lt;/strong&gt;:&lt;br&gt;
+The place where you &lt;strong&gt;design the data flow&lt;/strong&gt; — like drawing the pipeline.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-2-workflow-manager&#34;&gt;🔷 2. &lt;strong&gt;Workflow Manager&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;📅 &lt;strong&gt;What it is:&lt;/strong&gt;&lt;br&gt;
+A tool to &lt;strong&gt;organize, schedule, and run&lt;/strong&gt; your ETL jobs.&lt;/p&gt;
+&lt;p&gt;⚙️ &lt;strong&gt;What you do in it:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Create &lt;strong&gt;Workflows&lt;/strong&gt; (which mapping to run, when to run it)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add &lt;strong&gt;Sessions&lt;/strong&gt; (execution unit for each mapping)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set &lt;strong&gt;task dependencies&lt;/strong&gt; and job sequences&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;📌 &lt;strong&gt;Think of it as&lt;/strong&gt;:&lt;br&gt;
+The &lt;strong&gt;project manager&lt;/strong&gt; — it tells what to run and when.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-3-workflow-monitor&#34;&gt;🔷 3. &lt;strong&gt;Workflow Monitor&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;🔍 &lt;strong&gt;What it is:&lt;/strong&gt;&lt;br&gt;
+A tool to &lt;strong&gt;watch ETL jobs while they are running&lt;/strong&gt; or check past runs.&lt;/p&gt;
+&lt;p&gt;📋 &lt;strong&gt;What you do in it:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;View job &lt;strong&gt;status&lt;/strong&gt; (Succeeded, Failed, Running)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check &lt;strong&gt;error messages&lt;/strong&gt;, &lt;strong&gt;logs&lt;/strong&gt;, &lt;strong&gt;duration&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Debug and troubleshoot issues&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;📌 &lt;strong&gt;Think of it as&lt;/strong&gt;:&lt;br&gt;
+The &lt;strong&gt;control room&lt;/strong&gt; — see if the jobs are doing fine or if something failed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-4-repository&#34;&gt;🔷 4. &lt;strong&gt;Repository&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;🗂️ &lt;strong&gt;What it is:&lt;/strong&gt;&lt;br&gt;
+A &lt;strong&gt;database&lt;/strong&gt; that stores everything — mappings, workflows, sessions, transformations, logs, etc.&lt;/p&gt;
+&lt;p&gt;🔒 &lt;strong&gt;What you do with it:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Save and retrieve your work&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Organize folders/projects&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Managed by &lt;strong&gt;Repository Service&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;📌 &lt;strong&gt;Think of it as&lt;/strong&gt;:&lt;br&gt;
+Your &lt;strong&gt;storage and brain&lt;/strong&gt; — everything you build is stored here.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;things-to-download-for-informatica&#34;&gt;Things to Download for Informatica&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Java JDK&lt;/li&gt;
+&lt;li&gt;Oracle Server (Oracle 11g)&lt;/li&gt;
+&lt;li&gt;Oracle Client (SQL Developer)&lt;/li&gt;
+&lt;li&gt;Informatica Client (v 9.6)&lt;/li&gt;
+&lt;li&gt;Informatica Server (v 9.6)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Jmeter Full Notes</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
