@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title> :: </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Java 8 Features Functional Interfaces Methods Streams Date and Time Why Java 8 is Important? java 8 improves overall application performance with little work. Lambda Expressions, Stream API, new methods added to existing classes improve productivity. Java 8 Optional type gives developers flexibility when dealing with null values, reducing the likelihood of NullPointerExceptions. Less Code: Java 8 reduces boilerplate with a functional style, focusing on what to do, not how. Parallel Friendly: With simple APIs, the JVM splits tasks and runs them across cores using fork/join. Reactive Programming It&rsquo;s a design pattern that focuses on use of asynchronous and non-blocking data streams to handle data and events. Need of Reactive Programming For Efficiency and Scalability. Without Reactive Programming \ Thread will be blocked until Operation is done.
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/digital-java8-innards_fp-course-id-55961/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://its-rawat.github.io/bigbits.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="">
+<meta property="og:description" content="Java 8 Features Functional Interfaces Methods Streams Date and Time Why Java 8 is Important? java 8 improves overall application performance with little work. Lambda Expressions, Stream API, new methods added to existing classes improve productivity. Java 8 Optional type gives developers flexibility when dealing with null values, reducing the likelihood of NullPointerExceptions. Less Code: Java 8 reduces boilerplate with a functional style, focusing on what to do, not how. Parallel Friendly: With simple APIs, the JVM splits tasks and runs them across cores using fork/join. Reactive Programming It&rsquo;s a design pattern that focuses on use of asynchronous and non-blocking data streams to handle data and events. Need of Reactive Programming For Efficiency and Scalability. Without Reactive Programming \ Thread will be blocked until Operation is done.
+" />
+<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/digital-java8-innards_fp-course-id-55961/" />
+<meta property="og:site_name" content="" />
+
+  
+    <meta property="og:image" content="https://its-rawat.github.io/bigbits.github.io/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="orange">
+
+  
+    <div id="banner">
+      <span>
+        
+          <a href="https://github.com/Its-Rawat">Also Check My GitHub</a>
+        
+      </span>
+      
+        <button type="button">x</button>
+      
+    </div>
+  
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://its-rawat.github.io/bigbits.github.io/">
+  <div class="logo">
+    re-Terminal
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/">About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/" >About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/digital-java8-innards_fp-course-id-55961/"></a>
+  </h1>
+  <div class="post-meta">
+    
+<span class="post-reading-time">2 min read (323 words)</span></div>
+
+  
+  
+
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#need-of-reactive-programming">Need of Reactive Programming</a></li>
+    <li><a href="#without-reactive-programming">Without Reactive Programming</a></li>
+    <li><a href="#with-reactive-programming">With Reactive Programming</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#lambda-expressions">Lambda Expressions</a>
+      <ul>
+        <li><a href="#comparable-interface">Comparable&lt;&gt; Interface</a></li>
+        <li><a href="#-syntax-example">✅ Syntax Example:</a></li>
+        <li><a href="#-what-does-this-mean-in-compareto">✅ What does <code>this</code> mean in <code>compareTo()</code>?</a></li>
+        <li><a href="#-what-does-collectionssortstudents-do">✅ What does <code>Collections.sort(students)</code> do?</a></li>
+        <li><a href="#-when-to-use-comparable">✅ When to use Comparable?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h1 id="java-8-features">Java 8 Features<a href="#java-8-features" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ol>
+<li>Functional Interfaces</li>
+<li>Methods</li>
+<li>Streams</li>
+<li>Date and Time</li>
+</ol>
+<hr>
+<h1 id="why-java-8-is-important">Why Java 8 is Important?<a href="#why-java-8-is-important" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li>java 8 improves overall application performance with little work.</li>
+<li>Lambda Expressions, Stream API, new methods added to existing classes improve productivity.</li>
+<li>Java 8 Optional type gives developers flexibility when dealing with null values, reducing the likelihood of NullPointerExceptions.</li>
+<li>Less Code: Java 8 reduces boilerplate with a functional style, focusing on <em>what</em> to do, not <em>how</em>.</li>
+<li>Parallel Friendly: With simple APIs, the JVM splits tasks and runs them across cores using fork/join.</li>
+</ul>
+<hr>
+<h1 id="reactive-programming">Reactive Programming<a href="#reactive-programming" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li>It&rsquo;s a <strong>design</strong> pattern that focuses on use of <strong>asynchronous</strong> and <strong>non-blocking</strong> data streams to handle data and events.</li>
+</ul>
+<h2 id="need-of-reactive-programming">Need of Reactive Programming<a href="#need-of-reactive-programming" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>For Efficiency and Scalability.</li>
+</ul>
+<hr>
+<h2 id="without-reactive-programming">Without Reactive Programming<a href="#without-reactive-programming" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250704001606.png" alt="Image Description"> \ Thread will be blocked until Operation is done.</p>
+<h2 id="with-reactive-programming">With Reactive Programming<a href="#with-reactive-programming" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250704003013.png" alt="Image Description">
+Thread don&rsquo;t wait for Response.</p>
+<hr>
+<h1 id="functional-interface">Functional Interface<a href="#functional-interface" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>A <strong>functional interface</strong> in Java is an interface that contains <strong>exactly one abstract method</strong>. It can have any number of <strong>default</strong> or <strong>static methods</strong>, but only <strong>one abstract method</strong>.</p>
+<h2 id="lambda-expressions">Lambda Expressions<a href="#lambda-expressions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>A <strong>lambda expression</strong> is a concise way to represent an <strong>anonymous function</strong>—a function without a name—in Java. Introduced in <strong>Java 8</strong>.</p>
+<hr>
+<h3 id="comparable-interface">Comparable&lt;&gt; Interface<a href="#comparable-interface" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>The <code>Comparable&lt;T&gt;</code> interface is used to <strong>define the natural ordering</strong> of objects.
+It allows a class to compare its instances using the <code>compareTo()</code> method.</p>
+<h3 id="-syntax-example">✅ Syntax Example:<a href="#-syntax-example" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">class Student implements Comparable&lt;Student&gt; {     
+	int rollNo;
+	public int compareTo(Student other) {
+		return this.rollNo - other.rollNo;
+	} 
+}
+</code></pre><hr>
+<h3 id="-what-does-this-mean-in-compareto">✅ What does <code>this</code> mean in <code>compareTo()</code>?<a href="#-what-does-this-mean-in-compareto" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>
+<p><code>this</code> → current object (e.g., <code>s1</code>)</p>
+</li>
+<li>
+<p><code>other</code> → object passed for comparison (e.g., <code>s2</code>)</p>
+</li>
+<li>
+<p><code>this.rollNo - other.rollNo</code>:</p>
+<ul>
+<li>
+<p>Negative → <code>this</code> comes <strong>before</strong></p>
+</li>
+<li>
+<p>Zero → <strong>equal</strong></p>
+</li>
+<li>
+<p>Positive → <code>this</code> comes <strong>after</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="-what-does-collectionssortstudents-do">✅ What does <code>Collections.sort(students)</code> do?<a href="#-what-does-collectionssortstudents-do" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>
+<p>Sorts the list using the logic in <code>compareTo()</code>.</p>
+</li>
+<li>
+<p>Internally calls:</p>
+<p>java</p>
+<p>CopyEdit</p>
+<p><code>s1.compareTo(s2)</code></p>
+<p>for every pair of objects.</p>
+</li>
+</ul>
+<hr>
+<h3 id="-when-to-use-comparable">✅ When to use Comparable?<a href="#-when-to-use-comparable" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>
+<p>When the class should define its <strong>own default sorting rule</strong> (e.g., by roll number, name, etc.).</p>
+</li>
+<li>
+<p>Works automatically with <code>Collections.sort()</code> or <code>Arrays.sort()</code>.</p>
+</li>
+</ul>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/git-workflow/">
+                <span class="button__text"></span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/Its-Rawat" target="_blank">Theme</a> made by <a href="https://github.com/Its-Rawat" target="_blank">Its_Rawat</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bigbits.github.io/bundle.min.js"></script>
+
+
+
+  
+
+  <script type="text/javascript" src="/bigbits.github.io/js/banner.min.js"></script>
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

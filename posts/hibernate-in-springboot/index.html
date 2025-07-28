@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Hibernate Notes :: </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="List of Challenges in Hibernate Solves in ORM Problem of Identity
+Problem of Granularity
+Problem of Inheritance
+Problem of Associations
+Problem of Navigation
+Problem of Object Lifecycle
+Problem of Data Duplication
+Problem of Lazy Loading / Performance
+Problem of Object Graphs and Cycles
+Problem of Data Type Mismatch
+Problem of Transactions
+Problem of Concurrency
+Problem of Querying
+Problem of Cascading Operations
+Problem of Batching &amp; N&#43;1 Queries
+Problem of Schema Evolution
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/hibernate-in-springboot/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://its-rawat.github.io/bigbits.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Hibernate Notes">
+<meta property="og:description" content="List of Challenges in Hibernate Solves in ORM Problem of Identity
+Problem of Granularity
+Problem of Inheritance
+Problem of Associations
+Problem of Navigation
+Problem of Object Lifecycle
+Problem of Data Duplication
+Problem of Lazy Loading / Performance
+Problem of Object Graphs and Cycles
+Problem of Data Type Mismatch
+Problem of Transactions
+Problem of Concurrency
+Problem of Querying
+Problem of Cascading Operations
+Problem of Batching &amp; N&#43;1 Queries
+Problem of Schema Evolution
+" />
+<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/hibernate-in-springboot/" />
+<meta property="og:site_name" content="" />
+
+  
+    <meta property="og:image" content="https://its-rawat.github.io/bigbits.github.io/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="orange">
+
+  
+    <div id="banner">
+      <span>
+        
+          <a href="https://github.com/Its-Rawat">Also Check My GitHub</a>
+        
+      </span>
+      
+        <button type="button">x</button>
+      
+    </div>
+  
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://its-rawat.github.io/bigbits.github.io/">
+  <div class="logo">
+    re-Terminal
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/">About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/" >About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/hibernate-in-springboot/">Hibernate Notes</a>
+  </h1>
+  <div class="post-meta">
+    
+<span class="post-reading-time">2 min read (273 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/hibernate/">hibernate</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/java/">java</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/theory/code/">Theory/code</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/java/">java</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/springboot/">springboot</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#list-of-challenges-in-hibernate-solves-in-orm"><strong>List of Challenges in Hibernate Solves in ORM</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#1-the-problem-of-identity">1. The Problem of Identity</a>
+      <ul>
+        <li><a href="#how-hibernate-solved-this-problem">How Hibernate Solved this Problem</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-problem-of-granularity">2. Problem of Granularity</a>
+      <ul>
+        <li><a href="#-embeddable-and-embedded">🔹 <code>@Embeddable</code> and <code>@Embedded</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h3 id="list-of-challenges-in-hibernate-solves-in-orm"><strong>List of Challenges in Hibernate Solves in ORM</strong><a href="#list-of-challenges-in-hibernate-solves-in-orm" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ol>
+<li>
+<p>Problem of Identity</p>
+</li>
+<li>
+<p>Problem of Granularity</p>
+</li>
+<li>
+<p>Problem of Inheritance</p>
+</li>
+<li>
+<p>Problem of Associations</p>
+</li>
+<li>
+<p>Problem of Navigation</p>
+</li>
+<li>
+<p>Problem of Object Lifecycle</p>
+</li>
+<li>
+<p>Problem of Data Duplication</p>
+</li>
+<li>
+<p>Problem of Lazy Loading / Performance</p>
+</li>
+<li>
+<p>Problem of Object Graphs and Cycles</p>
+</li>
+<li>
+<p>Problem of Data Type Mismatch</p>
+</li>
+<li>
+<p>Problem of Transactions</p>
+</li>
+<li>
+<p>Problem of Concurrency</p>
+</li>
+<li>
+<p>Problem of Querying</p>
+</li>
+<li>
+<p>Problem of Cascading Operations</p>
+</li>
+<li>
+<p>Problem of Batching &amp; N+1 Queries</p>
+</li>
+<li>
+<p>Problem of Schema Evolution</p>
+</li>
+<li>
+<p>Problem of Detached Entities</p>
+</li>
+</ol>
+<hr>
+<h2 id="1-the-problem-of-identity">1. The Problem of Identity<a href="#1-the-problem-of-identity" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<blockquote>
+<p>This problem arises when the same database row is read multiple times, creating different object instances in Java. In such cases, Java treats them as different because they are separate objects in memory.</p></blockquote>
+<pre tabindex="0"><code class="language-Problem" data-lang="Problem">User u1 = new User();
+u1.setId(1L);
+
+User u2 = new User();
+u2.setId(1L);
+
+System.out.println(u1 == u2); // ❌ false
+</code></pre><h3 id="how-hibernate-solved-this-problem">How Hibernate Solved this Problem<a href="#how-hibernate-solved-this-problem" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<pre tabindex="0"><code class="language-Solution" data-lang="Solution">User u1 = entityManager.find(User.class, 1L);
+User u2 = entityManager.find(User.class, 1L);
+
+System.out.println(u1 == u2); // ✅ true in Hibernate (if same session)
+</code></pre><hr>
+<h2 id="2-problem-of-granularity">2. Problem of Granularity<a href="#2-problem-of-granularity" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<blockquote>
+<p>Java supports <strong>rich, fine-grained objects</strong> (like nested objects, classes within classes),<br>
+but relational databases store data in <strong>flat tables with primitive fields</strong> only.</p></blockquote>
+<pre tabindex="0"><code class="language-Problem" data-lang="Problem">class Address {
+    private String street;
+    private String city;
+    private String zipCode;
+}
+
+@Entity
+class User {
+    @Id
+    private Long id;
+    private String name;
+
+    private Address address; // ❗ Complex object, not a primitive
+}
+</code></pre><p>#Solution
+Hibernate introduces:</p>
+<h3 id="-embeddable-and-embedded">🔹 <code>@Embeddable</code> and <code>@Embedded</code><a href="#-embeddable-and-embedded" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>
+<p>You mark the nested class (<code>Address</code>) as <code>@Embeddable</code></p>
+</li>
+<li>
+<p>And use <code>@Embedded</code> in the parent entity</p>
+</li>
+</ul>
+<pre tabindex="0"><code class="language-Solution" data-lang="Solution">@Embeddable
+public class Address {
+    private String street;
+    private String city;
+    private String zipCode;
+}
+
+
+@Entity
+public class User {
+    @Id
+    private Long id;
+    private String name;
+
+    @Embedded
+    private Address address;
+}
+</code></pre>
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/chennai-in-bits/">
+                <span class="button__icon">←</span>
+                <span class="button__text">First Immpression of CHENNAI</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/">
+                <span class="button__text">Jmeter Full Notes</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/Its-Rawat" target="_blank">Theme</a> made by <a href="https://github.com/Its-Rawat" target="_blank">Its_Rawat</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bigbits.github.io/bundle.min.js"></script>
+
+
+
+  
+
+  <script type="text/javascript" src="/bigbits.github.io/js/banner.min.js"></script>
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
