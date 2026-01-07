@@ -171,7 +171,26 @@ B = B + 100
 Write(B)
 Commit
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A transaction must satisfy the &lt;strong&gt;ACID properties&lt;/strong&gt; to ensure &lt;strong&gt;database correctness and consistency&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;![[Pasted image 20260107220421.png|300]]&lt;/p&gt;</description>
+&lt;p&gt;![[dbms1.png|400]]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-points&#34;&gt;Key Points&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A transaction groups multiple database operations into a &lt;strong&gt;single logical task&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Partial execution is &lt;strong&gt;not allowed&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Failure of any operation causes the &lt;strong&gt;entire transaction to rollback&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Ensures reliability in &lt;strong&gt;concurrent and failure-prone environments&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;acid-properties-overview&#34;&gt;ACID Properties (Overview)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Atomicity&lt;/strong&gt; – All operations execute or none execute&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Consistency&lt;/strong&gt; – Database remains in a valid state&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Isolation&lt;/strong&gt; – Transactions do not interfere with each other&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Durability&lt;/strong&gt; – Committed changes persist permanently&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;schedule&#34;&gt;Schedule&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;schedule&lt;/strong&gt; is the &lt;strong&gt;execution order of operations of multiple transactions&lt;/strong&gt; on the &lt;strong&gt;same database&lt;/strong&gt;, possibly &lt;strong&gt;executed concurrently&lt;/strong&gt;.&lt;/p&gt;</description>
       <content>&lt;h2 id=&#34;definition&#34;&gt;Definition&lt;/h2&gt;
 &lt;p&gt;A &lt;strong&gt;transaction&lt;/strong&gt; in DBMS is a &lt;strong&gt;finite sequence of database operations&lt;/strong&gt; that is &lt;strong&gt;executed as one logical unit of work&lt;/strong&gt;, meaning &lt;strong&gt;either all operations are performed successfully or none are performed&lt;/strong&gt;.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-copy&#34; data-lang=&#34;copy&#34;&gt;-- Example for &amp;#34;logical unite of work&amp;#34;
@@ -183,7 +202,7 @@ B = B + 100
 Write(B)
 Commit
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A transaction must satisfy the &lt;strong&gt;ACID properties&lt;/strong&gt; to ensure &lt;strong&gt;database correctness and consistency&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;![[Pasted image 20260107220421.png|300]]&lt;/p&gt;
+&lt;p&gt;![[dbms1.png|400]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;key-points&#34;&gt;Key Points&lt;/h2&gt;
 &lt;ul&gt;

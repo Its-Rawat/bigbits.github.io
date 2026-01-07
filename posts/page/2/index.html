@@ -195,7 +195,26 @@ B = B + 100
 Write(B)
 Commit
 </code></pre><p>A transaction must satisfy the <strong>ACID properties</strong> to ensure <strong>database correctness and consistency</strong>.</p>
-<p>![[Pasted image 20260107220421.png|300]]</p>
+<p>![[dbms1.png|400]]</p>
+<hr>
+<h2 id="key-points">Key Points</h2>
+<ul>
+<li>A transaction groups multiple database operations into a <strong>single logical task</strong></li>
+<li>Partial execution is <strong>not allowed</strong></li>
+<li>Failure of any operation causes the <strong>entire transaction to rollback</strong></li>
+<li>Ensures reliability in <strong>concurrent and failure-prone environments</strong></li>
+</ul>
+<hr>
+<h2 id="acid-properties-overview">ACID Properties (Overview)</h2>
+<ul>
+<li><strong>Atomicity</strong> – All operations execute or none execute</li>
+<li><strong>Consistency</strong> – Database remains in a valid state</li>
+<li><strong>Isolation</strong> – Transactions do not interfere with each other</li>
+<li><strong>Durability</strong> – Committed changes persist permanently</li>
+</ul>
+<hr>
+<h2 id="schedule">Schedule</h2>
+<p>A <strong>schedule</strong> is the <strong>execution order of operations of multiple transactions</strong> on the <strong>same database</strong>, possibly <strong>executed concurrently</strong>.</p>
           
         </div>
 
