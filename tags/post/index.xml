@@ -171,7 +171,7 @@ B = B + 100
 Write(B)
 Commit
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A transaction must satisfy the &lt;strong&gt;ACID properties&lt;/strong&gt; to ensure &lt;strong&gt;database correctness and consistency&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;![[dbms1.png|400]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dbms1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;key-points&#34;&gt;Key Points&lt;/h2&gt;
 &lt;ul&gt;
@@ -202,7 +202,7 @@ B = B + 100
 Write(B)
 Commit
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A transaction must satisfy the &lt;strong&gt;ACID properties&lt;/strong&gt; to ensure &lt;strong&gt;database correctness and consistency&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;![[dbms1.png|400]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dbms1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;key-points&#34;&gt;Key Points&lt;/h2&gt;
 &lt;ul&gt;
