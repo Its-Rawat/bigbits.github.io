@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>dbms- transaction :: </title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Definition A transaction in DBMS is a finite sequence of database operations that is executed as one logical unit of work, meaning either all operations are performed successfully or none are performed.
+-- Example for &#34;logical unite of work&#34;Read(A)A = A − 100Write(A)Read(B)B = B &#43; 100Write(B)Commit A transaction must satisfy the ACID properties to ensure database correctness and consistency.
+![[Pasted image 20260107220421.png|300]]
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://its-rawat.github.io/bigbits.github.io/posts/dbms--transactions/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://its-rawat.github.io/bigbits.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="https://its-rawat.github.io/bigbits.github.io/img/theme-colors/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="dbms- transaction">
+<meta property="og:description" content="Definition A transaction in DBMS is a finite sequence of database operations that is executed as one logical unit of work, meaning either all operations are performed successfully or none are performed.
+-- Example for &#34;logical unite of work&#34;Read(A)A = A − 100Write(A)Read(B)B = B &#43; 100Write(B)Commit A transaction must satisfy the ACID properties to ensure database correctness and consistency.
+![[Pasted image 20260107220421.png|300]]
+" />
+<meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/dbms--transactions/" />
+<meta property="og:site_name" content="" />
+
+  
+    <meta property="og:image" content="https://its-rawat.github.io/bigbits.github.io/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="orange">
+
+  
+    <div id="banner">
+      <span>
+        
+          <a href="https://github.com/Its-Rawat">Also Check My GitHub</a>
+        
+      </span>
+      
+        <button type="button">x</button>
+      
+    </div>
+  
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://its-rawat.github.io/bigbits.github.io/">
+  <div class="logo">
+    re-Terminal
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/">About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/">Showcase</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+      
+        
+          <li><a href="https://its-rawat.github.io/Rawat-Portfolio/" >About</a></li>
+        
+      
+        
+          <li><a href="https://its-rawat.github.io/RESUME_PROJECTS/" >Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://its-rawat.github.io/bigbits.github.io/posts/dbms--transactions/">dbms- transaction</a>
+  </h1>
+  <div class="post-meta">
+    
+<span class="post-reading-time">2 min read (317 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/dbms/">DBMS</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/sql/">SQL</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/gate/">GATE</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/linkedin/">linkedin</a>&nbsp;
+      
+      #<a href="https://its-rawat.github.io/bigbits.github.io/tags/post/">post</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition">Definition</a></li>
+    <li><a href="#key-points">Key Points</a></li>
+    <li><a href="#acid-properties-overview">ACID Properties (Overview)</a></li>
+    <li><a href="#schedule">Schedule</a>
+      <ul>
+        <li><a href="#why-concurrency">Why Concurrency?</a></li>
+        <li><a href="#problems-with-concurrency">Problems with Concurrency</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h2 id="definition">Definition<a href="#definition" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>A <strong>transaction</strong> in DBMS is a <strong>finite sequence of database operations</strong> that is <strong>executed as one logical unit of work</strong>, meaning <strong>either all operations are performed successfully or none are performed</strong>.</p>
+<pre tabindex="0"><code class="language-copy" data-lang="copy">-- Example for &#34;logical unite of work&#34;
+Read(A)
+A = A − 100
+Write(A)
+Read(B)
+B = B + 100
+Write(B)
+Commit
+</code></pre><p>A transaction must satisfy the <strong>ACID properties</strong> to ensure <strong>database correctness and consistency</strong>.</p>
+<p>![[Pasted image 20260107220421.png|300]]</p>
+<hr>
+<h2 id="key-points">Key Points<a href="#key-points" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>A transaction groups multiple database operations into a <strong>single logical task</strong></li>
+<li>Partial execution is <strong>not allowed</strong></li>
+<li>Failure of any operation causes the <strong>entire transaction to rollback</strong></li>
+<li>Ensures reliability in <strong>concurrent and failure-prone environments</strong></li>
+</ul>
+<hr>
+<h2 id="acid-properties-overview">ACID Properties (Overview)<a href="#acid-properties-overview" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><strong>Atomicity</strong> – All operations execute or none execute</li>
+<li><strong>Consistency</strong> – Database remains in a valid state</li>
+<li><strong>Isolation</strong> – Transactions do not interfere with each other</li>
+<li><strong>Durability</strong> – Committed changes persist permanently</li>
+</ul>
+<hr>
+<h2 id="schedule">Schedule<a href="#schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>A <strong>schedule</strong> is the <strong>execution order of operations of multiple transactions</strong> on the <strong>same database</strong>, possibly <strong>executed concurrently</strong>.</p>
+<hr>
+<h3 id="why-concurrency">Why Concurrency?<a href="#why-concurrency" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ol>
+<li>Improved throughput{no. of lines executed per unit time}.</li>
+<li>Resource utilization.</li>
+<li>Reduced waiting time.</li>
+</ol>
+<hr>
+<h3 id="problems-with-concurrency">Problems with Concurrency<a href="#problems-with-concurrency" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ol>
+<li><strong>Recoverability problems</strong> &ndash;&gt;  Occur when a transaction commits after reading data written by another uncommitted transaction, which may later be rolled back, leading to inconsistency.</li>
+<li><strong>Deadlock</strong> &ndash;&gt; A situation where two or more transactions wait indefinitely for each other to release resources, causing none of them to proceed.</li>
+<li><strong>Serializability(serial flow execution) issues</strong> &ndash;&gt; Arise when concurrent execution of transactions produces results that are not equivalent to any serial (one-by-one) execution, leading to incorrect database states.</li>
+</ol>
+<hr>
+<h4 id="serializability-issues">Serializability Issues<a href="#serializability-issues" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li><strong>Lost Update Problem</strong> – Updates of one transaction are overwritten by another.</li>
+<li><strong>Dirty Read Problem</strong> – A transaction reads uncommitted data of another transaction.</li>
+<li><strong>Phantom Read</strong> – Re-executing a query returns extra or missing rows.</li>
+<li><strong>Unrepeatable Read Problem</strong> – Same read gives different values due to another transaction’s update.</li>
+<li><strong>Incorrect Summary Problem</strong> – Aggregated results are computed on partially updated data.</li>
+</ul>
+<hr>
+<p>To be Continued&hellip;&hellip;</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Custom Spring Boot Banners</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/docker/">
+                <span class="button__text">Docker Full Notes</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2026 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/Its-Rawat" target="_blank">Theme</a> made by <a href="https://github.com/Its-Rawat" target="_blank">Its_Rawat</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bigbits.github.io/bundle.min.js"></script>
+
+
+
+  
+
+  <script type="text/javascript" src="/bigbits.github.io/js/banner.min.js"></script>
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

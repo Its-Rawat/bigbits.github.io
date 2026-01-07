@@ -8,6 +8,16 @@
     <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/data-structures-and-algorithms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/data-structures-and-algorithms/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/digital-java8-innards_fp-course-id-55961/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -135,6 +145,37 @@ It allows a class to compare its instances using the &lt;code&gt;compareTo()&lt;
 &lt;p&gt;Works automatically with &lt;code&gt;Collections.sort()&lt;/code&gt; or &lt;code&gt;Arrays.sort()&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/gate-syllabus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/gate-syllabus/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;1:- C Programming&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLbE3-5DBkMUkATaUFgDIpBDbfnym0qvsQ&amp;amp;si=u3i3XIy-51kaHb0Q&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;2:- Data Structure&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s334Pe8qACh32TdxsMKqDRU&amp;amp;si=WNKMe88lUQFh1n-Y&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;3:- Algorithm&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PL3eEXnCBViH87NTeUU8AteQQ7cmO33gOY&amp;amp;si=R_3U3ZLW1rIIFne9&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;4:- Theory Of Automata&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxGvebewU4z2CZYo-8nB93E7&amp;amp;si=BptkcYBUYshgDkj0&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;5:- Compiler Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s1NGf_6tQbDBsjLRjquKBE1&amp;amp;si=-VWwAEIpwSOy5JDA&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;6:- Operating System&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s17rFjWM8KchGlffXgOzzVP&amp;amp;si=GTZTHbeFmgl0Mod7&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;7:- DBMS&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0bu-I8fgDXXhVLO4qVROGy&amp;amp;si=_22IsI79jNR6VAUr&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;8:- Digital Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEErKQZ7xFxat8oh4OepU34&amp;amp;si=qyoBJ63HrWofzXdS&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;9:- Discrete Mathematics&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEYmhzVBW7nBdftFZ4xmiF1&amp;amp;si=VoafbTE_6Njcq3r3&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;10:- Computer Networks&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxHT-TxTy3U1slr5RaBJGaLd&amp;amp;si=Wim10HlOV4ZXANXJ&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;11:- Computer Architecture/ Organization&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0xddCBjwMDnEVyc523WbA2&amp;amp;si=oTNrhezV8MIF90Xv&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;</description>
+      <content>&lt;p&gt;&lt;em&gt;&lt;strong&gt;1:- C Programming&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLbE3-5DBkMUkATaUFgDIpBDbfnym0qvsQ&amp;amp;si=u3i3XIy-51kaHb0Q&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;2:- Data Structure&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s334Pe8qACh32TdxsMKqDRU&amp;amp;si=WNKMe88lUQFh1n-Y&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;3:- Algorithm&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PL3eEXnCBViH87NTeUU8AteQQ7cmO33gOY&amp;amp;si=R_3U3ZLW1rIIFne9&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;4:- Theory Of Automata&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxGvebewU4z2CZYo-8nB93E7&amp;amp;si=BptkcYBUYshgDkj0&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;5:- Compiler Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s1NGf_6tQbDBsjLRjquKBE1&amp;amp;si=-VWwAEIpwSOy5JDA&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;6:- Operating System&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s17rFjWM8KchGlffXgOzzVP&amp;amp;si=GTZTHbeFmgl0Mod7&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;7:- DBMS&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0bu-I8fgDXXhVLO4qVROGy&amp;amp;si=_22IsI79jNR6VAUr&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;8:- Digital Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEErKQZ7xFxat8oh4OepU34&amp;amp;si=qyoBJ63HrWofzXdS&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;9:- Discrete Mathematics&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEYmhzVBW7nBdftFZ4xmiF1&amp;amp;si=VoafbTE_6Njcq3r3&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;10:- Computer Networks&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxHT-TxTy3U1slr5RaBJGaLd&amp;amp;si=Wim10HlOV4ZXANXJ&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;11:- Computer Architecture/ Organization&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0xddCBjwMDnEVyc523WbA2&amp;amp;si=oTNrhezV8MIF90Xv&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -1812,6 +1853,83 @@ Running on: ${os.name}
 &lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/llllfs.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>dbms- transaction</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/dbms--transactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/dbms--transactions/</guid>
+      <description>&lt;h2 id=&#34;definition&#34;&gt;Definition&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;transaction&lt;/strong&gt; in DBMS is a &lt;strong&gt;finite sequence of database operations&lt;/strong&gt; that is &lt;strong&gt;executed as one logical unit of work&lt;/strong&gt;, meaning &lt;strong&gt;either all operations are performed successfully or none are performed&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-copy&#34; data-lang=&#34;copy&#34;&gt;-- Example for &amp;#34;logical unite of work&amp;#34;
+Read(A)
+A = A − 100
+Write(A)
+Read(B)
+B = B + 100
+Write(B)
+Commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A transaction must satisfy the &lt;strong&gt;ACID properties&lt;/strong&gt; to ensure &lt;strong&gt;database correctness and consistency&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20260107220421.png|300]]&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;definition&#34;&gt;Definition&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;transaction&lt;/strong&gt; in DBMS is a &lt;strong&gt;finite sequence of database operations&lt;/strong&gt; that is &lt;strong&gt;executed as one logical unit of work&lt;/strong&gt;, meaning &lt;strong&gt;either all operations are performed successfully or none are performed&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-copy&#34; data-lang=&#34;copy&#34;&gt;-- Example for &amp;#34;logical unite of work&amp;#34;
+Read(A)
+A = A − 100
+Write(A)
+Read(B)
+B = B + 100
+Write(B)
+Commit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A transaction must satisfy the &lt;strong&gt;ACID properties&lt;/strong&gt; to ensure &lt;strong&gt;database correctness and consistency&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20260107220421.png|300]]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-points&#34;&gt;Key Points&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A transaction groups multiple database operations into a &lt;strong&gt;single logical task&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Partial execution is &lt;strong&gt;not allowed&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Failure of any operation causes the &lt;strong&gt;entire transaction to rollback&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Ensures reliability in &lt;strong&gt;concurrent and failure-prone environments&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;acid-properties-overview&#34;&gt;ACID Properties (Overview)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Atomicity&lt;/strong&gt; – All operations execute or none execute&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Consistency&lt;/strong&gt; – Database remains in a valid state&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Isolation&lt;/strong&gt; – Transactions do not interfere with each other&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Durability&lt;/strong&gt; – Committed changes persist permanently&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;schedule&#34;&gt;Schedule&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;schedule&lt;/strong&gt; is the &lt;strong&gt;execution order of operations of multiple transactions&lt;/strong&gt; on the &lt;strong&gt;same database&lt;/strong&gt;, possibly &lt;strong&gt;executed concurrently&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;why-concurrency&#34;&gt;Why Concurrency?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Improved throughput{no. of lines executed per unit time}.&lt;/li&gt;
+&lt;li&gt;Resource utilization.&lt;/li&gt;
+&lt;li&gt;Reduced waiting time.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;problems-with-concurrency&#34;&gt;Problems with Concurrency&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Recoverability problems&lt;/strong&gt; &amp;ndash;&amp;gt;  Occur when a transaction commits after reading data written by another uncommitted transaction, which may later be rolled back, leading to inconsistency.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deadlock&lt;/strong&gt; &amp;ndash;&amp;gt; A situation where two or more transactions wait indefinitely for each other to release resources, causing none of them to proceed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Serializability(serial flow execution) issues&lt;/strong&gt; &amp;ndash;&amp;gt; Arise when concurrent execution of transactions produces results that are not equivalent to any serial (one-by-one) execution, leading to incorrect database states.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;serializability-issues&#34;&gt;Serializability Issues&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Lost Update Problem&lt;/strong&gt; – Updates of one transaction are overwritten by another.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dirty Read Problem&lt;/strong&gt; – A transaction reads uncommitted data of another transaction.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Phantom Read&lt;/strong&gt; – Re-executing a query returns extra or missing rows.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unrepeatable Read Problem&lt;/strong&gt; – Same read gives different values due to another transaction’s update.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Incorrect Summary Problem&lt;/strong&gt; – Aggregated results are computed on partially updated data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;To be Continued&amp;hellip;&amp;hellip;&lt;/p&gt;
 </content>
     </item>
     
