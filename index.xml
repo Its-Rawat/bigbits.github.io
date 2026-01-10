@@ -1989,7 +1989,7 @@ Eg: banking system.&lt;/p&gt;
 &lt;h5 id=&#34;conflict-serializable-schedule&#34;&gt;Conflict Serializable Schedule&lt;/h5&gt;
 &lt;p&gt;Its a type of a validation through which we can check if a schedule is serializable, if yes then for which sequence we can say it&amp;rsquo;s serializable.
 If a loop occur in conflict then we can&amp;rsquo;t tell if schedule is serializable. {In this case View Serializability is used.}&lt;/p&gt;
-&lt;p&gt;![[WhatsApp Image 2026-01-10 at 9.56.47 PM.jpeg]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/notes2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h5 id=&#34;view-serializable-schedule&#34;&gt;View Serializable Schedule&lt;/h5&gt;
 &lt;p&gt;We check view serializability if&lt;/p&gt;
