@@ -160,7 +160,7 @@ Key Points A transaction groups multiple database operations into a single logic
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">2 min read (314 words)</span></div>
+<span class="post-reading-time">3 min read (560 words)</span></div>
 
   
     <span class="post-tags">
@@ -195,6 +195,12 @@ Key Points A transaction groups multiple database operations into a single logic
       <ul>
         <li><a href="#why-concurrency">Why Concurrency?</a></li>
         <li><a href="#problems-with-concurrency">Problems with Concurrency</a></li>
+      </ul>
+    </li>
+    <li><a href="#types-of-schedules">Types of Schedules</a>
+      <ul>
+        <li><a href="#serial-schedule">Serial Schedule</a></li>
+        <li><a href="#non-serial-schedule">Non-Serial Schedule</a></li>
       </ul>
     </li>
   </ul>
@@ -258,7 +264,65 @@ Commit
 <li><strong>Incorrect Summary Problem</strong> – Aggregated results are computed on partially updated data.</li>
 </ul>
 <hr>
-<p>To be Continued&hellip;&hellip;</p>
+<h2 id="types-of-schedules">Types of Schedules<a href="#types-of-schedules" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260110201109.png" alt="Image Description"></p>
+<ol>
+<li>Serial Schedule</li>
+<li>Non-Serial Schedule
+<ul>
+<li>Serializable Schedules
+<ul>
+<li>View Serializable</li>
+<li>Conflict Serializable</li>
+</ul>
+</li>
+<li>Non-Serializable Schedules
+<ul>
+<li>Recoverable Schedules
+<ul>
+<li>Cascading Schedules</li>
+<li>Cascadless Schedules</li>
+<li>Strict Schedules</li>
+</ul>
+</li>
+<li>Non-Recoverable Schedules</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="serial-schedule">Serial Schedule<a href="#serial-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Each transaction will run one by one without any interference(overlapping).<br>
+Eg: you don&rsquo;t start new transaction until the current one is completely finished.</p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">Number of Serial Schedule = n!  // {n factorial}
+</code></pre><h3 id="non-serial-schedule">Non-Serial Schedule<a href="#non-serial-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Multiple transactions are allowed to interleave, means transaction overlapping is allowed.
+Eg: banking system.</p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">No. of Schedule Possible = 
+[(n1 + n2 + n3 + n4 + . . . . . .  Nn)! ] / [n1! n2! n3! n4! . . . . . Nn!]
+</code></pre><h4 id="serializable-schedules">Serializable Schedules<a href="#serializable-schedules" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>A concurrent schedule which provide result as a serial schedule.</p>
+<h5 id="conflict-serializable-schedule">Conflict Serializable Schedule<a href="#conflict-serializable-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<p>Its a type of a validation through which we can check if a schedule is serializable, if yes then for which sequence we can say it&rsquo;s serializable.
+If a loop occur in conflict then we can&rsquo;t tell if schedule is serializable. {In this case View Serializability is used.}</p>
+<p>![[WhatsApp Image 2026-01-10 at 9.56.47 PM.jpeg]]</p>
+<hr>
+<h5 id="view-serializable-schedule">View Serializable Schedule<a href="#view-serializable-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<p>We check view serializability if</p>
+<ol>
+<li>Loop is there in precedence table means not conflict serializable.</li>
+<li>If there is no blind write, means no write happen without a read.</li>
+</ol>
+<p>Steps to check view serializability:</p>
+<ol>
+<li>Who reads first from db.</li>
+<li>In between reads are same.</li>
+<li>who write last.
+If all 3 above are equal in both schedules, then we can say both schedule are view equivalent.</li>
+</ol>
+<hr>
+<h4 id="non-serializable-schedules">Non-Serializable Schedules<a href="#non-serializable-schedules" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>To be continued &hellip;&hellip;&hellip;.</p>
 
       </div></div>
 

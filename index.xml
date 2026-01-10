@@ -1948,7 +1948,65 @@ Commit
 &lt;li&gt;&lt;strong&gt;Incorrect Summary Problem&lt;/strong&gt; – Aggregated results are computed on partially updated data.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;To be Continued&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;types-of-schedules&#34;&gt;Types of Schedules&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260110201109.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Serial Schedule&lt;/li&gt;
+&lt;li&gt;Non-Serial Schedule
+&lt;ul&gt;
+&lt;li&gt;Serializable Schedules
+&lt;ul&gt;
+&lt;li&gt;View Serializable&lt;/li&gt;
+&lt;li&gt;Conflict Serializable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Non-Serializable Schedules
+&lt;ul&gt;
+&lt;li&gt;Recoverable Schedules
+&lt;ul&gt;
+&lt;li&gt;Cascading Schedules&lt;/li&gt;
+&lt;li&gt;Cascadless Schedules&lt;/li&gt;
+&lt;li&gt;Strict Schedules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Non-Recoverable Schedules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;serial-schedule&#34;&gt;Serial Schedule&lt;/h3&gt;
+&lt;p&gt;Each transaction will run one by one without any interference(overlapping).&lt;br&gt;
+Eg: you don&amp;rsquo;t start new transaction until the current one is completely finished.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;Number of Serial Schedule = n!  // {n factorial}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;non-serial-schedule&#34;&gt;Non-Serial Schedule&lt;/h3&gt;
+&lt;p&gt;Multiple transactions are allowed to interleave, means transaction overlapping is allowed.
+Eg: banking system.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;No. of Schedule Possible = 
+[(n1 + n2 + n3 + n4 + . . . . . .  Nn)! ] / [n1! n2! n3! n4! . . . . . Nn!]
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;serializable-schedules&#34;&gt;Serializable Schedules&lt;/h4&gt;
+&lt;p&gt;A concurrent schedule which provide result as a serial schedule.&lt;/p&gt;
+&lt;h5 id=&#34;conflict-serializable-schedule&#34;&gt;Conflict Serializable Schedule&lt;/h5&gt;
+&lt;p&gt;Its a type of a validation through which we can check if a schedule is serializable, if yes then for which sequence we can say it&amp;rsquo;s serializable.
+If a loop occur in conflict then we can&amp;rsquo;t tell if schedule is serializable. {In this case View Serializability is used.}&lt;/p&gt;
+&lt;p&gt;![[WhatsApp Image 2026-01-10 at 9.56.47 PM.jpeg]]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;view-serializable-schedule&#34;&gt;View Serializable Schedule&lt;/h5&gt;
+&lt;p&gt;We check view serializability if&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Loop is there in precedence table means not conflict serializable.&lt;/li&gt;
+&lt;li&gt;If there is no blind write, means no write happen without a read.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Steps to check view serializability:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Who reads first from db.&lt;/li&gt;
+&lt;li&gt;In between reads are same.&lt;/li&gt;
+&lt;li&gt;who write last.
+If all 3 above are equal in both schedules, then we can say both schedule are view equivalent.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;non-serializable-schedules&#34;&gt;Non-Serializable Schedules&lt;/h4&gt;
+&lt;p&gt;To be continued &amp;hellip;&amp;hellip;&amp;hellip;.&lt;/p&gt;
 </content>
     </item>
     
