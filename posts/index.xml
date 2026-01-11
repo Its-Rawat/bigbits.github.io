@@ -1985,7 +1985,7 @@ Eg: banking system.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;No. of Schedule Possible = 
 [(n1 + n2 + n3 + n4 + . . . . . .  Nn)! ] / [n1! n2! n3! n4! . . . . . Nn!]
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;serializable-schedules&#34;&gt;Serializable Schedules&lt;/h4&gt;
-&lt;p&gt;A concurrent schedule which provide result as a serial schedule.&lt;/p&gt;
+&lt;p&gt;A concurrent(interleaved) schedule which provide result as a serial schedule.&lt;/p&gt;
 &lt;h5 id=&#34;conflict-serializable-schedule&#34;&gt;Conflict Serializable Schedule&lt;/h5&gt;
 &lt;p&gt;Its a type of a validation through which we can check if a schedule is serializable, if yes then for which sequence we can say it&amp;rsquo;s serializable.
 If a loop occur in conflict then we can&amp;rsquo;t tell if schedule is serializable. {In this case View Serializability is used.}&lt;/p&gt;
@@ -2006,7 +2006,15 @@ If all 3 above are equal in both schedules, then we can say both schedule are vi
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;non-serializable-schedules&#34;&gt;Non-Serializable Schedules&lt;/h4&gt;
-&lt;p&gt;To be continued &amp;hellip;&amp;hellip;&amp;hellip;.&lt;/p&gt;
+&lt;p&gt;Non-serializable schedules are interleaved(mixed) sequences of transactions that can&amp;rsquo;t be rearranged into any serial order without causing inconsistencies.&lt;/p&gt;
+&lt;h5 id=&#34;recoverability-schedule&#34;&gt;Recoverability Schedule&lt;/h5&gt;
+&lt;p&gt;A recoverable schedule is one in which a transaction only commits after all transactions whose changes it has read have also committed.&lt;/p&gt;
+&lt;p&gt;Example: &lt;code&gt;If transaction T_i reads a value written by transaction T_j, then T_i must commit only after T_j commits to ensure no rollback of a committed transaction is needed. &lt;/code&gt;&lt;/p&gt;
+&lt;h6 id=&#34;cascadeless-recoverable-schedule&#34;&gt;Cascadeless recoverable schedule&lt;/h6&gt;
+&lt;p&gt;a transaction can only read a value if the transaction that wrote or modified that value has already committed. If the writing transaction hasn&amp;rsquo;t committed yet, then the reading transaction simply waits and does not read that value.&lt;/p&gt;
+&lt;h6 id=&#34;cascading-recoverable-schedule&#34;&gt;Cascading recoverable schedule&lt;/h6&gt;
+&lt;p&gt;A cascading recoverable schedule is one where transactions can read uncommitted data from others. If the original writer transaction is rolled back, any transactions that depended on that uncommitted data may also have to roll back, creating a cascading effect. However, no already committed transaction is undone in this process, so the schedule is still considered recoverable.&lt;/p&gt;
+&lt;hr&gt;
 </content>
     </item>
     

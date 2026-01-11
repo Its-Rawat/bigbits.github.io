@@ -160,7 +160,7 @@ Key Points A transaction groups multiple database operations into a single logic
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">3 min read (554 words)</span></div>
+<span class="post-reading-time">4 min read (722 words)</span></div>
 
   
     <span class="post-tags">
@@ -301,7 +301,7 @@ Eg: banking system.</p>
 <pre tabindex="0"><code class="language-Copy" data-lang="Copy">No. of Schedule Possible = 
 [(n1 + n2 + n3 + n4 + . . . . . .  Nn)! ] / [n1! n2! n3! n4! . . . . . Nn!]
 </code></pre><h4 id="serializable-schedules">Serializable Schedules<a href="#serializable-schedules" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
-<p>A concurrent schedule which provide result as a serial schedule.</p>
+<p>A concurrent(interleaved) schedule which provide result as a serial schedule.</p>
 <h5 id="conflict-serializable-schedule">Conflict Serializable Schedule<a href="#conflict-serializable-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
 <p>Its a type of a validation through which we can check if a schedule is serializable, if yes then for which sequence we can say it&rsquo;s serializable.
 If a loop occur in conflict then we can&rsquo;t tell if schedule is serializable. {In this case View Serializability is used.}</p>
@@ -322,7 +322,15 @@ If all 3 above are equal in both schedules, then we can say both schedule are vi
 </ol>
 <hr>
 <h4 id="non-serializable-schedules">Non-Serializable Schedules<a href="#non-serializable-schedules" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
-<p>To be continued &hellip;&hellip;&hellip;.</p>
+<p>Non-serializable schedules are interleaved(mixed) sequences of transactions that can&rsquo;t be rearranged into any serial order without causing inconsistencies.</p>
+<h5 id="recoverability-schedule">Recoverability Schedule<a href="#recoverability-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<p>A recoverable schedule is one in which a transaction only commits after all transactions whose changes it has read have also committed.</p>
+<p>Example: <code>If transaction T_i reads a value written by transaction T_j, then T_i must commit only after T_j commits to ensure no rollback of a committed transaction is needed. </code></p>
+<h6 id="cascadeless-recoverable-schedule">Cascadeless recoverable schedule<a href="#cascadeless-recoverable-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>a transaction can only read a value if the transaction that wrote or modified that value has already committed. If the writing transaction hasn&rsquo;t committed yet, then the reading transaction simply waits and does not read that value.</p>
+<h6 id="cascading-recoverable-schedule">Cascading recoverable schedule<a href="#cascading-recoverable-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>A cascading recoverable schedule is one where transactions can read uncommitted data from others. If the original writer transaction is rolled back, any transactions that depended on that uncommitted data may also have to roll back, creating a cascading effect. However, no already committed transaction is undone in this process, so the schedule is still considered recoverable.</p>
+<hr>
 
       </div></div>
 
