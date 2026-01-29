@@ -160,7 +160,7 @@ Key Points A transaction groups multiple database operations into a single logic
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">7 min read (1332 words)</span></div>
+<span class="post-reading-time">7 min read (1453 words)</span></div>
 
   
     <span class="post-tags">
@@ -215,7 +215,11 @@ Key Points A transaction groups multiple database operations into a single logic
       </ul>
     </li>
     <li><a href="#strict-two-phase-locking-strict-2pl">Strict Two-Phase Locking (Strict 2PL)</a></li>
-    <li><a href="#rigorous-2pl">Rigorous 2PL</a></li>
+    <li><a href="#rigorous-2pl">Rigorous 2PL</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -442,6 +446,42 @@ If all 3 above are equal in both schedules, then we can say both schedule are vi
 <li><strong>Pros/Cons:</strong> Strongest consistency, no uncommitted data read; lower concurrency since all locks are held until commit.</li>
 </ul>
 <hr>
+<h5 id="topics-covered-in-hierarchical-format">Topics Covered in Hierarchical format<a href="#topics-covered-in-hierarchical-format" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">Schedules
+│
+├─ Serial Schedules
+│
+└─ Non-Serial Schedules
+    │
+    ├─ Serializable Schedules
+    │   │
+    │   ├─ Conflict-Serializable Schedules
+    │   │   │
+    │   │   └─ Lock-Based Protocols (ensure conflict serializability)
+    │   │       ├─ Basic 2PL
+    │   │       │
+    │   │       ├─ Strict 2PL
+    │   │       │   └─ (also ensures Strict &amp; Cascadeless schedules)
+    │   │       │
+    │   │       ├─ Rigorous 2PL
+    │   │       │   └─ (stronger than Strict 2PL)
+    │   │       │
+    │   │       └─ Conservative 2PL
+    │   │           └─ (deadlock-free)
+    │   │
+    │   └─ View-Serializable Schedules
+    │       └─ (superset of Conflict-Serializable)
+    │
+    └─ Non-Serializable Schedules
+        │
+        ├─ Recoverable Schedules
+        │   │
+        │   ├─ Cascading Schedules
+        │   │
+        │   └─ Cascadeless Schedules
+        │
+        └─ Non-Recoverable Schedules
+</code></pre><hr>
 
       </div></div>
 
@@ -455,9 +495,9 @@ If all 3 above are equal in both schedules, then we can say both schedule are vi
     <div class="pagination__buttons">
         
         <span class="button previous">
-            <a href="https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/">
+            <a href="https://its-rawat.github.io/bigbits.github.io/posts/dbms--file-structure/">
                 <span class="button__icon">←</span>
-                <span class="button__text">Custom Spring Boot Banners</span>
+                <span class="button__text">dbms- file_structure</span>
             </a>
         </span>
         

@@ -7,6 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/tags/gate/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>dbms- file_structure</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/dbms--file-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/dbms--file-structure/</guid>
+      <description>&lt;h1 id=&#34;b-tree&#34;&gt;B-Tree&lt;/h1&gt;
+&lt;h2 id=&#34;-b-tree-nomenclature&#34;&gt;🌳 B-Tree Nomenclature&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Order (m)&lt;/strong&gt; → max children = &lt;code&gt;m&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Max keys&lt;/strong&gt; → &lt;code&gt;m − 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Min keys (non-root)&lt;/strong&gt; → &lt;code&gt;⌈m/2⌉ − 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Children vs Keys&lt;/strong&gt; → &lt;code&gt;keys = children − 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Root&lt;/strong&gt; → minimum &lt;code&gt;1&lt;/code&gt; key&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Internal node&lt;/strong&gt; → has children&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Leaf node&lt;/strong&gt; → no children&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;All leaves&lt;/strong&gt; → same level (balanced)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Height&lt;/strong&gt; → &lt;code&gt;O(logₘ n)&lt;/code&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125195750.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;insert-operation&#34;&gt;Insert Operation&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125234141.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;insert-operation-another-example&#34;&gt;Insert Operation another example&lt;/h2&gt;
+&lt;p&gt;B-Tree of Order 5
+Insert Keys 7, 4, 14, 25, 3, 10, 12, 15, 17, 9, 29, 1, 38, 2, 11&lt;br&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215459.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215512.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215528.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215537.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;b-tree&#34;&gt;B-Tree&lt;/h1&gt;
+&lt;h2 id=&#34;-b-tree-nomenclature&#34;&gt;🌳 B-Tree Nomenclature&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Order (m)&lt;/strong&gt; → max children = &lt;code&gt;m&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Max keys&lt;/strong&gt; → &lt;code&gt;m − 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Min keys (non-root)&lt;/strong&gt; → &lt;code&gt;⌈m/2⌉ − 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Children vs Keys&lt;/strong&gt; → &lt;code&gt;keys = children − 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Root&lt;/strong&gt; → minimum &lt;code&gt;1&lt;/code&gt; key&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Internal node&lt;/strong&gt; → has children&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Leaf node&lt;/strong&gt; → no children&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;All leaves&lt;/strong&gt; → same level (balanced)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Height&lt;/strong&gt; → &lt;code&gt;O(logₘ n)&lt;/code&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125195750.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;insert-operation&#34;&gt;Insert Operation&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125234141.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;insert-operation-another-example&#34;&gt;Insert Operation another example&lt;/h2&gt;
+&lt;p&gt;B-Tree of Order 5
+Insert Keys 7, 4, 14, 25, 3, 10, 12, 15, 17, 9, 29, 1, 38, 2, 11&lt;br&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215459.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215512.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215528.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215537.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;deletion-operation&#34;&gt;Deletion Operation&lt;/h2&gt;
+&lt;p&gt;Example 1
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129231027.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Solution
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129231105.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+</content>
+    </item>
+    
+    <item>
       <title>dbms- transaction</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/dbms--transactions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -263,6 +327,42 @@ If all 3 above are equal in both schedules, then we can say both schedule are vi
 &lt;li&gt;&lt;strong&gt;Pros/Cons:&lt;/strong&gt; Strongest consistency, no uncommitted data read; lower concurrency since all locks are held until commit.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
+&lt;h5 id=&#34;topics-covered-in-hierarchical-format&#34;&gt;Topics Covered in Hierarchical format&lt;/h5&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;Schedules
+│
+├─ Serial Schedules
+│
+└─ Non-Serial Schedules
+    │
+    ├─ Serializable Schedules
+    │   │
+    │   ├─ Conflict-Serializable Schedules
+    │   │   │
+    │   │   └─ Lock-Based Protocols (ensure conflict serializability)
+    │   │       ├─ Basic 2PL
+    │   │       │
+    │   │       ├─ Strict 2PL
+    │   │       │   └─ (also ensures Strict &amp;amp; Cascadeless schedules)
+    │   │       │
+    │   │       ├─ Rigorous 2PL
+    │   │       │   └─ (stronger than Strict 2PL)
+    │   │       │
+    │   │       └─ Conservative 2PL
+    │   │           └─ (deadlock-free)
+    │   │
+    │   └─ View-Serializable Schedules
+    │       └─ (superset of Conflict-Serializable)
+    │
+    └─ Non-Serializable Schedules
+        │
+        ├─ Recoverable Schedules
+        │   │
+        │   ├─ Cascading Schedules
+        │   │
+        │   └─ Cascadeless Schedules
+        │
+        └─ Non-Recoverable Schedules
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 </content>
     </item>
     
