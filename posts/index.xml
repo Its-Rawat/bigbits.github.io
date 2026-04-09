@@ -2447,7 +2447,17 @@ Via network name&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Scaling services&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;docker-compose up --scale&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Use cases and benefits&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;3-ways-to-create-docker-image&#34;&gt;3 Ways To Create Docker Image&lt;/h1&gt;
+&lt;h2 id=&#34;using-spotify-plugin-to-create-docker-image&#34;&gt;Using Spotify plugin to create docker image&lt;/h2&gt;
+&lt;h3 id=&#34;-step-1-build-jar&#34;&gt;⚙️ Step 1: Build JAR&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mvn clean package
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;-requirement&#34;&gt;✅ Requirement&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;spring-boot-maven-plugin&lt;/code&gt; in &lt;code&gt;pom.xml&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 Output:&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-docker&#34;&gt;What is Docker?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Docker is an open platform for developing, shipping and running applications.&lt;/code&gt;&lt;/li&gt;
@@ -2674,6 +2684,114 @@ Via network name&lt;/li&gt;
 &lt;code&gt;docker-compose up --scale&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Use cases and benefits&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;3-ways-to-create-docker-image&#34;&gt;3 Ways To Create Docker Image&lt;/h1&gt;
+&lt;h2 id=&#34;using-spotify-plugin-to-create-docker-image&#34;&gt;Using Spotify plugin to create docker image&lt;/h2&gt;
+&lt;h3 id=&#34;-step-1-build-jar&#34;&gt;⚙️ Step 1: Build JAR&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mvn clean package
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;-requirement&#34;&gt;✅ Requirement&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;spring-boot-maven-plugin&lt;/code&gt; in &lt;code&gt;pom.xml&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 Output:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Executable JAR → &lt;code&gt;target/*.jar&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-2-dockerfile&#34;&gt;📦 Step 2: Dockerfile&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-dockerfile&#34; data-lang=&#34;dockerfile&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; eclipse-temurin:21-jdk-alpine&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;COPY&lt;/span&gt; target/app.jar app.jar&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ENTRYPOINT&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;java&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-jar&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/app.jar&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;-key-concepts&#34;&gt;🧠 Key Concepts&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;FROM&lt;/code&gt; → Base image&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;COPY&lt;/code&gt; → Add JAR into container&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ENTRYPOINT&lt;/code&gt; → Run app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-3-build-image&#34;&gt;🏗️ Step 3: Build Image&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker build -t myapp:v1 .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;-breakdown&#34;&gt;🔍 Breakdown&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-t&lt;/code&gt; → tag (name:version)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt; → current directory (build context)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-4-verify-image&#34;&gt;🖼️ Step 4: Verify Image&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker images
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;-step-5-run-container&#34;&gt;▶️ Step 5: Run Container&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -p 8080:8080 myapp:v1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;-port-mapping&#34;&gt;🌐 Port Mapping&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;host-port:container-port&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-6-check-containers&#34;&gt;📊 Step 6: Check Containers&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps        &lt;span style=&#34;color:#75715e&#34;&gt;# running&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps -a     &lt;span style=&#34;color:#75715e&#34;&gt;# all&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;-step-7-logs&#34;&gt;📜 Step 7: Logs&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker logs -f &amp;lt;container-id&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-f&lt;/code&gt; → follow (like &lt;code&gt;tail -f&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-8-stop-container&#34;&gt;⛔ Step 8: Stop Container&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker stop &amp;lt;container-id&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;-step-9-remove-container&#34;&gt;🗑️ Step 9: Remove Container&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker rm &amp;lt;container-id&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;-step-10-remove-image&#34;&gt;❌ Step 10: Remove Image&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker rmi myapp:v1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Force:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker rmi -f myapp:v1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;-minimal-workflow&#34;&gt;⚡ Minimal Workflow&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mvn clean package
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker build -t myapp:v1 .
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -p 8080:8080 myapp:v1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-common-issues&#34;&gt;🧯 Common Issues&lt;/h2&gt;
+&lt;h4 id=&#34;-not-executable-jar&#34;&gt;❌ Not executable JAR&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;no main manifest attribute
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;✔ Fix:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add plugin&lt;/li&gt;
+&lt;li&gt;Rebuild:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mvn clean package
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;-app-not-starting&#34;&gt;❌ App not starting&lt;/h4&gt;
+&lt;p&gt;Possible causes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrong port&lt;/li&gt;
+&lt;li&gt;DB issue&lt;/li&gt;
+&lt;li&gt;Wrong profile&lt;/li&gt;
+&lt;li&gt;Missing env variables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;✔ Check:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker logs -f &amp;lt;container-id&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;-port-not-accessible&#34;&gt;❌ Port not accessible&lt;/h4&gt;
+&lt;p&gt;✔ Verify:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;App running on correct port&lt;/li&gt;
+&lt;li&gt;Correct &lt;code&gt;-p&lt;/code&gt; mapping&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-cheat-sheet&#34;&gt;📌 Cheat Sheet&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mvn clean package
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker build -t myapp:v1 .
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker images
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -p 8080:8080 myapp:v1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker logs -f &amp;lt;container-id&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker stop &amp;lt;container-id&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker rm &amp;lt;container-id&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker rmi myapp:v1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 </content>
     </item>
     
@@ -2882,174 +3000,6 @@ public class User {
     private Address address;
 }
 &lt;/code&gt;&lt;/pre&gt;</content>
-    </item>
-    
-    <item>
-      <title>Home Rebuild Process</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/home-rebuild-process/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/home-rebuild-process/</guid>
-      <description>&lt;h1 id=&#34;ownership-documents-required&#34;&gt;Ownership documents required&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Title Deed&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sale Deed&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Property Tax Receipts&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Will or Gift Deed (if inherited)&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Possession Letter – Proof that you’ve taken possession&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mutation Certificate – Updates government records in your name&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Encumbrance Certificate – Shows there are no loans or legal issues&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;1-title-deed&#34;&gt;&lt;strong&gt;1. Title Deed&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;The primary document showing who legally owns the property.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In Delhi, it’s usually a &lt;em&gt;Conveyance Deed&lt;/em&gt; (for DDA/allotted plots) or a &lt;em&gt;Freehold Deed&lt;/em&gt;.&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;ownership-documents-required&#34;&gt;Ownership documents required&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Title Deed&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sale Deed&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Property Tax Receipts&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Will or Gift Deed (if inherited)&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Possession Letter – Proof that you’ve taken possession&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mutation Certificate – Updates government records in your name&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Encumbrance Certificate – Shows there are no loans or legal issues&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;1-title-deed&#34;&gt;&lt;strong&gt;1. Title Deed&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;The primary document showing who legally owns the property.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In Delhi, it’s usually a &lt;em&gt;Conveyance Deed&lt;/em&gt; (for DDA/allotted plots) or a &lt;em&gt;Freehold Deed&lt;/em&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;2-consult-the-master-plan--building-bye-laws&#34;&gt;&lt;strong&gt;2. Consult the Master Plan &amp;amp; Building Bye-Laws&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Delhi follows the &lt;strong&gt;Unified Building Bye-Laws 2016&lt;/strong&gt; and the &lt;strong&gt;Delhi Master Plan 2041&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;These define &lt;strong&gt;Floor Area Ratio (FAR)&lt;/strong&gt;, setbacks, height limits, and permissible construction types.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;FAR depends on plot size, location, and road width.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;3-hire-a-licensed-architect--structural-engineer&#34;&gt;&lt;strong&gt;3. Hire a Licensed Architect / Structural Engineer&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;In Delhi, &lt;strong&gt;only registered architects&lt;/strong&gt; (Council of Architecture) or licensed engineers can submit plans for approval.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;They will:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Measure your plot.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Prepare &lt;strong&gt;site plan, floor plans, structural drawings&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Ensure earthquake-resistant design (Delhi is in seismic zone IV).&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;4-get-building-plan-approval&#34;&gt;&lt;strong&gt;4. Get Building Plan Approval&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Apply online via &lt;strong&gt;MCD’s Building Plan Approval System&lt;/strong&gt; (for South, North, East MCD areas) or NDMC/DDA portals depending on location.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Documents usually required:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Ownership proof&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Previous building plan (if any)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Architect’s drawings&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Structural safety certificate&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Indemnity bond for construction safety&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Small residential plots in certain categories may qualify for &lt;strong&gt;Self-Certification Scheme&lt;/strong&gt; to speed up approval.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;5-arrange-for-temporary-accommodation&#34;&gt;&lt;strong&gt;5. Arrange for Temporary Accommodation&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;If you’re already living there, plan where your family will stay during demolition and construction—rent nearby, move with relatives, or arrange temporary structures.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;6-hire-a-contractor&#34;&gt;&lt;strong&gt;6. Hire a Contractor&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Get &lt;strong&gt;at least 3–4 quotes&lt;/strong&gt; from licensed contractors.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Material specifications&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Labour costs&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Completion timeline&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Penalty clauses for delay&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;7-manage-utility-disconnections&#34;&gt;&lt;strong&gt;7. Manage Utility Disconnections&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Before demolition:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Apply to &lt;strong&gt;BSES/TPDDL&lt;/strong&gt; (electricity) for disconnection.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Inform &lt;strong&gt;Delhi Jal Board&lt;/strong&gt; for water disconnection.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Get NOC from local RWA (if applicable).&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;8-demolition--waste-disposal&#34;&gt;&lt;strong&gt;8. Demolition &amp;amp; Waste Disposal&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Contractor must follow &lt;strong&gt;Delhi Pollution Control Committee (DPCC)&lt;/strong&gt; norms for dust control.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;C&amp;amp;D waste should be taken to designated sites (e.g., Burari C&amp;amp;D waste plant).&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
     </item>
     
     <item>

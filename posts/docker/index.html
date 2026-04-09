@@ -28,7 +28,8 @@ docker network inspect Communication between containers
 Via network name 7. Docker Compose (Multi-container Applications) What is Docker Compose? docker-compose.yml file structure version services build ports volumes depends_on networks Running with Compose
 docker-compose up, docker-compose down Building and Rebuilding
 docker-compose build, docker-compose up --build Scaling services
-docker-compose up --scale Use cases and benefits " />
+docker-compose up --scale Use cases and benefits 3 Ways To Create Docker Image Using Spotify plugin to create docker image ⚙️ Step 1: Build JAR mvn clean package ✅ Requirement spring-boot-maven-plugin in pom.xml 👉 Output:
+" />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
@@ -87,7 +88,8 @@ docker network inspect Communication between containers
 Via network name 7. Docker Compose (Multi-container Applications) What is Docker Compose? docker-compose.yml file structure version services build ports volumes depends_on networks Running with Compose
 docker-compose up, docker-compose down Building and Rebuilding
 docker-compose build, docker-compose up --build Scaling services
-docker-compose up --scale Use cases and benefits " />
+docker-compose up --scale Use cases and benefits 3 Ways To Create Docker Image Using Spotify plugin to create docker image ⚙️ Step 1: Build JAR mvn clean package ✅ Requirement spring-boot-maven-plugin in pom.xml 👉 Output:
+" />
 <meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/docker/" />
 <meta property="og:site_name" content="" />
 
@@ -198,7 +200,7 @@ docker-compose up --scale Use cases and benefits " />
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">3 min read (525 words)</span></div>
+<span class="post-reading-time">4 min read (788 words)</span></div>
 
   
     <span class="post-tags">
@@ -241,6 +243,30 @@ docker-compose up --scale Use cases and benefits " />
     <li><a href="#5-docker-volumes-data-persistence">5. Docker Volumes (Data Persistence)</a></li>
     <li><a href="#6-docker-networking">6. Docker Networking</a></li>
     <li><a href="#7-docker-compose-multi-container-applications">7. Docker Compose (Multi-container Applications)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#using-spotify-plugin-to-create-docker-image">Using Spotify plugin to create docker image</a>
+      <ul>
+        <li><a href="#-step-1-build-jar">⚙️ Step 1: Build JAR</a></li>
+        <li><a href="#-step-2-dockerfile">📦 Step 2: Dockerfile</a></li>
+        <li><a href="#-step-3-build-image">🏗️ Step 3: Build Image</a></li>
+        <li><a href="#-step-4-verify-image">🖼️ Step 4: Verify Image</a></li>
+        <li><a href="#-step-5-run-container">▶️ Step 5: Run Container</a></li>
+        <li><a href="#-step-6-check-containers">📊 Step 6: Check Containers</a></li>
+        <li><a href="#-step-7-logs">📜 Step 7: Logs</a></li>
+        <li><a href="#-step-8-stop-container">⛔ Step 8: Stop Container</a></li>
+        <li><a href="#-step-9-remove-container">🗑️ Step 9: Remove Container</a></li>
+        <li><a href="#-step-10-remove-image">❌ Step 10: Remove Image</a></li>
+        <li><a href="#-minimal-workflow">⚡ Minimal Workflow</a></li>
+      </ul>
+    </li>
+    <li><a href="#-common-issues">🧯 Common Issues</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#-cheat-sheet">📌 Cheat Sheet</a></li>
   </ul>
 </nav>
     </div>
@@ -473,6 +499,114 @@ Via network name</li>
 <code>docker-compose up --scale</code></li>
 <li><strong>Use cases and benefits</strong></li>
 </ul>
+<hr>
+<h1 id="3-ways-to-create-docker-image">3 Ways To Create Docker Image<a href="#3-ways-to-create-docker-image" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="using-spotify-plugin-to-create-docker-image">Using Spotify plugin to create docker image<a href="#using-spotify-plugin-to-create-docker-image" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="-step-1-build-jar">⚙️ Step 1: Build JAR<a href="#-step-1-build-jar" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn clean package
+</span></span></code></pre></div><h4 id="-requirement">✅ Requirement<a href="#-requirement" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li><code>spring-boot-maven-plugin</code> in <code>pom.xml</code></li>
+</ul>
+<p>👉 Output:</p>
+<ul>
+<li>Executable JAR → <code>target/*.jar</code></li>
+</ul>
+<hr>
+<h3 id="-step-2-dockerfile">📦 Step 2: Dockerfile<a href="#-step-2-dockerfile" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> eclipse-temurin:21-jdk-alpine</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> target/app.jar app.jar<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [<span style="color:#e6db74">&#34;java&#34;</span>,<span style="color:#e6db74">&#34;-jar&#34;</span>,<span style="color:#e6db74">&#34;/app.jar&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h4 id="-key-concepts">🧠 Key Concepts<a href="#-key-concepts" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li><code>FROM</code> → Base image</li>
+<li><code>COPY</code> → Add JAR into container</li>
+<li><code>ENTRYPOINT</code> → Run app</li>
+</ul>
+<hr>
+<h3 id="-step-3-build-image">🏗️ Step 3: Build Image<a href="#-step-3-build-image" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker build -t myapp:v1 .
+</span></span></code></pre></div><h4 id="-breakdown">🔍 Breakdown<a href="#-breakdown" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li><code>-t</code> → tag (name:version)</li>
+<li><code>.</code> → current directory (build context)</li>
+</ul>
+<hr>
+<h3 id="-step-4-verify-image">🖼️ Step 4: Verify Image<a href="#-step-4-verify-image" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker images
+</span></span></code></pre></div><hr>
+<h3 id="-step-5-run-container">▶️ Step 5: Run Container<a href="#-step-5-run-container" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -p 8080:8080 myapp:v1
+</span></span></code></pre></div><h4 id="-port-mapping">🌐 Port Mapping<a href="#-port-mapping" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>host-port:container-port</li>
+</ul>
+<hr>
+<h3 id="-step-6-check-containers">📊 Step 6: Check Containers<a href="#-step-6-check-containers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps        <span style="color:#75715e"># running</span>
+</span></span><span style="display:flex;"><span>docker ps -a     <span style="color:#75715e"># all</span>
+</span></span></code></pre></div><hr>
+<h3 id="-step-7-logs">📜 Step 7: Logs<a href="#-step-7-logs" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker logs -f &lt;container-id&gt;
+</span></span></code></pre></div><ul>
+<li><code>-f</code> → follow (like <code>tail -f</code>)</li>
+</ul>
+<hr>
+<h3 id="-step-8-stop-container">⛔ Step 8: Stop Container<a href="#-step-8-stop-container" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker stop &lt;container-id&gt;
+</span></span></code></pre></div><hr>
+<h3 id="-step-9-remove-container">🗑️ Step 9: Remove Container<a href="#-step-9-remove-container" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rm &lt;container-id&gt;
+</span></span></code></pre></div><hr>
+<h3 id="-step-10-remove-image">❌ Step 10: Remove Image<a href="#-step-10-remove-image" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rmi myapp:v1
+</span></span></code></pre></div><p>Force:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rmi -f myapp:v1
+</span></span></code></pre></div><hr>
+<h3 id="-minimal-workflow">⚡ Minimal Workflow<a href="#-minimal-workflow" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn clean package
+</span></span><span style="display:flex;"><span>docker build -t myapp:v1 .
+</span></span><span style="display:flex;"><span>docker run -p 8080:8080 myapp:v1
+</span></span></code></pre></div><hr>
+<h2 id="-common-issues">🧯 Common Issues<a href="#-common-issues" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h4 id="-not-executable-jar">❌ Not executable JAR<a href="#-not-executable-jar" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<pre tabindex="0"><code>no main manifest attribute
+</code></pre><p>✔ Fix:</p>
+<ul>
+<li>Add plugin</li>
+<li>Rebuild:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn clean package
+</span></span></code></pre></div><hr>
+<h4 id="-app-not-starting">❌ App not starting<a href="#-app-not-starting" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Possible causes:</p>
+<ul>
+<li>Wrong port</li>
+<li>DB issue</li>
+<li>Wrong profile</li>
+<li>Missing env variables</li>
+</ul>
+<p>✔ Check:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker logs -f &lt;container-id&gt;
+</span></span></code></pre></div><hr>
+<h4 id="-port-not-accessible">❌ Port not accessible<a href="#-port-not-accessible" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>✔ Verify:</p>
+<ul>
+<li>App running on correct port</li>
+<li>Correct <code>-p</code> mapping</li>
+</ul>
+<hr>
+<h2 id="-cheat-sheet">📌 Cheat Sheet<a href="#-cheat-sheet" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn clean package
+</span></span><span style="display:flex;"><span>docker build -t myapp:v1 .
+</span></span><span style="display:flex;"><span>docker images
+</span></span><span style="display:flex;"><span>docker run -p 8080:8080 myapp:v1
+</span></span><span style="display:flex;"><span>docker ps
+</span></span><span style="display:flex;"><span>docker logs -f &lt;container-id&gt;
+</span></span><span style="display:flex;"><span>docker stop &lt;container-id&gt;
+</span></span><span style="display:flex;"><span>docker rm &lt;container-id&gt;
+</span></span><span style="display:flex;"><span>docker rmi myapp:v1
+</span></span></code></pre></div><hr>
 
       </div></div>
 
