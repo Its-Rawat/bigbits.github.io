@@ -1243,6 +1243,77 @@
     </item>
     
     <item>
+      <title>C-Programming (Full Notes For GATE)</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/c-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/c-programming/</guid>
+      <description>&lt;h1 id=&#34;syllabus-for-fundamental-of-c-programming&#34;&gt;Syllabus For Fundamental Of C-Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Token in C-programming&lt;/li&gt;
+&lt;li&gt;Keywords/Operators/String/Constant/Identifier&lt;/li&gt;
+&lt;li&gt;Special Character&lt;/li&gt;
+&lt;li&gt;int, char, float (signed and unsigned), short and long&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tokens-in-c&#34;&gt;Tokens in C&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Keywords&lt;/li&gt;
+&lt;li&gt;Operators&lt;/li&gt;
+&lt;li&gt;Identifiers&lt;/li&gt;
+&lt;li&gt;Constants&lt;/li&gt;
+&lt;li&gt;Special Symbols&lt;/li&gt;
+&lt;li&gt;String&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;keywords&#34;&gt;Keywords&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;auto, double, int, struct, switch &amp;hellip;&amp;hellip;.  (total 32)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;identifier&#34;&gt;Identifier&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Name of a variable || Name of a function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;constraint-for-identifier&#34;&gt;constraint for identifier&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;Can&amp;rsquo;t be start with digit, only letter || underscore followed by digit&lt;/li&gt;
+&lt;li&gt;No special keyword should be used.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt; C is a Case sensitive language  a and A are treaated different.&lt;/code&gt;&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;syllabus-for-fundamental-of-c-programming&#34;&gt;Syllabus For Fundamental Of C-Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Token in C-programming&lt;/li&gt;
+&lt;li&gt;Keywords/Operators/String/Constant/Identifier&lt;/li&gt;
+&lt;li&gt;Special Character&lt;/li&gt;
+&lt;li&gt;int, char, float (signed and unsigned), short and long&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tokens-in-c&#34;&gt;Tokens in C&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Keywords&lt;/li&gt;
+&lt;li&gt;Operators&lt;/li&gt;
+&lt;li&gt;Identifiers&lt;/li&gt;
+&lt;li&gt;Constants&lt;/li&gt;
+&lt;li&gt;Special Symbols&lt;/li&gt;
+&lt;li&gt;String&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;keywords&#34;&gt;Keywords&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;auto, double, int, struct, switch &amp;hellip;&amp;hellip;.  (total 32)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;identifier&#34;&gt;Identifier&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Name of a variable || Name of a function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;constraint-for-identifier&#34;&gt;constraint for identifier&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;Can&amp;rsquo;t be start with digit, only letter || underscore followed by digit&lt;/li&gt;
+&lt;li&gt;No special keyword should be used.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt; C is a Case sensitive language  a and A are treaated different.&lt;/code&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
       <title>CI/CD Pipeline and Devops Introduction</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/course-id-65172-agile-ci-cd-pipeline-and-devops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1824,8 +1895,8 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;-step-2-dockerfile&#34;&gt;📦 Step 2: Dockerfile&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-dockerfile&#34; data-lang=&#34;dockerfile&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; eclipse-temurin:21-jdk-alpine&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;COPY&lt;/span&gt; target/app.jar app.jar&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-dockerfile&#34; data-lang=&#34;dockerfile&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; eclipse-temurin:21-jdk-alpine  &lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;COPY&lt;/span&gt; target/*.jar app.jar  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ENTRYPOINT&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;java&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-jar&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/app.jar&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;-key-concepts&#34;&gt;🧠 Key Concepts&lt;/h4&gt;
 &lt;ul&gt;
