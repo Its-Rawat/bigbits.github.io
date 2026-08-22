@@ -156,7 +156,7 @@
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">1 min read (82 words)</span></div>
+<span class="post-reading-time">3 min read (589 words)</span></div>
 
   
     <span class="post-tags">
@@ -185,6 +185,13 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#tokens-in-c">Tokens in C</a>
+      <ul>
+        <li></li>
+        <li><a href="#decimal-number">Decimal Number</a></li>
+        <li><a href="#example-4-bit-1111">Example: 4-bit <code>1111</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#operators--arithmetic-expression">Operators &amp; Arithmetic Expression</a>
       <ul>
         <li></li>
       </ul>
@@ -226,6 +233,264 @@
 <li>No special keyword should be used.</li>
 </ol>
 <p><code> C is a Case sensitive language  a and A are treaated different.</code></p>
+<h4 id="constantsliterals">Constants/Literals<a href="#constantsliterals" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p><code>int a = 08;</code>
+In above example &lsquo;08&rsquo; is a <code>Constant</code>.</p>
+<p>Q <strong>Solve</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> a ;
+</span></span><span style="display:flex;"><span>	a <span style="color:#f92672">=</span> <span style="color:#ae81ff">60</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0</span>b1111<span style="color:#f92672">+</span><span style="color:#ae81ff">014</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0x10</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>, a);                         <span style="color:#75715e">// 103
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Explanation</strong>
+60 &lt;&ndash; Decimal Constant;
+0b &lt;&ndash; Binary Constant
+0  &lt;&ndash; Octal Constant
+0x &lt;&ndash; Hexadecimal Constant</p>
+<h5 id="-number-system-recap">🔢 Number System Recap<a href="#-number-system-recap" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<p>If you don&rsquo;t know <strong>Number Systems</strong>, here&rsquo;s a quick recap.</p>
+<h3 id="decimal-number">Decimal Number<a href="#decimal-number" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>In C, an integer constant <strong>without a prefix</strong> is treated as a <strong>decimal constant</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#ae81ff">40</span>);
+</span></span></code></pre></div><h6 id="binary-number-calculation">Binary Number Calculation<a href="#binary-number-calculation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">Binary Number -&gt; 0b1111
+
+  1    1    1    1
+  ↓    ↓    ↓    ↓
+ 2³   2²   2¹   2⁰
+
+= 1×8 + 1×4 + 1×2 + 1×1
+= 8 + 4 + 2 + 1
+= 15
+</code></pre><h6 id="octal-number-calculation">Octal Number Calculation<a href="#octal-number-calculation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">Octal Number-&gt; 014
+
+014₈
+= 1 × 8¹ + 4 × 8⁰
+= 1 × 8 + 4 × 1
+= 8 + 4
+= 12₁₀
+</code></pre><h6 id="hexadecimal-number-calculation">Hexadecimal Number Calculation<a href="#hexadecimal-number-calculation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<pre tabindex="0"><code class="language-COPY" data-lang="COPY">Hexadecimal -&gt; 0x
+
+0x10₁₆
+= 1 × 16¹ + 0 × 16⁰
+= 1 × 16 + 0 × 1
+= 16
+</code></pre><hr>
+<p>Q <strong>Solve</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> a ;
+</span></span><span style="display:flex;"><span>	a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0101</span><span style="color:#f92672">/</span><span style="color:#ae81ff">011</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0110</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0x110</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>, a);                          <span style="color:#75715e">// 351
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h6 id="format-specifier">Format Specifier<a href="#format-specifier" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<table>
+  <thead>
+      <tr>
+          <th>Format Specifier</th>
+          <th>Data Type</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>%d</code></td>
+          <td>Signed integer</td>
+          <td><code>printf(&quot;%d&quot;, 10);</code></td>
+      </tr>
+      <tr>
+          <td><code>%i</code></td>
+          <td>Signed integer</td>
+          <td><code>printf(&quot;%i&quot;, 10);</code></td>
+      </tr>
+      <tr>
+          <td><code>%u</code></td>
+          <td>Unsigned integer</td>
+          <td><code>printf(&quot;%u&quot;, 20);</code></td>
+      </tr>
+      <tr>
+          <td><code>%f</code></td>
+          <td>Float</td>
+          <td><code>printf(&quot;%f&quot;, 3.14);</code></td>
+      </tr>
+      <tr>
+          <td><code>%lf</code></td>
+          <td>Double (<code>scanf</code>)</td>
+          <td><code>scanf(&quot;%lf&quot;, &amp;d);</code></td>
+      </tr>
+      <tr>
+          <td><code>%c</code></td>
+          <td>Character</td>
+          <td><code>printf(&quot;%c&quot;, 'A');</code></td>
+      </tr>
+      <tr>
+          <td><code>%s</code></td>
+          <td>String</td>
+          <td><code>printf(&quot;%s&quot;, &quot;Hello&quot;);</code></td>
+      </tr>
+      <tr>
+          <td><code>%x</code></td>
+          <td>Hexadecimal (lowercase)</td>
+          <td><code>printf(&quot;%x&quot;, 255);</code> → <code>ff</code></td>
+      </tr>
+      <tr>
+          <td><code>%X</code></td>
+          <td>Hexadecimal (uppercase)</td>
+          <td><code>printf(&quot;%X&quot;, 255);</code> → <code>FF</code></td>
+      </tr>
+      <tr>
+          <td><code>%o</code></td>
+          <td>Octal</td>
+          <td><code>printf(&quot;%o&quot;, 8);</code> → <code>10</code></td>
+      </tr>
+      <tr>
+          <td><code>%p</code></td>
+          <td>Pointer address</td>
+          <td><code>printf(&quot;%p&quot;, ptr);</code></td>
+      </tr>
+      <tr>
+          <td><code>%%</code></td>
+          <td>Prints <code>%</code> symbol</td>
+          <td><code>printf(&quot;100%%&quot;);</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h5 id="data-type">DATA TYPE<a href="#data-type" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<ol>
+<li>The value it takes</li>
+<li>Amount of memory required</li>
+<li>Interpretation of value</li>
+</ol>
+<h6 id="signed-and-unsigned-number">Signed and Unsigned Number<a href="#signed-and-unsigned-number" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>example: 2s compliment Integer Interpretation
+1111  (Signed)
+-1x2^3 + 1x2^2 + 1x2^1</p>
+<p>11111  (UnSigned)
+1x2^3 + 1x2^2 + 1x2^1</p>
+<h6 id="2s-complement--signed-integer">2&rsquo;s Complement — Signed Integer<a href="#2s-complement--signed-integer" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<ul>
+<li><strong>MSB (Most Significant Bit) = 0</strong> → Positive</li>
+<li><strong>MSB = 1</strong> → Negative</li>
+<li><strong>MSB weight = <code>-2ⁿ⁻¹</code></strong></li>
+<li>Other bits have normal positive weights.</li>
+</ul>
+<h3 id="example-4-bit-1111">Example: 4-bit <code>1111</code><a href="#example-4-bit-1111" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Weights: -8  4  2  1
+</span></span><span style="display:flex;"><span>Bits:     1  1  1  1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>= -8 + 4 + 2 + 1
+</span></span><span style="display:flex;"><span>= -1
+</span></span></code></pre></div><p>Range of a Integer &ndash;&gt; -2^n-1 to 2^n-1</p>
+<hr>
+<h2 id="operators--arithmetic-expression">Operators &amp; Arithmetic Expression<a href="#operators--arithmetic-expression" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>`+, -, *,  /, % &quot;</p>
+<p>/ -&gt; Quotient
+% -&gt; Remainder</p>
+<p><em><em>Dividend = Quotient</em> Divisor + Remainder</em>*</p>
+<p><em>Solve</em>&ndash;&gt; 7/3, -7/3, 7/-3. -7/-3</p>
+<p>If dividend and divisor same sign +ve otherwise -ve
+Remainder: Sign of dividend is sign of Remainder</p>
+<p><strong>Solve</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> x;
+</span></span><span style="display:flex;"><span>	x<span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">11</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">9</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">6</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">12</span>;       <span style="color:#75715e">//9
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>,x);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h6 id="c-operator-precedence--short">C Operator Precedence — Short<a href="#c-operator-precedence--short" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: right">Priority</th>
+          <th>Operators</th>
+          <th>Associativity</th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">1</td>
+          <td><code>()</code></td>
+          <td>Left → Right</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: right">2</td>
+          <td><code>++</code> <code>--</code> <code>!</code> <code>~</code></td>
+          <td>Right → Left</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: right">3</td>
+          <td><code>*</code> <code>/</code> <code>%</code></td>
+          <td>Left → Right</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: right">4</td>
+          <td><code>+</code> <code>-</code></td>
+          <td>Left → Right</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: right">5</td>
+          <td><code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code></td>
+          <td>Left → Right</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: right">6</td>
+          <td><code>==</code> <code>!=</code></td>
+          <td>Left → Right</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: right">7</td>
+          <td><code>&amp;&amp;</code></td>
+          <td>Left → Right</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: right">8</td>
+          <td>`</td>
+          <td></td>
+          <td>`</td>
+          <td>Left → Right</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">9</td>
+          <td><code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code></td>
+          <td>Right → Left</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p><strong>Higher priority = evaluated first.</strong></p>
+<p><code>* / %</code> have <strong>same precedence</strong> → evaluate <strong>left to right</strong>.</p></blockquote>
+<hr>
 
       </div></div>
 

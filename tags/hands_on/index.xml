@@ -19,10 +19,10 @@
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+![[dock1.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250329102024.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -255,10 +255,10 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+![[dock1.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250329102024.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;

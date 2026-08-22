@@ -1310,6 +1310,264 @@
 &lt;li&gt;No special keyword should be used.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;code&gt; C is a Case sensitive language  a and A are treaated different.&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;constantsliterals&#34;&gt;Constants/Literals&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;int a = 08;&lt;/code&gt;
+In above example &amp;lsquo;08&amp;rsquo; is a &lt;code&gt;Constant&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Q &lt;strong&gt;Solve&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;b1111&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;014&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0x10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;, a);                         &lt;span style=&#34;color:#75715e&#34;&gt;// 103
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Explanation&lt;/strong&gt;
+60 &amp;lt;&amp;ndash; Decimal Constant;
+0b &amp;lt;&amp;ndash; Binary Constant
+0  &amp;lt;&amp;ndash; Octal Constant
+0x &amp;lt;&amp;ndash; Hexadecimal Constant&lt;/p&gt;
+&lt;h5 id=&#34;-number-system-recap&#34;&gt;🔢 Number System Recap&lt;/h5&gt;
+&lt;p&gt;If you don&amp;rsquo;t know &lt;strong&gt;Number Systems&lt;/strong&gt;, here&amp;rsquo;s a quick recap.&lt;/p&gt;
+&lt;h3 id=&#34;decimal-number&#34;&gt;Decimal Number&lt;/h3&gt;
+&lt;p&gt;In C, an integer constant &lt;strong&gt;without a prefix&lt;/strong&gt; is treated as a &lt;strong&gt;decimal constant&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;40&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;binary-number-calculation&#34;&gt;Binary Number Calculation&lt;/h6&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-COPY&#34; data-lang=&#34;COPY&#34;&gt;Binary Number -&amp;gt; 0b1111
+
+  1    1    1    1
+  ↓    ↓    ↓    ↓
+ 2³   2²   2¹   2⁰
+
+= 1×8 + 1×4 + 1×2 + 1×1
+= 8 + 4 + 2 + 1
+= 15
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;octal-number-calculation&#34;&gt;Octal Number Calculation&lt;/h6&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-COPY&#34; data-lang=&#34;COPY&#34;&gt;Octal Number-&amp;gt; 014
+
+014₈
+= 1 × 8¹ + 4 × 8⁰
+= 1 × 8 + 4 × 1
+= 8 + 4
+= 12₁₀
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;hexadecimal-number-calculation&#34;&gt;Hexadecimal Number Calculation&lt;/h6&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-COPY&#34; data-lang=&#34;COPY&#34;&gt;Hexadecimal -&amp;gt; 0x
+
+0x10₁₆
+= 1 × 16¹ + 0 × 16⁰
+= 1 × 16 + 0 × 1
+= 16
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;Q &lt;strong&gt;Solve&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0101&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;011&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0110&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0x110&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;, a);                          &lt;span style=&#34;color:#75715e&#34;&gt;// 351
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h6 id=&#34;format-specifier&#34;&gt;Format Specifier&lt;/h6&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Format Specifier&lt;/th&gt;
+          &lt;th&gt;Data Type&lt;/th&gt;
+          &lt;th&gt;Example&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%d&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Signed integer&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%d&amp;quot;, 10);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%i&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Signed integer&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%i&amp;quot;, 10);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%u&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Unsigned integer&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%u&amp;quot;, 20);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%f&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Float&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%f&amp;quot;, 3.14);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%lf&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Double (&lt;code&gt;scanf&lt;/code&gt;)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;scanf(&amp;quot;%lf&amp;quot;, &amp;amp;d);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%c&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Character&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%c&amp;quot;, &#39;A&#39;);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%s&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%s&amp;quot;, &amp;quot;Hello&amp;quot;);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%x&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Hexadecimal (lowercase)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%x&amp;quot;, 255);&lt;/code&gt; → &lt;code&gt;ff&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%X&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Hexadecimal (uppercase)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%X&amp;quot;, 255);&lt;/code&gt; → &lt;code&gt;FF&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%o&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Octal&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%o&amp;quot;, 8);&lt;/code&gt; → &lt;code&gt;10&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%p&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Pointer address&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%p&amp;quot;, ptr);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%%&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Prints &lt;code&gt;%&lt;/code&gt; symbol&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;100%%&amp;quot;);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;data-type&#34;&gt;DATA TYPE&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;The value it takes&lt;/li&gt;
+&lt;li&gt;Amount of memory required&lt;/li&gt;
+&lt;li&gt;Interpretation of value&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h6 id=&#34;signed-and-unsigned-number&#34;&gt;Signed and Unsigned Number&lt;/h6&gt;
+&lt;p&gt;example: 2s compliment Integer Interpretation
+1111  (Signed)
+-1x2^3 + 1x2^2 + 1x2^1&lt;/p&gt;
+&lt;p&gt;11111  (UnSigned)
+1x2^3 + 1x2^2 + 1x2^1&lt;/p&gt;
+&lt;h6 id=&#34;2s-complement--signed-integer&#34;&gt;2&amp;rsquo;s Complement — Signed Integer&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MSB (Most Significant Bit) = 0&lt;/strong&gt; → Positive&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MSB = 1&lt;/strong&gt; → Negative&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MSB weight = &lt;code&gt;-2ⁿ⁻¹&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Other bits have normal positive weights.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example-4-bit-1111&#34;&gt;Example: 4-bit &lt;code&gt;1111&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Weights: -8  4  2  1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bits:     1  1  1  1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;= -8 + 4 + 2 + 1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;= -1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Range of a Integer &amp;ndash;&amp;gt; -2^n-1 to 2^n-1&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;operators--arithmetic-expression&#34;&gt;Operators &amp;amp; Arithmetic Expression&lt;/h2&gt;
+&lt;p&gt;`+, -, *,  /, % &amp;quot;&lt;/p&gt;
+&lt;p&gt;/ -&amp;gt; Quotient
+% -&amp;gt; Remainder&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;em&gt;Dividend = Quotient&lt;/em&gt; Divisor + Remainder&lt;/em&gt;*&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Solve&lt;/em&gt;&amp;ndash;&amp;gt; 7/3, -7/3, 7/-3. -7/-3&lt;/p&gt;
+&lt;p&gt;If dividend and divisor same sign +ve otherwise -ve
+Remainder: Sign of dividend is sign of Remainder&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solve&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;;       &lt;span style=&#34;color:#75715e&#34;&gt;//9
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;,x);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;c-operator-precedence--short&#34;&gt;C Operator Precedence — Short&lt;/h6&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;Priority&lt;/th&gt;
+          &lt;th&gt;Operators&lt;/th&gt;
+          &lt;th&gt;Associativity&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;1&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;2&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;++&lt;/code&gt; &lt;code&gt;--&lt;/code&gt; &lt;code&gt;!&lt;/code&gt; &lt;code&gt;~&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Right → Left&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;3&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;*&lt;/code&gt; &lt;code&gt;/&lt;/code&gt; &lt;code&gt;%&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;4&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;+&lt;/code&gt; &lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;5&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt; &lt;code&gt;&amp;lt;=&lt;/code&gt; &lt;code&gt;&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;gt;=&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;6&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;==&lt;/code&gt; &lt;code&gt;!=&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;7&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;8&lt;/td&gt;
+          &lt;td&gt;`&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;`&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;9&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;=&lt;/code&gt; &lt;code&gt;+=&lt;/code&gt; &lt;code&gt;-=&lt;/code&gt; &lt;code&gt;*=&lt;/code&gt; &lt;code&gt;/=&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Right → Left&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Higher priority = evaluated first.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;* / %&lt;/code&gt; have &lt;strong&gt;same precedence&lt;/strong&gt; → evaluate &lt;strong&gt;left to right&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
 </content>
     </item>
     
@@ -1327,7 +1585,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
 &lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
 &lt;p&gt;The Operations team deploys the app and then testers test.
-&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+![[Pasted image 20250307014401.png]]&lt;/p&gt;
 &lt;p&gt;#Cons&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
@@ -1336,7 +1594,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
 &lt;li&gt;Long Feedback cycle&lt;/li&gt;
 &lt;li&gt;Long Iteration
-&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250307015213.png]]&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
@@ -1349,7 +1607,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
 &lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
 &lt;p&gt;The Operations team deploys the app and then testers test.
-&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+![[Pasted image 20250307014401.png]]&lt;/p&gt;
 &lt;p&gt;#Cons&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
@@ -1358,7 +1616,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
 &lt;li&gt;Long Feedback cycle&lt;/li&gt;
 &lt;li&gt;Long Iteration
-&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
+![[Pasted image 20250307015213.png]]&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
@@ -1393,7 +1651,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;CI&lt;/em&gt; (&lt;em&gt;Continuous Integration&lt;/em&gt;) pipeline means where developers frequently merge code changes into a central repository, allowing early detection of issues.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;CD&lt;/em&gt; refers to &lt;em&gt;continuous deployment&lt;/em&gt; or &lt;em&gt;continuous delivery&lt;/em&gt;, which automates the application&amp;rsquo;s release to its intended environment, ensuring that it is readily available to users.&lt;/strong&gt;
-&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+![[c1.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;old-school-operations-pain-points&#34;&gt;OLD School Operations Pain Points&lt;/h2&gt;
 &lt;ol&gt;
@@ -1404,7 +1662,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-development&#34;&gt;Continuous Development&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[c2.png]]&lt;/p&gt;
 &lt;h2 id=&#34;what-is-devops&#34;&gt;What is DevOps?&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;DevOps combines development (Dev) and operations (Ops) to increase the efficiency, speed, and security of software development and delivery compared to traditional processes.&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;why-we-need-devops&#34;&gt;Why we need DevOps?&lt;/h3&gt;
@@ -1425,10 +1683,10 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+![[dock1.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250329102024.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -1661,10 +1919,10 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+![[dock1.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250329102024.png]]&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -2098,10 +2356,10 @@ public class User {
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/</guid>
       <description>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Screenshot 2025-04-16 182824.png]]&lt;/p&gt;
 &lt;hr&gt;</description>
       <content>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Screenshot 2025-04-16 182824.png]]&lt;/p&gt;
 &lt;hr&gt;
 </content>
     </item>
@@ -2137,13 +2395,13 @@ public class User {
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[pl1.png]]&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250315195441.png]]&lt;/p&gt;
 &lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -2158,7 +2416,7 @@ public class User {
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;![[pl2.png]]&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-plsql&#34;&gt;What is PL/SQL?&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;PL/SQL stands for Procedural Language Extension to SQL&lt;/code&gt;&lt;/li&gt;
@@ -2167,13 +2425,13 @@ public class User {
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[pl1.png]]&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20250315195441.png]]&lt;/p&gt;
 &lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -2188,7 +2446,7 @@ public class User {
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[pl2.png]]&lt;/p&gt;
 &lt;h2 id=&#34;what-is-pdb&#34;&gt;What is PDB?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Pluggable Database (PDB)&lt;/strong&gt; is a portable collection of schemas, tables, and objects that can be plugged into a &lt;strong&gt;Container Database (CDB)&lt;/strong&gt; in Oracle.&lt;/p&gt;
 &lt;h2 id=&#34;why-pdb&#34;&gt;Why PDB?&lt;/h2&gt;
@@ -2214,7 +2472,7 @@ public class User {
 &lt;hr&gt;
 &lt;h1 id=&#34;what-are-blocks&#34;&gt;What are Blocks?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Block is a logical unit of code that groups related declarations, statements. &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl3.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;p&gt;![[pl3.png]]&lt;/p&gt;
 &lt;h2 id=&#34;structure-1&#34;&gt;Structure&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;DECLARE&lt;/strong&gt;&lt;/em&gt; Block.&lt;/li&gt;
@@ -2495,14 +2753,14 @@ Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it us
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/computer-organization--architect/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;![[Pasted image 20250419192418.png]]&lt;/p&gt;
 &lt;h1 id=&#34;base-system-in-computer-architecture&#34;&gt;Base System in Computer Architecture&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;code&gt;Refer Unit 1 FIT Notes &lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/bWrsk0QizEk?si=6XBleKlCR-PaCF_C
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;best-one-shot&#34;&gt;Best One Shot&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/NY2gz_Kzc0Q?si=YburSfFaLyNTFhf0
 &lt;/code&gt;&lt;/pre&gt;</description>
-      <content>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;![[Pasted image 20250419192418.png]]&lt;/p&gt;
 &lt;h1 id=&#34;base-system-in-computer-architecture&#34;&gt;Base System in Computer Architecture&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;code&gt;Refer Unit 1 FIT Notes &lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/bWrsk0QizEk?si=6XBleKlCR-PaCF_C

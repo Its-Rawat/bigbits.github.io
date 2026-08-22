@@ -74,6 +74,264 @@
 &lt;li&gt;No special keyword should be used.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;code&gt; C is a Case sensitive language  a and A are treaated different.&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;constantsliterals&#34;&gt;Constants/Literals&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;int a = 08;&lt;/code&gt;
+In above example &amp;lsquo;08&amp;rsquo; is a &lt;code&gt;Constant&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Q &lt;strong&gt;Solve&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;b1111&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;014&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0x10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;, a);                         &lt;span style=&#34;color:#75715e&#34;&gt;// 103
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Explanation&lt;/strong&gt;
+60 &amp;lt;&amp;ndash; Decimal Constant;
+0b &amp;lt;&amp;ndash; Binary Constant
+0  &amp;lt;&amp;ndash; Octal Constant
+0x &amp;lt;&amp;ndash; Hexadecimal Constant&lt;/p&gt;
+&lt;h5 id=&#34;-number-system-recap&#34;&gt;🔢 Number System Recap&lt;/h5&gt;
+&lt;p&gt;If you don&amp;rsquo;t know &lt;strong&gt;Number Systems&lt;/strong&gt;, here&amp;rsquo;s a quick recap.&lt;/p&gt;
+&lt;h3 id=&#34;decimal-number&#34;&gt;Decimal Number&lt;/h3&gt;
+&lt;p&gt;In C, an integer constant &lt;strong&gt;without a prefix&lt;/strong&gt; is treated as a &lt;strong&gt;decimal constant&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;40&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;binary-number-calculation&#34;&gt;Binary Number Calculation&lt;/h6&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-COPY&#34; data-lang=&#34;COPY&#34;&gt;Binary Number -&amp;gt; 0b1111
+
+  1    1    1    1
+  ↓    ↓    ↓    ↓
+ 2³   2²   2¹   2⁰
+
+= 1×8 + 1×4 + 1×2 + 1×1
+= 8 + 4 + 2 + 1
+= 15
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;octal-number-calculation&#34;&gt;Octal Number Calculation&lt;/h6&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-COPY&#34; data-lang=&#34;COPY&#34;&gt;Octal Number-&amp;gt; 014
+
+014₈
+= 1 × 8¹ + 4 × 8⁰
+= 1 × 8 + 4 × 1
+= 8 + 4
+= 12₁₀
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;hexadecimal-number-calculation&#34;&gt;Hexadecimal Number Calculation&lt;/h6&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-COPY&#34; data-lang=&#34;COPY&#34;&gt;Hexadecimal -&amp;gt; 0x
+
+0x10₁₆
+= 1 × 16¹ + 0 × 16⁰
+= 1 × 16 + 0 × 1
+= 16
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;Q &lt;strong&gt;Solve&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0101&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;011&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0110&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0x110&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;, a);                          &lt;span style=&#34;color:#75715e&#34;&gt;// 351
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h6 id=&#34;format-specifier&#34;&gt;Format Specifier&lt;/h6&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Format Specifier&lt;/th&gt;
+          &lt;th&gt;Data Type&lt;/th&gt;
+          &lt;th&gt;Example&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%d&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Signed integer&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%d&amp;quot;, 10);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%i&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Signed integer&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%i&amp;quot;, 10);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%u&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Unsigned integer&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%u&amp;quot;, 20);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%f&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Float&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%f&amp;quot;, 3.14);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%lf&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Double (&lt;code&gt;scanf&lt;/code&gt;)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;scanf(&amp;quot;%lf&amp;quot;, &amp;amp;d);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%c&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Character&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%c&amp;quot;, &#39;A&#39;);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%s&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;String&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%s&amp;quot;, &amp;quot;Hello&amp;quot;);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%x&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Hexadecimal (lowercase)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%x&amp;quot;, 255);&lt;/code&gt; → &lt;code&gt;ff&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%X&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Hexadecimal (uppercase)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%X&amp;quot;, 255);&lt;/code&gt; → &lt;code&gt;FF&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%o&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Octal&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%o&amp;quot;, 8);&lt;/code&gt; → &lt;code&gt;10&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%p&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Pointer address&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;%p&amp;quot;, ptr);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;%%&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Prints &lt;code&gt;%&lt;/code&gt; symbol&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;printf(&amp;quot;100%%&amp;quot;);&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;data-type&#34;&gt;DATA TYPE&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;The value it takes&lt;/li&gt;
+&lt;li&gt;Amount of memory required&lt;/li&gt;
+&lt;li&gt;Interpretation of value&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h6 id=&#34;signed-and-unsigned-number&#34;&gt;Signed and Unsigned Number&lt;/h6&gt;
+&lt;p&gt;example: 2s compliment Integer Interpretation
+1111  (Signed)
+-1x2^3 + 1x2^2 + 1x2^1&lt;/p&gt;
+&lt;p&gt;11111  (UnSigned)
+1x2^3 + 1x2^2 + 1x2^1&lt;/p&gt;
+&lt;h6 id=&#34;2s-complement--signed-integer&#34;&gt;2&amp;rsquo;s Complement — Signed Integer&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MSB (Most Significant Bit) = 0&lt;/strong&gt; → Positive&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MSB = 1&lt;/strong&gt; → Negative&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MSB weight = &lt;code&gt;-2ⁿ⁻¹&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Other bits have normal positive weights.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example-4-bit-1111&#34;&gt;Example: 4-bit &lt;code&gt;1111&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Weights: -8  4  2  1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bits:     1  1  1  1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;= -8 + 4 + 2 + 1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;= -1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Range of a Integer &amp;ndash;&amp;gt; -2^n-1 to 2^n-1&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;operators--arithmetic-expression&#34;&gt;Operators &amp;amp; Arithmetic Expression&lt;/h2&gt;
+&lt;p&gt;`+, -, *,  /, % &amp;quot;&lt;/p&gt;
+&lt;p&gt;/ -&amp;gt; Quotient
+% -&amp;gt; Remainder&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;em&gt;Dividend = Quotient&lt;/em&gt; Divisor + Remainder&lt;/em&gt;*&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Solve&lt;/em&gt;&amp;ndash;&amp;gt; 7/3, -7/3, 7/-3. -7/-3&lt;/p&gt;
+&lt;p&gt;If dividend and divisor same sign +ve otherwise -ve
+Remainder: Sign of dividend is sign of Remainder&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solve&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;;       &lt;span style=&#34;color:#75715e&#34;&gt;//9
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;,x);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;c-operator-precedence--short&#34;&gt;C Operator Precedence — Short&lt;/h6&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;Priority&lt;/th&gt;
+          &lt;th&gt;Operators&lt;/th&gt;
+          &lt;th&gt;Associativity&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;1&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;()&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;2&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;++&lt;/code&gt; &lt;code&gt;--&lt;/code&gt; &lt;code&gt;!&lt;/code&gt; &lt;code&gt;~&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Right → Left&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;3&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;*&lt;/code&gt; &lt;code&gt;/&lt;/code&gt; &lt;code&gt;%&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;4&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;+&lt;/code&gt; &lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;5&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt; &lt;code&gt;&amp;lt;=&lt;/code&gt; &lt;code&gt;&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;gt;=&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;6&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;==&lt;/code&gt; &lt;code&gt;!=&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;7&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;8&lt;/td&gt;
+          &lt;td&gt;`&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;`&lt;/td&gt;
+          &lt;td&gt;Left → Right&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;9&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;=&lt;/code&gt; &lt;code&gt;+=&lt;/code&gt; &lt;code&gt;-=&lt;/code&gt; &lt;code&gt;*=&lt;/code&gt; &lt;code&gt;/=&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Right → Left&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Higher priority = evaluated first.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;* / %&lt;/code&gt; have &lt;strong&gt;same precedence&lt;/strong&gt; → evaluate &lt;strong&gt;left to right&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
 </content>
     </item>
     
