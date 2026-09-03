@@ -2,18 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/</loc>
-  </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/posts/data-structures-and-algorithms/</loc>
-  </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/posts/digital-java8-innards_fp-course-id-55961/</loc>
-  </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/posts/gate-syllabus/</loc>
-  </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/posts/git-workflow/</loc>
-  </url><url>
-    <loc>https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/</loc>
-  </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/%23devops/</loc>
   </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/agile/</loc>
@@ -66,6 +54,8 @@
   </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/gate/</loc>
   </url><url>
+    <loc>https://its-rawat.github.io/bigbits.github.io/posts/gate-syllabus/</loc>
+  </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/hands/</loc>
   </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/hands_on/</loc>
@@ -78,6 +68,8 @@
   </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/java/</loc>
   </url><url>
+    <loc>https://its-rawat.github.io/bigbits.github.io/posts/digital-java8-innards_fp-course-id-55961/</loc>
+  </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/</loc>
   </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/js/</loc>
@@ -88,7 +80,11 @@
   </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/mca/</loc>
   </url><url>
+    <loc>https://its-rawat.github.io/bigbits.github.io/</loc>
+  </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/posts/topic-tags/</loc>
+  </url><url>
+    <loc>https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/</loc>
   </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/on/</loc>
   </url><url>
@@ -149,6 +145,8 @@
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/webtech/</loc>
   </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/welcome/</loc>
+  </url><url>
+    <loc>https://its-rawat.github.io/bigbits.github.io/posts/git-workflow/</loc>
   </url><url>
     <loc>https://its-rawat.github.io/bigbits.github.io/tags/zoho/</loc>
   </url><url>

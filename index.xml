@@ -1,238 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
+    <title>my-projects on </title>
     <link>https://its-rawat.github.io/bigbits.github.io/</link>
-    <description>Recent content on </description>
+    <description>Recent content in my-projects on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://its-rawat.github.io/bigbits.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/data-structures-and-algorithms/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/data-structures-and-algorithms/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/digital-java8-innards_fp-course-id-55961/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/digital-java8-innards_fp-course-id-55961/</guid>
-      <description>&lt;h1 id=&#34;java-8-features&#34;&gt;Java 8 Features&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;Functional Interfaces&lt;/li&gt;
-&lt;li&gt;Methods&lt;/li&gt;
-&lt;li&gt;Streams&lt;/li&gt;
-&lt;li&gt;Date and Time&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;why-java-8-is-important&#34;&gt;Why Java 8 is Important?&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;java 8 improves overall application performance with little work.&lt;/li&gt;
-&lt;li&gt;Lambda Expressions, Stream API, new methods added to existing classes improve productivity.&lt;/li&gt;
-&lt;li&gt;Java 8 Optional type gives developers flexibility when dealing with null values, reducing the likelihood of NullPointerExceptions.&lt;/li&gt;
-&lt;li&gt;Less Code: Java 8 reduces boilerplate with a functional style, focusing on &lt;em&gt;what&lt;/em&gt; to do, not &lt;em&gt;how&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;Parallel Friendly: With simple APIs, the JVM splits tasks and runs them across cores using fork/join.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;reactive-programming&#34;&gt;Reactive Programming&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;It&amp;rsquo;s a &lt;strong&gt;design&lt;/strong&gt; pattern that focuses on use of &lt;strong&gt;asynchronous&lt;/strong&gt; and &lt;strong&gt;non-blocking&lt;/strong&gt; data streams to handle data and events.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;need-of-reactive-programming&#34;&gt;Need of Reactive Programming&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;For Efficiency and Scalability.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;without-reactive-programming&#34;&gt;Without Reactive Programming&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250704001606.png&#34; alt=&#34;Image Description&#34;&gt; \ Thread will be blocked until Operation is done.&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;java-8-features&#34;&gt;Java 8 Features&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;Functional Interfaces&lt;/li&gt;
-&lt;li&gt;Methods&lt;/li&gt;
-&lt;li&gt;Streams&lt;/li&gt;
-&lt;li&gt;Date and Time&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;why-java-8-is-important&#34;&gt;Why Java 8 is Important?&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;java 8 improves overall application performance with little work.&lt;/li&gt;
-&lt;li&gt;Lambda Expressions, Stream API, new methods added to existing classes improve productivity.&lt;/li&gt;
-&lt;li&gt;Java 8 Optional type gives developers flexibility when dealing with null values, reducing the likelihood of NullPointerExceptions.&lt;/li&gt;
-&lt;li&gt;Less Code: Java 8 reduces boilerplate with a functional style, focusing on &lt;em&gt;what&lt;/em&gt; to do, not &lt;em&gt;how&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;Parallel Friendly: With simple APIs, the JVM splits tasks and runs them across cores using fork/join.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;reactive-programming&#34;&gt;Reactive Programming&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;It&amp;rsquo;s a &lt;strong&gt;design&lt;/strong&gt; pattern that focuses on use of &lt;strong&gt;asynchronous&lt;/strong&gt; and &lt;strong&gt;non-blocking&lt;/strong&gt; data streams to handle data and events.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;need-of-reactive-programming&#34;&gt;Need of Reactive Programming&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;For Efficiency and Scalability.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;without-reactive-programming&#34;&gt;Without Reactive Programming&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250704001606.png&#34; alt=&#34;Image Description&#34;&gt; \ Thread will be blocked until Operation is done.&lt;/p&gt;
-&lt;h2 id=&#34;with-reactive-programming&#34;&gt;With Reactive Programming&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250704003013.png&#34; alt=&#34;Image Description&#34;&gt;
-Thread don&amp;rsquo;t wait for Response.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;functional-interface&#34;&gt;Functional Interface&lt;/h1&gt;
-&lt;p&gt;A &lt;strong&gt;functional interface&lt;/strong&gt; in Java is an interface that contains &lt;strong&gt;exactly one abstract method&lt;/strong&gt;. It can have any number of &lt;strong&gt;default&lt;/strong&gt; or &lt;strong&gt;static methods&lt;/strong&gt;, but only &lt;strong&gt;one abstract method&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;lambda-expressions&#34;&gt;Lambda Expressions&lt;/h2&gt;
-&lt;p&gt;A &lt;strong&gt;lambda expression&lt;/strong&gt; is a concise way to represent an &lt;strong&gt;anonymous function&lt;/strong&gt;—a function without a name—in Java. Introduced in &lt;strong&gt;Java 8&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;comparable-interface&#34;&gt;Comparable&amp;lt;&amp;gt; Interface&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;Comparable&amp;lt;T&amp;gt;&lt;/code&gt; interface is used to &lt;strong&gt;define the natural ordering&lt;/strong&gt; of objects.
-It allows a class to compare its instances using the &lt;code&gt;compareTo()&lt;/code&gt; method.&lt;/p&gt;
-&lt;h3 id=&#34;-syntax-example&#34;&gt;✅ Syntax Example:&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;class Student implements Comparable&amp;lt;Student&amp;gt; {     
-	int rollNo;
-	public int compareTo(Student other) {
-		return this.rollNo - other.rollNo;
-	} 
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h3 id=&#34;-what-does-this-mean-in-compareto&#34;&gt;✅ What does &lt;code&gt;this&lt;/code&gt; mean in &lt;code&gt;compareTo()&lt;/code&gt;?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;this&lt;/code&gt; → current object (e.g., &lt;code&gt;s1&lt;/code&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;other&lt;/code&gt; → object passed for comparison (e.g., &lt;code&gt;s2&lt;/code&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;this.rollNo - other.rollNo&lt;/code&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Negative → &lt;code&gt;this&lt;/code&gt; comes &lt;strong&gt;before&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Zero → &lt;strong&gt;equal&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Positive → &lt;code&gt;this&lt;/code&gt; comes &lt;strong&gt;after&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;-what-does-collectionssortstudents-do&#34;&gt;✅ What does &lt;code&gt;Collections.sort(students)&lt;/code&gt; do?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Sorts the list using the logic in &lt;code&gt;compareTo()&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Internally calls:&lt;/p&gt;
-&lt;p&gt;java&lt;/p&gt;
-&lt;p&gt;CopyEdit&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;s1.compareTo(s2)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;for every pair of objects.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;-when-to-use-comparable&#34;&gt;✅ When to use Comparable?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;When the class should define its &lt;strong&gt;own default sorting rule&lt;/strong&gt; (e.g., by roll number, name, etc.).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Works automatically with &lt;code&gt;Collections.sort()&lt;/code&gt; or &lt;code&gt;Arrays.sort()&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/gate-syllabus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/gate-syllabus/</guid>
-      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;1:- C Programming&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLbE3-5DBkMUkATaUFgDIpBDbfnym0qvsQ&amp;amp;si=u3i3XIy-51kaHb0Q&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;2:- Data Structure&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s334Pe8qACh32TdxsMKqDRU&amp;amp;si=WNKMe88lUQFh1n-Y&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;3:- Algorithm&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PL3eEXnCBViH87NTeUU8AteQQ7cmO33gOY&amp;amp;si=R_3U3ZLW1rIIFne9&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;4:- Theory Of Automata&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxGvebewU4z2CZYo-8nB93E7&amp;amp;si=BptkcYBUYshgDkj0&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;5:- Compiler Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s1NGf_6tQbDBsjLRjquKBE1&amp;amp;si=-VWwAEIpwSOy5JDA&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;6:- Operating System&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s17rFjWM8KchGlffXgOzzVP&amp;amp;si=GTZTHbeFmgl0Mod7&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;7:- DBMS&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0bu-I8fgDXXhVLO4qVROGy&amp;amp;si=_22IsI79jNR6VAUr&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;8:- Digital Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEErKQZ7xFxat8oh4OepU34&amp;amp;si=qyoBJ63HrWofzXdS&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;9:- Discrete Mathematics&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEYmhzVBW7nBdftFZ4xmiF1&amp;amp;si=VoafbTE_6Njcq3r3&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;10:- Computer Networks&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxHT-TxTy3U1slr5RaBJGaLd&amp;amp;si=Wim10HlOV4ZXANXJ&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;11:- Computer Architecture/ Organization&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0xddCBjwMDnEVyc523WbA2&amp;amp;si=oTNrhezV8MIF90Xv&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;</description>
-      <content>&lt;p&gt;&lt;em&gt;&lt;strong&gt;1:- C Programming&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLbE3-5DBkMUkATaUFgDIpBDbfnym0qvsQ&amp;amp;si=u3i3XIy-51kaHb0Q&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;2:- Data Structure&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s334Pe8qACh32TdxsMKqDRU&amp;amp;si=WNKMe88lUQFh1n-Y&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;3:- Algorithm&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PL3eEXnCBViH87NTeUU8AteQQ7cmO33gOY&amp;amp;si=R_3U3ZLW1rIIFne9&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;4:- Theory Of Automata&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxGvebewU4z2CZYo-8nB93E7&amp;amp;si=BptkcYBUYshgDkj0&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;5:- Compiler Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s1NGf_6tQbDBsjLRjquKBE1&amp;amp;si=-VWwAEIpwSOy5JDA&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;6:- Operating System&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s17rFjWM8KchGlffXgOzzVP&amp;amp;si=GTZTHbeFmgl0Mod7&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;7:- DBMS&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0bu-I8fgDXXhVLO4qVROGy&amp;amp;si=_22IsI79jNR6VAUr&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;8:- Digital Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEErKQZ7xFxat8oh4OepU34&amp;amp;si=qyoBJ63HrWofzXdS&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;9:- Discrete Mathematics&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEYmhzVBW7nBdftFZ4xmiF1&amp;amp;si=VoafbTE_6Njcq3r3&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;10:- Computer Networks&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxHT-TxTy3U1slr5RaBJGaLd&amp;amp;si=Wim10HlOV4ZXANXJ&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;11:- Computer Architecture/ Organization&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0xddCBjwMDnEVyc523WbA2&amp;amp;si=oTNrhezV8MIF90Xv&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/git-workflow/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/git-workflow/</guid>
-      <description>&lt;h2 id=&#34;what-is-git-workflow&#34;&gt;What is Git workflow&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606222803.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;benefits-of-git-workflow&#34;&gt;Benefits of Git Workflow&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606223028.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;long-lived--branch-and-short-lived-branch&#34;&gt;Long Lived  branch and Short Lived branch&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Long lived branch are are branches which remain open throughout the project and short lived for bugs fixing or for single purposes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;workflow-selection&#34;&gt;Workflow selection&lt;/h2&gt;
-&lt;h3 id=&#34;team-size&#34;&gt;Team Size&lt;/h3&gt;</description>
-      <content>&lt;h2 id=&#34;what-is-git-workflow&#34;&gt;What is Git workflow&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606222803.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;benefits-of-git-workflow&#34;&gt;Benefits of Git Workflow&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606223028.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;long-lived--branch-and-short-lived-branch&#34;&gt;Long Lived  branch and Short Lived branch&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Long lived branch are are branches which remain open throughout the project and short lived for bugs fixing or for single purposes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;workflow-selection&#34;&gt;Workflow selection&lt;/h2&gt;
-&lt;h3 id=&#34;team-size&#34;&gt;Team Size&lt;/h3&gt;
-</content>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/</guid>
-      <description>&lt;h1 id=&#34;need-of-dtos-when-working-with-apis&#34;&gt;Need of DTOs when working with APIs&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png&#34; alt=&#34;Image Description&#34;&gt;
-&lt;code&gt;In Short:&lt;/code&gt;
-We use DTOs to ensure our entity data won’t be affected directly, promoting data encapsulation, security, and cleaner API design.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Extra Info&lt;/code&gt;
-DTO is a design pattern.&lt;/p&gt;
-&lt;hr&gt;</description>
-      <content>&lt;h1 id=&#34;need-of-dtos-when-working-with-apis&#34;&gt;Need of DTOs when working with APIs&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png&#34; alt=&#34;Image Description&#34;&gt;
-&lt;code&gt;In Short:&lt;/code&gt;
-We use DTOs to ensure our entity data won’t be affected directly, promoting data encapsulation, security, and cleaner API design.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Extra Info&lt;/code&gt;
-DTO is a design pattern.&lt;/p&gt;
-&lt;hr&gt;
-</content>
-    </item>
-    
     <item>
       <title>AGILE CRASH COURSE UDEMY</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/agile-crash-course/</link>
@@ -3141,6 +2914,37 @@ Via network name&lt;/li&gt;
     </item>
     
     <item>
+      <title>GATE Syllabus</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/gate-syllabus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/gate-syllabus/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;1:- C Programming&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLbE3-5DBkMUkATaUFgDIpBDbfnym0qvsQ&amp;amp;si=u3i3XIy-51kaHb0Q&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;2:- Data Structure&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s334Pe8qACh32TdxsMKqDRU&amp;amp;si=WNKMe88lUQFh1n-Y&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;3:- Algorithm&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PL3eEXnCBViH87NTeUU8AteQQ7cmO33gOY&amp;amp;si=R_3U3ZLW1rIIFne9&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;4:- Theory Of Automata&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxGvebewU4z2CZYo-8nB93E7&amp;amp;si=BptkcYBUYshgDkj0&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;5:- Compiler Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s1NGf_6tQbDBsjLRjquKBE1&amp;amp;si=-VWwAEIpwSOy5JDA&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;6:- Operating System&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s17rFjWM8KchGlffXgOzzVP&amp;amp;si=GTZTHbeFmgl0Mod7&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;7:- DBMS&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0bu-I8fgDXXhVLO4qVROGy&amp;amp;si=_22IsI79jNR6VAUr&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;8:- Digital Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEErKQZ7xFxat8oh4OepU34&amp;amp;si=qyoBJ63HrWofzXdS&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;9:- Discrete Mathematics&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEYmhzVBW7nBdftFZ4xmiF1&amp;amp;si=VoafbTE_6Njcq3r3&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;10:- Computer Networks&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxHT-TxTy3U1slr5RaBJGaLd&amp;amp;si=Wim10HlOV4ZXANXJ&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;11:- Computer Architecture/ Organization&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0xddCBjwMDnEVyc523WbA2&amp;amp;si=oTNrhezV8MIF90Xv&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;</description>
+      <content>&lt;p&gt;&lt;em&gt;&lt;strong&gt;1:- C Programming&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLbE3-5DBkMUkATaUFgDIpBDbfnym0qvsQ&amp;amp;si=u3i3XIy-51kaHb0Q&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;2:- Data Structure&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s334Pe8qACh32TdxsMKqDRU&amp;amp;si=WNKMe88lUQFh1n-Y&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;3:- Algorithm&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PL3eEXnCBViH87NTeUU8AteQQ7cmO33gOY&amp;amp;si=R_3U3ZLW1rIIFne9&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;4:- Theory Of Automata&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxGvebewU4z2CZYo-8nB93E7&amp;amp;si=BptkcYBUYshgDkj0&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;5:- Compiler Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s1NGf_6tQbDBsjLRjquKBE1&amp;amp;si=-VWwAEIpwSOy5JDA&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;6:- Operating System&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s17rFjWM8KchGlffXgOzzVP&amp;amp;si=GTZTHbeFmgl0Mod7&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;7:- DBMS&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0bu-I8fgDXXhVLO4qVROGy&amp;amp;si=_22IsI79jNR6VAUr&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;8:- Digital Design&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEErKQZ7xFxat8oh4OepU34&amp;amp;si=qyoBJ63HrWofzXdS&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;9:- Discrete Mathematics&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxEYmhzVBW7nBdftFZ4xmiF1&amp;amp;si=VoafbTE_6Njcq3r3&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;10:- Computer Networks&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLC36xJgs4dxHT-TxTy3U1slr5RaBJGaLd&amp;amp;si=Wim10HlOV4ZXANXJ&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;11:- Computer Architecture/ Organization&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;https://youtube.com/playlist?list=PLG9aCp4uE-s0xddCBjwMDnEVyc523WbA2&amp;amp;si=oTNrhezV8MIF90Xv&#34;&gt;📺 GATE CS Playlist YT&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Hibernate Notes</title>
       <link>https://its-rawat.github.io/bigbits.github.io/posts/hibernate-in-springboot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -3313,6 +3117,138 @@ public class User {
     private Address address;
 }
 &lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Java 8 Features</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/digital-java8-innards_fp-course-id-55961/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/digital-java8-innards_fp-course-id-55961/</guid>
+      <description>&lt;h1 id=&#34;java-8-features&#34;&gt;Java 8 Features&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Functional Interfaces&lt;/li&gt;
+&lt;li&gt;Methods&lt;/li&gt;
+&lt;li&gt;Streams&lt;/li&gt;
+&lt;li&gt;Date and Time&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;why-java-8-is-important&#34;&gt;Why Java 8 is Important?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;java 8 improves overall application performance with little work.&lt;/li&gt;
+&lt;li&gt;Lambda Expressions, Stream API, new methods added to existing classes improve productivity.&lt;/li&gt;
+&lt;li&gt;Java 8 Optional type gives developers flexibility when dealing with null values, reducing the likelihood of NullPointerExceptions.&lt;/li&gt;
+&lt;li&gt;Less Code: Java 8 reduces boilerplate with a functional style, focusing on &lt;em&gt;what&lt;/em&gt; to do, not &lt;em&gt;how&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Parallel Friendly: With simple APIs, the JVM splits tasks and runs them across cores using fork/join.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;reactive-programming&#34;&gt;Reactive Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;It&amp;rsquo;s a &lt;strong&gt;design&lt;/strong&gt; pattern that focuses on use of &lt;strong&gt;asynchronous&lt;/strong&gt; and &lt;strong&gt;non-blocking&lt;/strong&gt; data streams to handle data and events.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;need-of-reactive-programming&#34;&gt;Need of Reactive Programming&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;For Efficiency and Scalability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;without-reactive-programming&#34;&gt;Without Reactive Programming&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250704001606.png&#34; alt=&#34;Image Description&#34;&gt; \ Thread will be blocked until Operation is done.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;java-8-features&#34;&gt;Java 8 Features&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Functional Interfaces&lt;/li&gt;
+&lt;li&gt;Methods&lt;/li&gt;
+&lt;li&gt;Streams&lt;/li&gt;
+&lt;li&gt;Date and Time&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;why-java-8-is-important&#34;&gt;Why Java 8 is Important?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;java 8 improves overall application performance with little work.&lt;/li&gt;
+&lt;li&gt;Lambda Expressions, Stream API, new methods added to existing classes improve productivity.&lt;/li&gt;
+&lt;li&gt;Java 8 Optional type gives developers flexibility when dealing with null values, reducing the likelihood of NullPointerExceptions.&lt;/li&gt;
+&lt;li&gt;Less Code: Java 8 reduces boilerplate with a functional style, focusing on &lt;em&gt;what&lt;/em&gt; to do, not &lt;em&gt;how&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Parallel Friendly: With simple APIs, the JVM splits tasks and runs them across cores using fork/join.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;reactive-programming&#34;&gt;Reactive Programming&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;It&amp;rsquo;s a &lt;strong&gt;design&lt;/strong&gt; pattern that focuses on use of &lt;strong&gt;asynchronous&lt;/strong&gt; and &lt;strong&gt;non-blocking&lt;/strong&gt; data streams to handle data and events.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;need-of-reactive-programming&#34;&gt;Need of Reactive Programming&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;For Efficiency and Scalability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;without-reactive-programming&#34;&gt;Without Reactive Programming&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250704001606.png&#34; alt=&#34;Image Description&#34;&gt; \ Thread will be blocked until Operation is done.&lt;/p&gt;
+&lt;h2 id=&#34;with-reactive-programming&#34;&gt;With Reactive Programming&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250704003013.png&#34; alt=&#34;Image Description&#34;&gt;
+Thread don&amp;rsquo;t wait for Response.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;functional-interface&#34;&gt;Functional Interface&lt;/h1&gt;
+&lt;p&gt;A &lt;strong&gt;functional interface&lt;/strong&gt; in Java is an interface that contains &lt;strong&gt;exactly one abstract method&lt;/strong&gt;. It can have any number of &lt;strong&gt;default&lt;/strong&gt; or &lt;strong&gt;static methods&lt;/strong&gt;, but only &lt;strong&gt;one abstract method&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;lambda-expressions&#34;&gt;Lambda Expressions&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;lambda expression&lt;/strong&gt; is a concise way to represent an &lt;strong&gt;anonymous function&lt;/strong&gt;—a function without a name—in Java. Introduced in &lt;strong&gt;Java 8&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;comparable-interface&#34;&gt;Comparable&amp;lt;&amp;gt; Interface&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;Comparable&amp;lt;T&amp;gt;&lt;/code&gt; interface is used to &lt;strong&gt;define the natural ordering&lt;/strong&gt; of objects.
+It allows a class to compare its instances using the &lt;code&gt;compareTo()&lt;/code&gt; method.&lt;/p&gt;
+&lt;h3 id=&#34;-syntax-example&#34;&gt;✅ Syntax Example:&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;class Student implements Comparable&amp;lt;Student&amp;gt; {     
+	int rollNo;
+	public int compareTo(Student other) {
+		return this.rollNo - other.rollNo;
+	} 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h3 id=&#34;-what-does-this-mean-in-compareto&#34;&gt;✅ What does &lt;code&gt;this&lt;/code&gt; mean in &lt;code&gt;compareTo()&lt;/code&gt;?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;this&lt;/code&gt; → current object (e.g., &lt;code&gt;s1&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;other&lt;/code&gt; → object passed for comparison (e.g., &lt;code&gt;s2&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;this.rollNo - other.rollNo&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Negative → &lt;code&gt;this&lt;/code&gt; comes &lt;strong&gt;before&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zero → &lt;strong&gt;equal&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Positive → &lt;code&gt;this&lt;/code&gt; comes &lt;strong&gt;after&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-what-does-collectionssortstudents-do&#34;&gt;✅ What does &lt;code&gt;Collections.sort(students)&lt;/code&gt; do?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Sorts the list using the logic in &lt;code&gt;compareTo()&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Internally calls:&lt;/p&gt;
+&lt;p&gt;java&lt;/p&gt;
+&lt;p&gt;CopyEdit&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;s1.compareTo(s2)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;for every pair of objects.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-when-to-use-comparable&#34;&gt;✅ When to use Comparable?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When the class should define its &lt;strong&gt;own default sorting rule&lt;/strong&gt; (e.g., by roll number, name, etc.).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Works automatically with &lt;code&gt;Collections.sort()&lt;/code&gt; or &lt;code&gt;Arrays.sort()&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
     </item>
     
     <item>
@@ -3572,6 +3508,29 @@ public class User {
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://its-rawat.github.io/bigbits.github.io/posts/elite-tech-park-zoho-creator-assessment/&#34;&gt;Zoho Library System App&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Need of DTOs when working with APIs</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/spring-random-concepts/</guid>
+      <description>&lt;h1 id=&#34;need-of-dtos-when-working-with-apis&#34;&gt;Need of DTOs when working with APIs&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;code&gt;In Short:&lt;/code&gt;
+We use DTOs to ensure our entity data won’t be affected directly, promoting data encapsulation, security, and cleaner API design.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Extra Info&lt;/code&gt;
+DTO is a design pattern.&lt;/p&gt;
+&lt;hr&gt;</description>
+      <content>&lt;h1 id=&#34;need-of-dtos-when-working-with-apis&#34;&gt;Need of DTOs when working with APIs&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419115007.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;code&gt;In Short:&lt;/code&gt;
+We use DTOs to ensure our entity data won’t be affected directly, promoting data encapsulation, security, and cleaner API design.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Extra Info&lt;/code&gt;
+DTO is a design pattern.&lt;/p&gt;
+&lt;hr&gt;
 </content>
     </item>
     
@@ -4640,6 +4599,37 @@ Spring Security does &lt;strong&gt;a lot&lt;/strong&gt; under the hood to keep y
 &lt;li&gt;By default  spring security have  a &amp;ldquo;ROLE_&amp;rdquo; prefix attached (eg, &amp;ldquo;ROLE_ADMIN&amp;rdquo;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>What is Git workflow</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/posts/git-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/posts/git-workflow/</guid>
+      <description>&lt;h2 id=&#34;what-is-git-workflow&#34;&gt;What is Git workflow&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606222803.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;benefits-of-git-workflow&#34;&gt;Benefits of Git Workflow&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606223028.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;long-lived--branch-and-short-lived-branch&#34;&gt;Long Lived  branch and Short Lived branch&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Long lived branch are are branches which remain open throughout the project and short lived for bugs fixing or for single purposes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;workflow-selection&#34;&gt;Workflow selection&lt;/h2&gt;
+&lt;h3 id=&#34;team-size&#34;&gt;Team Size&lt;/h3&gt;</description>
+      <content>&lt;h2 id=&#34;what-is-git-workflow&#34;&gt;What is Git workflow&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606222803.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;benefits-of-git-workflow&#34;&gt;Benefits of Git Workflow&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250606223028.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;long-lived--branch-and-short-lived-branch&#34;&gt;Long Lived  branch and Short Lived branch&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Long lived branch are are branches which remain open throughout the project and short lived for bugs fixing or for single purposes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;workflow-selection&#34;&gt;Workflow selection&lt;/h2&gt;
+&lt;h3 id=&#34;team-size&#34;&gt;Team Size&lt;/h3&gt;
 </content>
     </item>
     
