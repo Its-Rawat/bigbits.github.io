@@ -1568,6 +1568,65 @@ Remainder: Sign of dividend is sign of Remainder&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Higher priority = evaluated first.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;* / %&lt;/code&gt; have &lt;strong&gt;same precedence&lt;/strong&gt; → evaluate &lt;strong&gt;left to right&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
+&lt;h1 id=&#34;functions-in-c&#34;&gt;Functions In C&lt;/h1&gt;
+&lt;p&gt;`A function is a block of code which only runs when it is called.&lt;/p&gt;
+&lt;p&gt;*Input (function parameters) and output (return value) of function.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Function Declaration
+&lt;ol&gt;
+&lt;li&gt;Announcement that this function we are going to use.&lt;/li&gt;
+&lt;li&gt;It has function name, input parameters, number of parameters, types of output.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Function Definition
+&lt;ol&gt;
+&lt;li&gt;Has code of function.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Function Call
+&lt;ol&gt;
+&lt;li&gt;Function calling (execute)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;declaration-of-function&#34;&gt;Declaration Of Function&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;return_type name(parameter_type1, parameter_type2......);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;example:-&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func_name&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a_argument, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; b_argument, &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; c_argument){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func1&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;){};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;){};  &lt;span style=&#34;color:#75715e&#34;&gt;// no parameters
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func&lt;/span&gt;(){};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func&lt;/span&gt;(){};  &lt;span style=&#34;color:#75715e&#34;&gt;// if output is not present then use void before func declaration
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;function-definition&#34;&gt;Function Definition&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Actually piece of code.&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;areaOfCircle&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; radius){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;  area  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(radius&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;radius);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; area;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; r;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Enter the radius: &amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;scanf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%f&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;r);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Area of Circle: %f&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#a6e22e&#34;&gt;areaOfCircle&lt;/span&gt;(r));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;type-of-parameter-passing&#34;&gt;Type of Parameter Passing&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Call by Value&lt;/li&gt;
+&lt;li&gt;Call by reference&lt;/li&gt;
+&lt;li&gt;Call by address&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;call-by-value&#34;&gt;Call by Value&lt;/h3&gt;
 </content>
     </item>
     
@@ -1585,7 +1644,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
 &lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
 &lt;p&gt;The Operations team deploys the app and then testers test.
-![[Pasted image 20250307014401.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;p&gt;#Cons&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
@@ -1594,7 +1653,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
 &lt;li&gt;Long Feedback cycle&lt;/li&gt;
 &lt;li&gt;Long Iteration
-![[Pasted image 20250307015213.png]]&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
@@ -1607,7 +1666,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h6 id=&#34;operations-team&#34;&gt;Operations Team&lt;/h6&gt;
 &lt;p&gt;Package is given with instructions to operations team&lt;/p&gt;
 &lt;p&gt;The Operations team deploys the app and then testers test.
-![[Pasted image 20250307014401.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307014401.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;p&gt;#Cons&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Integrating different modules is error prone task as integration team communicates with developers to integrate each developers modules into a single unite.&lt;/li&gt;
@@ -1616,7 +1675,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;li&gt;If a developer brings up functional defect, it will stay there until the end of iteration which may take too long.&lt;/li&gt;
 &lt;li&gt;Long Feedback cycle&lt;/li&gt;
 &lt;li&gt;Long Iteration
-![[Pasted image 20250307015213.png]]&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250307015213.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-integration&#34;&gt;Continuous Integration&lt;/h2&gt;
@@ -1651,7 +1710,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;CI&lt;/em&gt; (&lt;em&gt;Continuous Integration&lt;/em&gt;) pipeline means where developers frequently merge code changes into a central repository, allowing early detection of issues.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;CD&lt;/em&gt; refers to &lt;em&gt;continuous deployment&lt;/em&gt; or &lt;em&gt;continuous delivery&lt;/em&gt;, which automates the application&amp;rsquo;s release to its intended environment, ensuring that it is readily available to users.&lt;/strong&gt;
-![[c1.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;old-school-operations-pain-points&#34;&gt;OLD School Operations Pain Points&lt;/h2&gt;
 &lt;ol&gt;
@@ -1662,7 +1721,7 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;continuous-development&#34;&gt;Continuous Development&lt;/h2&gt;
-&lt;p&gt;![[c2.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/c2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what-is-devops&#34;&gt;What is DevOps?&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;DevOps combines development (Dev) and operations (Ops) to increase the efficiency, speed, and security of software development and delivery compared to traditional processes.&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;why-we-need-devops&#34;&gt;Why we need DevOps?&lt;/h3&gt;
@@ -1683,10 +1742,10 @@ Developer 3 &amp;ndash;&amp;gt;&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-![[dock1.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;![[Pasted image 20250329102024.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -1919,10 +1978,10 @@ Via network name&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;what-problem-does-docker-solve&#34;&gt;What problem does Docker solve?&lt;/h1&gt;
 &lt;p&gt;The main problem it solves is &lt;em&gt;dependency management&lt;/em&gt;.
-![[dock1.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dock1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;docker-architecture&#34;&gt;Docker Architecture&lt;/h1&gt;
-&lt;p&gt;![[Pasted image 20250329102024.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250329102024.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;some-terms-to-understand&#34;&gt;Some Terms to Understand&lt;/h2&gt;
 &lt;ol&gt;
@@ -2356,10 +2415,10 @@ public class User {
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/jmeter-testing/</guid>
       <description>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
-&lt;p&gt;![[Screenshot 2025-04-16 182824.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;</description>
       <content>&lt;h1 id=&#34;types-of-software-testing&#34;&gt;Types of Software Testing&lt;/h1&gt;
-&lt;p&gt;![[Screenshot 2025-04-16 182824.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Screenshot%202025-04-16%20182824.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 </content>
     </item>
@@ -2395,13 +2454,13 @@ public class User {
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;![[pl1.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
-&lt;p&gt;![[Pasted image 20250315195441.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -2416,7 +2475,7 @@ public class User {
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;![[pl2.png]]&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;what-is-plsql&#34;&gt;What is PL/SQL?&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;PL/SQL stands for Procedural Language Extension to SQL&lt;/code&gt;&lt;/li&gt;
@@ -2425,13 +2484,13 @@ public class User {
 &lt;/ol&gt;
 &lt;h1 id=&#34;plsql-architecture&#34;&gt;PL/SQL Architecture&lt;/h1&gt;
 &lt;h2 id=&#34;physical-architecture&#34;&gt;Physical Architecture&lt;/h2&gt;
-&lt;p&gt;![[pl1.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PL/SQL engine processes the entire PL/SQL block of code.&lt;/li&gt;
 &lt;li&gt;It Separate SQL statements and Procedural statements.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;simple-architecture-flow&#34;&gt;Simple Architecture Flow&lt;/h3&gt;
-&lt;p&gt;![[Pasted image 20250315195441.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250315195441.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;plsql-logical-architecture&#34;&gt;PL/SQL Logical Architecture&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Corporates with SQL Engine&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -2446,7 +2505,7 @@ public class User {
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;pluggable-database&#34;&gt;Pluggable Database&lt;/h1&gt;
-&lt;p&gt;![[pl2.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;what-is-pdb&#34;&gt;What is PDB?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Pluggable Database (PDB)&lt;/strong&gt; is a portable collection of schemas, tables, and objects that can be plugged into a &lt;strong&gt;Container Database (CDB)&lt;/strong&gt; in Oracle.&lt;/p&gt;
 &lt;h2 id=&#34;why-pdb&#34;&gt;Why PDB?&lt;/h2&gt;
@@ -2472,7 +2531,7 @@ public class User {
 &lt;hr&gt;
 &lt;h1 id=&#34;what-are-blocks&#34;&gt;What are Blocks?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Block is a logical unit of code that groups related declarations, statements. &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;![[pl3.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/pl3.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;structure-1&#34;&gt;Structure&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;DECLARE&lt;/strong&gt;&lt;/em&gt; Block.&lt;/li&gt;
@@ -2753,14 +2812,14 @@ Axios is a &lt;strong&gt;promise-based HTTP client&lt;/strong&gt;, meaning it us
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/computer-organization--architect/</guid>
-      <description>&lt;p&gt;![[Pasted image 20250419192418.png]]&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;base-system-in-computer-architecture&#34;&gt;Base System in Computer Architecture&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;code&gt;Refer Unit 1 FIT Notes &lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/bWrsk0QizEk?si=6XBleKlCR-PaCF_C
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;best-one-shot&#34;&gt;Best One Shot&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/NY2gz_Kzc0Q?si=YburSfFaLyNTFhf0
 &lt;/code&gt;&lt;/pre&gt;</description>
-      <content>&lt;p&gt;![[Pasted image 20250419192418.png]]&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020250419192418.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;base-system-in-computer-architecture&#34;&gt;Base System in Computer Architecture&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;code&gt;Refer Unit 1 FIT Notes &lt;/code&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Copy&#34; data-lang=&#34;Copy&#34;&gt;https://youtu.be/bWrsk0QizEk?si=6XBleKlCR-PaCF_C

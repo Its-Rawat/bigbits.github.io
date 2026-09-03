@@ -156,7 +156,7 @@
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">3 min read (589 words)</span></div>
+<span class="post-reading-time">4 min read (738 words)</span></div>
 
   
     <span class="post-tags">
@@ -194,6 +194,16 @@
     <li><a href="#operators--arithmetic-expression">Operators &amp; Arithmetic Expression</a>
       <ul>
         <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#declaration-of-function">Declaration Of Function</a></li>
+    <li><a href="#function-definition">Function Definition</a></li>
+    <li><a href="#type-of-parameter-passing">Type of Parameter Passing</a>
+      <ul>
+        <li><a href="#call-by-value">Call by Value</a></li>
       </ul>
     </li>
   </ul>
@@ -491,6 +501,65 @@ Remainder: Sign of dividend is sign of Remainder</p>
 <p><strong>Higher priority = evaluated first.</strong></p>
 <p><code>* / %</code> have <strong>same precedence</strong> → evaluate <strong>left to right</strong>.</p></blockquote>
 <hr>
+<h1 id="functions-in-c">Functions In C<a href="#functions-in-c" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>`A function is a block of code which only runs when it is called.</p>
+<p>*Input (function parameters) and output (return value) of function.</p>
+<ol>
+<li>Function Declaration
+<ol>
+<li>Announcement that this function we are going to use.</li>
+<li>It has function name, input parameters, number of parameters, types of output.</li>
+</ol>
+</li>
+<li>Function Definition
+<ol>
+<li>Has code of function.</li>
+</ol>
+</li>
+<li>Function Call
+<ol>
+<li>Function calling (execute)</li>
+</ol>
+</li>
+</ol>
+<h2 id="declaration-of-function">Declaration Of Function<a href="#declaration-of-function" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><code>return_type name(parameter_type1, parameter_type2......);</code></p>
+<p>example:-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">float</span> <span style="color:#a6e22e">func_name</span>(<span style="color:#66d9ef">int</span> a_argument, <span style="color:#66d9ef">int</span> b_argument, <span style="color:#66d9ef">float</span> c_argument){
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">func1</span> (<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>){};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">func</span> (<span style="color:#66d9ef">void</span>){};  <span style="color:#75715e">// no parameters
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">func</span>(){};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(){};  <span style="color:#75715e">// if output is not present then use void before func declaration
+</span></span></span></code></pre></div><h2 id="function-definition">Function Definition<a href="#function-definition" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><code>Actually piece of code.</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> <span style="color:#a6e22e">areaOfCircle</span>(<span style="color:#66d9ef">float</span> radius){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">float</span>  area  <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14</span><span style="color:#f92672">*</span>(radius<span style="color:#f92672">*</span>radius);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> area;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">float</span> r;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Enter the radius: &#34;</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">scanf</span>(<span style="color:#e6db74">&#34;%f&#34;</span>,<span style="color:#f92672">&amp;</span>r);
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Area of Circle: %f&#34;</span>,<span style="color:#a6e22e">areaOfCircle</span>(r));
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="type-of-parameter-passing">Type of Parameter Passing<a href="#type-of-parameter-passing" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ol>
+<li>Call by Value</li>
+<li>Call by reference</li>
+<li>Call by address</li>
+</ol>
+<h3 id="call-by-value">Call by Value<a href="#call-by-value" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 
       </div></div>
 

@@ -14,29 +14,29 @@
       <guid>https://its-rawat.github.io/bigbits.github.io/posts/custom-banners-for-spring-boot/</guid>
       <description>&lt;h2 id=&#34;spring-boot-banners&#34;&gt;Spring Boot Banners&lt;/h2&gt;
 &lt;p&gt;In this endpoint of internet, we’ll explore how to create a custom banner in a Spring Boot application.&lt;/p&gt;
-&lt;p&gt;![[custombanner.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/custombanner.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 &lt;p&gt;When a Spring Boot application starts, it prints a &lt;strong&gt;banner&lt;/strong&gt;, a visual representation, or text (often with ASCII graphics or branding information). The banner is a way to provide a more engaging and informative startup experience for developers and users such as the application name, version, or any other relevant data.&lt;/p&gt;</description>
       <content>&lt;h2 id=&#34;spring-boot-banners&#34;&gt;Spring Boot Banners&lt;/h2&gt;
 &lt;p&gt;In this endpoint of internet, we’ll explore how to create a custom banner in a Spring Boot application.&lt;/p&gt;
-&lt;p&gt;![[custombanner.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/custombanner.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 &lt;p&gt;When a Spring Boot application starts, it prints a &lt;strong&gt;banner&lt;/strong&gt;, a visual representation, or text (often with ASCII graphics or branding information). The banner is a way to provide a more engaging and informative startup experience for developers and users such as the application name, version, or any other relevant data.&lt;/p&gt;
 &lt;p&gt;By default, Spring Boot includes a simple banner displaying the Spring logo and the version number. Here’s an example of what the default banner looks like:
-![[sdgvfsgffs.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdgvfsgffs.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;how-to-create-custom-spring-boot-banners&#34;&gt;How to create Custom Spring Boot Banners&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Create a banner.txt file under your resource directory.
-![[sdfsf.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdfsf.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Go to this website &lt;a href=&#34;https://www.ascii-art.de/ascii/&#34;&gt;web&lt;/a&gt; and get the design of your preferences then &lt;code&gt;copy&lt;/code&gt; &amp;amp; &lt;code&gt;paste&lt;/code&gt; it in banner.txt.
-![[scs.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/scs.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;You can also add some more information like.
-![[jkthghbgh.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/jkthghbgh.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-copy&#34; data-lang=&#34;copy&#34;&gt;Welcome to Spring Boot App ${spring.application.name}  
@@ -45,11 +45,11 @@ Running on: ${os.name}
 &lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;To make these properties work you have to define them in your &lt;code&gt;application.properties&lt;/code&gt;  file.
-![[sdsdsds.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/sdsdsds.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The Output will look like this:
-![[llllfs.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/llllfs.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
@@ -73,18 +73,18 @@ Running on: ${os.name}
 &lt;li&gt;&lt;strong&gt;Leaf node&lt;/strong&gt; → no children&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;All leaves&lt;/strong&gt; → same level (balanced)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Height&lt;/strong&gt; → &lt;code&gt;O(logₘ n)&lt;/code&gt;
-![[Pasted image 20260125195750.png]]&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125195750.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;insert-operation&#34;&gt;Insert Operation&lt;/h2&gt;
-&lt;p&gt;![[Pasted image 20260125234141.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125234141.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;insert-operation-another-example&#34;&gt;Insert Operation another example&lt;/h2&gt;
 &lt;p&gt;B-Tree of Order 5
 Insert Keys 7, 4, 14, 25, 3, 10, 12, 15, 17, 9, 29, 1, 38, 2, 11&lt;br&gt;
-![[Pasted image 20260129215459.png]]
-![[Pasted image 20260129215512.png]]
-![[Pasted image 20260129215528.png]]
-![[Pasted image 20260129215537.png]]&lt;/p&gt;</description>
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215459.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215512.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215528.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215537.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;b-tree&#34;&gt;B-Tree&lt;/h1&gt;
 &lt;h2 id=&#34;-b-tree-nomenclature&#34;&gt;🌳 B-Tree Nomenclature&lt;/h2&gt;
 &lt;ul&gt;
@@ -97,24 +97,24 @@ Insert Keys 7, 4, 14, 25, 3, 10, 12, 15, 17, 9, 29, 1, 38, 2, 11&lt;br&gt;
 &lt;li&gt;&lt;strong&gt;Leaf node&lt;/strong&gt; → no children&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;All leaves&lt;/strong&gt; → same level (balanced)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Height&lt;/strong&gt; → &lt;code&gt;O(logₘ n)&lt;/code&gt;
-![[Pasted image 20260125195750.png]]&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125195750.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;insert-operation&#34;&gt;Insert Operation&lt;/h2&gt;
-&lt;p&gt;![[Pasted image 20260125234141.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125234141.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;insert-operation-another-example&#34;&gt;Insert Operation another example&lt;/h2&gt;
 &lt;p&gt;B-Tree of Order 5
 Insert Keys 7, 4, 14, 25, 3, 10, 12, 15, 17, 9, 29, 1, 38, 2, 11&lt;br&gt;
-![[Pasted image 20260129215459.png]]
-![[Pasted image 20260129215512.png]]
-![[Pasted image 20260129215528.png]]
-![[Pasted image 20260129215537.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215459.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215512.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215528.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215537.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;deletion-operation&#34;&gt;Deletion Operation&lt;/h2&gt;
 &lt;p&gt;Example 1
-![[Pasted image 20260129231027.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129231027.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Solution
-![[Pasted image 20260129231105.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129231105.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 </content>
     </item>
@@ -136,7 +136,7 @@ B = B + 100
 Write(B)
 Commit
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A transaction must satisfy the &lt;strong&gt;ACID properties&lt;/strong&gt; to ensure &lt;strong&gt;database correctness and consistency&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;![[dbms1.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dbms1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;key-points&#34;&gt;Key Points&lt;/h2&gt;
 &lt;ul&gt;
@@ -167,7 +167,7 @@ B = B + 100
 Write(B)
 Commit
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A transaction must satisfy the &lt;strong&gt;ACID properties&lt;/strong&gt; to ensure &lt;strong&gt;database correctness and consistency&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;![[dbms1.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dbms1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;key-points&#34;&gt;Key Points&lt;/h2&gt;
 &lt;ul&gt;
@@ -212,7 +212,7 @@ Commit
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;types-of-schedules&#34;&gt;Types of Schedules&lt;/h2&gt;
-&lt;p&gt;![[Pasted image 20260110201109.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260110201109.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Serial Schedule&lt;/li&gt;
 &lt;li&gt;Non-Serial Schedule
@@ -252,7 +252,7 @@ Eg: banking system.&lt;/p&gt;
 &lt;h5 id=&#34;conflict-serializable-schedule&#34;&gt;Conflict Serializable Schedule&lt;/h5&gt;
 &lt;p&gt;Its a type of a validation through which we can check if a schedule is serializable, if yes then for which sequence we can say it&amp;rsquo;s serializable.
 If a loop occur in conflict then we can&amp;rsquo;t tell if schedule is serializable. {In this case View Serializability is used.}&lt;/p&gt;
-&lt;p&gt;![[notes2.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/notes2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h5 id=&#34;view-serializable-schedule&#34;&gt;View Serializable Schedule&lt;/h5&gt;
 &lt;p&gt;We check view serializability if&lt;/p&gt;
@@ -272,7 +272,7 @@ If all 3 above are equal in both schedules, then we can say both schedule are vi
 &lt;p&gt;Non-serializable schedules are interleaved(mixed) sequences of transactions that can&amp;rsquo;t be rearranged into any serial order without causing inconsistencies.&lt;/p&gt;
 &lt;h5 id=&#34;recoverability-schedule&#34;&gt;Recoverability Schedule&lt;/h5&gt;
 &lt;p&gt;A recoverable schedule is one in which a transaction only commits after all transactions whose changes it has read have also committed.&lt;/p&gt;
-&lt;p&gt;Example: &lt;code&gt;If transaction T_i reads a value written by transaction T_j, then T_i must commit only after T_j commits to ensure no rollback of a committed transaction is needed. &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Example: &lt;code&gt;If transaction T_i reads a value written by transaction T_j, then T_i must commit only after T_j commits to ensure no rollback of a committed transaction is needed. &lt;/code&gt;&lt;/p&gt;
 &lt;h6 id=&#34;cascadeless-recoverable-schedule&#34;&gt;Cascadeless recoverable schedule&lt;/h6&gt;
 &lt;p&gt;a transaction can only read a value if the transaction that wrote or modified that value has already committed. If the writing transaction hasn&amp;rsquo;t committed yet, then the reading transaction simply waits and does not read that value.&lt;/p&gt;
 &lt;h6 id=&#34;cascading-recoverable-schedule&#34;&gt;Cascading recoverable schedule&lt;/h6&gt;

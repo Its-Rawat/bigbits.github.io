@@ -7,8 +7,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Definition A transaction in DBMS is a finite sequence of database operations that is executed as one logical unit of work, meaning either all operations are performed successfully or none are performed.
--- Example for &#34;logical unite of work&#34; Read(A) A = A − 100 Write(A) Read(B) B = B &#43; 100 Write(B) Commit A transaction must satisfy the ACID properties to ensure database correctness and consistency.
-![[dbms1.png]]
+-- Example for &#34;logical unite of work&#34;Read(A)A = A − 100Write(A)Read(B)B = B &#43; 100Write(B)Commit A transaction must satisfy the ACID properties to ensure database correctness and consistency.
 Key Points A transaction groups multiple database operations into a single logical task Partial execution is not allowed Failure of any operation causes the entire transaction to rollback Ensures reliability in concurrent and failure-prone environments ACID Properties (Overview) Atomicity – All operations execute or none execute Consistency – Database remains in a valid state Isolation – Transactions do not interfere with each other Durability – Committed changes persist permanently Schedule A schedule is the execution order of operations of multiple transactions on the same database, possibly executed concurrently.
 " />
 <meta name="keywords" content="" />
@@ -48,8 +47,7 @@ Key Points A transaction groups multiple database operations into a single logic
 <meta property="og:type" content="article" />
 <meta property="og:title" content="dbms- transaction">
 <meta property="og:description" content="Definition A transaction in DBMS is a finite sequence of database operations that is executed as one logical unit of work, meaning either all operations are performed successfully or none are performed.
--- Example for &#34;logical unite of work&#34; Read(A) A = A − 100 Write(A) Read(B) B = B &#43; 100 Write(B) Commit A transaction must satisfy the ACID properties to ensure database correctness and consistency.
-![[dbms1.png]]
+-- Example for &#34;logical unite of work&#34;Read(A)A = A − 100Write(A)Read(B)B = B &#43; 100Write(B)Commit A transaction must satisfy the ACID properties to ensure database correctness and consistency.
 Key Points A transaction groups multiple database operations into a single logical task Partial execution is not allowed Failure of any operation causes the entire transaction to rollback Ensures reliability in concurrent and failure-prone environments ACID Properties (Overview) Atomicity – All operations execute or none execute Consistency – Database remains in a valid state Isolation – Transactions do not interfere with each other Durability – Committed changes persist permanently Schedule A schedule is the execution order of operations of multiple transactions on the same database, possibly executed concurrently.
 " />
 <meta property="og:url" content="https://its-rawat.github.io/bigbits.github.io/posts/dbms--transactions/" />
@@ -162,7 +160,7 @@ Key Points A transaction groups multiple database operations into a single logic
   </h1>
   <div class="post-meta">
     
-<span class="post-reading-time">7 min read (1458 words)</span></div>
+<span class="post-reading-time">7 min read (1453 words)</span></div>
 
   
     <span class="post-tags">
@@ -239,7 +237,7 @@ B = B + 100
 Write(B)
 Commit
 </code></pre><p>A transaction must satisfy the <strong>ACID properties</strong> to ensure <strong>database correctness and consistency</strong>.</p>
-<p>![[dbms1.png]]</p>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/dbms1.png" alt="Image Description"></p>
 <hr>
 <h2 id="key-points">Key Points<a href="#key-points" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
@@ -284,7 +282,7 @@ Commit
 </ul>
 <hr>
 <h2 id="types-of-schedules">Types of Schedules<a href="#types-of-schedules" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>![[Pasted image 20260110201109.png]]</p>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260110201109.png" alt="Image Description"></p>
 <ol>
 <li>Serial Schedule</li>
 <li>Non-Serial Schedule
@@ -324,7 +322,7 @@ Eg: banking system.</p>
 <h5 id="conflict-serializable-schedule">Conflict Serializable Schedule<a href="#conflict-serializable-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
 <p>Its a type of a validation through which we can check if a schedule is serializable, if yes then for which sequence we can say it&rsquo;s serializable.
 If a loop occur in conflict then we can&rsquo;t tell if schedule is serializable. {In this case View Serializability is used.}</p>
-<p>![[notes2.png]]</p>
+<p><img src="https://its-rawat.github.io/bigbits.github.io/images/notes2.png" alt="Image Description"></p>
 <hr>
 <h5 id="view-serializable-schedule">View Serializable Schedule<a href="#view-serializable-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
 <p>We check view serializability if</p>
@@ -344,7 +342,7 @@ If all 3 above are equal in both schedules, then we can say both schedule are vi
 <p>Non-serializable schedules are interleaved(mixed) sequences of transactions that can&rsquo;t be rearranged into any serial order without causing inconsistencies.</p>
 <h5 id="recoverability-schedule">Recoverability Schedule<a href="#recoverability-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
 <p>A recoverable schedule is one in which a transaction only commits after all transactions whose changes it has read have also committed.</p>
-<p>Example: <code>If transaction T_i reads a value written by transaction T_j, then T_i must commit only after T_j commits to ensure no rollback of a committed transaction is needed. </code></p>
+<p>Example: <code>If transaction T_i reads a value written by transaction T_j, then T_i must commit only after T_j commits to ensure no rollback of a committed transaction is needed. </code></p>
 <h6 id="cascadeless-recoverable-schedule">Cascadeless recoverable schedule<a href="#cascadeless-recoverable-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
 <p>a transaction can only read a value if the transaction that wrote or modified that value has already committed. If the writing transaction hasn&rsquo;t committed yet, then the reading transaction simply waits and does not read that value.</p>
 <h6 id="cascading-recoverable-schedule">Cascading recoverable schedule<a href="#cascading-recoverable-schedule" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>

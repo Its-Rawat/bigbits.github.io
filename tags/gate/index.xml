@@ -332,6 +332,65 @@ Remainder: Sign of dividend is sign of Remainder&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Higher priority = evaluated first.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;* / %&lt;/code&gt; have &lt;strong&gt;same precedence&lt;/strong&gt; → evaluate &lt;strong&gt;left to right&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
+&lt;h1 id=&#34;functions-in-c&#34;&gt;Functions In C&lt;/h1&gt;
+&lt;p&gt;`A function is a block of code which only runs when it is called.&lt;/p&gt;
+&lt;p&gt;*Input (function parameters) and output (return value) of function.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Function Declaration
+&lt;ol&gt;
+&lt;li&gt;Announcement that this function we are going to use.&lt;/li&gt;
+&lt;li&gt;It has function name, input parameters, number of parameters, types of output.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Function Definition
+&lt;ol&gt;
+&lt;li&gt;Has code of function.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Function Call
+&lt;ol&gt;
+&lt;li&gt;Function calling (execute)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;declaration-of-function&#34;&gt;Declaration Of Function&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;return_type name(parameter_type1, parameter_type2......);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;example:-&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func_name&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a_argument, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; b_argument, &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; c_argument){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func1&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;){};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;){};  &lt;span style=&#34;color:#75715e&#34;&gt;// no parameters
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func&lt;/span&gt;(){};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func&lt;/span&gt;(){};  &lt;span style=&#34;color:#75715e&#34;&gt;// if output is not present then use void before func declaration
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;function-definition&#34;&gt;Function Definition&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Actually piece of code.&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;areaOfCircle&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; radius){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;  area  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(radius&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;radius);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; area;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; r;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Enter the radius: &amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;scanf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%f&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;r);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Area of Circle: %f&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#a6e22e&#34;&gt;areaOfCircle&lt;/span&gt;(r));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;type-of-parameter-passing&#34;&gt;Type of Parameter Passing&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Call by Value&lt;/li&gt;
+&lt;li&gt;Call by reference&lt;/li&gt;
+&lt;li&gt;Call by address&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;call-by-value&#34;&gt;Call by Value&lt;/h3&gt;
 </content>
     </item>
     
@@ -353,18 +412,18 @@ Remainder: Sign of dividend is sign of Remainder&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;Leaf node&lt;/strong&gt; → no children&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;All leaves&lt;/strong&gt; → same level (balanced)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Height&lt;/strong&gt; → &lt;code&gt;O(logₘ n)&lt;/code&gt;
-![[Pasted image 20260125195750.png]]&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125195750.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;insert-operation&#34;&gt;Insert Operation&lt;/h2&gt;
-&lt;p&gt;![[Pasted image 20260125234141.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125234141.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;insert-operation-another-example&#34;&gt;Insert Operation another example&lt;/h2&gt;
 &lt;p&gt;B-Tree of Order 5
 Insert Keys 7, 4, 14, 25, 3, 10, 12, 15, 17, 9, 29, 1, 38, 2, 11&lt;br&gt;
-![[Pasted image 20260129215459.png]]
-![[Pasted image 20260129215512.png]]
-![[Pasted image 20260129215528.png]]
-![[Pasted image 20260129215537.png]]&lt;/p&gt;</description>
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215459.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215512.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215528.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215537.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;</description>
       <content>&lt;h1 id=&#34;b-tree&#34;&gt;B-Tree&lt;/h1&gt;
 &lt;h2 id=&#34;-b-tree-nomenclature&#34;&gt;🌳 B-Tree Nomenclature&lt;/h2&gt;
 &lt;ul&gt;
@@ -377,24 +436,24 @@ Insert Keys 7, 4, 14, 25, 3, 10, 12, 15, 17, 9, 29, 1, 38, 2, 11&lt;br&gt;
 &lt;li&gt;&lt;strong&gt;Leaf node&lt;/strong&gt; → no children&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;All leaves&lt;/strong&gt; → same level (balanced)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Height&lt;/strong&gt; → &lt;code&gt;O(logₘ n)&lt;/code&gt;
-![[Pasted image 20260125195750.png]]&lt;/li&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125195750.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;insert-operation&#34;&gt;Insert Operation&lt;/h2&gt;
-&lt;p&gt;![[Pasted image 20260125234141.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260125234141.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;insert-operation-another-example&#34;&gt;Insert Operation another example&lt;/h2&gt;
 &lt;p&gt;B-Tree of Order 5
 Insert Keys 7, 4, 14, 25, 3, 10, 12, 15, 17, 9, 29, 1, 38, 2, 11&lt;br&gt;
-![[Pasted image 20260129215459.png]]
-![[Pasted image 20260129215512.png]]
-![[Pasted image 20260129215528.png]]
-![[Pasted image 20260129215537.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215459.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215512.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215528.png&#34; alt=&#34;Image Description&#34;&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129215537.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;deletion-operation&#34;&gt;Deletion Operation&lt;/h2&gt;
 &lt;p&gt;Example 1
-![[Pasted image 20260129231027.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129231027.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Solution
-![[Pasted image 20260129231105.png]]&lt;/p&gt;
+&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260129231105.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 </content>
     </item>
@@ -416,7 +475,7 @@ B = B + 100
 Write(B)
 Commit
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A transaction must satisfy the &lt;strong&gt;ACID properties&lt;/strong&gt; to ensure &lt;strong&gt;database correctness and consistency&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;![[dbms1.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dbms1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;key-points&#34;&gt;Key Points&lt;/h2&gt;
 &lt;ul&gt;
@@ -447,7 +506,7 @@ B = B + 100
 Write(B)
 Commit
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A transaction must satisfy the &lt;strong&gt;ACID properties&lt;/strong&gt; to ensure &lt;strong&gt;database correctness and consistency&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;![[dbms1.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/dbms1.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;key-points&#34;&gt;Key Points&lt;/h2&gt;
 &lt;ul&gt;
@@ -492,7 +551,7 @@ Commit
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;types-of-schedules&#34;&gt;Types of Schedules&lt;/h2&gt;
-&lt;p&gt;![[Pasted image 20260110201109.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/Pasted%20image%2020260110201109.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Serial Schedule&lt;/li&gt;
 &lt;li&gt;Non-Serial Schedule
@@ -532,7 +591,7 @@ Eg: banking system.&lt;/p&gt;
 &lt;h5 id=&#34;conflict-serializable-schedule&#34;&gt;Conflict Serializable Schedule&lt;/h5&gt;
 &lt;p&gt;Its a type of a validation through which we can check if a schedule is serializable, if yes then for which sequence we can say it&amp;rsquo;s serializable.
 If a loop occur in conflict then we can&amp;rsquo;t tell if schedule is serializable. {In this case View Serializability is used.}&lt;/p&gt;
-&lt;p&gt;![[notes2.png]]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://its-rawat.github.io/bigbits.github.io/images/notes2.png&#34; alt=&#34;Image Description&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h5 id=&#34;view-serializable-schedule&#34;&gt;View Serializable Schedule&lt;/h5&gt;
 &lt;p&gt;We check view serializability if&lt;/p&gt;
@@ -552,7 +611,7 @@ If all 3 above are equal in both schedules, then we can say both schedule are vi
 &lt;p&gt;Non-serializable schedules are interleaved(mixed) sequences of transactions that can&amp;rsquo;t be rearranged into any serial order without causing inconsistencies.&lt;/p&gt;
 &lt;h5 id=&#34;recoverability-schedule&#34;&gt;Recoverability Schedule&lt;/h5&gt;
 &lt;p&gt;A recoverable schedule is one in which a transaction only commits after all transactions whose changes it has read have also committed.&lt;/p&gt;
-&lt;p&gt;Example: &lt;code&gt;If transaction T_i reads a value written by transaction T_j, then T_i must commit only after T_j commits to ensure no rollback of a committed transaction is needed. &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Example: &lt;code&gt;If transaction T_i reads a value written by transaction T_j, then T_i must commit only after T_j commits to ensure no rollback of a committed transaction is needed. &lt;/code&gt;&lt;/p&gt;
 &lt;h6 id=&#34;cascadeless-recoverable-schedule&#34;&gt;Cascadeless recoverable schedule&lt;/h6&gt;
 &lt;p&gt;a transaction can only read a value if the transaction that wrote or modified that value has already committed. If the writing transaction hasn&amp;rsquo;t committed yet, then the reading transaction simply waits and does not read that value.&lt;/p&gt;
 &lt;h6 id=&#34;cascading-recoverable-schedule&#34;&gt;Cascading recoverable schedule&lt;/h6&gt;
