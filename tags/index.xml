@@ -17,31 +17,11 @@
     </item>
     
     <item>
-      <title>#TCS</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/tags/%23tcs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/tags/%23tcs/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>Agile</title>
       <link>https://its-rawat.github.io/bigbits.github.io/tags/agile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/tags/agile/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>All</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/tags/all/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/tags/all/</guid>
       <description></description>
       <content></content>
     </item>
@@ -157,16 +137,6 @@
     </item>
     
     <item>
-      <title>Docker</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/tags/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/tags/docker/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>Elite_Tech_Park</title>
       <link>https://its-rawat.github.io/bigbits.github.io/tags/elite_tech_park/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -277,6 +247,16 @@
     </item>
     
     <item>
+      <title>On</title>
+      <link>https://its-rawat.github.io/bigbits.github.io/tags/on/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://its-rawat.github.io/bigbits.github.io/tags/on/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
       <title>PL/SQL</title>
       <link>https://its-rawat.github.io/bigbits.github.io/tags/pl/sql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -302,16 +282,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://its-rawat.github.io/bigbits.github.io/tags/practical/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>https://its-rawat.github.io/bigbits.github.io/tags/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://its-rawat.github.io/bigbits.github.io/tags/projects/</guid>
       <description></description>
       <content></content>
     </item>
@@ -397,7 +367,7 @@
     </item>
     
     <item>
-      <title>Sql</title>
+      <title>SQL</title>
       <link>https://its-rawat.github.io/bigbits.github.io/tags/sql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
